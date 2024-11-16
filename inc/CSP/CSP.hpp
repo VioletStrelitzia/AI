@@ -18,16 +18,15 @@ namespace yuki::csp {
 		using BinaryConstraint = function<bool(BinaryScope const&, CSP const&)>;
 		//using BinaryConstraint = bool(*)(BinaryScope const&, CSP const&);
 
-		vector<Var> 					 variables;    		 // 变量
-		vector<vector<BinaryConstraint>> binaryConstraints;  // 二元约束
-		queue<Arc> 						 arcs;		   		 // 弧
+		vector<Var> 					 variables;			 // 变量
+		vector<vector<BinaryConstraint>> binaryConstraints;	 // 二元约束
+		queue<Arc> 						 arcs;				 // 弧
 
 	public:
 		CSP() = delete;
+		~CSP() = default;
 
 		CSP(vector<Var> const& variables);
-
-		~CSP() = default;
 
 		/// @brief 为序号为 varId1，varId2 的 var 添加二元约束
 		/// @param varId1 var1 的Id
@@ -64,22 +63,36 @@ namespace yuki::csp {
 		/// @return var1 的值域是否发生了改变
 		auto revise(usize const& varId1, usize const& varId2) -> bool;
 
+		/// @brief ac3 算法
+		/// @return 是否有变量的值域为空（失败）
 		auto ac3() -> bool;
 
+		/// @brief 推断，将值域内只有一个值的变量赋值为这个取值
+		/// @return 是否未失败（是否没有变量的值域为空）
 		auto inference() -> bool;
 
+		/// @brief 检查 variables 是否已经是解决方案
+		/// @return variables 是否已经是解决方案
 		auto isSolution() -> bool;
 
-		auto failure() -> bool;
-
+		/// @brief 记录 CSP 的状态
+		/// @return CSP 的状态
 		auto record() -> vector<Var>;
 
+		/// @brief 从 record 恢复 CSP 的状态
+		/// @param record CSP 状态的记录
 		auto recover(vector<Var> const& record) -> void;
 
+		/// @brief 选择一个未被赋值的 var
+		/// @return var 的 ID
 		auto selectUnassignedVariableId() -> usize;
 
+		/// @brief 返回不排序的值域序列
+		/// @param varId var 的 ID
+		/// @return 不排序的值域序列
 		auto orderDomainValues(usize const& varId) -> vector<ValueType>&;
 	
+		/// @brief 回溯算法
 		auto backtrack() -> void;
 		
 		/// @brief 获取一个取值为 value 的 var 的冲突数
@@ -226,7 +239,7 @@ namespace yuki::csp {
 		if (ac3()) {
 			for (Var& var : variables) {
 				if (var.unassigned && next(var.domain.begin()) == var.domain.end()) {
-					var.assign(var.domain.front());
+					var.assign(var.domain.front(), false);
 				}
 			}
 			return true;
@@ -253,27 +266,6 @@ namespace yuki::csp {
 			}
 		}
 		return true;
-	}
-
-	template <typename ValueType>
-	auto CSP<ValueType>::failure() -> bool {
-		for (Var& var : variables) {
-			if (var.unassigned) {
-				return true;
-			}
-		}
-		for (usize i = 0; i < variables.size(); ++i) {
-			for (usize j = 0; j < variables.size(); ++j) {
-				if (j == i) {
-					continue;
-				}
-				if (!checkBinaryConstraint(variables[i].value, i, variables[j].value, j) ||
-					!checkBinaryConstraint(variables[j].value, j, variables[i].value, i)) {
-					return true;
-				}
-			}
-		}
-		return false;
 	}
 
 	template <typename ValueType>

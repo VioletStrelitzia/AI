@@ -1,4 +1,4 @@
-#pragma once
+﻿#pragma once
 #include <iostream>
 
 #include <array>
@@ -12,6 +12,9 @@
 #include <stack>
 #include <string>
 #include <complex>
+#include <fstream>
+
+#include <iomanip>
 
 #include <random>
 
@@ -22,6 +25,8 @@
 namespace yuki {
 	using std::cin;
 	using std::cout;
+	using std::ostream;
+	using std::istream;
 	using std::endl;
 
 	using std::array;
@@ -37,9 +42,13 @@ namespace yuki {
 	using std::stack;
 	using std::string;
 
+	using std::ifstream;
+	using std::ofstream;
+
 	using std::initializer_list;
 	using std::function;
 	using std::remove_if;
+	using std::move;
 	using std::derived_from;
 
 	using std::random_device;
@@ -76,13 +85,9 @@ namespace yuki {
 	// 比较 是否大于
 	template<class ElemType> struct greater;
 
-    auto equalsZero(Real const& val) -> bool {
-        return abs(val) < ACCURACY;
-    }
+    auto equalsZero(Real const& val) -> bool;
 
-    auto equalsZero(int const& val) -> bool {
-        return val == 0;
-    }
+    auto equalsZero(i32 const& val) -> bool;
 
 	template<class ElemType>
 	struct less {
@@ -105,41 +110,11 @@ namespace yuki {
 	}
 
 	template <>
-	string toString<i32>(i32 x) {
-		if (x == 0) {
-			return "0";
-		}
-		vector<i32> nums;
-		string dst;
-		while (x) {
-			nums.push_back(x % 10);
-			x /= 10;
-		}
-		for (i32 i = (i32)nums.size() - 1; i > -1; --i) {
-			dst.push_back('0' + nums[i]);
-		}
-		return dst;
-	}
+	string toString<i32>(i32 x);
 
 	template <>
-	string toString<usize>(usize x) {
-		if (x == 0) {
-			return "0";
-		}
-		vector<usize> nums;
-		string dst;
-		while (x) {
-			nums.push_back(x % 10);
-			x /= 10;
-		}
-		for (i32 i = (i32)nums.size() - 1; i > -1; --i) {
-			dst.push_back('0' + (i32)nums[i]);
-		}
-		return dst;
-	}
+	string toString<usize>(usize x);
 
 	template <>
-	string toString<pair<usize, i32>>(pair<usize, i32> x) {
-		return "<" + toString(x.first) + ", " + toString(x.second) + ">";
-	}
+	string toString<pair<usize, i32>>(pair<usize, i32> x);
 }

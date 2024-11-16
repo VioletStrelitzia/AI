@@ -1,6 +1,5 @@
 ﻿#pragma once
 #include "TreeNode.hpp"
-#include "core.hpp"
 
 namespace yuki {
     template <typename ElemType>

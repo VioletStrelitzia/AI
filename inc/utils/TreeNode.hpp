@@ -1,5 +1,5 @@
 ﻿#pragma once
-#include "core.hpp"
+#include "core.h"
 
 namespace yuki {
     template <typename ElemType>

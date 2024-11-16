@@ -1,6 +1,7 @@
 # User ================================
-# 用户自定义的其他忽略文件
+# 自定义的其他忽略文件
 referenceBook/
+other/
 
 # Clion ================================
 # Covers JetBrains IDEs: IntelliJ, RubyMine, PhpStorm, AppCode, PyCharm, CLion, Android Studio and WebStorm
