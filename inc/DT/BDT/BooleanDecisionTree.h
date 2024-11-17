@@ -3,15 +3,15 @@
 #include "BDTDataset.h"
 
 namespace yuki::atri::dt::bdt {
-    class DecisionTree {
+    class BooleanDecisionTree {
     public:
         Dataset* dataset;
 
-        DecisionTree* root;
+        BooleanDecisionTreeNode* root;
 
     public:
-        DecisionTree(Dataset*& dataset);
-        ~DecisionTree();
+        BooleanDecisionTree(Dataset* dataset);
+        ~BooleanDecisionTree();
 
         /// @brief 计算布尔随机变量的信息熵
         /// @param p 该变量取 1 的概率（0 也可）
@@ -42,9 +42,6 @@ namespace yuki::atri::dt::bdt {
         }
 
         auto importance(vector<string> const& attributes, vector<Example> const& examples) -> string {
-            if (attributes.empty()) {
-                return "";
-            }
             usize attributeIndex = 0;
             f32 maxInfoGain = infoGain(attributes[0], examples), curInfoGain;
             for (usize i = 1, end = attributes.size(); i < end; ++i) {
@@ -68,7 +65,7 @@ namespace yuki::atri::dt::bdt {
             return result;
         }
 
-        auto pluralityValue(vector<Example> const& examples) -> DecisionTreeNode* {
+        auto pluralityValue(vector<Example> const& examples) -> BooleanDecisionTreeNode* {
             i32 positiveCount = 0;
             for (Example const& example: examples) {
                 if (example.label) {
@@ -77,7 +74,7 @@ namespace yuki::atri::dt::bdt {
             }
 
             i32 negtiveCount = (i32)examples.size() - positiveCount;
-            return new DecisionTreeNode(positiveCount >= negtiveCount);
+            return new BooleanDecisionTreeNode(positiveCount >= negtiveCount, dataset->labelAttribute);
         }
 
         auto filterExamples(vector<Example> const& examples, string const& attribute, string const& option) -> vector<Example> {
@@ -91,28 +88,29 @@ namespace yuki::atri::dt::bdt {
             return result;
         }
 
-        auto learn(vector<Example> const& remainExamples, vector<string> const& remainAttributes,
-                   vector<Example> const& parentExamples = {}) -> DecisionTreeNode* {
+        auto learn(vector<Example> const& remainExamples, vector<string> const& remainAttributes, vector<Example> const& parentExamples = {}) -> BooleanDecisionTreeNode* {
             if (remainExamples.empty()) {
                 return pluralityValue(parentExamples);
             } else if (isSameClassify(remainExamples)) {
-                return new DecisionTreeNode(remainExamples[0].label);
+                return new BooleanDecisionTreeNode(remainExamples[0].label, dataset->labelAttribute);
             } else if (remainAttributes.empty()) {
                 return pluralityValue(remainExamples);
             } else {
                 string A = importance(remainAttributes, remainExamples);
                 vector<string> subAttributes = removeAttritude(A, remainAttributes);
-                DecisionTreeNode* root = new DecisionTreeNode(A);
+                BooleanDecisionTreeNode* root = new BooleanDecisionTreeNode(A);
                 for (string const& option: dataset->attributesOptions[A]) {
                     root->options[option] = learn(filterExamples(remainExamples, A, option), subAttributes, remainExamples);
                 }
+                return root;
             }
-            return nullptr;
         }
 
         auto build() -> void {
             if (dataset) {
-                learn(dataset->examples, dataset->attributes);
+                cout << "Boolean decision tree learning start..." << endl;
+                root = learn(dataset->examples, dataset->attributes);
+                cout << "Boolean decision tree learning finished." << endl;
             }
         }
 
@@ -153,12 +151,37 @@ namespace yuki::atri::dt::bdt {
             }
             return true;
         }
+
+        void printTree() {
+            _printTree(root, 0);
+        }
+
+        void printSpacer(i32 const& number) {
+            for (i32 i = 0; i < number; ++i) {
+                cout << '\t';
+            }
+        }
+
+        void _printTree(BooleanDecisionTreeNode*& root, i32 const& depth) {
+            printSpacer(depth);
+            if (root->options.empty()) {
+                cout << root->attritude << ": " << root->value << endl;
+            } else {
+                cout << "Split on " << root->attritude << endl;
+                for (pair<string, BooleanDecisionTreeNode*> p : root->options) {
+                    printSpacer(depth);
+                    cout << "If " << root->attritude << " == " << p.first << endl;
+                    _printTree(p.second, depth + 1);
+                }
+            }
+        }
+
     };
     
-    DecisionTree::DecisionTree(Dataset*& dataset):
+    BooleanDecisionTree::BooleanDecisionTree(Dataset* dataset):
         dataset(dataset), root(nullptr) {}
     
-    DecisionTree::~DecisionTree() {
+    BooleanDecisionTree::~BooleanDecisionTree() {
         delete root;
     }
     

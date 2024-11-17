@@ -10,12 +10,38 @@ namespace yuki::atri::dt::bdt {
         vector<Example>          examples;        // 把数据保存为 Example 的形式
         map<string, set<string>> attributesOptions;
 
-        auto addValues(string const& line) -> void;
+        auto buildExample(vector<string> const& values, bool const& hasLable = true) -> Example {
+            bool lable = false;
+            if (hasLable) {
+                lable = getLabel(values.back());
+            }
+            return Example(values, lable, hasLable);
+        }
 
     public:
-        Dataset();
+        Dataset(string const& filename) {
+            ifstream inFile(filename);
+            if (inFile.fail()) {
+                cout << "cannot open file: " << filename << endl;
+            }
 
-        Dataset(vector<string> const& data, bool const& label);
+            string line;
+            if (getline(inFile, line)) {
+                attributes = readValues(line);
+                labelAttribute = attributes.back();
+            }
+            for (string const& attribute: attributes) {
+                if (getline(inFile, line)) {
+                    attributesOptions[attribute] = readOptions(line);
+                }
+            }
+            while (getline(inFile, line)) {
+                vector<string> values = readValues(line);
+                rawValues.push_back(values);
+                examples.push_back(buildExample(values, values.size() >= labelAttribute.size()));
+            }
+            attributes.pop_back();
+        }
 
         auto getLabel(string const& value) -> bool {
             return value == "1"; 
@@ -39,6 +65,26 @@ namespace yuki::atri::dt::bdt {
                 }
             }
             return result;
+        }
+
+        auto readValues(string const& line) -> vector<string> {
+            stringstream ss(line);
+            string value;
+            vector<string> values;
+            while (getline(ss, value, ',')) {
+                values.push_back(value);
+            }
+            return values;
+        }
+
+        auto readOptions(string const& line) -> set<string> {
+            stringstream ss(line);
+            string option;
+            set<string> options;
+            while (getline(ss, option, ',')) {
+                options.insert(option);
+            }
+            return options;
         }
     };
 }

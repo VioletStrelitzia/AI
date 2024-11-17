@@ -13,6 +13,7 @@
 #include <string>
 #include <complex>
 #include <fstream>
+#include <sstream>
 
 #include <iomanip>
 
@@ -44,6 +45,8 @@ namespace yuki {
 
 	using std::ifstream;
 	using std::ofstream;
+	using std::stringstream;
+	using std::getline;
 
 	using std::initializer_list;
 	using std::function;

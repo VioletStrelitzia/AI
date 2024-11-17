@@ -2,25 +2,25 @@
 #include "core.h"
 
 namespace yuki::atri::dt::bdt {
-    class DecisionTreeNode {
+    class BooleanDecisionTreeNode {
     public:
-        string                         attritude;
-        bool                           value;
-        map<string, DecisionTreeNode*> options;
+        string attritude;
+        bool   value;
+        map<string, BooleanDecisionTreeNode*> options;
 
     public:
         /// @brief 构造叶子节点
         /// @param value 叶节点的取值
-        DecisionTreeNode(bool const& value, string const& labelAttribute = ""):
+        BooleanDecisionTreeNode(bool const& value, string const& labelAttribute):
             value(value), attritude(labelAttribute) {}
 
         /// @brief 构造非叶子结点
         /// @param attribute 特征
-        DecisionTreeNode(string const& attribute):
+        BooleanDecisionTreeNode(string const& attribute):
             attritude(attribute) {}
 
-        ~DecisionTreeNode() {
-            for (pair<string, DecisionTreeNode*> c : options) {
+        ~BooleanDecisionTreeNode() {
+            for (pair<string, BooleanDecisionTreeNode*> c : options) {
                 delete c.second;
             }
         }

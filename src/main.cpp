@@ -1,15 +1,29 @@
 ﻿#include "core.h"
 #include "NQueen.h"
 #include "NFPAlgorithm.h"
-#include "BinaryDecisionTree.h"
+#include "BooleanDecisionTree.h"
 
+using namespace yuki;
 using namespace yuki::atri;
 
 int main() {
 	//csp::testBacktrackingSearch();
 	//csp::testMinConflict();
-    nfp::test();
-
+    //nfp::test();
+	dt::bdt::Dataset dataset("../../resources/BDTTrainData.csv");
+	for (auto& a: dataset.attributes) {
+		cout << a << ' ';
+	}
+	cout << endl << dataset.labelAttribute << endl;
+	for (auto& e: dataset.examples) {
+		for (auto& s: e.data) {
+			cout << s << ' ';
+		}
+		cout << "\nlable " << e.label << endl;
+	}
+	dt::bdt::BooleanDecisionTree t(&dataset);
+	t.build();
+	t.printTree();
 	//system("pause");
 	return 0;
 }
