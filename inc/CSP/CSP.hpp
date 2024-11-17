@@ -1,7 +1,7 @@
 ﻿#pragma once
 #include "Variable.hpp"
 
-namespace yuki::csp {
+namespace yuki::atri::csp {
 	/// @brief CSP算法
 	/// @tparam ValueType 变量的值的类型
 	template <typename ValueType>

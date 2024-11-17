@@ -1,8 +1,8 @@
 ﻿#pragma once
-#include "NFPPosition.h"
+#include "Position2.h"
 #include "core.h"
 
-namespace yuki::nfp {
+namespace yuki::atri::nfp {
     /**
      * @brief 用来描述棋盘状态的类。
      * @param data 状态压缩存进里面，64位每4位存一个数，最多可以测试到15数码问题
@@ -11,7 +11,7 @@ namespace yuki::nfp {
      * @param nextActions 该状态的可行的后继动作序列
      * @param prevActions 该状态的前序动作序列
      */
-    class NFPState {
+    class State {
     public:
         // 修改以下两个参数，整个框架可以自动转换到 rows * cols 数码问题（需要保证 rows * cols <= 16）
         static int const rows     = 3;  // 数码盘的行数
@@ -19,17 +19,17 @@ namespace yuki::nfp {
         static int const maxDepth = 20; // 最大深度
         static int const size = rows * cols;
 
-        using Action = NFPPosition; // 使用 NFPPosition 作为动作类型，向哪里走就相当于加上哪个方向的单位方向向量
+        using Action = Position2; // 使用 Position2 作为动作类型，向哪里走就相当于加上哪个方向的单位方向向量
 
         static int const     actionsNum = 4;            // 可能的 Action 总数有四种
         static Action const  actions[actionsNum];       // 可能的 Action 初始化存在 actions 里
         static string const  actionInfo[actionsNum];    // actionInfo[i] 对应 actions[i] 的具体信息（如向上走等）
-        static NFPState         _targetNFPState;              // 目标状态
-        static vector<NFPState> allNFPStates;                 // 存放 最优解在 0~maxDepth 深度的所有 NFPState
+        static State         _targetNFPState;              // 目标状态
+        static vector<State> allNFPStates;                 // 存放 最优解在 0~maxDepth 深度的所有 NFPState
         static int           depthIndexs[maxDepth + 1]; // 索引数组
 
         usize    data;    // 状态压缩，64位每4位存一个数，最多可以测试到15数码问题
-        NFPPosition zeroPos; // 0 的位置
+        Position2 zeroPos; // 0 的位置
         int      depth;   // 深度
 
         vector<Action const*> nextActions; // 可行的后继动作序列
@@ -47,7 +47,7 @@ namespace yuki::nfp {
          * @brief 初始化，一定要执行。
          * @param targetNFPState 目标状态
          */
-        static void init(NFPState const& targetNFPState);
+        static void init(State const& targetNFPState);
 
         /**
          * @brief 获取row行col列的数码。
@@ -63,7 +63,7 @@ namespace yuki::nfp {
          * 生成的后继节点默认已经初始化了可行后继动作序列并且继承了本节点的前序动作序列，并且深度+1。
          * @return 后继 NFPState
          */
-        NFPState genNextNFPState();
+        State genNextNFPState();
 
         /**
          * @brief 检测本节点是否存在可行后继动作。
@@ -84,7 +84,7 @@ namespace yuki::nfp {
          * @brief 将 0 移动到 swapPos。
          * @param swapPos 和 0 交换位置的数码的位置
          */
-        void zeroMoveTo(NFPPosition const& swapPos);
+        void zeroMoveTo(Position2 const& swapPos);
 
         /**
          * @brief 更新本节点的后继节点序列。可以输入上一步的动作来避免序列中生成其反动作导致走回头。
@@ -109,33 +109,33 @@ namespace yuki::nfp {
          * @param depth 最优解深度的
          * @return 最优解深度为depth的初始状态
          */
-        static NFPState genRandomNFPState(int const& depth = -1);
+        static State genRandomNFPState(int const& depth = -1);
 
         // 各种构造函数
-        NFPState(usize const& data, NFPPosition const& pZero, int const& depth = 0);
-        NFPState(initializer_list<initializer_list<usize>> const& listList);
-        NFPState(NFPState const& other);
-        NFPState(NFPState&& other) noexcept;
+        State(usize const& data, Position2 const& pZero, int const& depth = 0);
+        State(initializer_list<initializer_list<usize>> const& listList);
+        State(State const& other);
+        State(State&& other) noexcept;
 
         // 赋值函数
-        NFPState& operator=(NFPState const& other);
+        State& operator=(State const& other);
 
-        bool operator<(NFPState const& other) const;
+        bool operator<(State const& other) const;
 
         // 判相等（每个位置上数码一样即为相等）
-        bool operator==(NFPState const& other) const;
+        bool operator==(State const& other) const;
 
         // 判不相等（有某个位置上数码不一样即为不相等）
-        bool operator!=(NFPState const& other) const;
+        bool operator!=(State const& other) const;
 
         // 输出路径
         void printPath() const;
 
-        friend ostream& operator<<(ostream& os, NFPState const& NFPState);
+        friend ostream& operator<<(ostream& os, State const& NFPState);
 
     private:
-        void static genPrecision(NFPState const& originalNFPState);
+        void static genPrecision(State const& originalNFPState);
     };
 
-    std::ostream& operator<<(std::ostream& os, yuki::nfp::NFPState const& NFPState);
+    std::ostream& operator<<(std::ostream& os, yuki::atri::nfp::State const& NFPState);
 }

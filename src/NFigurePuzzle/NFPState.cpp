@@ -1,18 +1,18 @@
 ﻿#include "NFPState.h"
 
-namespace yuki::nfp {
-    usize NFPState::mask[NFPState::rows][NFPState::cols];
-    NFPPosition const NFPState::actions[4] = { { -1, 0 }, { 1 , 0 }, { 0, -1 }, { 0, 1 } };
-    string const NFPState::actionInfo[NFPState::actionsNum] = { "向上移动", "向下移动", "向左移动", "向右移动" };
-    NFPState NFPState::_targetNFPState(0, NFPPosition{ 0, 0 });
+namespace yuki::atri::nfp {
+    usize State::mask[State::rows][State::cols];
+    Position2 const State::actions[4] = { { -1, 0 }, { 1 , 0 }, { 0, -1 }, { 0, 1 } };
+    string const State::actionInfo[State::actionsNum] = { "向上移动", "向下移动", "向左移动", "向右移动" };
+    State State::_targetNFPState(0, Position2{ 0, 0 });
 
-    vector<NFPState> NFPState::allNFPStates;
-    int NFPState::depthIndexs[maxDepth + 1];
-    string const NFPState::precisionFilename = "../../resources/precision.ini";
-    random_device NFPState::rd;
-    mt19937 NFPState::gen(rd());
+    vector<State> State::allNFPStates;
+    int State::depthIndexs[maxDepth + 1];
+    string const State::precisionFilename = "../../resources/precision.ini";
+    random_device State::rd;
+    mt19937 State::gen(rd());
 
-    void NFPState::init(NFPState const& originalNFPState) {
+    void State::init(State const& originalNFPState) {
         _targetNFPState = originalNFPState;
         _targetNFPState.depth = 0;
         _targetNFPState.updateNextActions();
@@ -34,7 +34,7 @@ namespace yuki::nfp {
             inFile.read(reinterpret_cast<char*>(*mask), sizeof(usize) * rows * cols);
 
             usize buffer1 = 1;
-            NFPPosition buffer2{ 0, 0 };
+            Position2 buffer2{ 0, 0 };
             allNFPStates.clear();
 
             while (true) {
@@ -57,12 +57,12 @@ namespace yuki::nfp {
         inFile.close();
     }
 
-    int NFPState::genRandomDepth(int const& min, int const& max) const {
+    int State::genRandomDepth(int const& min, int const& max) const {
         uniform_int_distribution<int> distrib(min, max);
         return distrib(gen);
     }
 
-    NFPState NFPState::genRandomNFPState(int const& depth) {
+    State State::genRandomNFPState(int const& depth) {
         if (depth <= 0) {
             return _targetNFPState;
         }
@@ -70,12 +70,12 @@ namespace yuki::nfp {
         return allNFPStates[distrib(gen)];
     }
 
-    NFPState::NFPState(usize const& data, NFPPosition const& pZero, int const& depth) :
+    State::State(usize const& data, Position2 const& pZero, int const& depth) :
         data(data), zeroPos(pZero), depth(depth) {
         updateNextActions();
     }
 
-    NFPState::NFPState(initializer_list<initializer_list<usize>> const& listList) :
+    State::State(initializer_list<initializer_list<usize>> const& listList) :
         data(0), depth(0) {
         int offset = 0, r = 0, c = 0;
         for (auto const& list : listList) {
@@ -92,21 +92,21 @@ namespace yuki::nfp {
         updateNextActions();
     }
 
-    NFPState::NFPState(NFPState const& other) :
+    State::State(State const& other) :
         data(other.data),
         zeroPos(other.zeroPos),
         depth(other.depth),
         nextActions(other.nextActions),
         prevActions(other.prevActions) {}
 
-    NFPState::NFPState(NFPState&& other) noexcept :
+    State::State(State&& other) noexcept :
         data(move(other.data)),
         zeroPos(move(other.zeroPos)),
         depth(move(other.depth)),
         nextActions(move(other.nextActions)),
         prevActions(move(other.prevActions)) {}
 
-    NFPState& NFPState::operator=(NFPState const& other) {
+    State& State::operator=(State const& other) {
         zeroPos = other.zeroPos;
         data = other.data;
         depth = other.depth;
@@ -115,27 +115,27 @@ namespace yuki::nfp {
         return *this;
     }
 
-    usize NFPState::at(int const& row, int const& col) const {
+    usize State::at(int const& row, int const& col) const {
         return (data & mask[row][col]) >> ((row * rows + col) << 2);
     }
 
-    bool NFPState::operator<(NFPState const& other) const {
+    bool State::operator<(State const& other) const {
         return depth < other.depth;
     }
 
-    bool NFPState::operator==(NFPState const& other) const {
+    bool State::operator==(State const& other) const {
         return data == other.data;
     }
 
-    bool NFPState::operator!=(NFPState const& other) const {
+    bool State::operator!=(State const& other) const {
         return data != other.data;
     }
 
-    bool NFPState::hasNextAction() const {
+    bool State::hasNextAction() const {
         return !nextActions.empty();
     }
 
-    void NFPState::executeAction(Action const* const& action) {
+    void State::executeAction(Action const* const& action) {
         //prevActions.push_back(action);
 
         zeroMoveTo(zeroPos + *action);
@@ -147,14 +147,14 @@ namespace yuki::nfp {
         updateNextActions(action);
     }
 
-    void NFPState::reset() {
+    void State::reset() {
         depth = 0;
         updateNextActions();
         prevActions.clear();
     }
 
-    NFPState NFPState::genNextNFPState() {
-        NFPState nextNFPState(*this);
+    State State::genNextNFPState() {
+        State nextNFPState(*this);
         if (hasNextAction()) { // 后继动作序列不为空
             // 取出一个可行动作
             Action const*& action = nextActions.back();
@@ -168,7 +168,7 @@ namespace yuki::nfp {
         return nextNFPState;
     }
 
-    void NFPState::zeroMoveTo(NFPPosition const& swapPos) {
+    void State::zeroMoveTo(Position2 const& swapPos) {
         // 单线程环境下使用静态变量减少生成临时变量反复申请内存
         // 多线程环境下就不要用静态变量以防数据竞争
         static usize tmp1, tmp2;
@@ -196,7 +196,7 @@ namespace yuki::nfp {
         zeroPos = swapPos;
     }
 
-    void NFPState::updateNextActions(Action const* const& lastAction) {
+    void State::updateNextActions(Action const* const& lastAction) {
         nextActions.clear();
         if (zeroPos.r > 0        && lastAction != actions + 1) nextActions.push_back(actions);
         if (zeroPos.r < rows - 1 && lastAction != actions)     nextActions.push_back(actions + 1);
@@ -204,7 +204,7 @@ namespace yuki::nfp {
         if (zeroPos.c < cols - 1 && lastAction != actions + 2) nextActions.push_back(actions + 3);
     }
 
-    NFPState::Action const* NFPState::genRandomAction() const {
+    State::Action const* State::genRandomAction() const {
         if (nextActions.empty()) {
             return nullptr;
         }
@@ -212,7 +212,7 @@ namespace yuki::nfp {
         return nextActions[distrib(gen)];
     }
 
-    void NFPState::printPath() const {
+    void State::printPath() const {
         auto len = prevActions.size();
         for (int i = 0; i < len; ++i) {
             cout << "第";
@@ -227,7 +227,7 @@ namespace yuki::nfp {
         cout << *this << endl;
     }
 
-    void NFPState::genPrecision(NFPState const& originalNFPState) {
+    void State::genPrecision(State const& originalNFPState) {
         ofstream outFile(precisionFilename, std::ios::binary);
         if (outFile.good()) {
             outFile.write(reinterpret_cast<char const*>(&rows), sizeof rows);
@@ -256,7 +256,7 @@ namespace yuki::nfp {
                 s.insert(allNFPStates[index].data);
 
                 for (Action const* const& action : allNFPStates[index].nextActions) {
-                    NFPState nextNFPState(allNFPStates[index]);
+                    State nextNFPState(allNFPStates[index]);
                     nextNFPState.executeAction(action);
                     if (nextNFPState.depth > maxDepth) {
                         flag = true;
@@ -286,11 +286,11 @@ namespace yuki::nfp {
         outFile.close();
     }
 
-    ostream& operator<<(ostream& os, NFPState const& NFPState) {
-        for (int r = 0, i = 0; r < NFPState::rows; ++r) {
+    ostream& operator<<(ostream& os, State const& NFPState) {
+        for (int r = 0, i = 0; r < State::rows; ++r) {
             cout << "    ";
-            for (int c = 0; c < NFPState::cols; ++c, i += 4) {
-                cout << ((NFPState.data & NFPState::mask[r][c]) >> i) << ' ';
+            for (int c = 0; c < State::cols; ++c, i += 4) {
+                cout << ((NFPState.data & State::mask[r][c]) >> i) << ' ';
             }
             cout << '\n';
         }

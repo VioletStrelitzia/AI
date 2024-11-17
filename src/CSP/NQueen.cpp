@@ -1,7 +1,7 @@
 ﻿#include "NQueen.h"
 
-namespace yuki::csp {
-    bool nQueenBinaryConstraint(pair<Position, Position> const& scope, CSP<Position> const& csp) {
+namespace yuki::atri::csp {
+    bool nQueenBinaryConstraint(pair<Position2, Position2> const& scope, CSP<Position2> const& csp) {
         return scope.first.r != scope.second.r && // scope.first.c != scope.second.c &&
         abs(scope.first.r - scope.second.r) != abs(scope.first.c - scope.second.c);
     }
@@ -15,7 +15,7 @@ namespace yuki::csp {
                     X[c].domain.emplace_back(r, c);
                 }
             }
-            CSP<Position> csp(X);
+            CSP<Position2> csp(X);
 
             for (i32 c1 = 0; c1 < n; ++c1) {
                 for (i32 c2 = 0; c2 < n; ++c2) {
@@ -67,7 +67,7 @@ namespace yuki::csp {
                 X[c].domain.emplace_back(r, c);
             }
         }
-        CSP<Position> csp(X);
+        CSP<Position2> csp(X);
         for (i32 c1 = 0; c1 < n; ++c1) {
             for (i32 c2 = 0; c2 < n; ++c2) {
                 if (c2 == c1) continue;

@@ -1,7 +1,7 @@
 ﻿#pragma once
 #include "core.h"
 
-namespace yuki::csp {
+namespace yuki::atri::csp {
     /// @brief 变量类
     /// @tparam ValueType 变量的值的类型
     template <typename ValueType>

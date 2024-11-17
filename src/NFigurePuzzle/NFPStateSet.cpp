@@ -1,19 +1,19 @@
 ﻿#include "NFPStateSet.h"
 
-namespace yuki::nfp {
-    void NFPStateSet::clear() {
+namespace yuki::atri::nfp {
+    void StateSet::clear() {
         s.clear();
     }
 
-    bool NFPStateSet::visited(NFPState const& NFPState) {
+    bool StateSet::visited(State const& NFPState) {
         return s.find(NFPState.data) != s.end();
     }
 
-    void NFPStateSet::visit(NFPState const& NFPState) {
+    void StateSet::visit(State const& NFPState) {
         s.insert(NFPState.data);
     }
 
-    void NFPStateSet::remove(NFPState const& NFPState) {
+    void StateSet::remove(State const& NFPState) {
         s.erase(NFPState.data);
     }
 }

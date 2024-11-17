@@ -1,14 +1,12 @@
 ﻿#pragma once
 #include "CSP.hpp"
+#include "Position2.h"
 
-namespace yuki::csp {
-    struct Position {
-        int r, c;
-    };
+namespace yuki::atri::csp {
+    
+    using Queen = Variable<Position2>;
 
-    using Queen = Variable<Position>;
-
-    bool nQueenBinaryConstraint(pair<Position, Position> const& scope, CSP<Position> const& csp);
+    bool nQueenBinaryConstraint(pair<Position2, Position2> const& scope, CSP<Position2> const& csp);
 
     void testBacktrackingSearch(i32 const& maxN = 16);
 

@@ -1,21 +1,21 @@
 ﻿#pragma once
 #include "NFPState.h"
 
-namespace yuki::nfp {
-    class NFPStateSet {
+namespace yuki::atri::nfp {
+    class StateSet {
     private:
         set<usize> s;
 
     public:
-        NFPStateSet() = default;
-        ~NFPStateSet() = default;
+        StateSet() = default;
+        ~StateSet() = default;
 
         void clear();
 
-        bool visited(NFPState const& state);
+        bool visited(State const& state);
 
-        void visit(NFPState const& state);
+        void visit(State const& state);
 
-        void remove(NFPState const& state);
+        void remove(State const& state);
     };
 }
