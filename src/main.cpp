@@ -10,19 +10,19 @@ int main() {
 	//csp::testBacktrackingSearch();
 	//csp::testMinConflict();
     //nfp::test();
-	dt::bdt::Dataset dataset("../../resources/BDTTrainData.csv");
+	dt::Dataset dataset("../../resources/BDTTrainData.csv");
 	for (auto& a: dataset.attributes) {
 		cout << a << ' ';
 	}
-	cout << endl << dataset.labelAttribute << endl;
+	cout << endl << dataset.targetAttribute << endl;
 	for (auto& e: dataset.examples) {
 		for (auto& s: e.data) {
 			cout << s << ' ';
 		}
-		cout << "\nlable " << e.label << endl;
+		cout << "\nlable " << e.targetValue << endl;
 	}
-	dt::bdt::BooleanDecisionTree t(&dataset);
-	t.build();
+	dt::bdt::BooleanDecisionTree t(dataset);
+	t.build(dataset);
 	t.printTree();
 	//system("pause");
 	return 0;

@@ -2,7 +2,7 @@
 #include "Variable.hpp"
 
 namespace yuki::atri::csp {
-	/// @brief CSP算法
+	/// @brief CSP算法（基于 ac3 算法）
 	/// @tparam ValueType 变量的值的类型
 	template <typename ValueType>
 	class CSP {
@@ -26,6 +26,8 @@ namespace yuki::atri::csp {
 		CSP() = delete;
 		~CSP() = default;
 
+		/// @brief 构造函数，必须用变量集合初始化，然后再使用 addBinaryConstraint 函数添加变量之间的二元约束
+		/// @param variables 变量集合（需要初始化好值域） 
 		CSP(vector<Var> const& variables);
 
 		/// @brief 为序号为 varId1，varId2 的 var 添加二元约束

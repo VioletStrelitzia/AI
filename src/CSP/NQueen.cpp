@@ -8,6 +8,7 @@ namespace yuki::atri::csp {
 
     void testBacktrackingSearch(i32 const& maxN) {
         for (i32 n = 1; n <= maxN; ++n) {
+            // 构造变量集合 X
             vector<Queen> X;
             for (i32 c = 0; c < n; ++c) {
                 X.emplace_back(Queen());
@@ -15,8 +16,11 @@ namespace yuki::atri::csp {
                     X[c].domain.emplace_back(r, c);
                 }
             }
+
+            // 用变量集合 X 初始化 csp 问题
             CSP<Position2> csp(X);
 
+            // 向变量之间添加二元约束
             for (i32 c1 = 0; c1 < n; ++c1) {
                 for (i32 c2 = 0; c2 < n; ++c2) {
                     if (c2 == c1) continue;

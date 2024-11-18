@@ -43,6 +43,9 @@ namespace yuki {
 	using std::stack;
 	using std::string;
 
+	using std::shared_ptr;
+	using std::unique_ptr;
+
 	using std::ifstream;
 	using std::ofstream;
 	using std::stringstream;
@@ -81,43 +84,4 @@ namespace yuki {
 	using std::max;
 
     #define ACCURACY 1.e-7
-
-	// 比较 是否小于
-	template<class ElemType> struct less;
-
-	// 比较 是否大于
-	template<class ElemType> struct greater;
-
-    auto equalsZero(Real const& val) -> bool;
-
-    auto equalsZero(i32 const& val) -> bool;
-
-	template<class ElemType>
-	struct less {
-		bool operator () (const ElemType& x, const ElemType& y) {
-			return x < y;
-		}
-	};
-
-	// 比较 是否大于
-	template<class ElemType>
-	struct greater {
-		bool operator () (const ElemType& x, const ElemType& y) {
-			return x > y;
-		}
-	};
-
-	template <typename ElemType>
-	string toString(ElemType x) {
-		return "unknown";
-	}
-
-	template <>
-	string toString<i32>(i32 x);
-
-	template <>
-	string toString<usize>(usize x);
-
-	template <>
-	string toString<pair<usize, i32>>(pair<usize, i32> x);
 }

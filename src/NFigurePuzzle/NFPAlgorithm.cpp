@@ -301,7 +301,7 @@ namespace yuki::atri::nfp {
     int Algorithm::AStar(State& originalNFPState, State const& targetNFPState, function<int(State const&, State const&)> const& heuristicFunc) {
         originalNFPState.reset();
 
-        priority_queue<pair<int, State>, vector<pair<int, State>>, greater<pair<int, State>>> pq;
+        priority_queue<pair<int, State>, vector<pair<int, State>>, std::greater<pair<int, State>>> pq;
         StateSet set;
         pq.push({ heuristicFunc(originalNFPState, targetNFPState), originalNFPState });
         if (underExperiment) {
