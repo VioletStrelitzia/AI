@@ -1,40 +1,36 @@
 #pragma once
+#include "YukiTools.h"
+#include "ModelBase.h"
 #include "BDTNode.h"
 #include "DTDataset.h"
 
 namespace yuki::atri::dt::bdt {
     /// @brief 基于 ID3 算法的布尔决策树
-    class BooleanDecisionTree {
+    class BooleanDecisionTree: public ModelBase {
     public:
-        vector<string>           attributes;         // 特征列表
-        string                   targetAttribute;     // 标签的名称
-        vector<set<string>>      attributeValues;   // 
-        map<string, i32>         attributeIndexMap;  // 
-        BooleanDecisionTreeNode* root;               // 
+        vector<Attribute>             attributes;         // 特征列表
+        Attribute                     targetAttribute;    // 标签的名称
+        unordered_map<string, i32> attributeIndexMap;  // 
+        BooleanDecisionTreeNode*   root;               // 
 
     public:
         BooleanDecisionTree(Dataset& dataset);
 
         ~BooleanDecisionTree();
 
-        auto getExamples(vector<Example*> const& examples, i32 const& attributeIndex, string const& value) -> vector<Example*>;
-
-        /// @brief 计算布尔随机变量的信息熵
-        /// @param p 该变量取 1 的概率（0 也可）
-        /// @return 熵
-        auto entropyBinary(f32 const& p) -> f32;
+        auto getExamples(vector<Example*> const& examples, i32 const& attributeIndex, f64 const& value) -> vector<Example*>;
 
         /// @brief 计算给定属性在数据集中的熵
         /// @param attributeIndex 要计算熵的属性
         /// @param examples 数据集中的样本集合
         /// @return 给定属性的熵值
-        auto entropyRemain(i32 const& attributeIndex, vector<Example*> const& examples) -> f32;
+        auto entropyRemain(i32 const& attributeIndex, vector<Example*> const& examples) -> f64;
 
         /// @brief 计算给定属性在数据集中的信息增益
         /// @param attributeIndex 要计算信息增益的属性
         /// @param examples 数据集中的样本集合
         /// @return 给定属性的信息增益
-        auto infoGain(i32 const& attributeIndex, vector<Example*> const& examples) -> f32;
+        auto infoGain(i32 const& attributeIndex, vector<Example*> const& examples) -> f64;
 
         /// @brief 获取信息增益最大的属性
         /// @param attributeIndexs 候选属性集合
@@ -46,15 +42,15 @@ namespace yuki::atri::dt::bdt {
 
         auto pluralityValue(vector<Example*> const& examples) -> BooleanDecisionTreeNode*;
 
-        auto filterExamples(vector<Example*> const& examples, i32 const& attributeIndex, string const& value) -> vector<Example*>;
+        auto filterExamples(vector<Example*> const& examples, i32 const& attributeIndex, f64 const& value) -> vector<Example*>;
 
         auto learn(vector<Example*> const& remainExamples, vector<i32> const& remainAttributeIndexs, vector<Example*> const& parentExamples = {}) -> BooleanDecisionTreeNode*;
 
-        auto build(Dataset& dataset) -> void;
+        auto train(void* dataset_) -> void override;
+        
+        auto load(string const& filename) -> void override;
 
-        auto load(string const& filename) -> void;
-
-        auto save(string const& filename) -> void;
+        auto save(string const& filename) -> void override;
 
         /// @brief 样本中有多少个正例
         /// @param examples 样本
@@ -68,9 +64,6 @@ namespace yuki::atri::dt::bdt {
 
         void printTree();
 
-        void printSpacer(i32 const& number);
-
         void _printTree(BooleanDecisionTreeNode*& root, i32 const& depth);
-
     };
 }

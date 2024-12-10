@@ -1,0 +1,37 @@
+digraph Tree {
+node [shape=box, style="filled", color="black", fontname="Microsoft YaHei", fontsize=26];
+edge [fontname="Microsoft YaHei", fontsize=26];
+0 [label="Root\nSamples: 150\nSplit by petal length (cm)\na: 0.3333", fillcolor="#e58139"];
+0 -> 1;
+1 [label="petal length (cm) <= 1.9\nSamples: 50\ntarget: 0\nAll same: 1", fillcolor="#64a1c3"];
+0 -> 2;
+2 [label="petal length (cm) >  1.9\nSamples: 100\nSplit by petal width (cm)\na: 0.1103", fillcolor="#e58139"];
+2 -> 3;
+3 [label="petal width (cm) <= 1.7\nSamples: 54\nSplit by petal length (cm)\na: 0.08565", fillcolor="#e58139"];
+3 -> 4;
+4 [label="petal length (cm) <= 4.9\nSamples: 48\nSplit by petal width (cm)\na: 0", fillcolor="#e58139"];
+4 -> 5;
+5 [label="petal width (cm) <= 1.6\nSamples: 47\ntarget: 1\nAll same: 1", fillcolor="#64a1c3"];
+4 -> 6;
+6 [label="petal width (cm) >  1.6\nSamples: 1\ntarget: 2\nAll same: 1", fillcolor="#64a1c3"];
+3 -> 7;
+7 [label="petal length (cm) >  4.9\nSamples: 6\nSplit by petal width (cm)\na: 0.2222", fillcolor="#e58139"];
+7 -> 8;
+8 [label="petal width (cm) <= 1.5\nSamples: 3\ntarget: 2\nAll same: 1", fillcolor="#64a1c3"];
+7 -> 9;
+9 [label="petal width (cm) >  1.5\nSamples: 3\nSplit by sepal length (cm)\na: 0", fillcolor="#e58139"];
+9 -> 10;
+10 [label="sepal length (cm) <= 6.95\nSamples: 2\ntarget: 1\nAll same: 1", fillcolor="#64a1c3"];
+9 -> 11;
+11 [label="sepal length (cm) >  6.95\nSamples: 1\ntarget: 2\nAll same: 1", fillcolor="#64a1c3"];
+2 -> 12;
+12 [label="petal width (cm) >  1.7\nSamples: 46\nSplit by petal length (cm)\na: 0.02899", fillcolor="#e58139"];
+12 -> 13;
+13 [label="petal length (cm) <= 4.8\nSamples: 3\nSplit by sepal length (cm)\na: 0", fillcolor="#e58139"];
+13 -> 14;
+14 [label="sepal length (cm) <= 5.95\nSamples: 1\ntarget: 1\nAll same: 1", fillcolor="#64a1c3"];
+13 -> 15;
+15 [label="sepal length (cm) >  5.95\nSamples: 2\ntarget: 2\nAll same: 1", fillcolor="#64a1c3"];
+12 -> 16;
+16 [label="petal length (cm) >  4.8\nSamples: 43\ntarget: 2\nAll same: 1", fillcolor="#64a1c3"];
+}

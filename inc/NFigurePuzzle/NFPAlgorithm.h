@@ -22,7 +22,7 @@ namespace yuki::atri::nfp {
         /// @return 在深度限制内的搜索是否成功
         static auto IDS(State& originalState,
                         State const& targetState,
-                        Position2 const& preZeroPos,
+                        Vector2 const& preZeroPos,
                         i32 const& depthLimit, i32& ans) -> bool;
 
         /// @brief 宽度优先搜素示例

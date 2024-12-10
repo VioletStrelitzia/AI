@@ -1,4 +1,4 @@
-﻿#pragma once
+#pragma once
 #include "Position2.h"
 #include "core.h"
 
@@ -19,7 +19,7 @@ namespace yuki::atri::nfp {
         static int const maxDepth = 20; // 最大深度
         static int const size = rows * cols;
 
-        using Action = Position2; // 使用 Position2 作为动作类型，向哪里走就相当于加上哪个方向的单位方向向量
+        using Action = Vector2; // 使用 Vector2 作为动作类型，向哪里走就相当于加上哪个方向的单位方向向量
 
         static int const     actionsNum = 4;            // 可能的 Action 总数有四种
         static Action const  actions[actionsNum];       // 可能的 Action 初始化存在 actions 里
@@ -29,7 +29,7 @@ namespace yuki::atri::nfp {
         static int           depthIndexs[maxDepth + 1]; // 索引数组
 
         usize    data;    // 状态压缩，64位每4位存一个数，最多可以测试到15数码问题
-        Position2 zeroPos; // 0 的位置
+        Vector2 zeroPos; // 0 的位置
         int      depth;   // 深度
 
         vector<Action const*> nextActions; // 可行的后继动作序列
@@ -84,7 +84,7 @@ namespace yuki::atri::nfp {
          * @brief 将 0 移动到 swapPos。
          * @param swapPos 和 0 交换位置的数码的位置
          */
-        void zeroMoveTo(Position2 const& swapPos);
+        void zeroMoveTo(Vector2 const& swapPos);
 
         /**
          * @brief 更新本节点的后继节点序列。可以输入上一步的动作来避免序列中生成其反动作导致走回头。
@@ -112,7 +112,7 @@ namespace yuki::atri::nfp {
         static State genRandomNFPState(int const& depth = -1);
 
         // 各种构造函数
-        State(usize const& data, Position2 const& pZero, int const& depth = 0);
+        State(usize const& data, Vector2 const& pZero, int const& depth = 0);
         State(initializer_list<initializer_list<usize>> const& listList);
         State(State const& other);
         State(State&& other) noexcept;

@@ -1,4 +1,4 @@
-﻿#include "NFPStateSet.h"
+#include "NFPStateSet.h"
 
 namespace yuki::atri::nfp {
     void StateSet::clear() {

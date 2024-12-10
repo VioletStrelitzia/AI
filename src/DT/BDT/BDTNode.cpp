@@ -8,7 +8,7 @@ namespace yuki::atri::dt::bdt {
         attribute(attribute) {}
 
     BooleanDecisionTreeNode::~BooleanDecisionTreeNode() {
-        for (pair<string, BooleanDecisionTreeNode*> c : options) {
+        for (pair<f64, BooleanDecisionTreeNode*> c : options) {
             delete c.second;
         }
     }

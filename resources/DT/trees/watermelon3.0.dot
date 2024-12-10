@@ -1,0 +1,19 @@
+digraph Tree {
+node [shape=box, style="filled", color="black", fontname="Microsoft YaHei", fontsize=26];
+edge [fontname="Microsoft YaHei", fontsize=26];
+0 [label="Root\nSamples: 17\nSplit by 纹理\nInfoGain: 0.3806", fillcolor="#e58139"];
+0 -> 1;
+1 [label="纹理 == 0\nSamples: 9\nSplit by 密度\nInfoGain: 0.7642", fillcolor="#e58139"];
+1 -> 2;
+2 [label="密度 <= 0.3815\nSamples: 2\n好瓜: 1\nAll same: 1", fillcolor="#64a1c3"];
+1 -> 3;
+3 [label="密度 >  0.3815\nSamples: 7\n好瓜: 0\nAll same: 1", fillcolor="#64a1c3"];
+0 -> 4;
+4 [label="纹理 == 1\nSamples: 5\nSplit by 触感\nInfoGain: 0.7219", fillcolor="#e58139"];
+4 -> 5;
+5 [label="触感 == 0\nSamples: 4\n好瓜: 1\nAll same: 1", fillcolor="#64a1c3"];
+4 -> 6;
+6 [label="触感 == 1\nSamples: 1\n好瓜: 0\nAll same: 1", fillcolor="#64a1c3"];
+0 -> 7;
+7 [label="纹理 == 2\nSamples: 3\n好瓜: 1\nAll same: 1", fillcolor="#64a1c3"];
+}

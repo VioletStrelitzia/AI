@@ -1,4 +1,4 @@
-﻿#pragma once
+#pragma once
 #include "core.h"
 
 namespace yuki::atri::csp {

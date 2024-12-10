@@ -1,7 +1,7 @@
-﻿#include "NQueen.h"
+#include "NQueen.h"
 
 namespace yuki::atri::csp {
-    bool nQueenBinaryConstraint(pair<Position2, Position2> const& scope, CSP<Position2> const& csp) {
+    bool nQueenBinaryConstraint(pair<Vector2, Vector2> const& scope, CSP<Vector2> const& csp) {
         return scope.first.r != scope.second.r && // scope.first.c != scope.second.c &&
         abs(scope.first.r - scope.second.r) != abs(scope.first.c - scope.second.c);
     }
@@ -18,7 +18,7 @@ namespace yuki::atri::csp {
             }
 
             // 用变量集合 X 初始化 csp 问题
-            CSP<Position2> csp(X);
+            CSP<Vector2> csp(X);
 
             // 向变量之间添加二元约束
             for (i32 c1 = 0; c1 < n; ++c1) {
@@ -63,7 +63,7 @@ namespace yuki::atri::csp {
     }
 
     void testMinConflict(i32 const& n, i32 const& end) {
-        f32 count = 0;
+        f64 count = 0;
         vector<Queen> X;
         for (i32 c = 0; c < n; ++c) {
             X.emplace_back(Queen());
@@ -71,7 +71,7 @@ namespace yuki::atri::csp {
                 X[c].domain.emplace_back(r, c);
             }
         }
-        CSP<Position2> csp(X);
+        CSP<Vector2> csp(X);
         for (i32 c1 = 0; c1 < n; ++c1) {
             for (i32 c2 = 0; c2 < n; ++c2) {
                 if (c2 == c1) continue;

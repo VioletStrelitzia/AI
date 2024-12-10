@@ -1,10 +1,10 @@
-﻿#include "NFPState.h"
+#include "NFPState.h"
 
 namespace yuki::atri::nfp {
     usize State::mask[State::rows][State::cols];
-    Position2 const State::actions[4] = { { -1, 0 }, { 1 , 0 }, { 0, -1 }, { 0, 1 } };
+    Vector2 const State::actions[4] = { { -1, 0 }, { 1 , 0 }, { 0, -1 }, { 0, 1 } };
     string const State::actionInfo[State::actionsNum] = { "向上移动", "向下移动", "向左移动", "向右移动" };
-    State State::_targetNFPState(0, Position2{ 0, 0 });
+    State State::_targetNFPState(0, Vector2{ 0, 0 });
 
     vector<State> State::allNFPStates;
     int State::depthIndexs[maxDepth + 1];
@@ -34,7 +34,7 @@ namespace yuki::atri::nfp {
             inFile.read(reinterpret_cast<char*>(*mask), sizeof(usize) * rows * cols);
 
             usize buffer1 = 1;
-            Position2 buffer2{ 0, 0 };
+            Vector2 buffer2{ 0, 0 };
             allNFPStates.clear();
 
             while (true) {
@@ -70,7 +70,7 @@ namespace yuki::atri::nfp {
         return allNFPStates[distrib(gen)];
     }
 
-    State::State(usize const& data, Position2 const& pZero, int const& depth) :
+    State::State(usize const& data, Vector2 const& pZero, int const& depth) :
         data(data), zeroPos(pZero), depth(depth) {
         updateNextActions();
     }
@@ -168,7 +168,7 @@ namespace yuki::atri::nfp {
         return nextNFPState;
     }
 
-    void State::zeroMoveTo(Position2 const& swapPos) {
+    void State::zeroMoveTo(Vector2 const& swapPos) {
         // 单线程环境下使用静态变量减少生成临时变量反复申请内存
         // 多线程环境下就不要用静态变量以防数据竞争
         static usize tmp1, tmp2;

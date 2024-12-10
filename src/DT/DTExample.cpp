@@ -2,29 +2,29 @@
 
 namespace yuki::atri::dt {
     Example::Example():
-        data(), targetValue("0") {}
+        data(), target(0.) {}
 
-    Example::Example(vector<string> const& data_, string const& label_, bool const& isPop):
-        data(data_), targetValue(label_) {
+    Example::Example(vector<f64> const& data_, f64 const& label_, bool const& isPop):
+        data(data_), target(label_) {
         if (isPop) {
             data.pop_back();
         }
     }
 
-    auto subExamples(i32 const& attributeIndex, string const& value , vector<Example*> const& examples) -> vector<Example*> {
+    auto subExamples(Attribute const* const& attr, f64 const& value, vector<Example*> const& examples) -> vector<Example*> {
         vector<Example*> subExamples;
         for (Example* const& example: examples) {
-            if (example->data[attributeIndex] == value) {
+            if (example->data[attr->index] == value) {
                 subExamples.push_back(example);
             }
         }
         return subExamples;
     }
 
-    auto countTargetValue(string const& targetValue, vector<Example*> const& examples) -> i32 {
+    auto countTargetValue(f64 const& targetValue, vector<Example*> const& examples) -> i32 {
         i32 count = 0;
         for (Example* const& example: examples) {
-            if (example->targetValue == targetValue) {
+            if (example->target == targetValue) {
                 ++count;
             }
         }

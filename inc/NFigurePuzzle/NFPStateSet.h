@@ -1,4 +1,4 @@
-﻿#pragma once
+#pragma once
 #include "NFPState.h"
 
 namespace yuki::atri::nfp {

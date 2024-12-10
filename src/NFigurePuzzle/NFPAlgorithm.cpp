@@ -1,4 +1,4 @@
-﻿#include "NFPAlgorithm.h"
+#include "NFPAlgorithm.h"
 
 namespace yuki::atri::nfp {
     bool Algorithm::printPath = true;
@@ -102,7 +102,7 @@ namespace yuki::atri::nfp {
     /// @param preZeroPos 上一个NFPState的0的位置
     /// @param depthLimit 搜索深度限制
     /// @return 在深度限制内的搜索是否成功
-    bool Algorithm::IDS(State& originalNFPState, State const& targetNFPState, Position2 const& preZeroPos, int const& depthLimit, int& ans) {
+    bool Algorithm::IDS(State& originalNFPState, State const& targetNFPState, Vector2 const& preZeroPos, int const& depthLimit, int& ans) {
         if (originalNFPState == targetNFPState) {
             ans = originalNFPState.depth;
             return true;
@@ -115,8 +115,8 @@ namespace yuki::atri::nfp {
 
         // 枚举可以执行的action，即每次向上、下、左、右移动
         for (int actionId = 0; actionId < State::actionsNum; ++actionId) {
-            Position2 zeroPos = originalNFPState.zeroPos; // 0 的位置
-            Position2 swapPos = zeroPos + State::actions[actionId]; // 要交换的数 的位置
+            Vector2 zeroPos = originalNFPState.zeroPos; // 0 的位置
+            Vector2 swapPos = zeroPos + State::actions[actionId]; // 要交换的数 的位置
 
             // 优化：如果 0 将要回到回到上一次的位置，会判断直接跳过这次 action 而不往下搜索，避免提前回溯重复搜索
             // 以及越界判断
@@ -260,7 +260,7 @@ namespace yuki::atri::nfp {
     // 启发函数1：错位数码数
     int Algorithm::incorrectCount(State const& originalNFPState, State const& targetNFPState) {
         int incorrectCount = 0;
-        static Position2 pos[2][State::size];
+        static Vector2 pos[2][State::size];
 
         for (int r = 0; r < State::rows; ++r) {
             for (int c = 0; c < State::cols; ++c) {
@@ -281,7 +281,7 @@ namespace yuki::atri::nfp {
     // 启发函数2：曼哈顿距离
     int Algorithm::manhattanDistance(State const& originalNFPState, State const& targetNFPState) {
         int manhattanDis = 0;
-        static Position2 pos[2][State::size];
+        static Vector2 pos[2][State::size];
 
         for (int r = 0, i = 0; r < State::rows; ++r) {
             for (int c = 0; c < State::cols; ++c, i += 4) {

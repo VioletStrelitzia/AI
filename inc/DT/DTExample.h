@@ -1,19 +1,20 @@
 #pragma once
 #include "core.h"
+#include "Attribute.h"
 
 namespace yuki::atri::dt {
     class Example {
     public:
-        vector<string> data;
-        string targetValue;
+        vector<f64> data;
+        f64 target;
 
     public:
         Example();
         
-        Example(vector<string> const& data_, string const& label_, bool const& isPop = false);
+        Example(vector<f64> const& data_, f64 const& target_, bool const& isPop = false);
     };
 
-    auto subExamples(i32 const& attributeIndex, string const& value , vector<Example*> const& examples) -> vector<Example*>;
+    auto subExamples(Attribute const* const& attributeIndex, f64 const& value , vector<Example*> const& examples) -> vector<Example*>;
 
-    auto countTargetValue(string const& targetValue, vector<Example*> const& examples) -> i32;
+    auto countTargetValue(f64 const& targetValue, vector<Example*> const& examples) -> i32;
 }

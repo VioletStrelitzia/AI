@@ -3,12 +3,11 @@
 namespace yuki::atri::dt::bdt {
     BooleanDecisionTree::BooleanDecisionTree(Dataset& dataset):
         attributes(dataset.attributes),
-        targetAttribute(dataset.targetAttribute),
+        targetAttribute(dataset.target),
         root(nullptr) {
         i32 i = 0;
-        for (string const& attribute: attributes) {
-            attributeValues.push_back(dataset.attributesOptions[attribute]);
-            attributeIndexMap[attribute] = i++;
+        for (Attribute const& attribute: dataset.attributes) {
+            attributeIndexMap[attribute.name] = i++;
         }
     }
     
@@ -16,7 +15,7 @@ namespace yuki::atri::dt::bdt {
         delete root;
     }
 
-    auto BooleanDecisionTree::getExamples(vector<Example*> const& examples, i32 const& attributeIndex, string const& value) -> vector<Example*> {
+    auto BooleanDecisionTree::getExamples(vector<Example*> const& examples, i32 const& attributeIndex, f64 const& value) -> vector<Example*> {
         vector<Example*> result;
         for (Example* const& example: examples) {
             if (example->data[attributeIndex] == value) {
@@ -26,31 +25,27 @@ namespace yuki::atri::dt::bdt {
         return result;
     }
 
-    auto BooleanDecisionTree::entropyBinary(f32 const& p) -> f32 {
-        if (p == 0. || p == 1.) return 0;
-        f32 _p = 1. - p;
-        return -(p * log2(p) + _p * log2(_p));
-    }
-
-    auto BooleanDecisionTree::entropyRemain(i32 const& attributeIndex, vector<Example*> const& examples) -> f32 {
-        f32 result = 0.;
-        for (string const& value: attributeValues[attributeIndex]) {
+    auto BooleanDecisionTree::entropyRemain(i32 const& attributeIndex, vector<Example*> const& examples) -> f64 {
+        f64 result = 0.;
+        for (f64 const& value: attributes[attributeIndex].values) {
             vector<Example*> exs = getExamples(examples, attributeIndex, value);
-            f32 pk = (f32)exs.size() / (f32)examples.size();
-            f32 nk = entropyBinary((f32)positiveCount(exs) / (f32)exs.size());
-            result += pk * nk;
+            if (!exs.empty()) {
+                f64 pk = (f64)exs.size() / (f64)examples.size();
+                f64 nk = entropyBinary((f64)positiveCount(exs) / (f64)exs.size());
+                result += pk * nk;
+            }
         }
         return result;
     }
 
-    auto BooleanDecisionTree::infoGain(i32 const& attributeIndex, vector<Example*> const& examples) -> f32 {
-        return entropyBinary((f32)positiveCount(examples) / (f32)examples.size()) - entropyRemain(attributeIndex, examples);
+    auto BooleanDecisionTree::infoGain(i32 const& attributeIndex, vector<Example*> const& examples) -> f64 {
+        return entropyBinary((f64)positiveCount(examples) / (f64)examples.size()) - entropyRemain(attributeIndex, examples);
     }
 
     auto BooleanDecisionTree::importance(vector<i32> const& attributeIndexs, vector<Example*> const& examples) -> i32 {
         usize attributeIndex = 0;
-        f32 maxInfoGain = infoGain(attributeIndexs[0], examples);
-        f32 curInfoGain;
+        f64 maxInfoGain = infoGain(attributeIndexs[0], examples);
+        f64 curInfoGain;
         for (usize i = 1, end = attributeIndexs.size(); i < end; ++i) {
             curInfoGain = infoGain(attributeIndexs[i], examples);
             if (curInfoGain > maxInfoGain) {
@@ -74,16 +69,16 @@ namespace yuki::atri::dt::bdt {
     auto BooleanDecisionTree::pluralityValue(vector<Example*> const& examples) -> BooleanDecisionTreeNode* {
         i32 positiveCount = 0;
         for (Example* const& example: examples) {
-            if (example->targetValue == "1") {
+            if (example->target == 1) {
                 ++positiveCount;
             }
         }
         i32 negtiveCount = (i32)examples.size() - positiveCount;
         // 根据多数表决值创建决策树节点并返回
-        return new BooleanDecisionTreeNode(positiveCount >= negtiveCount, targetAttribute);
+        return new BooleanDecisionTreeNode(positiveCount >= negtiveCount, targetAttribute.name);
     }
 
-    auto BooleanDecisionTree::filterExamples(vector<Example*> const& examples, i32 const& attributeIndex, string const& value) -> vector<Example*> {
+    auto BooleanDecisionTree::filterExamples(vector<Example*> const& examples, i32 const& attributeIndex, f64 const& value) -> vector<Example*> {
         vector<Example*> result;
         for (Example* const& example: examples) {
             if (example->data[attributeIndex] == value) {
@@ -97,32 +92,31 @@ namespace yuki::atri::dt::bdt {
         if (remainExamples.empty()) {
             return pluralityValue(parentExamples);
         } else if (isSameClassify(remainExamples)) {
-            return new BooleanDecisionTreeNode(remainExamples[0]->targetValue == "1", targetAttribute);
+            return new BooleanDecisionTreeNode(remainExamples[0]->target == 1, targetAttribute.name);
         } else if (remainAttributes.empty()) {
             return pluralityValue(remainExamples);
         } else {
             i32 AIndex = importance(remainAttributes, remainExamples);
             vector<i32> subAttributes = removeAttritude(AIndex, remainAttributes);
-            BooleanDecisionTreeNode* root = new BooleanDecisionTreeNode(attributes[AIndex]);
-            for (string const& value: attributeValues[AIndex]) {
+            BooleanDecisionTreeNode* root = new BooleanDecisionTreeNode(attributes[AIndex].name);
+            for (f64 const& value: attributes[AIndex].values) {
                 root->options[value] = learn(filterExamples(remainExamples, AIndex, value), subAttributes, remainExamples);
             }
             return root;
         }
     }
 
-    auto BooleanDecisionTree::build(Dataset& dataset) -> void {
+    auto BooleanDecisionTree::train(void* dataset_) -> void {
+        Dataset& dataset = *(Dataset*)dataset_;
         attributes = dataset.attributes;
-        targetAttribute = dataset.targetAttribute;
-        attributeValues.clear();
+        targetAttribute = dataset.target;
 
         // 存指针和序号，减少拷贝开销
         vector<i32> attributeIndexs;
         i32 i = 0;
-        for (string const& attribute: attributes) {
-            attributeValues.push_back(dataset.attributesOptions[attribute]);
+        for (Attribute const& attribute: attributes) {
             attributeIndexs.push_back(i);
-            attributeIndexMap[attribute] = i++;
+            attributeIndexMap[attribute.name] = i++;
         }
         vector<Example*> examples;
         for (Example& example: dataset.examples) {
@@ -148,7 +142,7 @@ namespace yuki::atri::dt::bdt {
     i32 BooleanDecisionTree::positiveCount(vector<Example*> const& examples) {
         i32 count = 0;
         for (Example* const& example: examples) {
-            if (example->targetValue == "1") {
+            if (example->target == 1) {
                 ++count;
             }
         }
@@ -159,9 +153,9 @@ namespace yuki::atri::dt::bdt {
         if (examples.empty()) {
             return true;
         }
-        string label = examples[0]->targetValue;
+        f64 target = examples[0]->target;
         for (Example* const& example: examples) {
-            if (example->targetValue != label) {
+            if (example->target != target) {
                 return false;
             }
         }
@@ -172,19 +166,13 @@ namespace yuki::atri::dt::bdt {
         _printTree(root, 0);
     }
 
-    void BooleanDecisionTree::printSpacer(i32 const& number) {
-        for (i32 i = 0; i < number; ++i) {
-            cout << '\t';
-        }
-    }
-
     void BooleanDecisionTree::_printTree(BooleanDecisionTreeNode*& root, i32 const& depth) {
         printSpacer(depth);
         if (root->options.empty()) {
             cout << root->attribute << ": " << root->value << endl;
         } else {
             cout << "Split on " << root->attribute << endl;
-            for (pair<string, BooleanDecisionTreeNode*> p : root->options) {
+            for (pair<f64, BooleanDecisionTreeNode*> p : root->options) {
                 printSpacer(depth);
                 cout << "If " << root->attribute << " == " << p.first << endl;
                 _printTree(p.second, depth + 1);

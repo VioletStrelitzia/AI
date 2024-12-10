@@ -1,4 +1,4 @@
-﻿#pragma once
+#pragma once
 #include <iostream>
 
 #include <array>
@@ -22,6 +22,10 @@
 #include <initializer_list>
 #include <functional>
 #include <concepts>
+
+#include <format>
+#include <variant>
+#include <ranges>
 
 namespace yuki {
 	using std::cin;
@@ -69,19 +73,30 @@ namespace yuki {
 	using u32 = unsigned int;
 	using u64 = unsigned long long;
 
-	using f16 = float;
-	using f32 = double;
-	using f64 = long double;
+	using f32 = float;
+	using f64 = double;
+	using f128 = long double;
 
 	using isize = long long;
 	using usize = unsigned long long;
 
     using SizeType = i32;
-    using Real = f32;
-    using Complex = std::complex<f32>;
+    using Real = f64;
+    using Complex = std::complex<f64>;
     using std::sort;
     using std::abs;
 	using std::max;
+	using std::min;
+	using std::stod;
+	using std::swap;
+	using std::format;
+	using std::to_string;
+
+	using std::variant;
+	using std::get;
+
+	namespace rg = std::ranges;
+	namespace views =  std::views;
 
     #define ACCURACY 1.e-7
 }

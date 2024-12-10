@@ -6,7 +6,7 @@ namespace yuki::atri::dt::bdt {
     public:
         string attribute;
         bool   value;
-        map<string, BooleanDecisionTreeNode*> options;
+        map<f64, BooleanDecisionTreeNode*> options;
 
     public:
         /// @brief 构造叶子节点

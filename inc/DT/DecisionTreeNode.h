@@ -1,79 +1,284 @@
 #pragma once
 #include "core.h"
+#include "DTExample.h"
+#include "TreeNodeBase.h"
 #include "YukiTools.h"
 
 namespace yuki::atri::dt {
-    // 决策树结点的基类
-    class DecisionTreeNode {
-    public:
-        virtual ~DecisionTreeNode() = default;
-
-        // 评估样本并返回叶结点的类别
-        virtual auto classify(map<string, string>& sample) const -> string = 0;
-
-        // 用于打印树的结构（递归）
-        virtual auto printTree(i32 const& depth = 0) const -> void = 0;
+    enum DecisionTreeNodeType {
+        BASE_DTNODE = 0,
+        BINARY,
+        DISCRETE_MUT,
+        CONTINUOUS_BINARY,
+        DISCRETE_LEAF,
+        CONTINUOUS_BINARY_LEAF
     };
 
-    // 内部结点
-    class DecisionTreeInternalNode : public DecisionTreeNode {
-    private:
-        string attribute;  // 用于分裂的属性
-        map<string, shared_ptr<DecisionTreeNode>> children;  // 子节点
+    // 决策树结点的基类
+    class DecisionTreeNode: public TreeNodeBase {
+    protected:
+        string attribute;  // 属性
+        DecisionTreeNodeType type;
 
     public:
-        DecisionTreeInternalNode(string const& attribute_):
-            attribute(attribute_) {}
+        friend class DecisionTree;
+        friend class DecisionTreeBuilder;
 
-        // 评估样本并返回叶结点的类别
-        string classify(map<string, string>& sample) const override {
-            // 根据属性索引和样本值选择子结点
-            // 这里需要根据实际的数据类型和条件来实现
+        DecisionTreeNode(string const& attribute_, DecisionTreeNodeType const& type_ = DecisionTreeNodeType::BASE_DTNODE);
+        virtual ~DecisionTreeNode() = default;
+
+        /// @brief 评估样本并返回叶结点的类别
+        /// @param sample 样本
+        /// @return 类别
+        virtual auto classify(map<string, f64>& sample) const -> f64 = 0;
+    };
+
+    class BinaryDecisionTreeNode: public DecisionTreeNode {
+    protected:
+        f64 value;
+        f64 classification;
+
+        i32 sampleCount;
+        pair<string, f64> splitInfo;
+
+        shared_ptr<DecisionTreeNode> lchild;
+        shared_ptr<DecisionTreeNode> rchild;
+    public:
+        friend class DecisionTree;
+        friend class DecisionTreeBuilder;
+
+        BinaryDecisionTreeNode(
+            string const& attribute_,
+            f64 const& value_,
+            f64 const& classification_,
+            i32 const& sampleCount_ = 0,
+            pair<string, f64> const& splitInfo_ = { "default", 0. },
+            shared_ptr<DecisionTreeNode> const& lchild_ = nullptr,
+            shared_ptr<DecisionTreeNode> const& rchild_ = nullptr):
+            DecisionTreeNode(attribute_, DecisionTreeNodeType::BINARY),
+            value(value_),
+            classification(classification_),
+            sampleCount(sampleCount_),
+            splitInfo(splitInfo_),
+            lchild(lchild_),
+            rchild(rchild_) {}
+
+        virtual ~BinaryDecisionTreeNode() = default;
+
+        /// @brief 评估样本并返回叶结点的类别
+        /// @param sample 样本
+        /// @return 类别
+        virtual auto classify(map<string, f64>& sample) const -> f64 {
             auto valueIt = sample.find(attribute);
             if (valueIt != sample.end()) {
-                auto childIt = children.find((*valueIt).second);
-                if (childIt != children.end()) {
-                    sample.erase(valueIt);
-                    return (*childIt).second->classify(sample);
+                if ((*valueIt).second <= value) {
+                    if (lchild) {
+                        return lchild->classify(sample);
+                    }
+                } else if (rchild) {
+                    return rchild->classify(sample);
                 }
+                return classification;
             }
-            return "";
+            return Attribute::ABSENT;
         }
 
-        // 用于打印树的结构（递归）
-        void printTree(i32 const& depth = 0) const override {
-            printSpacer(depth);
-            if (!children.empty()) {
-                cout << "Split on " << attribute << endl;
-                for (pair<string, shared_ptr<DecisionTreeNode>> p : children) {
-                    printSpacer(depth);
-                    cout << "If " << attribute << " == " << p.first << endl;
-                    p.second->printTree(depth + 1);
+        auto dot(ofstream& outFile, i32& idx, string const& fromParent) const -> void override {
+            string color = "#e58139";
+            if (lchild && rchild) {
+                color = "#64a1c3";
+            } else if (!lchild && !rchild) {
+                color = "#451247";
+            }
+            outFile << format(
+                "{} [label=\"{}\\nSamples: {}\\nSplit by {}\\n{}: {}\\nclass: {}\", fillcolor=\"{}\"];\n",
+                idx, fromParent, sampleCount, attribute, splitInfo.first, splitInfo.second, classification, color);
+            i32 curIdx = idx;
+            if (lchild) {
+                ++idx;
+                outFile << format("{} -> {};\n", curIdx, idx);
+                lchild->dot(outFile, idx, format("{} <= {}", attribute, value));
+            }
+            if (rchild) {
+                ++idx;
+                outFile << format("{} -> {};\n", curIdx, idx);
+                rchild->dot(outFile, idx, format("{} >  {}", attribute, value));
+            }
+        }
+    };
+
+    /// @brief 离散决策树的内部结点
+    class DiscreteDecisionTreeNode: public DecisionTreeNode {
+    private:
+        f64 classification;
+        map<f64, shared_ptr<DecisionTreeNode>> children;  // 子节点
+
+        i32 sampleCount;
+        pair<string, f64> splitInfo;
+
+    public:
+        friend class DecisionTree;
+        friend class DecisionTreeBuilder;
+
+        DiscreteDecisionTreeNode(
+            string const& attribute_,
+            f64 const& classification_,
+            i32 const& sampleCount_ = 0,
+            pair<string, f64> const& splitInfo_ = { "default", 0. });
+
+        /// @brief 评估样本并返回叶结点的类别
+        /// @param sample 样本
+        /// @return 类别
+        auto classify(map<string, f64>& sample) const -> f64 override;
+
+        /// @brief 打印树的结构（递归）
+        /// @param depth 深度
+        auto printTree(i32 const& depth = 0) const -> void override;
+
+        auto dot(ofstream& outFile, i32& idx, string const& fromParent) const -> void override {
+            if (children.empty()) {
+                outFile << format("{} [label=\"{}\\nSamples: {}\\n{}: {}\\n{}: {:1.4}\", fillcolor=\"{}\"];\n",
+                    idx, fromParent, sampleCount, attribute, classification, splitInfo.first, splitInfo.second, "#64a1c3");
+            } else {
+                string color = "#e58139";
+                for (auto const& child: children) {
+                    if (child.second == nullptr) {
+                        color = "#9183e3";
+                        break;
+                    }
+                }
+                outFile << format("{} [label=\"{}\\nSamples: {}\\nSplit by {}\\n{}: {:1.4}\", fillcolor=\"{}\"];\n",
+                    idx, fromParent, sampleCount, attribute, splitInfo.first, splitInfo.second, color);
+                i32 curIdx = idx;
+                for (auto const& child: children) {
+                    if (child.second != nullptr) {
+                        ++idx;
+                        outFile << format("{} -> {};\n", curIdx, idx);
+                        child.second->dot(outFile, idx, format("{} == {}", attribute, child.first));                    
+                    }
                 }
             }
+        }
+    };
+
+    class ContinuousBinaryDecisionTreeNode: public DecisionTreeNode {
+    private:
+        f64 value;
+        f64 classification;
+        shared_ptr<DecisionTreeNode> lchild, rchild;
+
+        i32 sampleCount;
+        pair<string, f64> splitInfo;
+    
+    public:
+        friend class DecisionTree;
+        friend class DecisionTreeBuilder;
+
+        ContinuousBinaryDecisionTreeNode(
+            string const& attribute_,
+            f64 const& value_,
+            f64 const& classification_,
+            i32 const& sampleCount_ = 0,
+            pair<string, f64> const& splitInfo_ = { "default", 0. });
+    
+        /// @brief 评估样本并返回叶结点的类别
+        /// @param sample 样本
+        /// @return 类别
+        auto classify(map<string, f64>& sample) const -> f64 override;
+
+        /// @brief 打印树的结构（递归）
+        /// @param depth 深度
+        auto printTree(i32 const& depth = 0) const -> void override;
+
+        auto dot(ofstream& outFile, i32& idx, string const& fromParent) const -> void override {
+            if (lchild && rchild) {
+                outFile << format("{} [label=\"{}\\nSamples: {}\\nSplit by {}\\n{}: {:1.4}\", fillcolor=\"{}\"];\n",
+                    idx, fromParent, sampleCount, attribute, splitInfo.first, splitInfo.second, "#e58139");
+            } else if (!lchild && !rchild) {
+                outFile << format("{} [label=\"{}\\nSamples: {}\\nclass: {}\\n{}: {:1.4}\", fillcolor=\"{}\"];\n",
+                    idx, fromParent, sampleCount, classification, splitInfo.first, splitInfo.second, "#64a1c3");
+            } else {
+                outFile << format("{} [label=\"{}\\nSamples: {}\\nSplit by {}\\nclass: {}\\n{}: {:1.4}\", fillcolor=\"{}\"];\n",
+                    idx, fromParent, sampleCount, attribute, classification, splitInfo.first, splitInfo.second, "#9183e3");
+            }
+            i32 curIdx = idx;
+            if (lchild) {
+                ++idx;
+                outFile << format("{} -> {};\n", curIdx, idx);
+                lchild->dot(outFile, idx, format("{} <= {}", attribute, value));
+            }
+            if (rchild) {
+                ++idx;
+                outFile << format("{} -> {};\n", curIdx, idx);
+                rchild->dot(outFile, idx, format("{} >  {}", attribute, value));                
+            }
+
         }
     };
 
     // 叶结点，包含类别信息
-    class DecisionTreeLeafNode : public DecisionTreeNode {
+    class DiscreteDecisionTreeLeafNode: public DecisionTreeNode {
     private:
-        string targetAttribute;
-        string classification; // 叶结点的类别
+        f64 classification; // 叶结点的类别
+
+        i32 sampleCount;
+        pair<string, f64> splitInfo;
 
     public:
-        DecisionTreeLeafNode(string const& targetAttribute, string const& classification)
-            : targetAttribute(targetAttribute), classification(classification) {}
+        friend class DecisionTree;
+        friend class DecisionTreeBuilder;
 
-        // 评估样本并返回叶结点的类别
-        string classify(map<string, string>& sample) const override {
-            // 直接返回叶节点的类别
-            return classification;
+        DiscreteDecisionTreeLeafNode(
+            string const& targetAttribute,
+            f64 const& classification,
+            i32 const& sampleCount_ = 0,
+            pair<string, f64> const& splitInfo_ = { "default", 0. });
+
+        /// @brief 评估样本并返回叶结点的类别
+        /// @param sample 样本
+        /// @return 类别
+        auto classify(map<string, f64>& sample) const -> f64 override;
+
+        /// @brief 打印树的结构（递归）
+        /// @param depth 深度
+        auto printTree(i32 const& depth = 0) const -> void override;
+
+        auto dot(ofstream& outFile, i32& idx, string const& fromParent) const -> void override {
+            outFile << format("{} [label=\"{}\\nSamples: {}\\n{}: {}\\n{}: {:1.4}\", fillcolor=\"{}\"];\n",
+                idx, fromParent, sampleCount, attribute, classification, splitInfo.first, splitInfo.second, "#e58139");
         }
+    };
 
-        // 用于打印树的结构（递归）
-        void printTree(i32 const& depth = 0) const override {
-            printSpacer(depth);
-            cout << targetAttribute << ": " << classification << endl;
+    // 叶结点，包含类别信息
+    class ContinuousDecisionTreeLeafNode: public DecisionTreeNode {
+    private:
+        f64 classification; // 叶结点的类别
+
+        i32 sampleCount;
+        pair<string, f64> splitInfo;
+
+    public:
+        friend class DecisionTree;
+        friend class DecisionTreeBuilder;
+
+        ContinuousDecisionTreeLeafNode(
+            string const& targetAttribute,
+            f64 const& classification,
+            i32 const& sampleCount_ = 0,
+            pair<string, f64> const& splitInfo_ = { "default", 0. });
+
+        /// @brief 评估样本并返回叶结点的类别
+        /// @param sample 样本
+        /// @return 类别
+        auto classify(map<string, f64>& sample) const -> f64 override;
+
+        /// @brief 打印树的结构（递归）
+        /// @param depth 深度
+        auto printTree(i32 const& depth = 0) const -> void override;
+
+        auto dot(ofstream& outFile, i32& idx, string const& fromParent) const -> void override {
+            outFile << format("{} [label=\"{}\\nSamples: {}\\n{}: {}\\n{}: {:1.4}\", fillcolor=\"{}\"];\n",
+                idx, fromParent, sampleCount, attribute, classification, splitInfo.first, splitInfo.second, "#e58139");
         }
     };
 }
