@@ -1,0 +1,19 @@
+<map id="DefaultBase" name="DefaultBase">
+<area shape="rect" id="Node000001" title="错误基类" alt="" coords="131,157,224,184"/>
+<area shape="rect" id="Node000003" href="$structyuki_1_1dflt_1_1_bad_alloc.html" title="申请内存失败错误类" alt="" coords="328,5,401,32"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="190,142,222,91,244,64,271,42,298,28,327,20,328,26,300,33,273,46,248,68,226,94,194,145"/>
+<area shape="rect" id="Node000004" href="$structyuki_1_1dflt_1_1_dimension_mismatch.html" title="矩阵计算中行列不对应错误类" alt="" coords="294,56,435,83"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="201,144,233,117,271,92,299,81,301,86,273,97,236,121,205,148"/>
+<area shape="rect" id="Node000005" href="$structyuki_1_1dflt_1_1_divide_by_zero.html" title="除0错误类" alt="" coords="314,107,415,133"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="238,152,314,131,315,136,240,157"/>
+<area shape="rect" id="Node000006" href="$structyuki_1_1dflt_1_1_load_failed.html" title="加载（资源等）错误类" alt="" coords="322,157,407,184"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="239,168,322,168,322,173,239,173"/>
+<area shape="rect" id="Node000007" href="$structyuki_1_1dflt_1_1_out_of_range.html" title="越界错误类" alt="" coords="318,208,412,235"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="240,185,318,206,316,211,238,190"/>
+<area shape="rect" id="Node000008" href="$structyuki_1_1dflt_1_1_save_failed.html" title="加载（资源等）错误类" alt="" coords="322,259,408,285"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="205,193,236,220,273,244,322,262,320,267,271,249,233,224,201,197"/>
+<area shape="rect" id="Node000009" href="$structyuki_1_1dflt_1_1_unexpected_enum_parameter.html" title="无效的枚举类型错误类" alt="" coords="272,309,457,336"/>
+<area shape="poly" id="edge8_Node000001_Node000009" title=" " alt="" coords="194,197,226,247,248,273,273,295,295,306,293,311,271,300,244,277,222,251,190,199"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,157,83,184"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="98,168,130,168,130,173,98,173"/>
+</map>

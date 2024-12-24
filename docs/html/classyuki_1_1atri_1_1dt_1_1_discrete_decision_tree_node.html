@@ -1,0 +1,527 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.12.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>AI: DiscreteDecisionTreeNode类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">AI<span id="projectnumber">&#160;1.0.0</span>
+   </div>
+   <div id="projectbrief">YUKII的AI库</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.12.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','搜索',false);
+  $(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){ initResizable(false); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespaceyuki.html">yuki</a></li><li class="navelem"><a class="el" href="namespaceyuki_1_1atri.html">atri</a></li><li class="navelem"><a class="el" href="namespaceyuki_1_1atri_1_1dt.html">dt</a></li><li class="navelem"><a class="el" href="classyuki_1_1atri_1_1dt_1_1_discrete_decision_tree_node.html">DiscreteDecisionTreeNode</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div id="doc-content">
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="#pri-attribs">Private 属性</a> &#124;
+<a href="#friends">友元</a> &#124;
+<a href="classyuki_1_1atri_1_1dt_1_1_discrete_decision_tree_node-members.html">所有成员列表</a>  </div>
+  <div class="headertitle"><div class="title">DiscreteDecisionTreeNode类 参考</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>离散决策树的内部结点  
+ <a href="#details">更多...</a></p>
+
+<p><code>#include &lt;<a class="el" href="_decision_tree_node_8h_source.html">DecisionTreeNode.h</a>&gt;</code></p>
+<div class="dynheader">
+类 DiscreteDecisionTreeNode 继承关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classyuki_1_1atri_1_1dt_1_1_discrete_decision_tree_node__inherit__graph.png" border="0" usemap="#a_discrete_decision_tree_node_inherit__map" alt="Inheritance graph"/></div>
+<map name="a_discrete_decision_tree_node_inherit__map" id="a_discrete_decision_tree_node_inherit__map">
+<area shape="rect" title="离散决策树的内部结点" alt="" coords="5,155,184,181"/>
+<area shape="rect" href="classyuki_1_1atri_1_1dt_1_1_decision_tree_node.html" title="决策树结点的基类" alt="" coords="30,80,159,107"/>
+<area shape="poly" title=" " alt="" coords="97,122,97,154,92,154,92,122"/>
+<area shape="rect" href="classyuki_1_1_tree_node_base.html" title="树结点基类" alt="" coords="40,5,149,32"/>
+<area shape="poly" title=" " alt="" coords="97,48,97,80,92,80,92,48"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">图例</a>]</span></center></div>
+<div class="dynheader">
+DiscreteDecisionTreeNode 的协作图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classyuki_1_1atri_1_1dt_1_1_discrete_decision_tree_node__coll__graph.png" border="0" usemap="#a_discrete_decision_tree_node_coll__map" alt="Collaboration graph"/></div>
+<map name="a_discrete_decision_tree_node_coll__map" id="a_discrete_decision_tree_node_coll__map">
+<area shape="rect" title="离散决策树的内部结点" alt="" coords="498,97,676,124"/>
+<area shape="rect" href="classyuki_1_1atri_1_1dt_1_1_decision_tree_node.html" title="决策树结点的基类" alt="" coords="242,31,371,57"/>
+<area shape="poly" title=" " alt="" coords="381,59,528,94,527,99,380,64"/>
+<area shape="rect" href="classyuki_1_1_tree_node_base.html" title="树结点基类" alt="" coords="5,5,114,32"/>
+<area shape="poly" title=" " alt="" coords="129,23,242,35,241,40,129,28"/>
+<area shape="rect" title=" " alt="" coords="33,56,86,83"/>
+<area shape="poly" title=" " alt="" coords="101,62,241,48,241,53,102,68"/>
+<area shape="rect" title=" " alt="" coords="213,81,400,140"/>
+<area shape="poly" title=" " alt="" coords="416,108,497,108,497,113,416,113"/>
+<area shape="rect" title=" " alt="" coords="244,164,368,191"/>
+<area shape="poly" title=" " alt="" coords="380,157,527,122,528,127,381,162"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">图例</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:a22fa2b4004d6f12b5255d0ec53fb8883" id="r_a22fa2b4004d6f12b5255d0ec53fb8883"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a22fa2b4004d6f12b5255d0ec53fb8883">DiscreteDecisionTreeNode</a> (string const &amp;attribute_, <a class="el" href="namespaceyuki.html#abc2f107791bd7c1d49ecf0f168c085a3">f64</a> const &amp;classification_, <a class="el" href="namespaceyuki.html#a77a52b9640a0c8600feb48e548425a40">i32</a> const &amp;sampleCount_=0, pair&lt; string, <a class="el" href="namespaceyuki.html#abc2f107791bd7c1d49ecf0f168c085a3">f64</a> &gt; const &amp;splitInfo_={ &quot;default&quot;, 0. })</td></tr>
+<tr class="separator:a22fa2b4004d6f12b5255d0ec53fb8883"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af1fb316636ed3f1b77c4a86953573726" id="r_af1fb316636ed3f1b77c4a86953573726"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af1fb316636ed3f1b77c4a86953573726">classify</a> (map&lt; string, <a class="el" href="namespaceyuki.html#abc2f107791bd7c1d49ecf0f168c085a3">f64</a> &gt; &amp;sample) const -&gt; <a class="el" href="namespaceyuki.html#abc2f107791bd7c1d49ecf0f168c085a3">f64</a> override</td></tr>
+<tr class="memdesc:af1fb316636ed3f1b77c4a86953573726"><td class="mdescLeft">&#160;</td><td class="mdescRight">评估样本并返回叶结点的类别  <br /></td></tr>
+<tr class="separator:af1fb316636ed3f1b77c4a86953573726"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a54b797ca3cf16c24b9b2f15bb97f666d" id="r_a54b797ca3cf16c24b9b2f15bb97f666d"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a54b797ca3cf16c24b9b2f15bb97f666d">printTree</a> (<a class="el" href="namespaceyuki.html#a77a52b9640a0c8600feb48e548425a40">i32</a> const &amp;depth=0) const -&gt; void override</td></tr>
+<tr class="memdesc:a54b797ca3cf16c24b9b2f15bb97f666d"><td class="mdescLeft">&#160;</td><td class="mdescRight">打印树的结构（递归）  <br /></td></tr>
+<tr class="separator:a54b797ca3cf16c24b9b2f15bb97f666d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a087f7b88a3cf4a1d7fa24356812925dc" id="r_a087f7b88a3cf4a1d7fa24356812925dc"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a087f7b88a3cf4a1d7fa24356812925dc">dot</a> (ofstream &amp;outFile, <a class="el" href="namespaceyuki.html#a77a52b9640a0c8600feb48e548425a40">i32</a> &amp;idx, string const &amp;fromParent) const -&gt; void override</td></tr>
+<tr class="memdesc:a087f7b88a3cf4a1d7fa24356812925dc"><td class="mdescLeft">&#160;</td><td class="mdescRight">为树生成 dot 文件  <br /></td></tr>
+<tr class="separator:a087f7b88a3cf4a1d7fa24356812925dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_classyuki_1_1atri_1_1dt_1_1_decision_tree_node"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_classyuki_1_1atri_1_1dt_1_1_decision_tree_node')"><img src="closed.png" alt="-"/>&#160;Public 成员函数 继承自 <a class="el" href="classyuki_1_1atri_1_1dt_1_1_decision_tree_node.html">DecisionTreeNode</a></td></tr>
+<tr class="memitem:a8749f8eaa9786b446913b12eaf5d60f8 inherit pub_methods_classyuki_1_1atri_1_1dt_1_1_decision_tree_node" id="r_a8749f8eaa9786b446913b12eaf5d60f8"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classyuki_1_1atri_1_1dt_1_1_decision_tree_node.html#a8749f8eaa9786b446913b12eaf5d60f8">DecisionTreeNode</a> (string const &amp;attribute_, <a class="el" href="namespaceyuki_1_1atri_1_1dt.html#a984713b338ecee463f7b52d03af1b14f">DecisionTreeNodeType</a> const &amp;type_=<a class="el" href="namespaceyuki_1_1atri_1_1dt.html#a984713b338ecee463f7b52d03af1b14fa082ce8b9c867f0449a6e864b552b1751">DecisionTreeNodeType::BASE_DTNODE</a>)</td></tr>
+<tr class="separator:a8749f8eaa9786b446913b12eaf5d60f8 inherit pub_methods_classyuki_1_1atri_1_1dt_1_1_decision_tree_node"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a89a128941930ab4acb288585d96610e9 inherit pub_methods_classyuki_1_1atri_1_1dt_1_1_decision_tree_node" id="r_a89a128941930ab4acb288585d96610e9"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classyuki_1_1atri_1_1dt_1_1_decision_tree_node.html#a89a128941930ab4acb288585d96610e9">~DecisionTreeNode</a> ()=default</td></tr>
+<tr class="separator:a89a128941930ab4acb288585d96610e9 inherit pub_methods_classyuki_1_1atri_1_1dt_1_1_decision_tree_node"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_classyuki_1_1_tree_node_base"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_classyuki_1_1_tree_node_base')"><img src="closed.png" alt="-"/>&#160;Public 成员函数 继承自 <a class="el" href="classyuki_1_1_tree_node_base.html">TreeNodeBase</a></td></tr>
+<tr class="memitem:ab1b022df1b4829b6decb03422a67b511 inherit pub_methods_classyuki_1_1_tree_node_base" id="r_ab1b022df1b4829b6decb03422a67b511"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classyuki_1_1_tree_node_base.html#ab1b022df1b4829b6decb03422a67b511">TreeNodeBase</a> ()=default</td></tr>
+<tr class="separator:ab1b022df1b4829b6decb03422a67b511 inherit pub_methods_classyuki_1_1_tree_node_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac82b2e10b0d180544191ffe85ab201a5 inherit pub_methods_classyuki_1_1_tree_node_base" id="r_ac82b2e10b0d180544191ffe85ab201a5"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classyuki_1_1_tree_node_base.html#ac82b2e10b0d180544191ffe85ab201a5">~TreeNodeBase</a> ()=default</td></tr>
+<tr class="separator:ac82b2e10b0d180544191ffe85ab201a5 inherit pub_methods_classyuki_1_1_tree_node_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Private 属性</h2></td></tr>
+<tr class="memitem:a7d9be8b70f44f3e3bcd869b94f9014ee" id="r_a7d9be8b70f44f3e3bcd869b94f9014ee"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceyuki.html#abc2f107791bd7c1d49ecf0f168c085a3">f64</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7d9be8b70f44f3e3bcd869b94f9014ee">classification</a></td></tr>
+<tr class="separator:a7d9be8b70f44f3e3bcd869b94f9014ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0d05b825c06e8c49838451e366cd8650" id="r_a0d05b825c06e8c49838451e366cd8650"><td class="memItemLeft" align="right" valign="top">map&lt; <a class="el" href="namespaceyuki.html#abc2f107791bd7c1d49ecf0f168c085a3">f64</a>, shared_ptr&lt; <a class="el" href="classyuki_1_1atri_1_1dt_1_1_decision_tree_node.html">DecisionTreeNode</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0d05b825c06e8c49838451e366cd8650">children</a></td></tr>
+<tr class="separator:a0d05b825c06e8c49838451e366cd8650"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad49d8b089fd353245da4ab6ec0737518" id="r_ad49d8b089fd353245da4ab6ec0737518"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceyuki.html#a77a52b9640a0c8600feb48e548425a40">i32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad49d8b089fd353245da4ab6ec0737518">sampleCount</a></td></tr>
+<tr class="separator:ad49d8b089fd353245da4ab6ec0737518"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2f145a6908e90b17cf645c978562bfca" id="r_a2f145a6908e90b17cf645c978562bfca"><td class="memItemLeft" align="right" valign="top">pair&lt; string, <a class="el" href="namespaceyuki.html#abc2f107791bd7c1d49ecf0f168c085a3">f64</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2f145a6908e90b17cf645c978562bfca">splitInfo</a></td></tr>
+<tr class="separator:a2f145a6908e90b17cf645c978562bfca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="friends" name="friends"></a>
+友元</h2></td></tr>
+<tr class="memitem:a1be3fa2306f8e00ce0254b8af8588731" id="r_a1be3fa2306f8e00ce0254b8af8588731"><td class="memItemLeft" align="right" valign="top">class&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1be3fa2306f8e00ce0254b8af8588731">DecisionTree</a></td></tr>
+<tr class="separator:a1be3fa2306f8e00ce0254b8af8588731"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa37d89e3639192073cc986342807a27b" id="r_aa37d89e3639192073cc986342807a27b"><td class="memItemLeft" align="right" valign="top">class&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa37d89e3639192073cc986342807a27b">DecisionTreeBuilder</a></td></tr>
+<tr class="separator:aa37d89e3639192073cc986342807a27b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="inherited" name="inherited"></a>
+额外继承的成员函数</h2></td></tr>
+<tr class="inherit_header pro_attribs_classyuki_1_1atri_1_1dt_1_1_decision_tree_node"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pro_attribs_classyuki_1_1atri_1_1dt_1_1_decision_tree_node')"><img src="closed.png" alt="-"/>&#160;Protected 属性 继承自 <a class="el" href="classyuki_1_1atri_1_1dt_1_1_decision_tree_node.html">DecisionTreeNode</a></td></tr>
+<tr class="memitem:a06a1b413829e643bb77193d69fbff5a1 inherit pro_attribs_classyuki_1_1atri_1_1dt_1_1_decision_tree_node" id="r_a06a1b413829e643bb77193d69fbff5a1"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classyuki_1_1atri_1_1dt_1_1_decision_tree_node.html#a06a1b413829e643bb77193d69fbff5a1">attribute</a></td></tr>
+<tr class="memdesc:a06a1b413829e643bb77193d69fbff5a1 inherit pro_attribs_classyuki_1_1atri_1_1dt_1_1_decision_tree_node"><td class="mdescLeft">&#160;</td><td class="mdescRight">属性  <br /></td></tr>
+<tr class="separator:a06a1b413829e643bb77193d69fbff5a1 inherit pro_attribs_classyuki_1_1atri_1_1dt_1_1_decision_tree_node"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adccaba904ce3be0f72500aadf0192843 inherit pro_attribs_classyuki_1_1atri_1_1dt_1_1_decision_tree_node" id="r_adccaba904ce3be0f72500aadf0192843"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceyuki_1_1atri_1_1dt.html#a984713b338ecee463f7b52d03af1b14f">DecisionTreeNodeType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classyuki_1_1atri_1_1dt_1_1_decision_tree_node.html#adccaba904ce3be0f72500aadf0192843">type</a></td></tr>
+<tr class="memdesc:adccaba904ce3be0f72500aadf0192843 inherit pro_attribs_classyuki_1_1atri_1_1dt_1_1_decision_tree_node"><td class="mdescLeft">&#160;</td><td class="mdescRight">决策树结点的类型  <br /></td></tr>
+<tr class="separator:adccaba904ce3be0f72500aadf0192843 inherit pro_attribs_classyuki_1_1atri_1_1dt_1_1_decision_tree_node"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p>离散决策树的内部结点 </p>
+
+<p class="definition">在文件 <a class="el" href="_decision_tree_node_8h_source.html">DecisionTreeNode.h</a> 第 <a class="el" href="_decision_tree_node_8h_source.html#l00124">124</a> 行定义.</p>
+</div><h2 class="groupheader">构造及析构函数说明</h2>
+<a id="a22fa2b4004d6f12b5255d0ec53fb8883" name="a22fa2b4004d6f12b5255d0ec53fb8883"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a22fa2b4004d6f12b5255d0ec53fb8883">&#9670;&#160;</a></span>DiscreteDecisionTreeNode()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classyuki_1_1atri_1_1dt_1_1_discrete_decision_tree_node.html">DiscreteDecisionTreeNode</a> </td>
+          <td>(</td>
+          <td class="paramtype">string const &amp;</td>          <td class="paramname"><span class="paramname"><em>attribute_</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespaceyuki.html#abc2f107791bd7c1d49ecf0f168c085a3">f64</a> const &amp;</td>          <td class="paramname"><span class="paramname"><em>classification_</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespaceyuki.html#a77a52b9640a0c8600feb48e548425a40">i32</a> const &amp;</td>          <td class="paramname"><span class="paramname"><em>sampleCount_</em></span><span class="paramdefsep"> = </span><span class="paramdefval">0</span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">pair&lt; string, <a class="el" href="namespaceyuki.html#abc2f107791bd7c1d49ecf0f168c085a3">f64</a> &gt; const &amp;</td>          <td class="paramname"><span class="paramname"><em>splitInfo_</em></span><span class="paramdefsep"> = </span><span class="paramdefval">{&#160;&quot;default&quot;,&#160;0.&#160;}</span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="_decision_tree_node_8cpp_source.html">DecisionTreeNode.cpp</a> 第 <a class="el" href="_decision_tree_node_8cpp_source.html#l00007">7</a> 行定义.</p>
+
+</div>
+</div>
+<h2 class="groupheader">成员函数说明</h2>
+<a id="af1fb316636ed3f1b77c4a86953573726" name="af1fb316636ed3f1b77c4a86953573726"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af1fb316636ed3f1b77c4a86953573726">&#9670;&#160;</a></span>classify()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto classify </td>
+          <td>(</td>
+          <td class="paramtype">map&lt; string, <a class="el" href="namespaceyuki.html#abc2f107791bd7c1d49ecf0f168c085a3">f64</a> &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>sample</em></span></td><td>)</td>
+          <td> const -&gt; <a class="el" href="namespaceyuki.html#abc2f107791bd7c1d49ecf0f168c085a3">f64</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>评估样本并返回叶结点的类别 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">sample</td><td>样本 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>f64 类别 </dd></dl>
+
+<p>实现了 <a class="el" href="classyuki_1_1atri_1_1dt_1_1_decision_tree_node.html#aa024c031d3eac6dc2ac44cacd1a6a6b3">DecisionTreeNode</a>.</p>
+
+<p class="definition">在文件 <a class="el" href="_decision_tree_node_8cpp_source.html">DecisionTreeNode.cpp</a> 第 <a class="el" href="_decision_tree_node_8cpp_source.html#l00018">18</a> 行定义.</p>
+
+</div>
+</div>
+<a id="a087f7b88a3cf4a1d7fa24356812925dc" name="a087f7b88a3cf4a1d7fa24356812925dc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a087f7b88a3cf4a1d7fa24356812925dc">&#9670;&#160;</a></span>dot()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto dot </td>
+          <td>(</td>
+          <td class="paramtype">ofstream &amp;</td>          <td class="paramname"><span class="paramname"><em>outFile</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespaceyuki.html#a77a52b9640a0c8600feb48e548425a40">i32</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>idx</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string const &amp;</td>          <td class="paramname"><span class="paramname"><em>fromParent</em></span>&#160;) const -&gt;  void</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>为树生成 dot 文件 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">outFile</td><td>文件输出类 </td></tr>
+    <tr><td class="paramname">idx</td><td>结点的序号 </td></tr>
+    <tr><td class="paramname">fromParent</td><td>双亲结点传递的信息 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>实现了 <a class="el" href="classyuki_1_1_tree_node_base.html#a929227a78c33692374531cfce5ba3caf">TreeNodeBase</a>.</p>
+
+<p class="definition">在文件 <a class="el" href="_decision_tree_node_8h_source.html">DecisionTreeNode.h</a> 第 <a class="el" href="_decision_tree_node_8h_source.html#l00154">154</a> 行定义.</p>
+
+<p class="reference">引用了 <a class="el" href="_decision_tree_node_8h_source.html#l00027">DecisionTreeNode::attribute</a>, <a class="el" href="_decision_tree_node_8h_source.html#l00127">DiscreteDecisionTreeNode::children</a>, <a class="el" href="_decision_tree_node_8h_source.html#l00129">DiscreteDecisionTreeNode::sampleCount</a> , 以及 <a class="el" href="_decision_tree_node_8h_source.html#l00130">DiscreteDecisionTreeNode::splitInfo</a>.</p>
+
+</div>
+</div>
+<a id="a54b797ca3cf16c24b9b2f15bb97f666d" name="a54b797ca3cf16c24b9b2f15bb97f666d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a54b797ca3cf16c24b9b2f15bb97f666d">&#9670;&#160;</a></span>printTree()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto printTree </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespaceyuki.html#a77a52b9640a0c8600feb48e548425a40">i32</a> const &amp;</td>          <td class="paramname"><span class="paramname"><em>depth</em></span><span class="paramdefsep"> = </span><span class="paramdefval">0</span></td><td>)</td>
+          <td> const -&gt; void</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>打印树的结构（递归） </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">depth</td><td>深度 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>实现了 <a class="el" href="classyuki_1_1_tree_node_base.html#a49e857d2a7db71cd2e787da39cb2fecf">TreeNodeBase</a>.</p>
+
+<p class="definition">在文件 <a class="el" href="_decision_tree_node_8cpp_source.html">DecisionTreeNode.cpp</a> 第 <a class="el" href="_decision_tree_node_8cpp_source.html#l00032">32</a> 行定义.</p>
+
+<p class="reference">引用了 <a class="el" href="tools_8cpp_source.html#l00104">yuki::printSpacer()</a>.</p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classyuki_1_1atri_1_1dt_1_1_discrete_decision_tree_node_a54b797ca3cf16c24b9b2f15bb97f666d_cgraph.png" border="0" usemap="#aclassyuki_1_1atri_1_1dt_1_1_discrete_decision_tree_node_a54b797ca3cf16c24b9b2f15bb97f666d_cgraph" alt=""/></div>
+<map name="aclassyuki_1_1atri_1_1dt_1_1_discrete_decision_tree_node_a54b797ca3cf16c24b9b2f15bb97f666d_cgraph" id="aclassyuki_1_1atri_1_1dt_1_1_discrete_decision_tree_node_a54b797ca3cf16c24b9b2f15bb97f666d_cgraph">
+<area shape="rect" title="打印树的结构（递归）" alt="" coords="5,5,78,32"/>
+<area shape="rect" href="namespaceyuki.html#a5a75fc158cd1a918b4e6ea36d23fdefd" title="打印制表填充" alt="" coords="126,5,245,32"/>
+<area shape="poly" title=" " alt="" coords="78,16,110,16,110,21,78,21"/>
+</map>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">友元及相关符号说明</h2>
+<a id="a1be3fa2306f8e00ce0254b8af8588731" name="a1be3fa2306f8e00ce0254b8af8588731"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1be3fa2306f8e00ce0254b8af8588731">&#9670;&#160;</a></span>DecisionTree</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">friend class <a class="el" href="classyuki_1_1atri_1_1dt_1_1_decision_tree.html">DecisionTree</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="_decision_tree_node_8h_source.html">DecisionTreeNode.h</a> 第 <a class="el" href="_decision_tree_node_8h_source.html#l00133">133</a> 行定义.</p>
+
+</div>
+</div>
+<a id="aa37d89e3639192073cc986342807a27b" name="aa37d89e3639192073cc986342807a27b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa37d89e3639192073cc986342807a27b">&#9670;&#160;</a></span>DecisionTreeBuilder</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">friend class <a class="el" href="classyuki_1_1atri_1_1dt_1_1_decision_tree_builder.html">DecisionTreeBuilder</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="_decision_tree_node_8h_source.html">DecisionTreeNode.h</a> 第 <a class="el" href="_decision_tree_node_8h_source.html#l00134">134</a> 行定义.</p>
+
+</div>
+</div>
+<h2 class="groupheader">类成员变量说明</h2>
+<a id="a0d05b825c06e8c49838451e366cd8650" name="a0d05b825c06e8c49838451e366cd8650"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0d05b825c06e8c49838451e366cd8650">&#9670;&#160;</a></span>children</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">map&lt;<a class="el" href="namespaceyuki.html#abc2f107791bd7c1d49ecf0f168c085a3">f64</a>, shared_ptr&lt;<a class="el" href="classyuki_1_1atri_1_1dt_1_1_decision_tree_node.html">DecisionTreeNode</a>&gt; &gt; children</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="_decision_tree_node_8h_source.html">DecisionTreeNode.h</a> 第 <a class="el" href="_decision_tree_node_8h_source.html#l00127">127</a> 行定义.</p>
+
+<p class="reference">被这些函数引用 <a class="el" href="_decision_tree_node_8h_source.html#l00154">DiscreteDecisionTreeNode::dot()</a>, <a class="el" href="_decision_tree_builder_8cpp_source.html#l00463">DecisionTreeBuilder::fit()</a> , 以及 <a class="el" href="_decision_tree_builder_8cpp_source.html#l00531">DecisionTreeBuilder::fitQueue()</a>.</p>
+
+</div>
+</div>
+<a id="a7d9be8b70f44f3e3bcd869b94f9014ee" name="a7d9be8b70f44f3e3bcd869b94f9014ee"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7d9be8b70f44f3e3bcd869b94f9014ee">&#9670;&#160;</a></span>classification</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespaceyuki.html#abc2f107791bd7c1d49ecf0f168c085a3">f64</a> classification</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="_decision_tree_node_8h_source.html">DecisionTreeNode.h</a> 第 <a class="el" href="_decision_tree_node_8h_source.html#l00126">126</a> 行定义.</p>
+
+</div>
+</div>
+<a id="ad49d8b089fd353245da4ab6ec0737518" name="ad49d8b089fd353245da4ab6ec0737518"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad49d8b089fd353245da4ab6ec0737518">&#9670;&#160;</a></span>sampleCount</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespaceyuki.html#a77a52b9640a0c8600feb48e548425a40">i32</a> sampleCount</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="_decision_tree_node_8h_source.html">DecisionTreeNode.h</a> 第 <a class="el" href="_decision_tree_node_8h_source.html#l00129">129</a> 行定义.</p>
+
+<p class="reference">被这些函数引用 <a class="el" href="_decision_tree_node_8h_source.html#l00154">DiscreteDecisionTreeNode::dot()</a>.</p>
+
+</div>
+</div>
+<a id="a2f145a6908e90b17cf645c978562bfca" name="a2f145a6908e90b17cf645c978562bfca"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2f145a6908e90b17cf645c978562bfca">&#9670;&#160;</a></span>splitInfo</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">pair&lt;string, <a class="el" href="namespaceyuki.html#abc2f107791bd7c1d49ecf0f168c085a3">f64</a>&gt; splitInfo</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="_decision_tree_node_8h_source.html">DecisionTreeNode.h</a> 第 <a class="el" href="_decision_tree_node_8h_source.html#l00130">130</a> 行定义.</p>
+
+<p class="reference">被这些函数引用 <a class="el" href="_decision_tree_node_8h_source.html#l00154">DiscreteDecisionTreeNode::dot()</a>.</p>
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>D:/user/Project/Code/AI/inc/DT/<a class="el" href="_decision_tree_node_8h_source.html">DecisionTreeNode.h</a></li>
+<li>D:/user/Project/Code/AI/src/DT/<a class="el" href="_decision_tree_node_8cpp_source.html">DecisionTreeNode.cpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0
+</small></address>
+</div><!-- doc-content -->
+</body>
+</html>

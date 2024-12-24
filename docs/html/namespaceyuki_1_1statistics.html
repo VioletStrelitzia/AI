@@ -1,0 +1,1089 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.12.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>AI: yuki::statistics 命名空间参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">AI<span id="projectnumber">&#160;1.0.0</span>
+   </div>
+   <div id="projectbrief">YUKII的AI库</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.12.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','搜索',false);
+  $(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){ initResizable(false); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespaceyuki.html">yuki</a></li><li class="navelem"><a class="el" href="namespaceyuki_1_1statistics.html">statistics</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div id="doc-content">
+<div class="header">
+  <div class="summary">
+<a href="#func-members">函数</a>  </div>
+  <div class="headertitle"><div class="title">yuki::statistics 命名空间参考</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>统计库  
+<a href="#details">更多...</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+函数</h2></td></tr>
+<tr class="memitem:a9f5ddc0a8af3796b52b9be539498893e" id="r_a9f5ddc0a8af3796b52b9be539498893e"><td class="memItemLeft" align="right" valign="top">static auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9f5ddc0a8af3796b52b9be539498893e">varianceTwoPass</a> (vector&lt; <a class="el" href="namespaceyuki.html#abc2f107791bd7c1d49ecf0f168c085a3">f64</a> &gt; const &amp;data) -&gt; <a class="el" href="namespaceyuki.html#abc2f107791bd7c1d49ecf0f168c085a3">f64</a></td></tr>
+<tr class="memdesc:a9f5ddc0a8af3796b52b9be539498893e"><td class="mdescLeft">&#160;</td><td class="mdescRight">计算方差（朴素方法）  <br /></td></tr>
+<tr class="separator:a9f5ddc0a8af3796b52b9be539498893e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a11eeb4cbe502140aee06bcec744782e0" id="r_a11eeb4cbe502140aee06bcec744782e0"><td class="memItemLeft" align="right" valign="top">static auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a11eeb4cbe502140aee06bcec744782e0">varianceOnePass</a> (vector&lt; <a class="el" href="namespaceyuki.html#abc2f107791bd7c1d49ecf0f168c085a3">f64</a> &gt; const &amp;data) -&gt; <a class="el" href="namespaceyuki.html#abc2f107791bd7c1d49ecf0f168c085a3">f64</a></td></tr>
+<tr class="memdesc:a11eeb4cbe502140aee06bcec744782e0"><td class="mdescLeft">&#160;</td><td class="mdescRight">计算方差（一趟法，数值误差大）  <br /></td></tr>
+<tr class="separator:a11eeb4cbe502140aee06bcec744782e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a55d030798b22764edcd313f75df660ba" id="r_a55d030798b22764edcd313f75df660ba"><td class="memItemLeft" align="right" valign="top">static auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a55d030798b22764edcd313f75df660ba">variance</a> (vector&lt; <a class="el" href="namespaceyuki.html#abc2f107791bd7c1d49ecf0f168c085a3">f64</a> &gt; const &amp;data) -&gt; <a class="el" href="namespaceyuki.html#abc2f107791bd7c1d49ecf0f168c085a3">f64</a></td></tr>
+<tr class="memdesc:a55d030798b22764edcd313f75df660ba"><td class="mdescLeft">&#160;</td><td class="mdescRight">计算方差（Welford迭代法）  <br /></td></tr>
+<tr class="separator:a55d030798b22764edcd313f75df660ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a51a0d0fd9e0cfa2570a4193c2373c831" id="r_a51a0d0fd9e0cfa2570a4193c2373c831"><td class="memTemplParams" colspan="2">template&lt;typename ElemType &gt; </td></tr>
+<tr class="memitem:a51a0d0fd9e0cfa2570a4193c2373c831"><td class="memTemplItemLeft" align="right" valign="top">static auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a51a0d0fd9e0cfa2570a4193c2373c831">median</a> (vector&lt; ElemType &gt; &amp;data, <a class="el" href="namespaceyuki.html#a67cb024aa20a9cffd9c230409152959c">usize</a> const &amp;left, <a class="el" href="namespaceyuki.html#a67cb024aa20a9cffd9c230409152959c">usize</a> const &amp;right, <a class="el" href="namespaceyuki.html#a67cb024aa20a9cffd9c230409152959c">usize</a> const &amp;mid, function&lt; bool(ElemType const &amp;, ElemType const &amp;)&gt; const &amp;comper=greater&lt; ElemType &gt;()) -&gt; ElemType</td></tr>
+<tr class="memdesc:a51a0d0fd9e0cfa2570a4193c2373c831"><td class="mdescLeft">&#160;</td><td class="mdescRight">求中位元素（递归）  <br /></td></tr>
+<tr class="separator:a51a0d0fd9e0cfa2570a4193c2373c831"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae4420eaef7b40d8befa430dacd5a1826" id="r_ae4420eaef7b40d8befa430dacd5a1826"><td class="memTemplParams" colspan="2">template&lt;typename ElemType &gt; </td></tr>
+<tr class="memitem:ae4420eaef7b40d8befa430dacd5a1826"><td class="memTemplItemLeft" align="right" valign="top">static auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#ae4420eaef7b40d8befa430dacd5a1826">median</a> (vector&lt; ElemType &gt; &amp;data, <a class="el" href="namespaceyuki.html#a67cb024aa20a9cffd9c230409152959c">usize</a> left, <a class="el" href="namespaceyuki.html#a67cb024aa20a9cffd9c230409152959c">usize</a> right, function&lt; bool(ElemType const &amp;, ElemType const &amp;)&gt; const &amp;comper=greater&lt; ElemType &gt;()) -&gt; ElemType</td></tr>
+<tr class="memdesc:ae4420eaef7b40d8befa430dacd5a1826"><td class="mdescLeft">&#160;</td><td class="mdescRight">求中位元素（迭代）  <br /></td></tr>
+<tr class="separator:ae4420eaef7b40d8befa430dacd5a1826"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab9ac9849ed40c25f2d51f459bdb63359" id="r_ab9ac9849ed40c25f2d51f459bdb63359"><td class="memTemplParams" colspan="2">template&lt;typename ElemType &gt; </td></tr>
+<tr class="memitem:ab9ac9849ed40c25f2d51f459bdb63359"><td class="memTemplItemLeft" align="right" valign="top">static auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#ab9ac9849ed40c25f2d51f459bdb63359">median</a> (vector&lt; ElemType &gt; data, function&lt; bool(ElemType const &amp;, ElemType const &amp;)&gt; const &amp;comper=greater&lt; ElemType &gt;()) -&gt; ElemType</td></tr>
+<tr class="memdesc:ab9ac9849ed40c25f2d51f459bdb63359"><td class="mdescLeft">&#160;</td><td class="mdescRight">求中位元素  <br /></td></tr>
+<tr class="separator:ab9ac9849ed40c25f2d51f459bdb63359"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac0c56aaf28b0dab3080545241577ff4f" id="r_ac0c56aaf28b0dab3080545241577ff4f"><td class="memItemLeft" align="right" valign="top">static auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac0c56aaf28b0dab3080545241577ff4f">entropy</a> (vector&lt; <a class="el" href="namespaceyuki.html#abc2f107791bd7c1d49ecf0f168c085a3">f64</a> &gt; const &amp;P) -&gt; <a class="el" href="namespaceyuki.html#abc2f107791bd7c1d49ecf0f168c085a3">f64</a></td></tr>
+<tr class="memdesc:ac0c56aaf28b0dab3080545241577ff4f"><td class="mdescLeft">&#160;</td><td class="mdescRight">计算随机变量的信息熵  <br /></td></tr>
+<tr class="separator:ac0c56aaf28b0dab3080545241577ff4f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4a97173c39238f508b2a5ccd087afda8" id="r_a4a97173c39238f508b2a5ccd087afda8"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a4a97173c39238f508b2a5ccd087afda8"><td class="memTemplItemLeft" align="right" valign="top">static auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a4a97173c39238f508b2a5ccd087afda8">entropy</a> (unordered_map&lt; T, <a class="el" href="namespaceyuki.html#abc2f107791bd7c1d49ecf0f168c085a3">f64</a> &gt; const &amp;PMap) -&gt; <a class="el" href="namespaceyuki.html#abc2f107791bd7c1d49ecf0f168c085a3">f64</a></td></tr>
+<tr class="memdesc:a4a97173c39238f508b2a5ccd087afda8"><td class="mdescLeft">&#160;</td><td class="mdescRight">计算随机变量的信息熵  <br /></td></tr>
+<tr class="separator:a4a97173c39238f508b2a5ccd087afda8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a829519289008e44fe0bb5f5aec7edbaa" id="r_a829519289008e44fe0bb5f5aec7edbaa"><td class="memItemLeft" align="right" valign="top">static auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a829519289008e44fe0bb5f5aec7edbaa">entropyBinary</a> (<a class="el" href="namespaceyuki.html#abc2f107791bd7c1d49ecf0f168c085a3">f64</a> const &amp;p) -&gt; <a class="el" href="namespaceyuki.html#abc2f107791bd7c1d49ecf0f168c085a3">f64</a></td></tr>
+<tr class="memdesc:a829519289008e44fe0bb5f5aec7edbaa"><td class="mdescLeft">&#160;</td><td class="mdescRight">计算布尔随机变量的信息熵  <br /></td></tr>
+<tr class="separator:a829519289008e44fe0bb5f5aec7edbaa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a089b6b377afd975cdb34990feab306ce" id="r_a089b6b377afd975cdb34990feab306ce"><td class="memItemLeft" align="right" valign="top">static auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a089b6b377afd975cdb34990feab306ce">gini</a> (vector&lt; <a class="el" href="namespaceyuki.html#abc2f107791bd7c1d49ecf0f168c085a3">f64</a> &gt; const &amp;P) -&gt; <a class="el" href="namespaceyuki.html#abc2f107791bd7c1d49ecf0f168c085a3">f64</a></td></tr>
+<tr class="memdesc:a089b6b377afd975cdb34990feab306ce"><td class="mdescLeft">&#160;</td><td class="mdescRight">计算基尼指数  <br /></td></tr>
+<tr class="separator:a089b6b377afd975cdb34990feab306ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7037de54d7c9b63cbeb9fa1dc2c62fcb" id="r_a7037de54d7c9b63cbeb9fa1dc2c62fcb"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a7037de54d7c9b63cbeb9fa1dc2c62fcb"><td class="memTemplItemLeft" align="right" valign="top">static auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a7037de54d7c9b63cbeb9fa1dc2c62fcb">gini</a> (unordered_map&lt; T, <a class="el" href="namespaceyuki.html#abc2f107791bd7c1d49ecf0f168c085a3">f64</a> &gt; const &amp;PMap, <a class="el" href="namespaceyuki.html#abc2f107791bd7c1d49ecf0f168c085a3">f64</a> const &amp;n=1) -&gt; <a class="el" href="namespaceyuki.html#abc2f107791bd7c1d49ecf0f168c085a3">f64</a></td></tr>
+<tr class="memdesc:a7037de54d7c9b63cbeb9fa1dc2c62fcb"><td class="mdescLeft">&#160;</td><td class="mdescRight">计算基尼指数  <br /></td></tr>
+<tr class="separator:a7037de54d7c9b63cbeb9fa1dc2c62fcb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa81ff98ce3d13de0d73dba099065187e" id="r_aa81ff98ce3d13de0d73dba099065187e"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:aa81ff98ce3d13de0d73dba099065187e"><td class="memTemplItemLeft" align="right" valign="top">static auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#aa81ff98ce3d13de0d73dba099065187e">gini</a> (unordered_map&lt; T, pair&lt; <a class="el" href="namespaceyuki.html#abc2f107791bd7c1d49ecf0f168c085a3">f64</a>, <a class="el" href="namespaceyuki.html#abc2f107791bd7c1d49ecf0f168c085a3">f64</a> &gt; &gt; const &amp;PMap, <a class="el" href="namespaceyuki.html#abc2f107791bd7c1d49ecf0f168c085a3">f64</a> const &amp;n=1) -&gt; pair&lt; <a class="el" href="namespaceyuki.html#abc2f107791bd7c1d49ecf0f168c085a3">f64</a>, <a class="el" href="namespaceyuki.html#abc2f107791bd7c1d49ecf0f168c085a3">f64</a> &gt;</td></tr>
+<tr class="separator:aa81ff98ce3d13de0d73dba099065187e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a694b99a9f82ee4e177ac4f9ded05f413" id="r_a694b99a9f82ee4e177ac4f9ded05f413"><td class="memTemplParams" colspan="2">template&lt;typename ElemType &gt; </td></tr>
+<tr class="memitem:a694b99a9f82ee4e177ac4f9ded05f413"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a694b99a9f82ee4e177ac4f9ded05f413">median</a> (vector&lt; ElemType &gt; &amp;data, <a class="el" href="namespaceyuki.html#a67cb024aa20a9cffd9c230409152959c">usize</a> const &amp;left, <a class="el" href="namespaceyuki.html#a67cb024aa20a9cffd9c230409152959c">usize</a> const &amp;right, <a class="el" href="namespaceyuki.html#a67cb024aa20a9cffd9c230409152959c">usize</a> const &amp;mid, function&lt; bool(ElemType const &amp;, ElemType const &amp;)&gt; const &amp;comper) -&gt; ElemType</td></tr>
+<tr class="memdesc:a694b99a9f82ee4e177ac4f9ded05f413"><td class="mdescLeft">&#160;</td><td class="mdescRight">求中位元素（递归）  <br /></td></tr>
+<tr class="separator:a694b99a9f82ee4e177ac4f9ded05f413"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a599a4e6aaa62b54ff152d5f2d2707f0d" id="r_a599a4e6aaa62b54ff152d5f2d2707f0d"><td class="memTemplParams" colspan="2">template&lt;typename ElemType &gt; </td></tr>
+<tr class="memitem:a599a4e6aaa62b54ff152d5f2d2707f0d"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a599a4e6aaa62b54ff152d5f2d2707f0d">median</a> (vector&lt; ElemType &gt; &amp;data, <a class="el" href="namespaceyuki.html#a67cb024aa20a9cffd9c230409152959c">usize</a> left, <a class="el" href="namespaceyuki.html#a67cb024aa20a9cffd9c230409152959c">usize</a> right, function&lt; bool(ElemType const &amp;, ElemType const &amp;)&gt; const &amp;comper) -&gt; ElemType</td></tr>
+<tr class="memdesc:a599a4e6aaa62b54ff152d5f2d2707f0d"><td class="mdescLeft">&#160;</td><td class="mdescRight">求中位元素（迭代）  <br /></td></tr>
+<tr class="separator:a599a4e6aaa62b54ff152d5f2d2707f0d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0ad41911f3371444ab2ef4e3c8349437" id="r_a0ad41911f3371444ab2ef4e3c8349437"><td class="memTemplParams" colspan="2">template&lt;typename ElemType &gt; </td></tr>
+<tr class="memitem:a0ad41911f3371444ab2ef4e3c8349437"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a0ad41911f3371444ab2ef4e3c8349437">median</a> (vector&lt; ElemType &gt; data, function&lt; bool(ElemType const &amp;, ElemType const &amp;)&gt; const &amp;comper) -&gt; ElemType</td></tr>
+<tr class="memdesc:a0ad41911f3371444ab2ef4e3c8349437"><td class="mdescLeft">&#160;</td><td class="mdescRight">求中位元素  <br /></td></tr>
+<tr class="separator:a0ad41911f3371444ab2ef4e3c8349437"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeee27c9a2431a88fb921edc25c83fe3f" id="r_aeee27c9a2431a88fb921edc25c83fe3f"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:aeee27c9a2431a88fb921edc25c83fe3f"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#aeee27c9a2431a88fb921edc25c83fe3f">entropy</a> (unordered_map&lt; T, <a class="el" href="namespaceyuki.html#abc2f107791bd7c1d49ecf0f168c085a3">f64</a> &gt; const &amp;PMap) -&gt; <a class="el" href="namespaceyuki.html#abc2f107791bd7c1d49ecf0f168c085a3">f64</a></td></tr>
+<tr class="memdesc:aeee27c9a2431a88fb921edc25c83fe3f"><td class="mdescLeft">&#160;</td><td class="mdescRight">计算随机变量的信息熵  <br /></td></tr>
+<tr class="separator:aeee27c9a2431a88fb921edc25c83fe3f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a02e11baf285240b04458eea8478296d1" id="r_a02e11baf285240b04458eea8478296d1"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a02e11baf285240b04458eea8478296d1"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a02e11baf285240b04458eea8478296d1">gini</a> (unordered_map&lt; T, <a class="el" href="namespaceyuki.html#abc2f107791bd7c1d49ecf0f168c085a3">f64</a> &gt; const &amp;PMap, <a class="el" href="namespaceyuki.html#abc2f107791bd7c1d49ecf0f168c085a3">f64</a> const &amp;n) -&gt; <a class="el" href="namespaceyuki.html#abc2f107791bd7c1d49ecf0f168c085a3">f64</a></td></tr>
+<tr class="memdesc:a02e11baf285240b04458eea8478296d1"><td class="mdescLeft">&#160;</td><td class="mdescRight">计算基尼指数  <br /></td></tr>
+<tr class="separator:a02e11baf285240b04458eea8478296d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad2ffbed131833ad9ee90f444d023006e" id="r_ad2ffbed131833ad9ee90f444d023006e"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:ad2ffbed131833ad9ee90f444d023006e"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#ad2ffbed131833ad9ee90f444d023006e">gini</a> (unordered_map&lt; T, pair&lt; <a class="el" href="namespaceyuki.html#abc2f107791bd7c1d49ecf0f168c085a3">f64</a>, <a class="el" href="namespaceyuki.html#abc2f107791bd7c1d49ecf0f168c085a3">f64</a> &gt; &gt; const &amp;PMap, <a class="el" href="namespaceyuki.html#abc2f107791bd7c1d49ecf0f168c085a3">f64</a> const &amp;n) -&gt; pair&lt; <a class="el" href="namespaceyuki.html#abc2f107791bd7c1d49ecf0f168c085a3">f64</a>, <a class="el" href="namespaceyuki.html#abc2f107791bd7c1d49ecf0f168c085a3">f64</a> &gt;</td></tr>
+<tr class="separator:ad2ffbed131833ad9ee90f444d023006e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p>统计库 </p>
+</div><h2 class="groupheader">函数说明</h2>
+<a id="a4a97173c39238f508b2a5ccd087afda8" name="a4a97173c39238f508b2a5ccd087afda8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4a97173c39238f508b2a5ccd087afda8">&#9670;&#160;</a></span>entropy() <span class="overload">[1/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static auto entropy </td>
+          <td>(</td>
+          <td class="paramtype">unordered_map&lt; T, <a class="el" href="namespaceyuki.html#abc2f107791bd7c1d49ecf0f168c085a3">f64</a> &gt; const &amp;</td>          <td class="paramname"><span class="paramname"><em>PMap</em></span></td><td>)</td>
+          <td> -&gt;  <a class="el" href="namespaceyuki.html#abc2f107791bd7c1d49ecf0f168c085a3">f64</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>计算随机变量的信息熵 </p>
+<dl class="tparams"><dt>模板参数</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>map 的键类型 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">PMap</td><td>该变量所有取值的概率集合 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>f64 随机变量的信息熵 </dd></dl>
+
+<p class="definition">在文件 <a class="el" href="tools_8h_source.html">tools.h</a> 第 <a class="el" href="tools_8h_source.html#l00372">372</a> 行定义.</p>
+
+</div>
+</div>
+<a id="aeee27c9a2431a88fb921edc25c83fe3f" name="aeee27c9a2431a88fb921edc25c83fe3f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeee27c9a2431a88fb921edc25c83fe3f">&#9670;&#160;</a></span>entropy() <span class="overload">[2/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">auto entropy </td>
+          <td>(</td>
+          <td class="paramtype">unordered_map&lt; T, <a class="el" href="namespaceyuki.html#abc2f107791bd7c1d49ecf0f168c085a3">f64</a> &gt; const &amp;</td>          <td class="paramname"><span class="paramname"><em>PMap</em></span></td><td>)</td>
+          <td> -&gt;  <a class="el" href="namespaceyuki.html#abc2f107791bd7c1d49ecf0f168c085a3">f64</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>计算随机变量的信息熵 </p>
+<dl class="tparams"><dt>模板参数</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>map 的键类型 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">PMap</td><td>该变量所有取值的概率集合 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>f64 随机变量的信息熵 </dd></dl>
+
+<p class="definition">在文件 <a class="el" href="tools_8h_source.html">tools.h</a> 第 <a class="el" href="tools_8h_source.html#l00372">372</a> 行定义.</p>
+
+</div>
+</div>
+<a id="ac0c56aaf28b0dab3080545241577ff4f" name="ac0c56aaf28b0dab3080545241577ff4f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac0c56aaf28b0dab3080545241577ff4f">&#9670;&#160;</a></span>entropy() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto entropy </td>
+          <td>(</td>
+          <td class="paramtype">vector&lt; <a class="el" href="namespaceyuki.html#abc2f107791bd7c1d49ecf0f168c085a3">f64</a> &gt; const &amp;</td>          <td class="paramname"><span class="paramname"><em>P</em></span></td><td>)</td>
+          <td> -&gt; <a class="el" href="namespaceyuki.html#abc2f107791bd7c1d49ecf0f168c085a3">f64</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>计算随机变量的信息熵 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">P</td><td>该变量所有取值的概率集合 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>信息熵 </dd></dl>
+
+<p class="definition">在文件 <a class="el" href="tools_8cpp_source.html">tools.cpp</a> 第 <a class="el" href="tools_8cpp_source.html#l00056">56</a> 行定义.</p>
+
+<p class="reference">被这些函数引用 <a class="el" href="_decision_tree_builder_8cpp_source.html#l00226">DecisionTreeBuilder::entropyRemain()</a>, <a class="el" href="_decision_tree_builder_8cpp_source.html#l00252">DecisionTreeBuilder::infoGain()</a>, <a class="el" href="_decision_tree_builder_8cpp_source.html#l00292">DecisionTreeBuilder::infoGainRatio()</a> , 以及 <a class="el" href="main_8cpp_source.html#l00013">testDTQuickSort()</a>.</p>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="namespaceyuki_1_1statistics_ac0c56aaf28b0dab3080545241577ff4f_icgraph.png" border="0" usemap="#anamespaceyuki_1_1statistics_ac0c56aaf28b0dab3080545241577ff4f_icgraph" alt=""/></div>
+<map name="anamespaceyuki_1_1statistics_ac0c56aaf28b0dab3080545241577ff4f_icgraph" id="anamespaceyuki_1_1statistics_ac0c56aaf28b0dab3080545241577ff4f_icgraph">
+<area shape="rect" title="计算随机变量的信息熵" alt="" coords="404,109,468,136"/>
+<area shape="rect" href="classyuki_1_1atri_1_1dt_1_1_decision_tree_builder.html#acefb24aafd554801df533f179aa48320" title="计算给定属性在数据集中的熵" alt="" coords="173,5,356,48"/>
+<area shape="poly" title=" " alt="" coords="408,101,355,62,331,51,334,46,357,58,411,97"/>
+<area shape="rect" href="classyuki_1_1atri_1_1dt_1_1_decision_tree_builder.html#a9598a2aa8fe1f9b71cd834369f49dc84" title="计算给定属性在数据集中的信息增益" alt="" coords="190,72,339,115"/>
+<area shape="poly" title=" " alt="" coords="388,117,339,109,340,103,389,112"/>
+<area shape="rect" href="main_8cpp.html#a956789368c525ec65d42251064531261" title=" " alt="" coords="5,109,125,136"/>
+<area shape="poly" title=" " alt="" coords="389,128,356,129,173,129,125,128,125,123,173,124,356,124,388,123"/>
+<area shape="rect" href="classyuki_1_1atri_1_1dt_1_1_decision_tree_builder.html#a8f38d5ee600d9a0238cf81e0919c4bbe" title="计算指定属性对于样本集的信息增益率" alt="" coords="177,189,352,232"/>
+<area shape="poly" title=" " alt="" coords="402,147,357,173,319,191,317,186,355,168,400,142"/>
+<area shape="poly" title=" " alt="" coords="175,109,126,117,125,111,174,104"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a829519289008e44fe0bb5f5aec7edbaa" name="a829519289008e44fe0bb5f5aec7edbaa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a829519289008e44fe0bb5f5aec7edbaa">&#9670;&#160;</a></span>entropyBinary()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto entropyBinary </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespaceyuki.html#abc2f107791bd7c1d49ecf0f168c085a3">f64</a> const &amp;</td>          <td class="paramname"><span class="paramname"><em>p</em></span></td><td>)</td>
+          <td> -&gt; <a class="el" href="namespaceyuki.html#abc2f107791bd7c1d49ecf0f168c085a3">f64</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>计算布尔随机变量的信息熵 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">p</td><td>该变量取 1 的概率（0 也可） </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>信息熵 </dd></dl>
+
+<p class="definition">在文件 <a class="el" href="tools_8cpp_source.html">tools.cpp</a> 第 <a class="el" href="tools_8cpp_source.html#l00067">67</a> 行定义.</p>
+
+</div>
+</div>
+<a id="a02e11baf285240b04458eea8478296d1" name="a02e11baf285240b04458eea8478296d1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a02e11baf285240b04458eea8478296d1">&#9670;&#160;</a></span>gini() <span class="overload">[1/5]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">auto gini </td>
+          <td>(</td>
+          <td class="paramtype">unordered_map&lt; T, <a class="el" href="namespaceyuki.html#abc2f107791bd7c1d49ecf0f168c085a3">f64</a> &gt; const &amp;</td>          <td class="paramname"><span class="paramname"><em>PMap</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespaceyuki.html#abc2f107791bd7c1d49ecf0f168c085a3">f64</a> const &amp;</td>          <td class="paramname"><span class="paramname"><em>n</em></span><span class="paramdefsep"> = </span><span class="paramdefval">1</span>&#160;) -&gt;  <a class="el" href="namespaceyuki.html#abc2f107791bd7c1d49ecf0f168c085a3">f64</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>计算基尼指数 </p>
+<dl class="tparams"><dt>模板参数</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>map 的键类型 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">PMap</td><td>所有取值的概率集合 </td></tr>
+    <tr><td class="paramname">n</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>f64 </dd></dl>
+
+<p class="definition">在文件 <a class="el" href="tools_8h_source.html">tools.h</a> 第 <a class="el" href="tools_8h_source.html#l00384">384</a> 行定义.</p>
+
+</div>
+</div>
+<a id="a7037de54d7c9b63cbeb9fa1dc2c62fcb" name="a7037de54d7c9b63cbeb9fa1dc2c62fcb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7037de54d7c9b63cbeb9fa1dc2c62fcb">&#9670;&#160;</a></span>gini() <span class="overload">[2/5]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static auto gini </td>
+          <td>(</td>
+          <td class="paramtype">unordered_map&lt; T, <a class="el" href="namespaceyuki.html#abc2f107791bd7c1d49ecf0f168c085a3">f64</a> &gt; const &amp;</td>          <td class="paramname"><span class="paramname"><em>PMap</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespaceyuki.html#abc2f107791bd7c1d49ecf0f168c085a3">f64</a> const &amp;</td>          <td class="paramname"><span class="paramname"><em>n</em></span><span class="paramdefsep"> = </span><span class="paramdefval">1</span>&#160;) -&gt;  <a class="el" href="namespaceyuki.html#abc2f107791bd7c1d49ecf0f168c085a3">f64</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>计算基尼指数 </p>
+<dl class="tparams"><dt>模板参数</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>map 的键类型 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">PMap</td><td>所有取值的概率集合 </td></tr>
+    <tr><td class="paramname">n</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>f64 </dd></dl>
+
+<p class="definition">在文件 <a class="el" href="tools_8h_source.html">tools.h</a> 第 <a class="el" href="tools_8h_source.html#l00384">384</a> 行定义.</p>
+
+</div>
+</div>
+<a id="ad2ffbed131833ad9ee90f444d023006e" name="ad2ffbed131833ad9ee90f444d023006e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad2ffbed131833ad9ee90f444d023006e">&#9670;&#160;</a></span>gini() <span class="overload">[3/5]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">auto gini </td>
+          <td>(</td>
+          <td class="paramtype">unordered_map&lt; T, pair&lt; <a class="el" href="namespaceyuki.html#abc2f107791bd7c1d49ecf0f168c085a3">f64</a>, <a class="el" href="namespaceyuki.html#abc2f107791bd7c1d49ecf0f168c085a3">f64</a> &gt; &gt; const &amp;</td>          <td class="paramname"><span class="paramname"><em>PMap</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespaceyuki.html#abc2f107791bd7c1d49ecf0f168c085a3">f64</a> const &amp;</td>          <td class="paramname"><span class="paramname"><em>n</em></span>&#160;) -&gt; pair&lt;<a class="el" href="namespaceyuki.html#abc2f107791bd7c1d49ecf0f168c085a3">f64</a>, <a class="el" href="namespaceyuki.html#abc2f107791bd7c1d49ecf0f168c085a3">f64</a>&gt; </td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="tools_8h_source.html">tools.h</a> 第 <a class="el" href="tools_8h_source.html#l00394">394</a> 行定义.</p>
+
+</div>
+</div>
+<a id="aa81ff98ce3d13de0d73dba099065187e" name="aa81ff98ce3d13de0d73dba099065187e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa81ff98ce3d13de0d73dba099065187e">&#9670;&#160;</a></span>gini() <span class="overload">[4/5]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static auto gini </td>
+          <td>(</td>
+          <td class="paramtype">unordered_map&lt; T, pair&lt; <a class="el" href="namespaceyuki.html#abc2f107791bd7c1d49ecf0f168c085a3">f64</a>, <a class="el" href="namespaceyuki.html#abc2f107791bd7c1d49ecf0f168c085a3">f64</a> &gt; &gt; const &amp;</td>          <td class="paramname"><span class="paramname"><em>PMap</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespaceyuki.html#abc2f107791bd7c1d49ecf0f168c085a3">f64</a> const &amp;</td>          <td class="paramname"><span class="paramname"><em>n</em></span><span class="paramdefsep"> = </span><span class="paramdefval">1</span>&#160;) -&gt;  pair&lt; <a class="el" href="namespaceyuki.html#abc2f107791bd7c1d49ecf0f168c085a3">f64</a>, <a class="el" href="namespaceyuki.html#abc2f107791bd7c1d49ecf0f168c085a3">f64</a> &gt;</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="tools_8h_source.html">tools.h</a> 第 <a class="el" href="tools_8h_source.html#l00394">394</a> 行定义.</p>
+
+</div>
+</div>
+<a id="a089b6b377afd975cdb34990feab306ce" name="a089b6b377afd975cdb34990feab306ce"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a089b6b377afd975cdb34990feab306ce">&#9670;&#160;</a></span>gini() <span class="overload">[5/5]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto gini </td>
+          <td>(</td>
+          <td class="paramtype">vector&lt; <a class="el" href="namespaceyuki.html#abc2f107791bd7c1d49ecf0f168c085a3">f64</a> &gt; const &amp;</td>          <td class="paramname"><span class="paramname"><em>P</em></span></td><td>)</td>
+          <td> -&gt; <a class="el" href="namespaceyuki.html#abc2f107791bd7c1d49ecf0f168c085a3">f64</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>计算基尼指数 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">P</td><td>所有取值的概率集合 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>基尼指数 </dd></dl>
+
+<p class="definition">在文件 <a class="el" href="tools_8cpp_source.html">tools.cpp</a> 第 <a class="el" href="tools_8cpp_source.html#l00073">73</a> 行定义.</p>
+
+<p class="reference">被这些函数引用 <a class="el" href="_decision_tree_builder_8cpp_source.html#l00345">DecisionTreeBuilder::giniIndex()</a>.</p>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="namespaceyuki_1_1statistics_a089b6b377afd975cdb34990feab306ce_icgraph.png" border="0" usemap="#anamespaceyuki_1_1statistics_a089b6b377afd975cdb34990feab306ce_icgraph" alt=""/></div>
+<map name="anamespaceyuki_1_1statistics_a089b6b377afd975cdb34990feab306ce_icgraph" id="anamespaceyuki_1_1statistics_a089b6b377afd975cdb34990feab306ce_icgraph">
+<area shape="rect" title="计算基尼指数" alt="" coords="203,13,244,40"/>
+<area shape="rect" href="classyuki_1_1atri_1_1dt_1_1_decision_tree_builder.html#aa10ed40befae9f8350131087780f489b" title="计算指定属性对于样本集的基尼指数" alt="" coords="5,5,155,48"/>
+<area shape="poly" title=" " alt="" coords="187,29,155,29,155,24,187,24"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a694b99a9f82ee4e177ac4f9ded05f413" name="a694b99a9f82ee4e177ac4f9ded05f413"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a694b99a9f82ee4e177ac4f9ded05f413">&#9670;&#160;</a></span>median() <span class="overload">[1/6]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename ElemType &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">auto median </td>
+          <td>(</td>
+          <td class="paramtype">vector&lt; ElemType &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>data</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespaceyuki.html#a67cb024aa20a9cffd9c230409152959c">usize</a> const &amp;</td>          <td class="paramname"><span class="paramname"><em>left</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespaceyuki.html#a67cb024aa20a9cffd9c230409152959c">usize</a> const &amp;</td>          <td class="paramname"><span class="paramname"><em>right</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespaceyuki.html#a67cb024aa20a9cffd9c230409152959c">usize</a> const &amp;</td>          <td class="paramname"><span class="paramname"><em>mid</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">function&lt; bool(ElemType const &amp;, ElemType const &amp;)&gt; const &amp;</td>          <td class="paramname"><span class="paramname"><em>comper</em></span><span class="paramdefsep"> = </span><span class="paramdefval">greater&lt;&#160;ElemType&#160;&gt;()</span>&#160;) -&gt;  ElemType</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>求中位元素（递归） </p>
+<dl class="tparams"><dt>模板参数</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">ElemType</td><td>元素类型 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">data</td><td>数据 </td></tr>
+    <tr><td class="paramname">left</td><td>左端点 </td></tr>
+    <tr><td class="paramname">right</td><td>右端点 </td></tr>
+    <tr><td class="paramname">mid</td><td>中点下标 </td></tr>
+    <tr><td class="paramname">comper</td><td>比较器 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>中位元素 </dd></dl>
+
+<p class="definition">在文件 <a class="el" href="tools_8h_source.html">tools.h</a> 第 <a class="el" href="tools_8h_source.html#l00315">315</a> 行定义.</p>
+
+<p class="reference">引用了 <a class="el" href="tools_8h_source.html#l00315">median()</a> , 以及 <a class="el" href="tools_8h_source.html#l00289">yuki::random::uniformInt()</a>.</p>
+
+<p class="reference">被这些函数引用 <a class="el" href="tools_8h_source.html#l00315">median()</a> , 以及 <a class="el" href="tools_8h_source.html#l00367">median()</a>.</p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="namespaceyuki_1_1statistics_a694b99a9f82ee4e177ac4f9ded05f413_cgraph.png" border="0" usemap="#anamespaceyuki_1_1statistics_a694b99a9f82ee4e177ac4f9ded05f413_cgraph" alt=""/></div>
+<map name="anamespaceyuki_1_1statistics_a694b99a9f82ee4e177ac4f9ded05f413_cgraph" id="anamespaceyuki_1_1statistics_a694b99a9f82ee4e177ac4f9ded05f413_cgraph">
+<area shape="rect" title="求中位元素（递归）" alt="" coords="5,29,69,56"/>
+<area shape="poly" title=" " alt="" coords="9,30,4,21,8,11,19,5,37,3,56,5,67,12,64,16,55,10,37,8,20,10,12,15,10,20,14,28"/>
+<area shape="rect" href="namespaceyuki_1_1random.html#aa4d10691eb9a4df34e4a64ee06bc2aa3" title="生成一个随机整型数" alt="" coords="117,29,279,56"/>
+<area shape="poly" title=" " alt="" coords="69,40,101,40,101,45,69,45"/>
+</map>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="namespaceyuki_1_1statistics_a694b99a9f82ee4e177ac4f9ded05f413_icgraph.png" border="0" usemap="#anamespaceyuki_1_1statistics_a694b99a9f82ee4e177ac4f9ded05f413_icgraph" alt=""/></div>
+<map name="anamespaceyuki_1_1statistics_a694b99a9f82ee4e177ac4f9ded05f413_icgraph" id="anamespaceyuki_1_1statistics_a694b99a9f82ee4e177ac4f9ded05f413_icgraph">
+<area shape="rect" title="求中位元素（递归）" alt="" coords="117,29,180,56"/>
+<area shape="poly" title=" " alt="" coords="166,16,160,10,148,8,137,10,132,14,130,20,133,28,128,30,125,20,127,11,135,5,148,3,162,5,170,12"/>
+<area shape="rect" href="namespaceyuki_1_1statistics.html#a0ad41911f3371444ab2ef4e3c8349437" title="求中位元素" alt="" coords="5,29,69,56"/>
+<area shape="poly" title=" " alt="" coords="101,45,69,45,69,40,101,40"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a51a0d0fd9e0cfa2570a4193c2373c831" name="a51a0d0fd9e0cfa2570a4193c2373c831"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a51a0d0fd9e0cfa2570a4193c2373c831">&#9670;&#160;</a></span>median() <span class="overload">[2/6]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename ElemType &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static auto median </td>
+          <td>(</td>
+          <td class="paramtype">vector&lt; ElemType &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>data</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespaceyuki.html#a67cb024aa20a9cffd9c230409152959c">usize</a> const &amp;</td>          <td class="paramname"><span class="paramname"><em>left</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespaceyuki.html#a67cb024aa20a9cffd9c230409152959c">usize</a> const &amp;</td>          <td class="paramname"><span class="paramname"><em>right</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespaceyuki.html#a67cb024aa20a9cffd9c230409152959c">usize</a> const &amp;</td>          <td class="paramname"><span class="paramname"><em>mid</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">function&lt; bool(ElemType const &amp;, ElemType const &amp;)&gt; const &amp;</td>          <td class="paramname"><span class="paramname"><em>comper</em></span><span class="paramdefsep"> = </span><span class="paramdefval">greater&lt;&#160;ElemType&#160;&gt;()</span>&#160;) -&gt;  ElemType</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>求中位元素（递归） </p>
+<dl class="tparams"><dt>模板参数</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">ElemType</td><td>元素类型 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">data</td><td>数据 </td></tr>
+    <tr><td class="paramname">left</td><td>左端点 </td></tr>
+    <tr><td class="paramname">right</td><td>右端点 </td></tr>
+    <tr><td class="paramname">mid</td><td>中点下标 </td></tr>
+    <tr><td class="paramname">comper</td><td>比较器 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>中位元素 </dd></dl>
+
+<p class="definition">在文件 <a class="el" href="tools_8h_source.html">tools.h</a> 第 <a class="el" href="tools_8h_source.html#l00315">315</a> 行定义.</p>
+
+<p class="reference">引用了 <a class="el" href="tools_8h_source.html#l00315">median()</a> , 以及 <a class="el" href="tools_8h_source.html#l00289">yuki::random::uniformInt()</a>.</p>
+
+<p class="reference">被这些函数引用 <a class="el" href="tools_8h_source.html#l00315">median()</a> , 以及 <a class="el" href="tools_8h_source.html#l00367">median()</a>.</p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="namespaceyuki_1_1statistics_a51a0d0fd9e0cfa2570a4193c2373c831_cgraph.png" border="0" usemap="#anamespaceyuki_1_1statistics_a51a0d0fd9e0cfa2570a4193c2373c831_cgraph" alt=""/></div>
+<map name="anamespaceyuki_1_1statistics_a51a0d0fd9e0cfa2570a4193c2373c831_cgraph" id="anamespaceyuki_1_1statistics_a51a0d0fd9e0cfa2570a4193c2373c831_cgraph">
+<area shape="rect" title="求中位元素（递归）" alt="" coords="5,29,69,56"/>
+<area shape="poly" title=" " alt="" coords="9,30,4,21,8,11,19,5,37,3,56,5,67,12,64,16,55,10,37,8,20,10,12,15,10,20,14,28"/>
+<area shape="rect" href="namespaceyuki_1_1random.html#aa4d10691eb9a4df34e4a64ee06bc2aa3" title="生成一个随机整型数" alt="" coords="117,29,279,56"/>
+<area shape="poly" title=" " alt="" coords="69,40,101,40,101,45,69,45"/>
+</map>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="namespaceyuki_1_1statistics_a51a0d0fd9e0cfa2570a4193c2373c831_icgraph.png" border="0" usemap="#anamespaceyuki_1_1statistics_a51a0d0fd9e0cfa2570a4193c2373c831_icgraph" alt=""/></div>
+<map name="anamespaceyuki_1_1statistics_a51a0d0fd9e0cfa2570a4193c2373c831_icgraph" id="anamespaceyuki_1_1statistics_a51a0d0fd9e0cfa2570a4193c2373c831_icgraph">
+<area shape="rect" title="求中位元素（递归）" alt="" coords="117,29,180,56"/>
+<area shape="poly" title=" " alt="" coords="166,16,160,10,148,8,137,10,132,14,130,20,133,28,128,30,125,20,127,11,135,5,148,3,162,5,170,12"/>
+<area shape="rect" href="namespaceyuki_1_1statistics.html#a0ad41911f3371444ab2ef4e3c8349437" title="求中位元素" alt="" coords="5,29,69,56"/>
+<area shape="poly" title=" " alt="" coords="101,45,69,45,69,40,101,40"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a599a4e6aaa62b54ff152d5f2d2707f0d" name="a599a4e6aaa62b54ff152d5f2d2707f0d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a599a4e6aaa62b54ff152d5f2d2707f0d">&#9670;&#160;</a></span>median() <span class="overload">[3/6]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename ElemType &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">auto median </td>
+          <td>(</td>
+          <td class="paramtype">vector&lt; ElemType &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>data</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespaceyuki.html#a67cb024aa20a9cffd9c230409152959c">usize</a></td>          <td class="paramname"><span class="paramname"><em>left</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespaceyuki.html#a67cb024aa20a9cffd9c230409152959c">usize</a></td>          <td class="paramname"><span class="paramname"><em>right</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">function&lt; bool(ElemType const &amp;, ElemType const &amp;)&gt; const &amp;</td>          <td class="paramname"><span class="paramname"><em>comper</em></span><span class="paramdefsep"> = </span><span class="paramdefval">greater&lt;&#160;ElemType&#160;&gt;()</span>&#160;) -&gt;  ElemType</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>求中位元素（迭代） </p>
+<dl class="tparams"><dt>模板参数</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">ElemType</td><td>元素类型 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">data</td><td>数据 </td></tr>
+    <tr><td class="paramname">left</td><td>左端点 </td></tr>
+    <tr><td class="paramname">right</td><td>右端点 </td></tr>
+    <tr><td class="paramname">comper</td><td>比较器 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>中位元素 </dd></dl>
+
+<p class="definition">在文件 <a class="el" href="tools_8h_source.html">tools.h</a> 第 <a class="el" href="tools_8h_source.html#l00339">339</a> 行定义.</p>
+
+<p class="reference">引用了 <a class="el" href="tools_8h_source.html#l00289">yuki::random::uniformInt()</a>.</p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="namespaceyuki_1_1statistics_a599a4e6aaa62b54ff152d5f2d2707f0d_cgraph.png" border="0" usemap="#anamespaceyuki_1_1statistics_a599a4e6aaa62b54ff152d5f2d2707f0d_cgraph" alt=""/></div>
+<map name="anamespaceyuki_1_1statistics_a599a4e6aaa62b54ff152d5f2d2707f0d_cgraph" id="anamespaceyuki_1_1statistics_a599a4e6aaa62b54ff152d5f2d2707f0d_cgraph">
+<area shape="rect" title="求中位元素（迭代）" alt="" coords="5,5,69,32"/>
+<area shape="rect" href="namespaceyuki_1_1random.html#aa4d10691eb9a4df34e4a64ee06bc2aa3" title="生成一个随机整型数" alt="" coords="117,5,279,32"/>
+<area shape="poly" title=" " alt="" coords="69,16,101,16,101,21,69,21"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ae4420eaef7b40d8befa430dacd5a1826" name="ae4420eaef7b40d8befa430dacd5a1826"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae4420eaef7b40d8befa430dacd5a1826">&#9670;&#160;</a></span>median() <span class="overload">[4/6]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename ElemType &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static auto median </td>
+          <td>(</td>
+          <td class="paramtype">vector&lt; ElemType &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>data</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespaceyuki.html#a67cb024aa20a9cffd9c230409152959c">usize</a></td>          <td class="paramname"><span class="paramname"><em>left</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespaceyuki.html#a67cb024aa20a9cffd9c230409152959c">usize</a></td>          <td class="paramname"><span class="paramname"><em>right</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">function&lt; bool(ElemType const &amp;, ElemType const &amp;)&gt; const &amp;</td>          <td class="paramname"><span class="paramname"><em>comper</em></span><span class="paramdefsep"> = </span><span class="paramdefval">greater&lt;&#160;ElemType&#160;&gt;()</span>&#160;) -&gt;  ElemType</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>求中位元素（迭代） </p>
+<dl class="tparams"><dt>模板参数</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">ElemType</td><td>元素类型 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">data</td><td>数据 </td></tr>
+    <tr><td class="paramname">left</td><td>左端点 </td></tr>
+    <tr><td class="paramname">right</td><td>右端点 </td></tr>
+    <tr><td class="paramname">comper</td><td>比较器 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>中位元素 </dd></dl>
+
+<p class="definition">在文件 <a class="el" href="tools_8h_source.html">tools.h</a> 第 <a class="el" href="tools_8h_source.html#l00339">339</a> 行定义.</p>
+
+<p class="reference">引用了 <a class="el" href="tools_8h_source.html#l00289">yuki::random::uniformInt()</a>.</p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="namespaceyuki_1_1statistics_ae4420eaef7b40d8befa430dacd5a1826_cgraph.png" border="0" usemap="#anamespaceyuki_1_1statistics_ae4420eaef7b40d8befa430dacd5a1826_cgraph" alt=""/></div>
+<map name="anamespaceyuki_1_1statistics_ae4420eaef7b40d8befa430dacd5a1826_cgraph" id="anamespaceyuki_1_1statistics_ae4420eaef7b40d8befa430dacd5a1826_cgraph">
+<area shape="rect" title="求中位元素（迭代）" alt="" coords="5,5,69,32"/>
+<area shape="rect" href="namespaceyuki_1_1random.html#aa4d10691eb9a4df34e4a64ee06bc2aa3" title="生成一个随机整型数" alt="" coords="117,5,279,32"/>
+<area shape="poly" title=" " alt="" coords="69,16,101,16,101,21,69,21"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a0ad41911f3371444ab2ef4e3c8349437" name="a0ad41911f3371444ab2ef4e3c8349437"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0ad41911f3371444ab2ef4e3c8349437">&#9670;&#160;</a></span>median() <span class="overload">[5/6]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename ElemType &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">auto median </td>
+          <td>(</td>
+          <td class="paramtype">vector&lt; ElemType &gt;</td>          <td class="paramname"><span class="paramname"><em>data</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">function&lt; bool(ElemType const &amp;, ElemType const &amp;)&gt; const &amp;</td>          <td class="paramname"><span class="paramname"><em>comper</em></span><span class="paramdefsep"> = </span><span class="paramdefval">greater&lt;&#160;ElemType&#160;&gt;()</span>&#160;) -&gt;  ElemType</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>求中位元素 </p>
+<dl class="tparams"><dt>模板参数</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">ElemType</td><td>元素类型 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">data</td><td>数据 </td></tr>
+    <tr><td class="paramname">comper</td><td>比较器 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>中位元素 </dd></dl>
+
+<p class="definition">在文件 <a class="el" href="tools_8h_source.html">tools.h</a> 第 <a class="el" href="tools_8h_source.html#l00367">367</a> 行定义.</p>
+
+<p class="reference">引用了 <a class="el" href="tools_8h_source.html#l00315">median()</a>.</p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="namespaceyuki_1_1statistics_a0ad41911f3371444ab2ef4e3c8349437_cgraph.png" border="0" usemap="#anamespaceyuki_1_1statistics_a0ad41911f3371444ab2ef4e3c8349437_cgraph" alt=""/></div>
+<map name="anamespaceyuki_1_1statistics_a0ad41911f3371444ab2ef4e3c8349437_cgraph" id="anamespaceyuki_1_1statistics_a0ad41911f3371444ab2ef4e3c8349437_cgraph">
+<area shape="rect" title="求中位元素" alt="" coords="5,29,69,56"/>
+<area shape="rect" href="namespaceyuki_1_1statistics.html#a694b99a9f82ee4e177ac4f9ded05f413" title="求中位元素（递归）" alt="" coords="117,29,180,56"/>
+<area shape="poly" title=" " alt="" coords="69,40,101,40,101,45,69,45"/>
+<area shape="poly" title=" " alt="" coords="128,30,125,20,127,11,135,5,148,3,162,5,170,12,166,16,160,10,148,8,137,10,132,14,130,20,133,28"/>
+<area shape="rect" href="namespaceyuki_1_1random.html#aa4d10691eb9a4df34e4a64ee06bc2aa3" title="生成一个随机整型数" alt="" coords="228,29,390,56"/>
+<area shape="poly" title=" " alt="" coords="181,40,213,40,213,45,181,45"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ab9ac9849ed40c25f2d51f459bdb63359" name="ab9ac9849ed40c25f2d51f459bdb63359"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab9ac9849ed40c25f2d51f459bdb63359">&#9670;&#160;</a></span>median() <span class="overload">[6/6]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename ElemType &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static auto median </td>
+          <td>(</td>
+          <td class="paramtype">vector&lt; ElemType &gt;</td>          <td class="paramname"><span class="paramname"><em>data</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">function&lt; bool(ElemType const &amp;, ElemType const &amp;)&gt; const &amp;</td>          <td class="paramname"><span class="paramname"><em>comper</em></span><span class="paramdefsep"> = </span><span class="paramdefval">greater&lt;&#160;ElemType&#160;&gt;()</span>&#160;) -&gt;  ElemType</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>求中位元素 </p>
+<dl class="tparams"><dt>模板参数</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">ElemType</td><td>元素类型 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">data</td><td>数据 </td></tr>
+    <tr><td class="paramname">comper</td><td>比较器 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>中位元素 </dd></dl>
+
+<p class="definition">在文件 <a class="el" href="tools_8h_source.html">tools.h</a> 第 <a class="el" href="tools_8h_source.html#l00367">367</a> 行定义.</p>
+
+<p class="reference">引用了 <a class="el" href="tools_8h_source.html#l00315">median()</a>.</p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="namespaceyuki_1_1statistics_ab9ac9849ed40c25f2d51f459bdb63359_cgraph.png" border="0" usemap="#anamespaceyuki_1_1statistics_ab9ac9849ed40c25f2d51f459bdb63359_cgraph" alt=""/></div>
+<map name="anamespaceyuki_1_1statistics_ab9ac9849ed40c25f2d51f459bdb63359_cgraph" id="anamespaceyuki_1_1statistics_ab9ac9849ed40c25f2d51f459bdb63359_cgraph">
+<area shape="rect" title="求中位元素" alt="" coords="5,29,69,56"/>
+<area shape="rect" href="namespaceyuki_1_1statistics.html#a694b99a9f82ee4e177ac4f9ded05f413" title="求中位元素（递归）" alt="" coords="117,29,180,56"/>
+<area shape="poly" title=" " alt="" coords="69,40,101,40,101,45,69,45"/>
+<area shape="poly" title=" " alt="" coords="128,30,125,20,127,11,135,5,148,3,162,5,170,12,166,16,160,10,148,8,137,10,132,14,130,20,133,28"/>
+<area shape="rect" href="namespaceyuki_1_1random.html#aa4d10691eb9a4df34e4a64ee06bc2aa3" title="生成一个随机整型数" alt="" coords="228,29,390,56"/>
+<area shape="poly" title=" " alt="" coords="181,40,213,40,213,45,181,45"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a55d030798b22764edcd313f75df660ba" name="a55d030798b22764edcd313f75df660ba"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a55d030798b22764edcd313f75df660ba">&#9670;&#160;</a></span>variance()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto variance </td>
+          <td>(</td>
+          <td class="paramtype">vector&lt; <a class="el" href="namespaceyuki.html#abc2f107791bd7c1d49ecf0f168c085a3">f64</a> &gt; const &amp;</td>          <td class="paramname"><span class="paramname"><em>data</em></span></td><td>)</td>
+          <td> -&gt; <a class="el" href="namespaceyuki.html#abc2f107791bd7c1d49ecf0f168c085a3">f64</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>计算方差（Welford迭代法） </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">data</td><td>数据 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>方差 </dd></dl>
+
+<p class="definition">在文件 <a class="el" href="tools_8cpp_source.html">tools.cpp</a> 第 <a class="el" href="tools_8cpp_source.html#l00041">41</a> 行定义.</p>
+
+</div>
+</div>
+<a id="a11eeb4cbe502140aee06bcec744782e0" name="a11eeb4cbe502140aee06bcec744782e0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a11eeb4cbe502140aee06bcec744782e0">&#9670;&#160;</a></span>varianceOnePass()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto varianceOnePass </td>
+          <td>(</td>
+          <td class="paramtype">vector&lt; <a class="el" href="namespaceyuki.html#abc2f107791bd7c1d49ecf0f168c085a3">f64</a> &gt; const &amp;</td>          <td class="paramname"><span class="paramname"><em>data</em></span></td><td>)</td>
+          <td> -&gt; <a class="el" href="namespaceyuki.html#abc2f107791bd7c1d49ecf0f168c085a3">f64</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>计算方差（一趟法，数值误差大） </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">data</td><td>数据 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>方差 </dd></dl>
+
+<p class="definition">在文件 <a class="el" href="tools_8cpp_source.html">tools.cpp</a> 第 <a class="el" href="tools_8cpp_source.html#l00028">28</a> 行定义.</p>
+
+</div>
+</div>
+<a id="a9f5ddc0a8af3796b52b9be539498893e" name="a9f5ddc0a8af3796b52b9be539498893e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9f5ddc0a8af3796b52b9be539498893e">&#9670;&#160;</a></span>varianceTwoPass()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto varianceTwoPass </td>
+          <td>(</td>
+          <td class="paramtype">vector&lt; <a class="el" href="namespaceyuki.html#abc2f107791bd7c1d49ecf0f168c085a3">f64</a> &gt; const &amp;</td>          <td class="paramname"><span class="paramname"><em>data</em></span></td><td>)</td>
+          <td> -&gt; <a class="el" href="namespaceyuki.html#abc2f107791bd7c1d49ecf0f168c085a3">f64</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>计算方差（朴素方法） </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">data</td><td>数据 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>方差 </dd></dl>
+
+<p class="definition">在文件 <a class="el" href="tools_8cpp_source.html">tools.cpp</a> 第 <a class="el" href="tools_8cpp_source.html#l00013">13</a> 行定义.</p>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0
+</small></address>
+</div><!-- doc-content -->
+</body>
+</html>

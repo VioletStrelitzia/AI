@@ -2,21 +2,20 @@
 
 namespace yuki::atri::nfp {
     bool Algorithm::printPath = true;
-    int Algorithm::nodeCountTemp = 0;
+    i32 Algorithm::nodeCountTemp = 0;
     bool Algorithm::underExperiment = false;
 
-    // 统计测试函数，在这个函数里设计并输出统计数据
     void Algorithm::statisticalExperiment() {
         underExperiment = true;
         clock_t t;
-        int sampleNum = 100;
-        int timeCosts[5][State::maxDepth / 2] = { 0 };
-        int nodeCounts[5][State::maxDepth / 2] = { 0 };
-        int ans;
+        i32 sampleNum = 100;
+        i32 timeCosts[5][State::maxDepth / 2] = { 0 };
+        i32 nodeCounts[5][State::maxDepth / 2] = { 0 };
+        i32 ans;
         
-        for (int d = 2; d <= State::maxDepth; d += 2) {
-            int j = (d - 2) / 2;
-            for (int i = 0; i < sampleNum; ++i) {
+        for (i32 d = 2; d <= State::maxDepth; d += 2) {
+            i32 j = (d - 2) / 2;
+            for (i32 i = 0; i < sampleNum; ++i) {
                 State originalNFPState(State::genRandomNFPState(d));
 
                 nodeCountTemp = 0;
@@ -66,10 +65,10 @@ namespace yuki::atri::nfp {
         cout << std::setw(10) << std::left << "A*_1";
         cout << std::setw(10) << std::left << "A*_2";
         cout << std::setw(10) << std::left << "IDS" << endl;
-        for (int d = 2; d <= State::maxDepth; d += 2) {
-            int j = (d - 2) / 2;
+        for (i32 d = 2; d <= State::maxDepth; d += 2) {
+            i32 j = (d - 2) / 2;
             cout << std::setw(10) << std::left << d;
-            for (int i = 0; i < 5; ++i) {
+            for (i32 i = 0; i < 5; ++i) {
                 cout << std::setw(10) << std::left << (double)nodeCounts[i][j] / sampleNum;
             }
             cout << endl;
@@ -83,10 +82,10 @@ namespace yuki::atri::nfp {
         cout << std::setw(10) << std::left << "A*_1";
         cout << std::setw(10) << std::left << "A*_2";
         cout << std::setw(10) << std::left << "IDS" << endl;
-        for (int d = 2; d <= State::maxDepth; d += 2) {
-            int j = (d - 2) / 2;
+        for (i32 d = 2; d <= State::maxDepth; d += 2) {
+            i32 j = (d - 2) / 2;
             cout << std::setw(10) << std::left << d;
-            for (int i = 0; i < 5; ++i) {
+            for (i32 i = 0; i < 5; ++i) {
                 cout << std::setw(10) << std::left << (double)timeCosts[i][j] / sampleNum;
             }
             cout << endl;
@@ -94,15 +93,8 @@ namespace yuki::atri::nfp {
         cout << endl;
         underExperiment = false;
     }
-
-    /// @brief 曼哈顿距离优化的迭代加深搜索
-    /// @param originalNFPState 目前的NFPState
-    /// @param targetNFPState 目标NFPState
-    /// @param now 目前已走过的步数
-    /// @param preZeroPos 上一个NFPState的0的位置
-    /// @param depthLimit 搜索深度限制
-    /// @return 在深度限制内的搜索是否成功
-    bool Algorithm::IDS(State& originalNFPState, State const& targetNFPState, Vector2 const& preZeroPos, int const& depthLimit, int& ans) {
+    
+    auto Algorithm::IDS(State& originalNFPState, State const& targetNFPState, Vector2 const& preZeroPos, i32 const& depthLimit, i32& ans) -> bool {
         if (originalNFPState == targetNFPState) {
             ans = originalNFPState.depth;
             return true;
@@ -114,7 +106,7 @@ namespace yuki::atri::nfp {
         }
 
         // 枚举可以执行的action，即每次向上、下、左、右移动
-        for (int actionId = 0; actionId < State::actionsNum; ++actionId) {
+        for (i32 actionId = 0; actionId < State::actionsNum; ++actionId) {
             Vector2 zeroPos = originalNFPState.zeroPos; // 0 的位置
             Vector2 swapPos = zeroPos + State::actions[actionId]; // 要交换的数 的位置
 
@@ -151,8 +143,7 @@ namespace yuki::atri::nfp {
         return false;
     }
 
-    // 宽度优先搜索示例
-    int Algorithm::BFS_Demo(State& originalNFPState, State const& targetNFPState) {
+    i32 Algorithm::BFS_Demo(State& originalNFPState, State const& targetNFPState) {
         originalNFPState.reset();
         queue<State> q;
         StateSet set;
@@ -183,8 +174,7 @@ namespace yuki::atri::nfp {
         return -1;
     }
 
-    // 宽度优先搜索
-    int Algorithm::BFS(State& originalNFPState, State const& targetNFPState) {
+    i32 Algorithm::BFS(State& originalNFPState, State const& targetNFPState) {
         originalNFPState.reset();
 
         queue<State> q;
@@ -216,8 +206,7 @@ namespace yuki::atri::nfp {
         return -1;
     }
 
-    // 深度有限搜索
-    int Algorithm::DLS(State& originalNFPState, State const& targetNFPState, int const& depthLimit) {
+    i32 Algorithm::DLS(State& originalNFPState, State const& targetNFPState, i32 const& depthLimit) {
         originalNFPState.reset();
 
         stack<State> s;
@@ -257,19 +246,18 @@ namespace yuki::atri::nfp {
         return -1;
     }
 
-    // 启发函数1：错位数码数
-    int Algorithm::incorrectCount(State const& originalNFPState, State const& targetNFPState) {
-        int incorrectCount = 0;
+    i32 Algorithm::incorrectCount(State const& originalNFPState, State const& targetNFPState) {
+        i32 incorrectCount = 0;
         static Vector2 pos[2][State::size];
 
-        for (int r = 0; r < State::rows; ++r) {
-            for (int c = 0; c < State::cols; ++c) {
+        for (i32 r = 0; r < State::rows; ++r) {
+            for (i32 c = 0; c < State::cols; ++c) {
                 pos[0][originalNFPState.at(r, c)] = { r, c };
                 pos[1][targetNFPState.at(r, c)] = { r, c };
             }
         }
 
-        for (int i = 1; i < State::size; ++i) {
+        for (i32 i = 1; i < State::size; ++i) {
             if (pos[0][i] != pos[1][i]) {
                 ++incorrectCount;
             }
@@ -278,30 +266,28 @@ namespace yuki::atri::nfp {
         return incorrectCount + originalNFPState.depth;
     }
 
-    // 启发函数2：曼哈顿距离
-    int Algorithm::manhattanDistance(State const& originalNFPState, State const& targetNFPState) {
-        int manhattanDis = 0;
+    i32 Algorithm::manhattanDistance(State const& originalNFPState, State const& targetNFPState) {
+        i32 manhattanDis = 0;
         static Vector2 pos[2][State::size];
 
-        for (int r = 0, i = 0; r < State::rows; ++r) {
-            for (int c = 0; c < State::cols; ++c, i += 4) {
+        for (i32 r = 0, i = 0; r < State::rows; ++r) {
+            for (i32 c = 0; c < State::cols; ++c, i += 4) {
                 pos[0][originalNFPState.at(r, c)] = { r, c };
                 pos[1][targetNFPState.at(r, c)] = { r, c };
             }
         }
 
-        for (int i = 1; i < State::size; ++i) {
+        for (i32 i = 1; i < State::size; ++i) {
             manhattanDis += abs(pos[0][i].r - pos[1][i].r) + abs(pos[0][i].c - pos[1][i].c);
         }
 
         return manhattanDis + originalNFPState.depth;
     }
 
-    // 启发式搜索
-    int Algorithm::AStar(State& originalNFPState, State const& targetNFPState, function<int(State const&, State const&)> const& heuristicFunc) {
+    i32 Algorithm::AStar(State& originalNFPState, State const& targetNFPState, function<i32(State const&, State const&)> const& heuristicFunc) {
         originalNFPState.reset();
 
-        priority_queue<pair<int, State>, vector<pair<int, State>>, std::greater<pair<int, State>>> pq;
+        priority_queue<pair<i32, State>, vector<pair<i32, State>>, std::greater<pair<i32, State>>> pq;
         StateSet set;
         pq.push({ heuristicFunc(originalNFPState, targetNFPState), originalNFPState });
         if (underExperiment) {
@@ -332,9 +318,8 @@ namespace yuki::atri::nfp {
         return -1;
     }
 
-    // 交互模式
     void Algorithm::interactiveMode() {
-        int depth = -1;
+        i32 depth = -1;
         while (true) {
             cout << "生成一个最优解深度为d（0 <= d <= " << State::maxDepth << ")的初始状态，请输入d（输入-1则退出程序）：";
             cin >> depth;
@@ -348,7 +333,7 @@ namespace yuki::atri::nfp {
 
             State originalNFPState = State::genRandomNFPState(depth);
             cout << "初始状态为：\n" << originalNFPState << endl;
-            int res[6]{ -2, -2, -2, -2, -2, -2 };
+            i32 res[6]{ -2, -2, -2, -2, -2, -2 };
 
             cout << "\nBFS_Demo路径输出：\n";
             res[0] = Algorithm::BFS_Demo(originalNFPState, State::_targetNFPState);
@@ -366,7 +351,7 @@ namespace yuki::atri::nfp {
             res[4] = Algorithm::AStar(originalNFPState, State::_targetNFPState, Algorithm::manhattanDistance);
 
             cout << "\nIDS路径输出：\n";
-            int dep = 0;
+            i32 dep = 0;
             while (dep <= State::maxDepth &&
                 !Algorithm::IDS(originalNFPState, State::_targetNFPState, originalNFPState.zeroPos, dep, res[5])) {
                 ++dep;
@@ -378,7 +363,7 @@ namespace yuki::atri::nfp {
             }
             cout << "\n是否正确\t";
             bool pass = true, IDSPass = true;
-            for (int i = 0; i < 5; ++i) {
+            for (i32 i = 0; i < 5; ++i) {
                 if (res[i] != -1 && res[i] >= depth) {
                     cout << "Y\t";
                 } else {
@@ -417,14 +402,13 @@ namespace yuki::atri::nfp {
         }
     }
 
-    // 正确性测试函数
     void Algorithm::testSearch() {
         bool pass = true;
-        int res = -1;
+        i32 res = -1;
         // 依次遍历深度为1~10的状态用于测试BFS
-        for (int d = 1; d <= 10; ++d) {
-            int end = State::depthIndexs[d] - 1;
-            for (int i = State::depthIndexs[d - 1]; i < end; ++i) {
+        for (i32 d = 1; d <= 10; ++d) {
+            i32 end = State::depthIndexs[d] - 1;
+            for (i32 i = State::depthIndexs[d - 1]; i < end; ++i) {
                 res = Algorithm::BFS(State::allNFPStates[i], State::_targetNFPState);
                 if (res != d) {
                     cout << State::allNFPStates[i] << '\n';
@@ -443,9 +427,9 @@ namespace yuki::atri::nfp {
         }
 
         // 依次遍历深度为1~8的状态用于测试DLS
-        for (int d = 1; d <= 8; ++d) {
-            int end = State::depthIndexs[d] - 1;
-            for (int i = State::depthIndexs[d - 1]; i < end; ++i) {
+        for (i32 d = 1; d <= 8; ++d) {
+            i32 end = State::depthIndexs[d] - 1;
+            for (i32 i = State::depthIndexs[d - 1]; i < end; ++i) {
                 res = Algorithm::DLS(State::allNFPStates[i], State::_targetNFPState);
                 if (res < 0) {
                     cout << State::allNFPStates[i] << '\n';
@@ -463,9 +447,9 @@ namespace yuki::atri::nfp {
         }
 
         // 依次遍历深度为5~14的状态用于测试AStar1
-        for (int d = 5; d <= 14; ++d) {
-            int end = State::depthIndexs[d] - 1;
-            for (int i = State::depthIndexs[d - 1]; i < end; ++i) {
+        for (i32 d = 5; d <= 14; ++d) {
+            i32 end = State::depthIndexs[d] - 1;
+            for (i32 i = State::depthIndexs[d - 1]; i < end; ++i) {
                 res = Algorithm::AStar(State::allNFPStates[i], State::_targetNFPState, Algorithm::incorrectCount);
                 if (res != d) {
                     cout << State::allNFPStates[i] << '\n';
@@ -484,9 +468,9 @@ namespace yuki::atri::nfp {
         }
 
         // 依次遍历深度为8~16的状态用于测试AStar2
-        for (int d = 8; d <= 16; ++d) {
-            int end = State::depthIndexs[d] - 1;
-            for (int i = State::depthIndexs[d - 1]; i < end; ++i) {
+        for (i32 d = 8; d <= 16; ++d) {
+            i32 end = State::depthIndexs[d] - 1;
+            for (i32 i = State::depthIndexs[d - 1]; i < end; ++i) {
                 res = Algorithm::AStar(State::allNFPStates[i], State::_targetNFPState, Algorithm::manhattanDistance);
                 if (res != d) {
                     cout << State::allNFPStates[i] << '\n';
@@ -505,10 +489,10 @@ namespace yuki::atri::nfp {
         }
 
         // 依次遍历深度为8~13的状态用于测试IDS
-        for (int d = 8; d <= 13; ++d) {
-            int end = State::depthIndexs[d] - 1;
-            for (int i = State::depthIndexs[d - 1]; i < end; ++i) {
-                int dep = d;
+        for (i32 d = 8; d <= 13; ++d) {
+            i32 end = State::depthIndexs[d] - 1;
+            for (i32 i = State::depthIndexs[d - 1]; i < end; ++i) {
+                i32 dep = d;
                 res = -1;
                 while (dep <= State::maxDepth && !Algorithm::IDS(State::allNFPStates[i], State::_targetNFPState, State::allNFPStates[i].zeroPos, dep, res)) {
                     ++dep;

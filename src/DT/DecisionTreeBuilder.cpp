@@ -5,6 +5,7 @@ namespace yuki::atri::dt {
         if (left < right) {
             // 左闭右闭
             i32 i = left + 1, j = right, p = left;
+            swap(examples[left], examples[(left + right) >> 1]);
             while (true) {
                 while (examples[i].first->data[attr->index] <= examples[p].first->data[attr->index] && i < right) ++i;
                 while (examples[j].first->data[attr->index] >= examples[p].first->data[attr->index] && j > left) --j;
@@ -209,7 +210,7 @@ namespace yuki::atri::dt {
             }
         }
 
-        return randomChoose(targetV);
+        return random::choose(targetV);
     }
 
     bool DecisionTreeBuilder::isSameClassify(vector<pair<Example*, f64>> const& examples) {
@@ -241,7 +242,7 @@ namespace yuki::atri::dt {
         i = 0;
         for (vector<pair<Example*, f64>> const& exs: subExamples) {
             if (!exs.empty()) {
-                HL_A += n_k[i] / n * entropy(targetProbDist(target, exs));
+                HL_A += n_k[i] / n * statistics::entropy(targetProbDist(target, exs));
             }
             ++i;
         }
@@ -256,7 +257,7 @@ namespace yuki::atri::dt {
             HL_A = DBL_MAX;  // 目标属性 target 在用属性 attr 分割样本集之后的加权信息熵，即条件信息熵
         
         // 计算目标属性 target 在样本集的信息熵
-        HL = entropy(targetProbDist(target, examples));
+        HL = statistics::entropy(targetProbDist(target, examples));
 
         switch (attr->type) {
         case AttributeType::DISCRETE: {
@@ -266,7 +267,10 @@ namespace yuki::atri::dt {
         case AttributeType::CONTINUOUS: {
             // 如果属性 attr 是离散的，需要枚举所有取值作为二分点的情况，并取剩余期望熵最小的点作为二分点
             f64 temp, splitValue;
-            quickSort(examples, attr);
+            rg::sort(examples, [&attr](pair<Example*, f64> const& p1, pair<Example*, f64> const& p2) -> bool {
+                return p1.first->data[attr->index] < p2.first->data[attr->index];
+            });
+            //quickSort(examples, attr);
             for (i32 i = 0, end = (i32)examples.size() - 1; i < end && examples[i + 1].first->data[attr->index] != Attribute::ABSENT; ++i) {
                 attr->values.clear();
                 attr->values.insert(examples[i].first->data[attr->index]);
@@ -296,7 +300,7 @@ namespace yuki::atri::dt {
 
         switch (attr->type) {
         case AttributeType::DISCRETE: {
-            H_A = entropy(targetProbDist(target, examples));
+            H_A = statistics::entropy(targetProbDist(target, examples));
         } break;
         case AttributeType::CONTINUOUS: {
             vector<f64> P(attr->values.size() + 1, 0.);
@@ -329,7 +333,7 @@ namespace yuki::atri::dt {
                 }
             }
             for (f64& p: P) p /= n;
-            H_A = entropy(P);
+            H_A = statistics::entropy(P);
         } break;
         }
         if (H_A == 0) {
@@ -354,7 +358,7 @@ namespace yuki::atri::dt {
                     for (pair<Example*, f64> const& exp: exs) {
                         n_k += exp.second;
                     }
-                    GI += n_k / n * yuki::gini(targetProbDist(target, exs));
+                    GI += n_k / n * statistics::gini(targetProbDist(target, exs));
                 }
             }
         } break;
@@ -362,10 +366,13 @@ namespace yuki::atri::dt {
             // 如果属性 attr 是离散的，需要枚举所有取值作为二分点的情况，并取剩余期望熵最小的点作为二分点
             GI = DBL_MAX;
             f64 splitValue, curGI, n2 = n * n;
-            quickSort(examples, attr);
+            rg::sort(examples, [&attr](pair<Example*, f64> const& p1, pair<Example*, f64> const& p2) -> bool {
+                return p1.first->data[attr->index] < p2.first->data[attr->index];
+            });
+            //quickSort(examples, attr);
 
             for (i32 i = 0, end = static_cast<i32>(examples.size() - 1); i < end; ++i) {
-                // 这里还是用 splitExamples 较好，不要计数，如果值相同会无限递归
+                // 这里还是用 splitExamples 较好，不要直接遍历计数，如果值相同会无限递归
                 attr->values.clear();
                 attr->values.insert(examples[i].first->data[attr->index]);
                 vector<vector<pair<Example*, f64>>> subExs = splitExamples(attr, examples);
@@ -375,7 +382,7 @@ namespace yuki::atri::dt {
                     for (pair<Example*, f64> const& exp: exs) {
                         n_k += exp.second;
                     }
-                    curGI += n_k / n * gini(targetProbDist(target,exs));
+                    curGI += n_k / n * statistics::gini(targetProbDist(target,exs));
                 }
                 if (GI > curGI) {
                     splitValue = (examples[i].first->data[attr->index] + examples[i + 1].first->data[attr->index]) / 2;
@@ -388,208 +395,5 @@ namespace yuki::atri::dt {
         }
 
         return GI;
-    }
-
-    auto DecisionTreeBuilder::importance(
-        vector<Attribute*> const& attributes, Attribute* const& target,
-        vector<pair<Example*, f64>>& examples,
-        string const& criterion, pair<string, f64>* nodeInfo) -> Attribute* {
-        vector<i32> attrIdxs(1, 0);
-        f64 select, cur;
-        vector<pair<Example*, f64>> availExamples;
-        if (criterion == "InfoGain") {
-            availExamples = getAvailEx(attributes[0], examples);
-            select = getTotalWeight(availExamples) / getTotalWeight(examples) * infoGain(attributes[0], target, availExamples);
-            cout << attributes[0]->name << select << endl;
-            for (i32 i = 1, end = static_cast<i32>(attributes.size()); i < end; ++i) {
-                availExamples = getAvailEx(attributes[i], examples);
-                cur = getTotalWeight(availExamples) / getTotalWeight(examples) * infoGain(attributes[i], target, availExamples);
-                cout << attributes[i]->name << cur << endl;
-                if (cur > select) {
-                    attrIdxs.clear();
-                    select = cur;
-                    attrIdxs.push_back(i);
-                } else if (cur == select) {
-                    attrIdxs.push_back(i);
-                }
-            }
-            cout << endl;
-        } else if (criterion == "InfoGainRatio") {
-            availExamples = getAvailEx(attributes[0], examples);
-            select = getTotalWeight(availExamples) / getTotalWeight(examples) * infoGainRatio(attributes[0], target, availExamples);
-            cout << attributes[0]->name << ' ' << select << ' ' << getTotalWeight(examples) << endl;
-            for (i32 i = 1, end = static_cast<i32>(attributes.size()); i < end; ++i) {
-                availExamples = getAvailEx(attributes[i], examples);
-                cur = getTotalWeight(availExamples) / getTotalWeight(examples) * infoGainRatio(attributes[i], target, availExamples);
-                cout << attributes[i]->name << cur << endl;
-                if (cur > select) {
-                    attrIdxs.clear();
-                    select = cur;
-                    attrIdxs.push_back(i);
-                } else if (cur == select) {
-                    attrIdxs.push_back(i);
-                } 
-            }
-            cout << endl;
-        } else /*if (criterion == "GiniIndex")*/ {
-            availExamples = getAvailEx(attributes[0], examples);
-            select = getTotalWeight(availExamples) / getTotalWeight(examples) * giniIndex(attributes[0], target, availExamples);
-            for (i32 i = 1, end = static_cast<i32>(attributes.size()); i < end; ++i) {
-                availExamples = getAvailEx(attributes[i], examples);
-                cur = getTotalWeight(availExamples) / getTotalWeight(examples) * giniIndex(attributes[i], target, availExamples);
-                if (cur < select) {
-                    attrIdxs.clear();
-                    select = cur;
-                    attrIdxs.push_back(i);
-                } else if (cur == select) {
-                    attrIdxs.push_back(i);
-                } 
-            }
-        }
-        if (nodeInfo) {
-            nodeInfo->first = criterion;
-            nodeInfo->second = select;
-        }
-        return attributes[randomChoose(attrIdxs)];
-    }
-
-    auto DecisionTreeBuilder::fit(
-        vector<Attribute*> const& attributes,
-        Attribute* const& target,
-        vector<pair<Example*, f64>>& examples,
-        vector<pair<Example*, f64>> const& parentExamples,
-        string const& criterion,
-        i32 const& depth,
-        i32 const& maxDepth
-    ) -> shared_ptr<DecisionTreeNode> {
-        if (examples.empty()) {
-            return shared_ptr<DecisionTreeNode>(
-                new DiscreteDecisionTreeNode(
-                    target->name, pluralityValue(target, parentExamples), 0, { "Exampls empty", 1. }));
-        } else if (isSameClassify(examples)) {
-            return shared_ptr<DecisionTreeNode>(
-                new DiscreteDecisionTreeNode(
-                    target->name, examples[0].first->target, static_cast<i32>(examples.size()), { "All same", 1. }));
-        } else if (attributes.empty()) {
-            return shared_ptr<DecisionTreeNode>(
-                new DiscreteDecisionTreeNode(
-                    target->name, pluralityValue(target, examples), static_cast<i32>(examples.size()), { "Attributes empty", 1. }));
-        } else {
-            pair<string, f64> nodeInfo;
-            Attribute* attr = importance(attributes, target, examples, criterion, &nodeInfo);
-            vector<pair<Example*, f64>> absentExamples = sepAbsentEx(attr, examples);
-            vector<vector<pair<Example*, f64>>> subExs = splitExamples(attr, examples);
-            mergeExamples(subExs, absentExamples);
-            switch (attr->type) {
-            case AttributeType::DISCRETE: {
-                vector<Attribute*> subAttributes = removeAttritude(attr, attributes);
-                DiscreteDecisionTreeNode* root =
-                    new DiscreteDecisionTreeNode(
-                        attr->name, pluralityValue(target, examples), static_cast<i32>(examples.size()), nodeInfo);
-                if (maxDepth > 0 && depth >= maxDepth) {
-                    for (f64 const& value: attr->values) {
-                        root->children[value] = nullptr;
-                    }
-                } else {
-                    i32 i = 0;
-                    for (f64 const& value: attr->values) {
-                        root->children[value] = shared_ptr<DecisionTreeNode>(fit(subAttributes, target, subExs[i], examples, criterion, depth + 1, maxDepth));
-                        ++i;
-                    }
-                }
-                return shared_ptr<DecisionTreeNode>(root);
-            } case AttributeType::CONTINUOUS: {
-                shared_ptr<DecisionTreeNode> dstRoot;
-                if (subExs.size() == 2) {
-                    ContinuousBinaryDecisionTreeNode* root =
-                        new ContinuousBinaryDecisionTreeNode(
-                            attr->name, *attr->values.begin(), pluralityValue(target, examples), (i32)examples.size(), nodeInfo);
-                    if (maxDepth > 0 && depth >= maxDepth) {
-                        root->lchild = nullptr;
-                        root->rchild = nullptr;
-                    } else {
-                        root->lchild = shared_ptr<DecisionTreeNode>(fit(attributes, target, subExs[0], examples, criterion, depth + 1, maxDepth));
-                        root->rchild = shared_ptr<DecisionTreeNode>(fit(attributes, target, subExs[1], examples, criterion, depth + 1, maxDepth));
-                    
-                    }
-                    dstRoot = shared_ptr<DecisionTreeNode>(root);
-                }
-                return dstRoot;
-            } default:
-                return nullptr;
-            }
-        }
-    }
-
-    auto DecisionTreeBuilder::fitQueue(
-        vector<Attribute*> const& attributes,
-        Attribute* const& target,
-        vector<pair<Example*, f64>>& examples,
-        vector<pair<Example*, f64>> const& parentExamples,
-        string const& criterion,
-        i32 const& depth,
-        i32 const& maxDepth
-        ) -> shared_ptr<DecisionTreeNode> {
-        queue<pair<shared_ptr<DecisionTreeNode>&, NodeData>> q;
-        shared_ptr<DecisionTreeNode> root;
-        q.push({ root, { attributes, examples, {}, 0 } });
-
-        while (!q.empty()) {
-            auto& x = q.front();
-
-            if (x.second.examples.empty()) {
-                x.first = shared_ptr<DecisionTreeNode>(
-                    new DiscreteDecisionTreeNode(
-                        target->name, pluralityValue(target, x.second.parentExamples), 0, { "Exampls empty", 1. }));
-            } else if (isSameClassify(x.second.examples)) {
-                x.first = shared_ptr<DecisionTreeNode>(
-                    new DiscreteDecisionTreeNode(
-                        target->name, x.second.examples[0].first->target, (i32)x.second.examples.size(), { "All same", 1. }));
-            } else if (x.second.attributes.empty()) {
-                x.first = shared_ptr<DecisionTreeNode>(
-                    new DiscreteDecisionTreeNode(
-                        target->name, pluralityValue(target, x.second.examples), (i32)x.second.examples.size(), { "Attributes empty", 1. }));
-            } else {
-                pair<string, f64> nodeInfo;
-                Attribute* attr = importance(x.second.attributes, target, x.second.examples, criterion, &nodeInfo);
-                vector<pair<Example*, f64>> absentExamples = sepAbsentEx(attr, x.second.examples);
-                vector<vector<pair<Example*, f64>>> subExs = splitExamples(attr, x.second.examples);
-                mergeExamples(subExs, absentExamples);
-                switch (attr->type) {
-                case AttributeType::DISCRETE: {
-                    vector<Attribute*> subAttributes = removeAttritude(attr, x.second.attributes);
-                    DiscreteDecisionTreeNode* node =
-                        new DiscreteDecisionTreeNode(
-                            attr->name, pluralityValue(target, x.second.examples), (i32)x.second.examples.size(), nodeInfo);
-                    for (f64 const& value: attr->values) {
-                        node->children[value] = shared_ptr<DecisionTreeNode>();
-                    }
-                    // 这里还是先添加子结点再将子结点加入队列，防止数据结构添加新结点的时候内存改变导致引用失效
-                    i32 i = 0;
-                    for (f64 const& value: attr->values) {
-                        q.push({ node->children[value], { subAttributes, subExs[i], x.second.examples, x.second.depth + 1 }});
-                        ++i;
-                    }
-                    x.first = shared_ptr<DecisionTreeNode>(node);
-                } break;
-                case AttributeType::CONTINUOUS: {
-                    if (subExs.size() == 2) {
-                        ContinuousBinaryDecisionTreeNode* node =
-                            new ContinuousBinaryDecisionTreeNode(
-                                attr->name, *attr->values.begin(), pluralityValue(target, x.second.examples), (i32)x.second.examples.size(), nodeInfo);
-                        node->lchild = shared_ptr<DecisionTreeNode>();
-                        q.push({ node->lchild, { x.second.attributes, subExs[0], x.second.examples, x.second.depth + 1} });
-                        node->rchild = shared_ptr<DecisionTreeNode>();
-                        q.push({ node->rchild, { x.second.attributes, subExs[1], x.second.examples, x.second.depth + 1} });
-                        x.first = shared_ptr<DecisionTreeNode>(node);
-                    }
-                } break;
-                default:
-                    x.first = nullptr;
-                }
-            }
-            q.pop();
-        }
-        return root;
     }
 }

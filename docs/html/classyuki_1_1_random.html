@@ -1,0 +1,628 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.12.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>AI: Random类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">AI<span id="projectnumber">&#160;1.0.0</span>
+   </div>
+   <div id="projectbrief">YUKII的AI库</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.12.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','搜索',false);
+  $(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){ initResizable(false); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespaceyuki.html">yuki</a></li><li class="navelem"><a class="el" href="classyuki_1_1_random.html">Random</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div id="doc-content">
+<div class="header">
+  <div class="summary">
+<a href="#pub-static-methods">静态 Public 成员函数</a> &#124;
+<a href="#pub-static-attribs">静态 Public 属性</a> &#124;
+<a href="classyuki_1_1_random-members.html">所有成员列表</a>  </div>
+  <div class="headertitle"><div class="title">Random类 参考</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>随机类  
+ <a href="#details">更多...</a></p>
+
+<p><code>#include &lt;<a class="el" href="tools_8h_source.html">tools.h</a>&gt;</code></p>
+<div class="dynheader">
+Random 的协作图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classyuki_1_1_random__coll__graph.png" border="0" usemap="#a_random_coll__map" alt="Collaboration graph"/></div>
+<map name="a_random_coll__map" id="a_random_coll__map">
+<area shape="rect" title="随机类" alt="" coords="82,96,152,123"/>
+<area shape="rect" title=" " alt="" coords="5,5,115,32"/>
+<area shape="poly" title=" " alt="" coords="79,44,111,94,107,97,74,47"/>
+<area shape="rect" title=" " alt="" coords="139,5,210,32"/>
+<area shape="poly" title=" " alt="" coords="161,47,128,97,123,94,156,44"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">图例</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
+静态 Public 成员函数</h2></td></tr>
+<tr class="memitem:a86d3a6b3083b1637408e87a38ce35ef8" id="r_a86d3a6b3083b1637408e87a38ce35ef8"><td class="memItemLeft" align="right" valign="top">static auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a86d3a6b3083b1637408e87a38ce35ef8">reflash</a> () -&gt; void</td></tr>
+<tr class="memdesc:a86d3a6b3083b1637408e87a38ce35ef8"><td class="mdescLeft">&#160;</td><td class="mdescRight">刷新gen  <br /></td></tr>
+<tr class="separator:a86d3a6b3083b1637408e87a38ce35ef8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a937aa67e6bdca95a4ed11d12c87aaf02" id="r_a937aa67e6bdca95a4ed11d12c87aaf02"><td class="memTemplParams" colspan="2">template&lt;typename ElemType  = f64&gt; </td></tr>
+<tr class="memitem:a937aa67e6bdca95a4ed11d12c87aaf02"><td class="memTemplItemLeft" align="right" valign="top">static auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a937aa67e6bdca95a4ed11d12c87aaf02">uniformRealDis</a> (ElemType const &amp;left, ElemType const &amp;right) -&gt; uniform_real_distribution&lt; ElemType &gt;</td></tr>
+<tr class="memdesc:a937aa67e6bdca95a4ed11d12c87aaf02"><td class="mdescLeft">&#160;</td><td class="mdescRight">生成服从均匀分布的浮点数生成器  <br /></td></tr>
+<tr class="separator:a937aa67e6bdca95a4ed11d12c87aaf02"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7426885c935dd2ac479702452476c2fd" id="r_a7426885c935dd2ac479702452476c2fd"><td class="memTemplParams" colspan="2">template&lt;typename ElemType  = i32&gt; </td></tr>
+<tr class="memitem:a7426885c935dd2ac479702452476c2fd"><td class="memTemplItemLeft" align="right" valign="top">static auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a7426885c935dd2ac479702452476c2fd">uniformIntDis</a> (ElemType const &amp;left, ElemType const &amp;right) -&gt; uniform_int_distribution&lt; ElemType &gt;</td></tr>
+<tr class="memdesc:a7426885c935dd2ac479702452476c2fd"><td class="mdescLeft">&#160;</td><td class="mdescRight">生成服从均匀分布的整型数生成器  <br /></td></tr>
+<tr class="separator:a7426885c935dd2ac479702452476c2fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac88f03eaee39420d241f2f74adfa6676" id="r_ac88f03eaee39420d241f2f74adfa6676"><td class="memTemplParams" colspan="2">template&lt;typename ElemType  = f64&gt; </td></tr>
+<tr class="memitem:ac88f03eaee39420d241f2f74adfa6676"><td class="memTemplItemLeft" align="right" valign="top">static auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#ac88f03eaee39420d241f2f74adfa6676">uniformReal</a> (uniform_real_distribution&lt; ElemType &gt; const &amp;dis) -&gt; ElemType</td></tr>
+<tr class="memdesc:ac88f03eaee39420d241f2f74adfa6676"><td class="mdescLeft">&#160;</td><td class="mdescRight">生成一个随机浮点数  <br /></td></tr>
+<tr class="separator:ac88f03eaee39420d241f2f74adfa6676"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa4d10691eb9a4df34e4a64ee06bc2aa3" id="r_aa4d10691eb9a4df34e4a64ee06bc2aa3"><td class="memTemplParams" colspan="2">template&lt;typename ElemType  = i32&gt; </td></tr>
+<tr class="memitem:aa4d10691eb9a4df34e4a64ee06bc2aa3"><td class="memTemplItemLeft" align="right" valign="top">static auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#aa4d10691eb9a4df34e4a64ee06bc2aa3">uniformInt</a> (uniform_int_distribution&lt; ElemType &gt; const &amp;dis) -&gt; ElemType</td></tr>
+<tr class="memdesc:aa4d10691eb9a4df34e4a64ee06bc2aa3"><td class="mdescLeft">&#160;</td><td class="mdescRight">生成一个随机整型数  <br /></td></tr>
+<tr class="separator:aa4d10691eb9a4df34e4a64ee06bc2aa3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae63143da6f55ae62aabc1d88d5a46fa2" id="r_ae63143da6f55ae62aabc1d88d5a46fa2"><td class="memTemplParams" colspan="2">template&lt;typename ElemType  = f64&gt; </td></tr>
+<tr class="memitem:ae63143da6f55ae62aabc1d88d5a46fa2"><td class="memTemplItemLeft" align="right" valign="top">static auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#ae63143da6f55ae62aabc1d88d5a46fa2">uniformReal</a> (ElemType const &amp;left, ElemType const &amp;right) -&gt; ElemType</td></tr>
+<tr class="memdesc:ae63143da6f55ae62aabc1d88d5a46fa2"><td class="mdescLeft">&#160;</td><td class="mdescRight">生成一个随机浮点数  <br /></td></tr>
+<tr class="separator:ae63143da6f55ae62aabc1d88d5a46fa2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a633e90c03f1e25f8b7ececb6c18afd32" id="r_a633e90c03f1e25f8b7ececb6c18afd32"><td class="memTemplParams" colspan="2">template&lt;typename ElemType  = i32&gt; </td></tr>
+<tr class="memitem:a633e90c03f1e25f8b7ececb6c18afd32"><td class="memTemplItemLeft" align="right" valign="top">static auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a633e90c03f1e25f8b7ececb6c18afd32">uniformInt</a> (ElemType const &amp;left, ElemType const &amp;right) -&gt; ElemType</td></tr>
+<tr class="memdesc:a633e90c03f1e25f8b7ececb6c18afd32"><td class="mdescLeft">&#160;</td><td class="mdescRight">生成一个随机整型数  <br /></td></tr>
+<tr class="separator:a633e90c03f1e25f8b7ececb6c18afd32"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a57c0eec1cc36e8248289ee107445d6c3" id="r_a57c0eec1cc36e8248289ee107445d6c3"><td class="memTemplParams" colspan="2">template&lt;typename ElemType &gt; </td></tr>
+<tr class="memitem:a57c0eec1cc36e8248289ee107445d6c3"><td class="memTemplItemLeft" align="right" valign="top">static auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a57c0eec1cc36e8248289ee107445d6c3">choose</a> (vector&lt; ElemType &gt; const &amp;vec) -&gt; ElemType const &amp;</td></tr>
+<tr class="memdesc:a57c0eec1cc36e8248289ee107445d6c3"><td class="mdescLeft">&#160;</td><td class="mdescRight">从数组里随机选择一个元素  <br /></td></tr>
+<tr class="separator:a57c0eec1cc36e8248289ee107445d6c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-attribs" name="pub-static-attribs"></a>
+静态 Public 属性</h2></td></tr>
+<tr class="memitem:a5e7d225ba5a0794a0473ca8ddc08aaa3" id="r_a5e7d225ba5a0794a0473ca8ddc08aaa3"><td class="memItemLeft" align="right" valign="top">static random_device&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5e7d225ba5a0794a0473ca8ddc08aaa3">rd</a></td></tr>
+<tr class="memdesc:a5e7d225ba5a0794a0473ca8ddc08aaa3"><td class="mdescLeft">&#160;</td><td class="mdescRight">真随机数种子  <br /></td></tr>
+<tr class="separator:a5e7d225ba5a0794a0473ca8ddc08aaa3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a351c912b2aa4f003200a7a21165ae3d1" id="r_a351c912b2aa4f003200a7a21165ae3d1"><td class="memItemLeft" align="right" valign="top">static mt19937&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a351c912b2aa4f003200a7a21165ae3d1">gen</a></td></tr>
+<tr class="memdesc:a351c912b2aa4f003200a7a21165ae3d1"><td class="mdescLeft">&#160;</td><td class="mdescRight">随机数生成器  <br /></td></tr>
+<tr class="separator:a351c912b2aa4f003200a7a21165ae3d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p>随机类 </p>
+
+<p class="definition">在文件 <a class="el" href="tools_8h_source.html">tools.h</a> 第 <a class="el" href="tools_8h_source.html#l00021">21</a> 行定义.</p>
+</div><h2 class="groupheader">成员函数说明</h2>
+<a id="a57c0eec1cc36e8248289ee107445d6c3" name="a57c0eec1cc36e8248289ee107445d6c3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a57c0eec1cc36e8248289ee107445d6c3">&#9670;&#160;</a></span>choose()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename ElemType &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto choose </td>
+          <td>(</td>
+          <td class="paramtype">vector&lt; ElemType &gt; const &amp;</td>          <td class="paramname"><span class="paramname"><em>vec</em></span></td><td>)</td>
+          <td> -&gt; ElemType const&amp;</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>从数组里随机选择一个元素 </p>
+<dl class="tparams"><dt>模板参数</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">ElemType</td><td>数组元素类型 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">vec</td><td>数组 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>ElemType </dd></dl>
+
+<p class="definition">在文件 <a class="el" href="tools_8h_source.html">tools.h</a> 第 <a class="el" href="tools_8h_source.html#l00304">304</a> 行定义.</p>
+
+<p class="reference">被这些函数引用 <a class="el" href="_k_d_tree_8h_source.html#l00083">KDTreeNode::build()</a>, <a class="el" href="_decision_tree_builder_8cpp_source.html#l00400">DecisionTreeBuilder::importance()</a>, <a class="el" href="_decision_tree_builder_8cpp_source.html#l00190">DecisionTreeBuilder::pluralityValue()</a> , 以及 <a class="el" href="_c_s_p_8hpp_source.html#l00408">CSP&lt; ValueType &gt;::randomAssign()</a>.</p>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classyuki_1_1_random_a57c0eec1cc36e8248289ee107445d6c3_icgraph.png" border="0" usemap="#aclassyuki_1_1_random_a57c0eec1cc36e8248289ee107445d6c3_icgraph" alt=""/></div>
+<map name="aclassyuki_1_1_random_a57c0eec1cc36e8248289ee107445d6c3_icgraph" id="aclassyuki_1_1_random_a57c0eec1cc36e8248289ee107445d6c3_icgraph">
+<area shape="rect" title="从数组里随机选择一个元素" alt="" coords="621,113,685,140"/>
+<area shape="rect" href="classyuki_1_1atri_1_1nns_1_1_k_d_tree_node.html#a3db1e3b1017c1b609fe84170c23c86c6" title=" " alt="" coords="389,5,573,48"/>
+<area shape="poly" title=" " alt="" coords="626,104,601,82,572,62,549,51,552,46,575,58,604,78,630,100"/>
+<area shape="rect" href="classyuki_1_1atri_1_1dt_1_1_decision_tree_builder.html#a648a3592c7035034b976887714298567" title="获取信息增益最大的属性" alt="" coords="402,72,561,115"/>
+<area shape="poly" title=" " alt="" coords="606,120,561,111,562,106,607,115"/>
+<area shape="rect" href="classyuki_1_1atri_1_1dt_1_1_decision_tree_builder.html#a5d0dc286a8325ae013b6d8aa3e7dddd0" title="从样本集里选取占比最多的 target 取值作为叶子结点" alt="" coords="395,139,567,181"/>
+<area shape="poly" title=" " alt="" coords="607,138,568,146,567,141,606,133"/>
+<area shape="rect" href="classyuki_1_1atri_1_1csp_1_1_c_s_p.html#a007f7b8430262d9db2c44b4abdb8d033" title="对 variables 的所有 var 从其值域里随机赋值（不重置值域）" alt="" coords="413,205,549,248"/>
+<area shape="poly" title=" " alt="" coords="630,153,604,175,575,196,551,207,549,203,572,191,601,171,626,149"/>
+<area shape="rect" href="classyuki_1_1atri_1_1csp_1_1_c_s_p.html#af2f2e4a4d85e553f2dd648dec8b427fc" title="最小冲突算法" alt="" coords="205,205,341,248"/>
+<area shape="poly" title=" " alt="" coords="397,229,342,229,342,224,397,224"/>
+<area shape="rect" href="namespaceyuki_1_1atri_1_1csp.html#a1b1cfe52a93c9d9ada969f68fabd5de1" title=" " alt="" coords="5,205,157,248"/>
+<area shape="poly" title=" " alt="" coords="189,229,157,229,157,224,189,224"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a86d3a6b3083b1637408e87a38ce35ef8" name="a86d3a6b3083b1637408e87a38ce35ef8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a86d3a6b3083b1637408e87a38ce35ef8">&#9670;&#160;</a></span>reflash()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto reflash </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> -&gt; void</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>刷新gen </p>
+
+<p class="definition">在文件 <a class="el" href="tools_8cpp_source.html">tools.cpp</a> 第 <a class="el" href="tools_8cpp_source.html#l00007">7</a> 行定义.</p>
+
+</div>
+</div>
+<a id="a633e90c03f1e25f8b7ececb6c18afd32" name="a633e90c03f1e25f8b7ececb6c18afd32"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a633e90c03f1e25f8b7ececb6c18afd32">&#9670;&#160;</a></span>uniformInt() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename ElemType &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto uniformInt </td>
+          <td>(</td>
+          <td class="paramtype">ElemType const &amp;</td>          <td class="paramname"><span class="paramname"><em>left</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ElemType const &amp;</td>          <td class="paramname"><span class="paramname"><em>right</em></span>&#160;) -&gt; ElemType</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>生成一个随机整型数 </p>
+<dl class="tparams"><dt>模板参数</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">ElemType</td><td>整型类型 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">left</td><td>左端点 </td></tr>
+    <tr><td class="paramname">right</td><td>右端点 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>ElemType </dd></dl>
+
+<p class="definition">在文件 <a class="el" href="tools_8h_source.html">tools.h</a> 第 <a class="el" href="tools_8h_source.html#l00298">298</a> 行定义.</p>
+
+</div>
+</div>
+<a id="aa4d10691eb9a4df34e4a64ee06bc2aa3" name="aa4d10691eb9a4df34e4a64ee06bc2aa3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa4d10691eb9a4df34e4a64ee06bc2aa3">&#9670;&#160;</a></span>uniformInt() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename ElemType &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto uniformInt </td>
+          <td>(</td>
+          <td class="paramtype">uniform_int_distribution&lt; ElemType &gt; const &amp;</td>          <td class="paramname"><span class="paramname"><em>dis</em></span></td><td>)</td>
+          <td> -&gt; ElemType</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>生成一个随机整型数 </p>
+<dl class="tparams"><dt>模板参数</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">ElemType</td><td>整型类型 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dis</td><td>整型数服从的分布 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>ElemType </dd></dl>
+
+<p class="definition">在文件 <a class="el" href="tools_8h_source.html">tools.h</a> 第 <a class="el" href="tools_8h_source.html#l00287">287</a> 行定义.</p>
+
+<p class="reference">被这些函数引用 <a class="el" href="tools_8h_source.html#l00312">Statistics::median()</a> , 以及 <a class="el" href="tools_8h_source.html#l00336">Statistics::median()</a>.</p>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classyuki_1_1_random_aa4d10691eb9a4df34e4a64ee06bc2aa3_icgraph.png" border="0" usemap="#aclassyuki_1_1_random_aa4d10691eb9a4df34e4a64ee06bc2aa3_icgraph" alt=""/></div>
+<map name="aclassyuki_1_1_random_aa4d10691eb9a4df34e4a64ee06bc2aa3_icgraph" id="aclassyuki_1_1_random_aa4d10691eb9a4df34e4a64ee06bc2aa3_icgraph">
+<area shape="rect" title="生成一个随机整型数" alt="" coords="212,31,291,57"/>
+<area shape="rect" href="classyuki_1_1_statistics.html#aac4623dfb9c2a7fc172d71245d53e358" title="求中位元素（递归）" alt="" coords="5,5,164,32"/>
+<area shape="poly" title=" " alt="" coords="196,38,163,33,164,28,196,33"/>
+<area shape="rect" href="classyuki_1_1_statistics.html#a57687ba71207cb5db117fdc62518d3f5" title="求中位元素（迭代）" alt="" coords="5,56,164,83"/>
+<area shape="poly" title=" " alt="" coords="196,55,164,60,163,55,196,50"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a7426885c935dd2ac479702452476c2fd" name="a7426885c935dd2ac479702452476c2fd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7426885c935dd2ac479702452476c2fd">&#9670;&#160;</a></span>uniformIntDis()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename ElemType &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto uniformIntDis </td>
+          <td>(</td>
+          <td class="paramtype">ElemType const &amp;</td>          <td class="paramname"><span class="paramname"><em>left</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ElemType const &amp;</td>          <td class="paramname"><span class="paramname"><em>right</em></span>&#160;) -&gt; uniform_int_distribution&lt;ElemType&gt;</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>生成服从均匀分布的整型数生成器 </p>
+<dl class="tparams"><dt>模板参数</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">ElemType</td><td>整型类型 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">left</td><td>左端点 </td></tr>
+    <tr><td class="paramname">right</td><td>右端点 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>uniform_int_distribution&lt;ElemType&gt; </dd></dl>
+
+<p class="definition">在文件 <a class="el" href="tools_8h_source.html">tools.h</a> 第 <a class="el" href="tools_8h_source.html#l00277">277</a> 行定义.</p>
+
+</div>
+</div>
+<a id="ae63143da6f55ae62aabc1d88d5a46fa2" name="ae63143da6f55ae62aabc1d88d5a46fa2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae63143da6f55ae62aabc1d88d5a46fa2">&#9670;&#160;</a></span>uniformReal() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename ElemType &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto uniformReal </td>
+          <td>(</td>
+          <td class="paramtype">ElemType const &amp;</td>          <td class="paramname"><span class="paramname"><em>left</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ElemType const &amp;</td>          <td class="paramname"><span class="paramname"><em>right</em></span>&#160;) -&gt; ElemType</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>生成一个随机浮点数 </p>
+<dl class="tparams"><dt>模板参数</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">ElemType</td><td>浮点类型 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">left</td><td>左端点 </td></tr>
+    <tr><td class="paramname">right</td><td>右端点 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>ElemType </dd></dl>
+
+<p class="definition">在文件 <a class="el" href="tools_8h_source.html">tools.h</a> 第 <a class="el" href="tools_8h_source.html#l00292">292</a> 行定义.</p>
+
+</div>
+</div>
+<a id="ac88f03eaee39420d241f2f74adfa6676" name="ac88f03eaee39420d241f2f74adfa6676"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac88f03eaee39420d241f2f74adfa6676">&#9670;&#160;</a></span>uniformReal() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename ElemType &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto uniformReal </td>
+          <td>(</td>
+          <td class="paramtype">uniform_real_distribution&lt; ElemType &gt; const &amp;</td>          <td class="paramname"><span class="paramname"><em>dis</em></span></td><td>)</td>
+          <td> -&gt; ElemType</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>生成一个随机浮点数 </p>
+<dl class="tparams"><dt>模板参数</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">ElemType</td><td>浮点类型 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dis</td><td>浮点数服从的分布 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>ElemType </dd></dl>
+
+<p class="definition">在文件 <a class="el" href="tools_8h_source.html">tools.h</a> 第 <a class="el" href="tools_8h_source.html#l00282">282</a> 行定义.</p>
+
+</div>
+</div>
+<a id="a937aa67e6bdca95a4ed11d12c87aaf02" name="a937aa67e6bdca95a4ed11d12c87aaf02"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a937aa67e6bdca95a4ed11d12c87aaf02">&#9670;&#160;</a></span>uniformRealDis()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename ElemType &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto uniformRealDis </td>
+          <td>(</td>
+          <td class="paramtype">ElemType const &amp;</td>          <td class="paramname"><span class="paramname"><em>left</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ElemType const &amp;</td>          <td class="paramname"><span class="paramname"><em>right</em></span>&#160;) -&gt; uniform_real_distribution&lt;ElemType&gt;</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>生成服从均匀分布的浮点数生成器 </p>
+<dl class="tparams"><dt>模板参数</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">ElemType</td><td>浮点类型 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">left</td><td>左端点 </td></tr>
+    <tr><td class="paramname">right</td><td>右端点 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>uniform_real_distribution&lt;ElemType&gt; </dd></dl>
+<dl class="retval"><dt>返回值</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">服从均匀分布的浮点数生成器</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">在文件 <a class="el" href="tools_8h_source.html">tools.h</a> 第 <a class="el" href="tools_8h_source.html#l00272">272</a> 行定义.</p>
+
+</div>
+</div>
+<h2 class="groupheader">类成员变量说明</h2>
+<a id="a351c912b2aa4f003200a7a21165ae3d1" name="a351c912b2aa4f003200a7a21165ae3d1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a351c912b2aa4f003200a7a21165ae3d1">&#9670;&#160;</a></span>gen</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">mt19937 gen</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>随机数生成器 </p>
+
+<p class="definition">在文件 <a class="el" href="tools_8h_source.html">tools.h</a> 第 <a class="el" href="tools_8h_source.html#l00024">24</a> 行定义.</p>
+
+</div>
+</div>
+<a id="a5e7d225ba5a0794a0473ca8ddc08aaa3" name="a5e7d225ba5a0794a0473ca8ddc08aaa3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5e7d225ba5a0794a0473ca8ddc08aaa3">&#9670;&#160;</a></span>rd</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">random_device rd</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>真随机数种子 </p>
+
+<p class="definition">在文件 <a class="el" href="tools_8h_source.html">tools.h</a> 第 <a class="el" href="tools_8h_source.html#l00023">23</a> 行定义.</p>
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>D:/user/Project/Code/AI/inc/utils/<a class="el" href="tools_8h_source.html">tools.h</a></li>
+<li>D:/user/Project/Code/AI/src/utils/<a class="el" href="tools_8cpp_source.html">tools.cpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0
+</small></address>
+</div><!-- doc-content -->
+</body>
+</html>

@@ -1,0 +1,28 @@
+<map id="reset" name="reset">
+<area shape="rect" id="Node000001" title="重置状态的深度、后继动作以及前序动作。" alt="" coords="631,109,682,136"/>
+<area shape="rect" id="Node000002" href="$classyuki_1_1atri_1_1nfp_1_1_algorithm.html#a8698314719fbdd2dd46e3aeb347a57a0" title="启发式搜索" alt="" coords="406,72,566,115"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="616,118,566,110,567,105,616,113"/>
+<area shape="rect" id="Node000007" href="$classyuki_1_1atri_1_1nfp_1_1_algorithm.html#ad020df13255f87e7aad6fb445b52640e" title="宽度优先搜素" alt="" coords="389,139,583,165"/>
+<area shape="poly" id="edge8_Node000001_Node000007" title=" " alt="" coords="617,132,568,141,567,135,616,127"/>
+<area shape="rect" id="Node000008" href="$classyuki_1_1atri_1_1nfp_1_1_algorithm.html#af7995dba9c93f4d37c02d1c294459e97" title="宽度优先搜素示例" alt="" coords="406,5,566,48"/>
+<area shape="poly" id="edge12_Node000001_Node000008" title=" " alt="" coords="630,100,608,80,582,62,559,51,561,46,585,58,611,76,634,96"/>
+<area shape="rect" id="Node000009" href="$classyuki_1_1atri_1_1nfp_1_1_algorithm.html#a02a259aae6d65719ca6f71eb3c5d65a7" title="深度有限搜素" alt="" coords="389,189,583,216"/>
+<area shape="poly" id="edge14_Node000001_Node000009" title=" " alt="" coords="631,148,585,180,555,191,553,186,582,175,628,144"/>
+<area shape="rect" id="Node000003" href="$classyuki_1_1atri_1_1nfp_1_1_algorithm.html#ab22f2bde087abcbd73700c0108138d60" title="交互模式" alt="" coords="181,56,341,99"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="391,89,341,86,342,80,391,84"/>
+<area shape="rect" id="Node000005" href="$classyuki_1_1atri_1_1nfp_1_1_algorithm.html#a8062cc0fe3bbd86e03fe07bf78b87db7" title="统计测试函数，在这个函数里设计并输出统计数据" alt="" coords="181,189,341,232"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="398,124,391,129,376,141,367,153,358,166,343,179,323,191,320,186,339,175,354,163,363,150,372,137,387,124,395,120"/>
+<area shape="rect" id="Node000006" href="$classyuki_1_1atri_1_1nfp_1_1_algorithm.html#ad6e68a316b23076f9b9bc0b2427b9fea" title="正确性测试函数" alt="" coords="181,123,341,165"/>
+<area shape="poly" id="edge6_Node000002_Node000006" title=" " alt="" coords="391,117,342,129,341,123,390,112"/>
+<area shape="rect" id="Node000004" href="$namespaceyuki_1_1atri_1_1nfp.html#aadb7443b48bbe2cbcd08f9d96470dc1c" title=" " alt="" coords="5,131,133,157"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="184,107,111,133,109,128,182,102"/>
+<area shape="poly" id="edge5_Node000005_Node000004" title=" " alt="" coords="182,186,109,160,111,155,184,181"/>
+<area shape="poly" id="edge7_Node000006_Node000004" title=" " alt="" coords="165,147,133,147,133,141,165,141"/>
+<area shape="poly" id="edge9_Node000007_Node000003" title=" " alt="" coords="412,137,388,129,314,102,316,97,390,124,414,131"/>
+<area shape="poly" id="edge10_Node000007_Node000005" title=" " alt="" coords="418,172,342,192,341,187,417,167"/>
+<area shape="poly" id="edge11_Node000007_Node000006" title=" " alt="" coords="373,151,342,150,342,144,373,145"/>
+<area shape="poly" id="edge13_Node000008_Node000003" title=" " alt="" coords="391,51,342,62,341,57,390,45"/>
+<area shape="poly" id="edge15_Node000009_Node000003" title=" " alt="" coords="396,185,387,179,371,163,362,146,354,129,339,113,322,101,325,97,343,109,359,126,367,144,375,160,391,175,399,180"/>
+<area shape="poly" id="edge16_Node000009_Node000005" title=" " alt="" coords="373,209,342,210,342,205,373,204"/>
+<area shape="poly" id="edge17_Node000009_Node000006" title=" " alt="" coords="417,187,341,168,342,162,418,182"/>
+</map>

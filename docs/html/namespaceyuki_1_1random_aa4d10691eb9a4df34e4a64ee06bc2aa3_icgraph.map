@@ -1,0 +1,10 @@
+<map id="uniformInt" name="uniformInt">
+<area shape="rect" id="Node000001" title="生成一个随机整型数" alt="" coords="414,55,493,81"/>
+<area shape="rect" id="Node000002" href="$namespaceyuki_1_1statistics.html#a694b99a9f82ee4e177ac4f9ded05f413" title="求中位元素（递归）" alt="" coords="210,29,366,56"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="398,62,366,57,366,52,399,57"/>
+<area shape="rect" id="Node000004" href="$namespaceyuki_1_1statistics.html#a599a4e6aaa62b54ff152d5f2d2707f0d" title="求中位元素（迭代）" alt="" coords="210,80,366,107"/>
+<area shape="poly" id="edge4_Node000001_Node000004" title=" " alt="" coords="399,79,366,84,366,79,398,74"/>
+<area shape="poly" id="edge2_Node000002_Node000002" title=" " alt="" coords="316,16,306,10,288,8,271,10,262,15,259,20,264,28,259,30,254,21,258,11,269,5,288,3,308,5,319,12"/>
+<area shape="rect" id="Node000003" href="$namespaceyuki_1_1statistics.html#a0ad41911f3371444ab2ef4e3c8349437" title="求中位元素" alt="" coords="5,29,162,56"/>
+<area shape="poly" id="edge3_Node000002_Node000003" title=" " alt="" coords="194,45,162,45,162,40,194,40"/>
+</map>

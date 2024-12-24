@@ -65,7 +65,7 @@ auto testDTQuickSort() -> void {
 
 	cout << dt::DecisionTreeBuilder::infoGain(&attrs[0], &target, exsp) << endl;
 	
-	cout << 4. / 6. * entropy({1. / 4., 3. / 4.}) + 2. / 6. * entropy({1.}) << endl;
+	cout << 4. / 6. * statistics::entropy({1. / 4., 3. / 4.}) + 2. / 6. * statistics::entropy({1.}) << endl;
 }
 
 int main() {
@@ -76,11 +76,11 @@ int main() {
 	// watermelon2.0
 	// watermelon3.0-lack
 	// iris
-	/*
+	
 	string datasetName("watermelon2.0-train");
 
 	dt::Dataset dataset(format("../../resources/DT/{}.csv", datasetName));
-	dt::Dataset testDataset(format("../../resources/DT/watermelon2.0-test.csv"));*/
+	dt::Dataset testDataset(format("../../resources/DT/watermelon2.0-test.csv"));
 	/*
 	for (auto& a: dataset.attributes) {
 		cout << a << ' ';
@@ -98,8 +98,8 @@ int main() {
 	t.train(&dataset);
 	t.printTree();
 	cout << endl;*/
-	/*
-	auto tree = dt::DecisionTreeBuilder::learn(&dataset, "InfoGain");
+	
+	auto tree = dt::DecisionTreeBuilder::learn(&dataset);
 	cout << *tree;
 
 	i32 i = 0;
@@ -118,8 +118,8 @@ int main() {
 	}
 	tree->dot(format("../../resources/DT/trees/{}.dot", datasetName));
 	cout << "Accuracy: " << count << '/' << testDataset.rawValues.size() << " = " << count / testDataset.rawValues.size() << endl;
-	*/
 
+/*
 	nns::KDTree kdtree(2);
 
 	vector<vector<f64>> examples{
@@ -135,10 +135,10 @@ int main() {
 	vector<vector<f64>> points(1, examples.front());
 
 	for (int i = 1; i < examples.size(); ++i) {
-		if (distance(points.back(), target) > distance(examples[i], target)) {
+		if (distanceEuclidean(points.back(), target) > distanceEuclidean(examples[i], target)) {
 			points.clear();
 			points.push_back(examples[i]);
-		} else if (distance(points.back(), target) == distance(examples[i], target)) {
+		} else if (distanceEuclidean(points.back(), target) == distanceEuclidean(examples[i], target)) {
 			points.push_back(examples[i]);
 		}
 	}
@@ -146,7 +146,7 @@ int main() {
 	cout << points;
 
 	kdtree.dot("../../kdtree.dot");
-
+*/
 /*
     vector<i32> numbers{ 1, 2, 3, 4, 5, 6 };
     auto results = numbers

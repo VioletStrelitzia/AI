@@ -1,0 +1,490 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.12.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>AI: D:/user/Project/Code/AI/src/NFigurePuzzle/NFPState.cpp 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">AI<span id="projectnumber">&#160;1.0.0</span>
+   </div>
+   <div id="projectbrief">YUKII的AI库</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.12.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','搜索',false);
+  $(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){ initResizable(false); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_e1c7a55d9a44348580317e18fc19eb09.html">NFigurePuzzle</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div id="doc-content">
+<div class="header">
+  <div class="headertitle"><div class="title">NFPState.cpp</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="_n_f_p_state_8cpp.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#include &quot;<a class="code" href="_n_f_p_state_8h.html">NFPState.h</a>&quot;</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespaceyuki_1_1atri_1_1nfp.html">yuki::atri::nfp</a> {</div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span>    <a class="code hl_typedef" href="namespaceyuki.html#a67cb024aa20a9cffd9c230409152959c">usize</a> <a class="code hl_variable" href="classyuki_1_1atri_1_1nfp_1_1_state.html#af3537592c969ff7d12cf5f02c4c93dfa">State::mask</a>[<a class="code hl_variable" href="classyuki_1_1atri_1_1nfp_1_1_state.html#a586c34fe492dfaa733327c99e8cef1a7">State::rows</a>][<a class="code hl_variable" href="classyuki_1_1atri_1_1nfp_1_1_state.html#a8033bb7012818aa61af4cc5619b01d6b">State::cols</a>];</div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span>    Vector2 <span class="keyword">const</span> <a class="code hl_variable" href="classyuki_1_1atri_1_1nfp_1_1_state.html#ab1e6e20845952f084240f2cf8876f04c">State::actions</a>[4] = { { -1, 0 }, { 1 , 0 }, { 0, -1 }, { 0, 1 } };</div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span>    <span class="keywordtype">string</span> <span class="keyword">const</span> <a class="code hl_variable" href="classyuki_1_1atri_1_1nfp_1_1_state.html#a3a09c46648a27c97536f820f6621dbc6">State::actionInfo</a>[<a class="code hl_variable" href="classyuki_1_1atri_1_1nfp_1_1_state.html#af8595de5d3b7b7f207175b9c0554956a">State::actionsNum</a>] = { <span class="stringliteral">&quot;向上移动&quot;</span>, <span class="stringliteral">&quot;向下移动&quot;</span>, <span class="stringliteral">&quot;向左移动&quot;</span>, <span class="stringliteral">&quot;向右移动&quot;</span> };</div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span>    State <a class="code hl_variable" href="classyuki_1_1atri_1_1nfp_1_1_state.html#abcc222f8c879ad17d85b7001ad0e59c5">State::_targetNFPState</a>(0, Vector2{ 0, 0 });</div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span> </div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>    vector&lt;State&gt; <a class="code hl_variable" href="classyuki_1_1atri_1_1nfp_1_1_state.html#ac68a597a5d0c4bcf8b9f686e74ee2b8c">State::allNFPStates</a>;</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>    <span class="keywordtype">int</span> <a class="code hl_variable" href="classyuki_1_1atri_1_1nfp_1_1_state.html#abb60e383d39983f9e55ac9de9aa8b8fc">State::depthIndexs</a>[maxDepth + 1];</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>    <span class="keywordtype">string</span> <span class="keyword">const</span> <a class="code hl_variable" href="classyuki_1_1atri_1_1nfp_1_1_state.html#aeb25f8c0c00ad8d47645e11f48e9bc0c">State::precisionFilename</a> = <span class="stringliteral">&quot;../../resources/precision.ini&quot;</span>;</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>    random_device <a class="code hl_variable" href="classyuki_1_1atri_1_1nfp_1_1_state.html#a5e7d225ba5a0794a0473ca8ddc08aaa3">State::rd</a>;</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>    mt19937 <a class="code hl_variable" href="classyuki_1_1atri_1_1nfp_1_1_state.html#a351c912b2aa4f003200a7a21165ae3d1">State::gen</a>(rd());</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span> </div>
+<div class="foldopen" id="foldopen00015" data-start="{" data-end="}">
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno"><a class="line" href="classyuki_1_1atri_1_1nfp_1_1_state.html#a56f4b4d7201e0172c08c9086f2c376dd">   15</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classyuki_1_1atri_1_1nfp_1_1_state.html#a56f4b4d7201e0172c08c9086f2c376dd">State::init</a>(<a class="code hl_class" href="classyuki_1_1atri_1_1nfp_1_1_state.html">State</a> <span class="keyword">const</span>&amp; originalNFPState) {</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>        <a class="code hl_variable" href="classyuki_1_1atri_1_1nfp_1_1_state.html#abcc222f8c879ad17d85b7001ad0e59c5">_targetNFPState</a> = originalNFPState;</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>        <a class="code hl_variable" href="classyuki_1_1atri_1_1nfp_1_1_state.html#abcc222f8c879ad17d85b7001ad0e59c5">_targetNFPState</a>.<a class="code hl_variable" href="classyuki_1_1atri_1_1nfp_1_1_state.html#acb5ba97551079e0b072c62c21d784ac5">depth</a> = 0;</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>        <a class="code hl_variable" href="classyuki_1_1atri_1_1nfp_1_1_state.html#abcc222f8c879ad17d85b7001ad0e59c5">_targetNFPState</a>.<a class="code hl_function" href="classyuki_1_1atri_1_1nfp_1_1_state.html#a2a7248bc89ab676358633078fbc32d33">updateNextActions</a>();</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>        <a class="code hl_variable" href="classyuki_1_1atri_1_1nfp_1_1_state.html#abcc222f8c879ad17d85b7001ad0e59c5">_targetNFPState</a>.<a class="code hl_variable" href="classyuki_1_1atri_1_1nfp_1_1_state.html#a96b10df6448be2b76001abc1ba8b7271">prevActions</a>.clear();</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>        ifstream inFile;</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>        inFile.open(<a class="code hl_variable" href="classyuki_1_1atri_1_1nfp_1_1_state.html#aeb25f8c0c00ad8d47645e11f48e9bc0c">precisionFilename</a>, std::ios::binary);</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>        <span class="keywordflow">if</span> (inFile.is_open()) {</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>            <span class="keywordtype">int</span> buffer0[3] = { 0 };</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>            inFile.read(<span class="keyword">reinterpret_cast&lt;</span><span class="keywordtype">char</span>*<span class="keyword">&gt;</span>(&amp;buffer0), <span class="keyword">sizeof</span> buffer0);</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>            <span class="keywordflow">if</span> (buffer0[0] != <a class="code hl_variable" href="classyuki_1_1atri_1_1nfp_1_1_state.html#a586c34fe492dfaa733327c99e8cef1a7">rows</a> || buffer0[1] != <a class="code hl_variable" href="classyuki_1_1atri_1_1nfp_1_1_state.html#a8033bb7012818aa61af4cc5619b01d6b">cols</a> || buffer0[2] != <a class="code hl_variable" href="classyuki_1_1atri_1_1nfp_1_1_state.html#ae36c3fd1a30a6cda505c1b6792ed75df">maxDepth</a>) {</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>                cout &lt;&lt; <span class="stringliteral">&quot;generating precision...\n&quot;</span>;</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>                <a class="code hl_function" href="classyuki_1_1atri_1_1nfp_1_1_state.html#a681a048e9c16ad615ead48b96e61806d">genPrecision</a>(originalNFPState);</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>                cout &lt;&lt; <span class="stringliteral">&quot;generation completed!\n&quot;</span>;</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>                inFile.close();</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>                <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>            }</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>            cout &lt;&lt; <span class="stringliteral">&quot;reading precision...\n&quot;</span>;</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>            inFile.read(<span class="keyword">reinterpret_cast&lt;</span><span class="keywordtype">char</span>*<span class="keyword">&gt;</span>(*<a class="code hl_variable" href="classyuki_1_1atri_1_1nfp_1_1_state.html#af3537592c969ff7d12cf5f02c4c93dfa">mask</a>), <span class="keyword">sizeof</span>(<a class="code hl_typedef" href="namespaceyuki.html#a67cb024aa20a9cffd9c230409152959c">usize</a>) * <a class="code hl_variable" href="classyuki_1_1atri_1_1nfp_1_1_state.html#a586c34fe492dfaa733327c99e8cef1a7">rows</a> * <a class="code hl_variable" href="classyuki_1_1atri_1_1nfp_1_1_state.html#a8033bb7012818aa61af4cc5619b01d6b">cols</a>);</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span> </div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>            <a class="code hl_typedef" href="namespaceyuki.html#a67cb024aa20a9cffd9c230409152959c">usize</a> buffer1 = 1;</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>            <a class="code hl_class" href="classyuki_1_1atri_1_1_vector2.html">Vector2</a> buffer2{ 0, 0 };</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>            <a class="code hl_variable" href="classyuki_1_1atri_1_1nfp_1_1_state.html#ac68a597a5d0c4bcf8b9f686e74ee2b8c">allNFPStates</a>.clear();</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span> </div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>            <span class="keywordflow">while</span> (<span class="keyword">true</span>) {</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>                inFile.read(<span class="keyword">reinterpret_cast&lt;</span><span class="keywordtype">char</span>*<span class="keyword">&gt;</span>(&amp;buffer1), <span class="keyword">sizeof</span> buffer1);</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>                inFile.read(<span class="keyword">reinterpret_cast&lt;</span><span class="keywordtype">char</span>*<span class="keyword">&gt;</span>(&amp;buffer2), <span class="keyword">sizeof</span> buffer2);</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>                </div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>                <span class="keywordflow">if</span> (buffer1 == 0) {</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>                    <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>                }</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>                <a class="code hl_variable" href="classyuki_1_1atri_1_1nfp_1_1_state.html#ac68a597a5d0c4bcf8b9f686e74ee2b8c">allNFPStates</a>.emplace_back(buffer1, buffer2);</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>            }</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span> </div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>            inFile.read(<span class="keyword">reinterpret_cast&lt;</span><span class="keywordtype">char</span>*<span class="keyword">&gt;</span>(<a class="code hl_variable" href="classyuki_1_1atri_1_1nfp_1_1_state.html#abb60e383d39983f9e55ac9de9aa8b8fc">depthIndexs</a>), <span class="keyword">sizeof</span> <a class="code hl_variable" href="classyuki_1_1atri_1_1nfp_1_1_state.html#abb60e383d39983f9e55ac9de9aa8b8fc">depthIndexs</a>);</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>            cout &lt;&lt; <span class="stringliteral">&quot;read completed!\n&quot;</span>;</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>            <span class="comment">//for (int i = 0; i &lt;= maxDepth; ++i) {</span></div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>            <span class="comment">//    cout &lt;&lt; depthIndexs[i] &lt;&lt; endl;</span></div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>            <span class="comment">//}</span></div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>            cout &lt;&lt; endl;</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>        }</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>        inFile.close();</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    }</div>
+</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span> </div>
+<div class="foldopen" id="foldopen00060" data-start="{" data-end="}">
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno"><a class="line" href="classyuki_1_1atri_1_1nfp_1_1_state.html#af28c4f9c7da9b1130279f30cdc8281e2">   60</a></span>    <span class="keywordtype">int</span> <a class="code hl_function" href="classyuki_1_1atri_1_1nfp_1_1_state.html#af28c4f9c7da9b1130279f30cdc8281e2">State::genRandomDepth</a>(<span class="keywordtype">int</span> <span class="keyword">const</span>&amp; min, <span class="keywordtype">int</span> <span class="keyword">const</span>&amp; max)<span class="keyword"> const </span>{</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>        uniform_int_distribution&lt;int&gt; distrib(min, max);</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>        <span class="keywordflow">return</span> distrib(<a class="code hl_variable" href="classyuki_1_1atri_1_1nfp_1_1_state.html#a351c912b2aa4f003200a7a21165ae3d1">gen</a>);</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>    }</div>
+</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span> </div>
+<div class="foldopen" id="foldopen00065" data-start="{" data-end="}">
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno"><a class="line" href="classyuki_1_1atri_1_1nfp_1_1_state.html#a9205455170d40a1883ac408d8348df32">   65</a></span>    <a class="code hl_class" href="classyuki_1_1atri_1_1nfp_1_1_state.html">State</a> <a class="code hl_function" href="classyuki_1_1atri_1_1nfp_1_1_state.html#a9205455170d40a1883ac408d8348df32">State::genRandomNFPState</a>(<span class="keywordtype">int</span> <span class="keyword">const</span>&amp; depth) {</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="classyuki_1_1atri_1_1nfp_1_1_state.html#acb5ba97551079e0b072c62c21d784ac5">depth</a> &lt;= 0) {</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>            <span class="keywordflow">return</span> <a class="code hl_variable" href="classyuki_1_1atri_1_1nfp_1_1_state.html#abcc222f8c879ad17d85b7001ad0e59c5">_targetNFPState</a>;</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>        }</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>        uniform_int_distribution&lt;int&gt; distrib(<a class="code hl_variable" href="classyuki_1_1atri_1_1nfp_1_1_state.html#abb60e383d39983f9e55ac9de9aa8b8fc">depthIndexs</a>[<a class="code hl_variable" href="classyuki_1_1atri_1_1nfp_1_1_state.html#acb5ba97551079e0b072c62c21d784ac5">depth</a> - 1], <a class="code hl_variable" href="classyuki_1_1atri_1_1nfp_1_1_state.html#abb60e383d39983f9e55ac9de9aa8b8fc">depthIndexs</a>[<a class="code hl_variable" href="classyuki_1_1atri_1_1nfp_1_1_state.html#acb5ba97551079e0b072c62c21d784ac5">depth</a>] - 1);</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="classyuki_1_1atri_1_1nfp_1_1_state.html#ac68a597a5d0c4bcf8b9f686e74ee2b8c">allNFPStates</a>[distrib(<a class="code hl_variable" href="classyuki_1_1atri_1_1nfp_1_1_state.html#a351c912b2aa4f003200a7a21165ae3d1">gen</a>)];</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>    }</div>
+</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span> </div>
+<div class="foldopen" id="foldopen00073" data-start="{" data-end="}">
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno"><a class="line" href="classyuki_1_1atri_1_1nfp_1_1_state.html#ab0585158237b9631b0210ca9388f6535">   73</a></span>    <a class="code hl_function" href="classyuki_1_1atri_1_1nfp_1_1_state.html#ab0585158237b9631b0210ca9388f6535">State::State</a>(<a class="code hl_typedef" href="namespaceyuki.html#a67cb024aa20a9cffd9c230409152959c">usize</a> <span class="keyword">const</span>&amp; data, <a class="code hl_class" href="classyuki_1_1atri_1_1_vector2.html">Vector2</a> <span class="keyword">const</span>&amp; pZero, <span class="keywordtype">int</span> <span class="keyword">const</span>&amp; depth) :</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>        data(data), zeroPos(pZero), depth(depth) {</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>        <a class="code hl_function" href="classyuki_1_1atri_1_1nfp_1_1_state.html#a2a7248bc89ab676358633078fbc32d33">updateNextActions</a>();</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>    }</div>
+</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span> </div>
+<div class="foldopen" id="foldopen00078" data-start="{" data-end="}">
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno"><a class="line" href="classyuki_1_1atri_1_1nfp_1_1_state.html#a69e48d8c502fdc635cb401005d5d75b9">   78</a></span>    <a class="code hl_function" href="classyuki_1_1atri_1_1nfp_1_1_state.html#ab0585158237b9631b0210ca9388f6535">State::State</a>(initializer_list&lt;initializer_list&lt;usize&gt;&gt; <span class="keyword">const</span>&amp; listList) :</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>        data(0), depth(0) {</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>        <span class="keywordtype">int</span> offset = 0, r = 0, c = 0;</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>        <span class="keywordflow">for</span> (<span class="keyword">auto</span> <span class="keyword">const</span>&amp; list : listList) {</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>            <span class="keywordflow">for</span> (<a class="code hl_typedef" href="namespaceyuki.html#a67cb024aa20a9cffd9c230409152959c">usize</a> <span class="keyword">const</span>&amp; x : list) {</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>                <span class="keywordflow">if</span> (x == 0) {</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>                    <a class="code hl_variable" href="classyuki_1_1atri_1_1nfp_1_1_state.html#a295ca02676e42c0f3aae733697abeef9">zeroPos</a> = { r, c };</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>                }</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>                <a class="code hl_variable" href="classyuki_1_1atri_1_1nfp_1_1_state.html#a27671e0f9a4564074fd4fcd3558ae075">data</a> += x &lt;&lt; offset;</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>                offset += 4;</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>                ++c;</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>            }</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>            ++r;</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>        }</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>        <a class="code hl_function" href="classyuki_1_1atri_1_1nfp_1_1_state.html#a2a7248bc89ab676358633078fbc32d33">updateNextActions</a>();</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>    }</div>
+</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span> </div>
+<div class="foldopen" id="foldopen00095" data-start="{" data-end="}">
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno"><a class="line" href="classyuki_1_1atri_1_1nfp_1_1_state.html#aa96ecc8e3c6d470a44587c806fb16025">   95</a></span>    <a class="code hl_function" href="classyuki_1_1atri_1_1nfp_1_1_state.html#ab0585158237b9631b0210ca9388f6535">State::State</a>(<a class="code hl_class" href="classyuki_1_1atri_1_1nfp_1_1_state.html">State</a> <span class="keyword">const</span>&amp; other) :</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>        data(other.data),</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>        zeroPos(other.zeroPos),</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>        depth(other.depth),</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>        nextActions(other.nextActions),</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>        prevActions(other.prevActions) {}</div>
+</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span> </div>
+<div class="foldopen" id="foldopen00102" data-start="{" data-end="}">
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno"><a class="line" href="classyuki_1_1atri_1_1nfp_1_1_state.html#a8457c0791d55141000b584c6dc6604fa">  102</a></span>    <a class="code hl_function" href="classyuki_1_1atri_1_1nfp_1_1_state.html#ab0585158237b9631b0210ca9388f6535">State::State</a>(<a class="code hl_class" href="classyuki_1_1atri_1_1nfp_1_1_state.html">State</a>&amp;&amp; other) noexcept :</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>        data(move(other.data)),</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>        zeroPos(move(other.zeroPos)),</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>        depth(move(other.depth)),</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>        nextActions(move(other.nextActions)),</div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>        prevActions(move(other.prevActions)) {}</div>
+</div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span> </div>
+<div class="foldopen" id="foldopen00109" data-start="{" data-end="}">
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno"><a class="line" href="classyuki_1_1atri_1_1nfp_1_1_state.html#a5d66186d4435fc567b869cee9d956550">  109</a></span>    <a class="code hl_class" href="classyuki_1_1atri_1_1nfp_1_1_state.html">State</a>&amp; <a class="code hl_function" href="classyuki_1_1atri_1_1nfp_1_1_state.html#a5d66186d4435fc567b869cee9d956550">State::operator=</a>(<a class="code hl_class" href="classyuki_1_1atri_1_1nfp_1_1_state.html">State</a> <span class="keyword">const</span>&amp; other) {</div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>        <a class="code hl_variable" href="classyuki_1_1atri_1_1nfp_1_1_state.html#a295ca02676e42c0f3aae733697abeef9">zeroPos</a> = other.<a class="code hl_variable" href="classyuki_1_1atri_1_1nfp_1_1_state.html#a295ca02676e42c0f3aae733697abeef9">zeroPos</a>;</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>        <a class="code hl_variable" href="classyuki_1_1atri_1_1nfp_1_1_state.html#a27671e0f9a4564074fd4fcd3558ae075">data</a> = other.<a class="code hl_variable" href="classyuki_1_1atri_1_1nfp_1_1_state.html#a27671e0f9a4564074fd4fcd3558ae075">data</a>;</div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>        <a class="code hl_variable" href="classyuki_1_1atri_1_1nfp_1_1_state.html#acb5ba97551079e0b072c62c21d784ac5">depth</a> = other.<a class="code hl_variable" href="classyuki_1_1atri_1_1nfp_1_1_state.html#acb5ba97551079e0b072c62c21d784ac5">depth</a>;</div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>        <a class="code hl_variable" href="classyuki_1_1atri_1_1nfp_1_1_state.html#a82091510de7ed0f5b951b08992f1366f">nextActions</a> = other.<a class="code hl_variable" href="classyuki_1_1atri_1_1nfp_1_1_state.html#a82091510de7ed0f5b951b08992f1366f">nextActions</a>;</div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>        <a class="code hl_variable" href="classyuki_1_1atri_1_1nfp_1_1_state.html#a96b10df6448be2b76001abc1ba8b7271">prevActions</a> = other.<a class="code hl_variable" href="classyuki_1_1atri_1_1nfp_1_1_state.html#a96b10df6448be2b76001abc1ba8b7271">prevActions</a>;</div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>        <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>    }</div>
+</div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span> </div>
+<div class="foldopen" id="foldopen00118" data-start="{" data-end="}">
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno"><a class="line" href="classyuki_1_1atri_1_1nfp_1_1_state.html#a73c158802a46ff6eb0ba850537d921fd">  118</a></span>    <a class="code hl_typedef" href="namespaceyuki.html#a67cb024aa20a9cffd9c230409152959c">usize</a> <a class="code hl_function" href="classyuki_1_1atri_1_1nfp_1_1_state.html#a73c158802a46ff6eb0ba850537d921fd">State::at</a>(<span class="keywordtype">int</span> <span class="keyword">const</span>&amp; row, <span class="keywordtype">int</span> <span class="keyword">const</span>&amp; col)<span class="keyword"> const </span>{</div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>        <span class="keywordflow">return</span> (<a class="code hl_variable" href="classyuki_1_1atri_1_1nfp_1_1_state.html#a27671e0f9a4564074fd4fcd3558ae075">data</a> &amp; <a class="code hl_variable" href="classyuki_1_1atri_1_1nfp_1_1_state.html#af3537592c969ff7d12cf5f02c4c93dfa">mask</a>[row][col]) &gt;&gt; ((row * <a class="code hl_variable" href="classyuki_1_1atri_1_1nfp_1_1_state.html#a586c34fe492dfaa733327c99e8cef1a7">rows</a> + col) &lt;&lt; 2);</div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>    }</div>
+</div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span> </div>
+<div class="foldopen" id="foldopen00122" data-start="{" data-end="}">
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno"><a class="line" href="classyuki_1_1atri_1_1nfp_1_1_state.html#a2ceea2a152c37f7a4530433c2231d079">  122</a></span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="classyuki_1_1atri_1_1nfp_1_1_state.html#a2ceea2a152c37f7a4530433c2231d079">State::operator&lt;</a>(<a class="code hl_class" href="classyuki_1_1atri_1_1nfp_1_1_state.html">State</a> <span class="keyword">const</span>&amp; other)<span class="keyword"> const </span>{</div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="classyuki_1_1atri_1_1nfp_1_1_state.html#acb5ba97551079e0b072c62c21d784ac5">depth</a> &lt; other.<a class="code hl_variable" href="classyuki_1_1atri_1_1nfp_1_1_state.html#acb5ba97551079e0b072c62c21d784ac5">depth</a>;</div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>    }</div>
+</div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span> </div>
+<div class="foldopen" id="foldopen00126" data-start="{" data-end="}">
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno"><a class="line" href="classyuki_1_1atri_1_1nfp_1_1_state.html#a1bc53bb6cc497f0ada4186caeb9b00d0">  126</a></span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="classyuki_1_1atri_1_1nfp_1_1_state.html#a1bc53bb6cc497f0ada4186caeb9b00d0">State::operator==</a>(<a class="code hl_class" href="classyuki_1_1atri_1_1nfp_1_1_state.html">State</a> <span class="keyword">const</span>&amp; other)<span class="keyword"> const </span>{</div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="classyuki_1_1atri_1_1nfp_1_1_state.html#a27671e0f9a4564074fd4fcd3558ae075">data</a> == other.<a class="code hl_variable" href="classyuki_1_1atri_1_1nfp_1_1_state.html#a27671e0f9a4564074fd4fcd3558ae075">data</a>;</div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>    }</div>
+</div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span> </div>
+<div class="foldopen" id="foldopen00130" data-start="{" data-end="}">
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno"><a class="line" href="classyuki_1_1atri_1_1nfp_1_1_state.html#a5734a27d605bdde7c49061fb3bcbbbcc">  130</a></span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="classyuki_1_1atri_1_1nfp_1_1_state.html#a5734a27d605bdde7c49061fb3bcbbbcc">State::operator!=</a>(<a class="code hl_class" href="classyuki_1_1atri_1_1nfp_1_1_state.html">State</a> <span class="keyword">const</span>&amp; other)<span class="keyword"> const </span>{</div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="classyuki_1_1atri_1_1nfp_1_1_state.html#a27671e0f9a4564074fd4fcd3558ae075">data</a> != other.<a class="code hl_variable" href="classyuki_1_1atri_1_1nfp_1_1_state.html#a27671e0f9a4564074fd4fcd3558ae075">data</a>;</div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>    }</div>
+</div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span> </div>
+<div class="foldopen" id="foldopen00134" data-start="{" data-end="}">
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno"><a class="line" href="classyuki_1_1atri_1_1nfp_1_1_state.html#a8f13c339dcaf512c1957eabc8079bad0">  134</a></span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="classyuki_1_1atri_1_1nfp_1_1_state.html#a8f13c339dcaf512c1957eabc8079bad0">State::hasNextAction</a>()<span class="keyword"> const </span>{</div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>        <span class="keywordflow">return</span> !<a class="code hl_variable" href="classyuki_1_1atri_1_1nfp_1_1_state.html#a82091510de7ed0f5b951b08992f1366f">nextActions</a>.empty();</div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>    }</div>
+</div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span> </div>
+<div class="foldopen" id="foldopen00138" data-start="{" data-end="}">
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno"><a class="line" href="classyuki_1_1atri_1_1nfp_1_1_state.html#ae594e908404b048ed8092ffef74e565d">  138</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classyuki_1_1atri_1_1nfp_1_1_state.html#ae594e908404b048ed8092ffef74e565d">State::executeAction</a>(<a class="code hl_class" href="classyuki_1_1atri_1_1_vector2.html">Action</a> <span class="keyword">const</span>* <span class="keyword">const</span>&amp; action) {</div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span>        <span class="comment">//prevActions.push_back(action);</span></div>
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span> </div>
+<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span>        <a class="code hl_function" href="classyuki_1_1atri_1_1nfp_1_1_state.html#a9c1d5d625192a37da3c0416b80f2c9c2">zeroMoveTo</a>(<a class="code hl_variable" href="classyuki_1_1atri_1_1nfp_1_1_state.html#a295ca02676e42c0f3aae733697abeef9">zeroPos</a> + *action);</div>
+<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span> </div>
+<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span>        ++<a class="code hl_variable" href="classyuki_1_1atri_1_1nfp_1_1_state.html#acb5ba97551079e0b072c62c21d784ac5">depth</a>;</div>
+<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span> </div>
+<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span>        <span class="comment">// 这里默认不会把上个动作的反动作加入后继可行动作，比如上一个动作是是向下走，更新的后继可行动作就不会考虑向上走</span></div>
+<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span>        <span class="comment">// 如果需要加入上个动作的反动作，则将输入参数 action 去掉</span></div>
+<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span>        <a class="code hl_function" href="classyuki_1_1atri_1_1nfp_1_1_state.html#a2a7248bc89ab676358633078fbc32d33">updateNextActions</a>(action);</div>
+<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span>    }</div>
+</div>
+<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span> </div>
+<div class="foldopen" id="foldopen00150" data-start="{" data-end="}">
+<div class="line"><a id="l00150" name="l00150"></a><span class="lineno"><a class="line" href="classyuki_1_1atri_1_1nfp_1_1_state.html#ad20897c5c8bd47f5d4005989bead0e55">  150</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classyuki_1_1atri_1_1nfp_1_1_state.html#ad20897c5c8bd47f5d4005989bead0e55">State::reset</a>() {</div>
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>        <a class="code hl_variable" href="classyuki_1_1atri_1_1nfp_1_1_state.html#acb5ba97551079e0b072c62c21d784ac5">depth</a> = 0;</div>
+<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>        <a class="code hl_function" href="classyuki_1_1atri_1_1nfp_1_1_state.html#a2a7248bc89ab676358633078fbc32d33">updateNextActions</a>();</div>
+<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>        <a class="code hl_variable" href="classyuki_1_1atri_1_1nfp_1_1_state.html#a96b10df6448be2b76001abc1ba8b7271">prevActions</a>.clear();</div>
+<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span>    }</div>
+</div>
+<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span> </div>
+<div class="foldopen" id="foldopen00156" data-start="{" data-end="}">
+<div class="line"><a id="l00156" name="l00156"></a><span class="lineno"><a class="line" href="classyuki_1_1atri_1_1nfp_1_1_state.html#ac1e4f5404a2f3a827f0674116635f39e">  156</a></span>    <a class="code hl_class" href="classyuki_1_1atri_1_1nfp_1_1_state.html">State</a> <a class="code hl_function" href="classyuki_1_1atri_1_1nfp_1_1_state.html#ac1e4f5404a2f3a827f0674116635f39e">State::genNextNFPState</a>() {</div>
+<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span>        <a class="code hl_class" href="classyuki_1_1atri_1_1nfp_1_1_state.html">State</a> nextNFPState(*<span class="keyword">this</span>);</div>
+<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span>        <span class="keywordflow">if</span> (<a class="code hl_function" href="classyuki_1_1atri_1_1nfp_1_1_state.html#a8f13c339dcaf512c1957eabc8079bad0">hasNextAction</a>()) { <span class="comment">// 后继动作序列不为空</span></div>
+<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span>            <span class="comment">// 取出一个可行动作</span></div>
+<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span>            <a class="code hl_class" href="classyuki_1_1atri_1_1_vector2.html">Action</a> <span class="keyword">const</span>*&amp; action = <a class="code hl_variable" href="classyuki_1_1atri_1_1nfp_1_1_state.html#a82091510de7ed0f5b951b08992f1366f">nextActions</a>.back();</div>
+<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span>            <span class="comment">// 执行动作</span></div>
+<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span>            nextNFPState.<a class="code hl_function" href="classyuki_1_1atri_1_1nfp_1_1_state.html#ae594e908404b048ed8092ffef74e565d">executeAction</a>(action);</div>
+<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span>            <span class="comment">// 记录动作</span></div>
+<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span>            nextNFPState.<a class="code hl_variable" href="classyuki_1_1atri_1_1nfp_1_1_state.html#a96b10df6448be2b76001abc1ba8b7271">prevActions</a>.push_back(action);</div>
+<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span>            <span class="comment">// 将执行过的动作移除</span></div>
+<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>            <a class="code hl_variable" href="classyuki_1_1atri_1_1nfp_1_1_state.html#a82091510de7ed0f5b951b08992f1366f">nextActions</a>.pop_back();</div>
+<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span>        }</div>
+<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span>        <span class="keywordflow">return</span> nextNFPState;</div>
+<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span>    }</div>
+</div>
+<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span> </div>
+<div class="foldopen" id="foldopen00171" data-start="{" data-end="}">
+<div class="line"><a id="l00171" name="l00171"></a><span class="lineno"><a class="line" href="classyuki_1_1atri_1_1nfp_1_1_state.html#a9c1d5d625192a37da3c0416b80f2c9c2">  171</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classyuki_1_1atri_1_1nfp_1_1_state.html#a9c1d5d625192a37da3c0416b80f2c9c2">State::zeroMoveTo</a>(<a class="code hl_class" href="classyuki_1_1atri_1_1_vector2.html">Vector2</a> <span class="keyword">const</span>&amp; swapPos) {</div>
+<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span>        <span class="comment">// 单线程环境下使用静态变量减少生成临时变量反复申请内存</span></div>
+<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span>        <span class="comment">// 多线程环境下就不要用静态变量以防数据竞争</span></div>
+<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span>        <span class="keyword">static</span> <a class="code hl_typedef" href="namespaceyuki.html#a67cb024aa20a9cffd9c230409152959c">usize</a> tmp1, tmp2;</div>
+<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span>        <span class="keyword">static</span> <span class="keywordtype">unsigned</span> idx1, idx2, offset;</div>
+<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span> </div>
+<div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span>        tmp1 = <a class="code hl_variable" href="classyuki_1_1atri_1_1nfp_1_1_state.html#a27671e0f9a4564074fd4fcd3558ae075">data</a> &amp; <a class="code hl_variable" href="classyuki_1_1atri_1_1nfp_1_1_state.html#af3537592c969ff7d12cf5f02c4c93dfa">mask</a>[<a class="code hl_variable" href="classyuki_1_1atri_1_1nfp_1_1_state.html#a295ca02676e42c0f3aae733697abeef9">zeroPos</a>.<a class="code hl_variable" href="classyuki_1_1atri_1_1_vector2.html#a1a886e40a748ff17d9ce4d5bd931c0c4">r</a>][<a class="code hl_variable" href="classyuki_1_1atri_1_1nfp_1_1_state.html#a295ca02676e42c0f3aae733697abeef9">zeroPos</a>.<a class="code hl_variable" href="classyuki_1_1atri_1_1_vector2.html#a540180068a19e39eca3271cd9916ebca">c</a>];</div>
+<div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span>        tmp2 = <a class="code hl_variable" href="classyuki_1_1atri_1_1nfp_1_1_state.html#a27671e0f9a4564074fd4fcd3558ae075">data</a> &amp; <a class="code hl_variable" href="classyuki_1_1atri_1_1nfp_1_1_state.html#af3537592c969ff7d12cf5f02c4c93dfa">mask</a>[swapPos.<a class="code hl_variable" href="classyuki_1_1atri_1_1_vector2.html#a1a886e40a748ff17d9ce4d5bd931c0c4">r</a>][swapPos.<a class="code hl_variable" href="classyuki_1_1atri_1_1_vector2.html#a540180068a19e39eca3271cd9916ebca">c</a>];</div>
+<div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span>        <a class="code hl_variable" href="classyuki_1_1atri_1_1nfp_1_1_state.html#a27671e0f9a4564074fd4fcd3558ae075">data</a> -= tmp1;</div>
+<div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span>        <a class="code hl_variable" href="classyuki_1_1atri_1_1nfp_1_1_state.html#a27671e0f9a4564074fd4fcd3558ae075">data</a> -= tmp2;</div>
+<div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span>        idx1 = <a class="code hl_variable" href="classyuki_1_1atri_1_1nfp_1_1_state.html#a295ca02676e42c0f3aae733697abeef9">zeroPos</a>.<a class="code hl_variable" href="classyuki_1_1atri_1_1_vector2.html#a1a886e40a748ff17d9ce4d5bd931c0c4">r</a> * <a class="code hl_variable" href="classyuki_1_1atri_1_1nfp_1_1_state.html#a586c34fe492dfaa733327c99e8cef1a7">rows</a> + <a class="code hl_variable" href="classyuki_1_1atri_1_1nfp_1_1_state.html#a295ca02676e42c0f3aae733697abeef9">zeroPos</a>.<a class="code hl_variable" href="classyuki_1_1atri_1_1_vector2.html#a540180068a19e39eca3271cd9916ebca">c</a>;</div>
+<div class="line"><a id="l00182" name="l00182"></a><span class="lineno">  182</span>        idx2 = swapPos.<a class="code hl_variable" href="classyuki_1_1atri_1_1_vector2.html#a1a886e40a748ff17d9ce4d5bd931c0c4">r</a> * <a class="code hl_variable" href="classyuki_1_1atri_1_1nfp_1_1_state.html#a586c34fe492dfaa733327c99e8cef1a7">rows</a> + swapPos.<a class="code hl_variable" href="classyuki_1_1atri_1_1_vector2.html#a540180068a19e39eca3271cd9916ebca">c</a>;</div>
+<div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span>        <span class="keywordflow">if</span> (idx1 &gt; idx2) {</div>
+<div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span>            offset = (idx1 - idx2) &lt;&lt; 2;</div>
+<div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span>            tmp1 &gt;&gt;= offset;</div>
+<div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span>            tmp2 &lt;&lt;= offset;</div>
+<div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span>        }</div>
+<div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span>        <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span>            offset = (idx2 - idx1) &lt;&lt; 2;</div>
+<div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span>            tmp1 &lt;&lt;= offset;</div>
+<div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span>            tmp2 &gt;&gt;= offset;</div>
+<div class="line"><a id="l00192" name="l00192"></a><span class="lineno">  192</span>        }</div>
+<div class="line"><a id="l00193" name="l00193"></a><span class="lineno">  193</span>        <a class="code hl_variable" href="classyuki_1_1atri_1_1nfp_1_1_state.html#a27671e0f9a4564074fd4fcd3558ae075">data</a> ^= tmp1;</div>
+<div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span>        <a class="code hl_variable" href="classyuki_1_1atri_1_1nfp_1_1_state.html#a27671e0f9a4564074fd4fcd3558ae075">data</a> ^= tmp2;</div>
+<div class="line"><a id="l00195" name="l00195"></a><span class="lineno">  195</span> </div>
+<div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span>        <a class="code hl_variable" href="classyuki_1_1atri_1_1nfp_1_1_state.html#a295ca02676e42c0f3aae733697abeef9">zeroPos</a> = swapPos;</div>
+<div class="line"><a id="l00197" name="l00197"></a><span class="lineno">  197</span>    }</div>
+</div>
+<div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span> </div>
+<div class="foldopen" id="foldopen00199" data-start="{" data-end="}">
+<div class="line"><a id="l00199" name="l00199"></a><span class="lineno"><a class="line" href="classyuki_1_1atri_1_1nfp_1_1_state.html#a2a7248bc89ab676358633078fbc32d33">  199</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classyuki_1_1atri_1_1nfp_1_1_state.html#a2a7248bc89ab676358633078fbc32d33">State::updateNextActions</a>(<a class="code hl_class" href="classyuki_1_1atri_1_1_vector2.html">Action</a> <span class="keyword">const</span>* <span class="keyword">const</span>&amp; lastAction) {</div>
+<div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span>        <a class="code hl_variable" href="classyuki_1_1atri_1_1nfp_1_1_state.html#a82091510de7ed0f5b951b08992f1366f">nextActions</a>.clear();</div>
+<div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="classyuki_1_1atri_1_1nfp_1_1_state.html#a295ca02676e42c0f3aae733697abeef9">zeroPos</a>.<a class="code hl_variable" href="classyuki_1_1atri_1_1_vector2.html#a1a886e40a748ff17d9ce4d5bd931c0c4">r</a> &gt; 0        &amp;&amp; lastAction != <a class="code hl_variable" href="classyuki_1_1atri_1_1nfp_1_1_state.html#ab1e6e20845952f084240f2cf8876f04c">actions</a> + 1) <a class="code hl_variable" href="classyuki_1_1atri_1_1nfp_1_1_state.html#a82091510de7ed0f5b951b08992f1366f">nextActions</a>.push_back(<a class="code hl_variable" href="classyuki_1_1atri_1_1nfp_1_1_state.html#ab1e6e20845952f084240f2cf8876f04c">actions</a>);</div>
+<div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="classyuki_1_1atri_1_1nfp_1_1_state.html#a295ca02676e42c0f3aae733697abeef9">zeroPos</a>.<a class="code hl_variable" href="classyuki_1_1atri_1_1_vector2.html#a1a886e40a748ff17d9ce4d5bd931c0c4">r</a> &lt; <a class="code hl_variable" href="classyuki_1_1atri_1_1nfp_1_1_state.html#a586c34fe492dfaa733327c99e8cef1a7">rows</a> - 1 &amp;&amp; lastAction != <a class="code hl_variable" href="classyuki_1_1atri_1_1nfp_1_1_state.html#ab1e6e20845952f084240f2cf8876f04c">actions</a>)     <a class="code hl_variable" href="classyuki_1_1atri_1_1nfp_1_1_state.html#a82091510de7ed0f5b951b08992f1366f">nextActions</a>.push_back(<a class="code hl_variable" href="classyuki_1_1atri_1_1nfp_1_1_state.html#ab1e6e20845952f084240f2cf8876f04c">actions</a> + 1);</div>
+<div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="classyuki_1_1atri_1_1nfp_1_1_state.html#a295ca02676e42c0f3aae733697abeef9">zeroPos</a>.<a class="code hl_variable" href="classyuki_1_1atri_1_1_vector2.html#a540180068a19e39eca3271cd9916ebca">c</a> &gt; 0        &amp;&amp; lastAction != <a class="code hl_variable" href="classyuki_1_1atri_1_1nfp_1_1_state.html#ab1e6e20845952f084240f2cf8876f04c">actions</a> + 3) <a class="code hl_variable" href="classyuki_1_1atri_1_1nfp_1_1_state.html#a82091510de7ed0f5b951b08992f1366f">nextActions</a>.push_back(<a class="code hl_variable" href="classyuki_1_1atri_1_1nfp_1_1_state.html#ab1e6e20845952f084240f2cf8876f04c">actions</a> + 2);</div>
+<div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="classyuki_1_1atri_1_1nfp_1_1_state.html#a295ca02676e42c0f3aae733697abeef9">zeroPos</a>.<a class="code hl_variable" href="classyuki_1_1atri_1_1_vector2.html#a540180068a19e39eca3271cd9916ebca">c</a> &lt; <a class="code hl_variable" href="classyuki_1_1atri_1_1nfp_1_1_state.html#a8033bb7012818aa61af4cc5619b01d6b">cols</a> - 1 &amp;&amp; lastAction != <a class="code hl_variable" href="classyuki_1_1atri_1_1nfp_1_1_state.html#ab1e6e20845952f084240f2cf8876f04c">actions</a> + 2) <a class="code hl_variable" href="classyuki_1_1atri_1_1nfp_1_1_state.html#a82091510de7ed0f5b951b08992f1366f">nextActions</a>.push_back(<a class="code hl_variable" href="classyuki_1_1atri_1_1nfp_1_1_state.html#ab1e6e20845952f084240f2cf8876f04c">actions</a> + 3);</div>
+<div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span>    }</div>
+</div>
+<div class="line"><a id="l00206" name="l00206"></a><span class="lineno">  206</span> </div>
+<div class="foldopen" id="foldopen00207" data-start="{" data-end="}">
+<div class="line"><a id="l00207" name="l00207"></a><span class="lineno"><a class="line" href="classyuki_1_1atri_1_1nfp_1_1_state.html#a44a0d935586155e821aa5d1189155d87">  207</a></span>    <a class="code hl_class" href="classyuki_1_1atri_1_1_vector2.html">State::Action</a> <span class="keyword">const</span>* <a class="code hl_function" href="classyuki_1_1atri_1_1nfp_1_1_state.html#a44a0d935586155e821aa5d1189155d87">State::genRandomAction</a>()<span class="keyword"> const </span>{</div>
+<div class="line"><a id="l00208" name="l00208"></a><span class="lineno">  208</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="classyuki_1_1atri_1_1nfp_1_1_state.html#a82091510de7ed0f5b951b08992f1366f">nextActions</a>.empty()) {</div>
+<div class="line"><a id="l00209" name="l00209"></a><span class="lineno">  209</span>            <span class="keywordflow">return</span> <span class="keyword">nullptr</span>;</div>
+<div class="line"><a id="l00210" name="l00210"></a><span class="lineno">  210</span>        }</div>
+<div class="line"><a id="l00211" name="l00211"></a><span class="lineno">  211</span>        uniform_int_distribution&lt;int&gt; distrib(0, <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(<a class="code hl_variable" href="classyuki_1_1atri_1_1nfp_1_1_state.html#a82091510de7ed0f5b951b08992f1366f">nextActions</a>.size()) - 1);</div>
+<div class="line"><a id="l00212" name="l00212"></a><span class="lineno">  212</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="classyuki_1_1atri_1_1nfp_1_1_state.html#a82091510de7ed0f5b951b08992f1366f">nextActions</a>[distrib(<a class="code hl_variable" href="classyuki_1_1atri_1_1nfp_1_1_state.html#a351c912b2aa4f003200a7a21165ae3d1">gen</a>)];</div>
+<div class="line"><a id="l00213" name="l00213"></a><span class="lineno">  213</span>    }</div>
+</div>
+<div class="line"><a id="l00214" name="l00214"></a><span class="lineno">  214</span> </div>
+<div class="foldopen" id="foldopen00215" data-start="{" data-end="}">
+<div class="line"><a id="l00215" name="l00215"></a><span class="lineno"><a class="line" href="classyuki_1_1atri_1_1nfp_1_1_state.html#a43f5e6ac75a53b7410b9ad588f543961">  215</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classyuki_1_1atri_1_1nfp_1_1_state.html#a43f5e6ac75a53b7410b9ad588f543961">State::printPath</a>()<span class="keyword"> const </span>{</div>
+<div class="line"><a id="l00216" name="l00216"></a><span class="lineno">  216</span>        <span class="keyword">auto</span> len = <a class="code hl_variable" href="classyuki_1_1atri_1_1nfp_1_1_state.html#a96b10df6448be2b76001abc1ba8b7271">prevActions</a>.size();</div>
+<div class="line"><a id="l00217" name="l00217"></a><span class="lineno">  217</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; len; ++i) {</div>
+<div class="line"><a id="l00218" name="l00218"></a><span class="lineno">  218</span>            cout &lt;&lt; <span class="stringliteral">&quot;第&quot;</span>;</div>
+<div class="line"><a id="l00219" name="l00219"></a><span class="lineno">  219</span>            <span class="keywordflow">if</span> (i &lt; 9) {</div>
+<div class="line"><a id="l00220" name="l00220"></a><span class="lineno">  220</span>                cout &lt;&lt; <span class="charliteral">&#39; &#39;</span>;</div>
+<div class="line"><a id="l00221" name="l00221"></a><span class="lineno">  221</span>            }</div>
+<div class="line"><a id="l00222" name="l00222"></a><span class="lineno">  222</span>            cout &lt;&lt; i + 1 &lt;&lt; <span class="stringliteral">&quot;步：&quot;</span> &lt;&lt; <a class="code hl_variable" href="classyuki_1_1atri_1_1nfp_1_1_state.html#a3a09c46648a27c97536f820f6621dbc6">actionInfo</a>[<a class="code hl_variable" href="classyuki_1_1atri_1_1nfp_1_1_state.html#a96b10df6448be2b76001abc1ba8b7271">prevActions</a>[i] - <a class="code hl_variable" href="classyuki_1_1atri_1_1nfp_1_1_state.html#ab1e6e20845952f084240f2cf8876f04c">actions</a>] &lt;&lt; endl;</div>
+<div class="line"><a id="l00223" name="l00223"></a><span class="lineno">  223</span>        }</div>
+<div class="line"><a id="l00224" name="l00224"></a><span class="lineno">  224</span>        <span class="keywordflow">if</span> (len == 0) {</div>
+<div class="line"><a id="l00225" name="l00225"></a><span class="lineno">  225</span>            cout &lt;&lt; <span class="stringliteral">&quot;无需移动\n&quot;</span>;</div>
+<div class="line"><a id="l00226" name="l00226"></a><span class="lineno">  226</span>        }</div>
+<div class="line"><a id="l00227" name="l00227"></a><span class="lineno">  227</span>        cout &lt;&lt; *<span class="keyword">this</span> &lt;&lt; endl;</div>
+<div class="line"><a id="l00228" name="l00228"></a><span class="lineno">  228</span>    }</div>
+</div>
+<div class="line"><a id="l00229" name="l00229"></a><span class="lineno">  229</span> </div>
+<div class="foldopen" id="foldopen00230" data-start="{" data-end="}">
+<div class="line"><a id="l00230" name="l00230"></a><span class="lineno"><a class="line" href="classyuki_1_1atri_1_1nfp_1_1_state.html#a681a048e9c16ad615ead48b96e61806d">  230</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classyuki_1_1atri_1_1nfp_1_1_state.html#a681a048e9c16ad615ead48b96e61806d">State::genPrecision</a>(<a class="code hl_class" href="classyuki_1_1atri_1_1nfp_1_1_state.html">State</a> <span class="keyword">const</span>&amp; originalNFPState) {</div>
+<div class="line"><a id="l00231" name="l00231"></a><span class="lineno">  231</span>        ofstream outFile(<a class="code hl_variable" href="classyuki_1_1atri_1_1nfp_1_1_state.html#aeb25f8c0c00ad8d47645e11f48e9bc0c">precisionFilename</a>, std::ios::binary);</div>
+<div class="line"><a id="l00232" name="l00232"></a><span class="lineno">  232</span>        <span class="keywordflow">if</span> (outFile.good()) {</div>
+<div class="line"><a id="l00233" name="l00233"></a><span class="lineno">  233</span>            outFile.write(<span class="keyword">reinterpret_cast&lt;</span><span class="keywordtype">char</span> const*<span class="keyword">&gt;</span>(&amp;<a class="code hl_variable" href="classyuki_1_1atri_1_1nfp_1_1_state.html#a586c34fe492dfaa733327c99e8cef1a7">rows</a>), <span class="keyword">sizeof</span> <a class="code hl_variable" href="classyuki_1_1atri_1_1nfp_1_1_state.html#a586c34fe492dfaa733327c99e8cef1a7">rows</a>);</div>
+<div class="line"><a id="l00234" name="l00234"></a><span class="lineno">  234</span>            outFile.write(<span class="keyword">reinterpret_cast&lt;</span><span class="keywordtype">char</span> const*<span class="keyword">&gt;</span>(&amp;<a class="code hl_variable" href="classyuki_1_1atri_1_1nfp_1_1_state.html#a8033bb7012818aa61af4cc5619b01d6b">cols</a>), <span class="keyword">sizeof</span> <a class="code hl_variable" href="classyuki_1_1atri_1_1nfp_1_1_state.html#a8033bb7012818aa61af4cc5619b01d6b">cols</a>);</div>
+<div class="line"><a id="l00235" name="l00235"></a><span class="lineno">  235</span>            outFile.write(<span class="keyword">reinterpret_cast&lt;</span><span class="keywordtype">char</span> const*<span class="keyword">&gt;</span>(&amp;<a class="code hl_variable" href="classyuki_1_1atri_1_1nfp_1_1_state.html#ae36c3fd1a30a6cda505c1b6792ed75df">maxDepth</a>), <span class="keyword">sizeof</span> <a class="code hl_variable" href="classyuki_1_1atri_1_1nfp_1_1_state.html#ae36c3fd1a30a6cda505c1b6792ed75df">maxDepth</a>);</div>
+<div class="line"><a id="l00236" name="l00236"></a><span class="lineno">  236</span> </div>
+<div class="line"><a id="l00237" name="l00237"></a><span class="lineno">  237</span>            <a class="code hl_typedef" href="namespaceyuki.html#a67cb024aa20a9cffd9c230409152959c">usize</a> m = 0b1111;</div>
+<div class="line"><a id="l00238" name="l00238"></a><span class="lineno">  238</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> r = 0; r &lt; <a class="code hl_variable" href="classyuki_1_1atri_1_1nfp_1_1_state.html#a586c34fe492dfaa733327c99e8cef1a7">rows</a>; ++r) {</div>
+<div class="line"><a id="l00239" name="l00239"></a><span class="lineno">  239</span>                <span class="keywordflow">for</span> (<span class="keywordtype">int</span> c = 0; c &lt; <a class="code hl_variable" href="classyuki_1_1atri_1_1nfp_1_1_state.html#a8033bb7012818aa61af4cc5619b01d6b">cols</a>; ++c) {</div>
+<div class="line"><a id="l00240" name="l00240"></a><span class="lineno">  240</span>                    <a class="code hl_variable" href="classyuki_1_1atri_1_1nfp_1_1_state.html#af3537592c969ff7d12cf5f02c4c93dfa">mask</a>[r][c] = m;</div>
+<div class="line"><a id="l00241" name="l00241"></a><span class="lineno">  241</span>                    outFile.write(<span class="keyword">reinterpret_cast&lt;</span><span class="keywordtype">char</span>*<span class="keyword">&gt;</span>(&amp; m), <span class="keyword">sizeof</span> m);</div>
+<div class="line"><a id="l00242" name="l00242"></a><span class="lineno">  242</span>                    m &lt;&lt;= 4;</div>
+<div class="line"><a id="l00243" name="l00243"></a><span class="lineno">  243</span>                }</div>
+<div class="line"><a id="l00244" name="l00244"></a><span class="lineno">  244</span>            }</div>
+<div class="line"><a id="l00245" name="l00245"></a><span class="lineno">  245</span> </div>
+<div class="line"><a id="l00246" name="l00246"></a><span class="lineno">  246</span>            <a class="code hl_variable" href="classyuki_1_1atri_1_1nfp_1_1_state.html#ac68a597a5d0c4bcf8b9f686e74ee2b8c">allNFPStates</a>.clear();</div>
+<div class="line"><a id="l00247" name="l00247"></a><span class="lineno">  247</span> </div>
+<div class="line"><a id="l00248" name="l00248"></a><span class="lineno">  248</span>            <a class="code hl_variable" href="classyuki_1_1atri_1_1nfp_1_1_state.html#ac68a597a5d0c4bcf8b9f686e74ee2b8c">allNFPStates</a>.push_back(<a class="code hl_variable" href="classyuki_1_1atri_1_1nfp_1_1_state.html#abcc222f8c879ad17d85b7001ad0e59c5">_targetNFPState</a>);</div>
+<div class="line"><a id="l00249" name="l00249"></a><span class="lineno">  249</span>            outFile.write(<span class="keyword">reinterpret_cast&lt;</span><span class="keywordtype">char</span>*<span class="keyword">&gt;</span>(&amp;<a class="code hl_variable" href="classyuki_1_1atri_1_1nfp_1_1_state.html#abcc222f8c879ad17d85b7001ad0e59c5">_targetNFPState</a>), 16);</div>
+<div class="line"><a id="l00250" name="l00250"></a><span class="lineno">  250</span>            <a class="code hl_variable" href="classyuki_1_1atri_1_1nfp_1_1_state.html#abb60e383d39983f9e55ac9de9aa8b8fc">depthIndexs</a>[0] = 1;</div>
+<div class="line"><a id="l00251" name="l00251"></a><span class="lineno">  251</span>            set&lt;usize&gt; s;</div>
+<div class="line"><a id="l00252" name="l00252"></a><span class="lineno">  252</span> </div>
+<div class="line"><a id="l00253" name="l00253"></a><span class="lineno">  253</span>            <span class="keywordtype">bool</span> flag = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00254" name="l00254"></a><span class="lineno">  254</span>            <span class="keywordtype">int</span> index = 0;</div>
+<div class="line"><a id="l00255" name="l00255"></a><span class="lineno">  255</span>            <span class="keywordflow">while</span> (index &lt; <a class="code hl_variable" href="classyuki_1_1atri_1_1nfp_1_1_state.html#ac68a597a5d0c4bcf8b9f686e74ee2b8c">allNFPStates</a>.size()) {</div>
+<div class="line"><a id="l00256" name="l00256"></a><span class="lineno">  256</span>                s.insert(<a class="code hl_variable" href="classyuki_1_1atri_1_1nfp_1_1_state.html#ac68a597a5d0c4bcf8b9f686e74ee2b8c">allNFPStates</a>[index].<a class="code hl_variable" href="classyuki_1_1atri_1_1nfp_1_1_state.html#a27671e0f9a4564074fd4fcd3558ae075">data</a>);</div>
+<div class="line"><a id="l00257" name="l00257"></a><span class="lineno">  257</span> </div>
+<div class="line"><a id="l00258" name="l00258"></a><span class="lineno">  258</span>                <span class="keywordflow">for</span> (<a class="code hl_class" href="classyuki_1_1atri_1_1_vector2.html">Action</a> <span class="keyword">const</span>* <span class="keyword">const</span>&amp; action : <a class="code hl_variable" href="classyuki_1_1atri_1_1nfp_1_1_state.html#ac68a597a5d0c4bcf8b9f686e74ee2b8c">allNFPStates</a>[index].<a class="code hl_variable" href="classyuki_1_1atri_1_1nfp_1_1_state.html#a82091510de7ed0f5b951b08992f1366f">nextActions</a>) {</div>
+<div class="line"><a id="l00259" name="l00259"></a><span class="lineno">  259</span>                    <a class="code hl_class" href="classyuki_1_1atri_1_1nfp_1_1_state.html">State</a> nextNFPState(<a class="code hl_variable" href="classyuki_1_1atri_1_1nfp_1_1_state.html#ac68a597a5d0c4bcf8b9f686e74ee2b8c">allNFPStates</a>[index]);</div>
+<div class="line"><a id="l00260" name="l00260"></a><span class="lineno">  260</span>                    nextNFPState.<a class="code hl_function" href="classyuki_1_1atri_1_1nfp_1_1_state.html#ae594e908404b048ed8092ffef74e565d">executeAction</a>(action);</div>
+<div class="line"><a id="l00261" name="l00261"></a><span class="lineno">  261</span>                    <span class="keywordflow">if</span> (nextNFPState.<a class="code hl_variable" href="classyuki_1_1atri_1_1nfp_1_1_state.html#acb5ba97551079e0b072c62c21d784ac5">depth</a> &gt; <a class="code hl_variable" href="classyuki_1_1atri_1_1nfp_1_1_state.html#ae36c3fd1a30a6cda505c1b6792ed75df">maxDepth</a>) {</div>
+<div class="line"><a id="l00262" name="l00262"></a><span class="lineno">  262</span>                        flag = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00263" name="l00263"></a><span class="lineno">  263</span>                        <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00264" name="l00264"></a><span class="lineno">  264</span>                    }</div>
+<div class="line"><a id="l00265" name="l00265"></a><span class="lineno">  265</span>                    <span class="keywordflow">if</span> (s.find(nextNFPState.<a class="code hl_variable" href="classyuki_1_1atri_1_1nfp_1_1_state.html#a27671e0f9a4564074fd4fcd3558ae075">data</a>) == s.end()) {</div>
+<div class="line"><a id="l00266" name="l00266"></a><span class="lineno">  266</span>                        outFile.write(<span class="keyword">reinterpret_cast&lt;</span><span class="keywordtype">char</span>*<span class="keyword">&gt;</span>(&amp;nextNFPState), 16);</div>
+<div class="line"><a id="l00267" name="l00267"></a><span class="lineno">  267</span>                        <a class="code hl_variable" href="classyuki_1_1atri_1_1nfp_1_1_state.html#ac68a597a5d0c4bcf8b9f686e74ee2b8c">allNFPStates</a>.emplace_back(nextNFPState);</div>
+<div class="line"><a id="l00268" name="l00268"></a><span class="lineno">  268</span>                        <a class="code hl_variable" href="classyuki_1_1atri_1_1nfp_1_1_state.html#abb60e383d39983f9e55ac9de9aa8b8fc">depthIndexs</a>[nextNFPState.<a class="code hl_variable" href="classyuki_1_1atri_1_1nfp_1_1_state.html#acb5ba97551079e0b072c62c21d784ac5">depth</a>] = <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(<a class="code hl_variable" href="classyuki_1_1atri_1_1nfp_1_1_state.html#ac68a597a5d0c4bcf8b9f686e74ee2b8c">allNFPStates</a>.size());</div>
+<div class="line"><a id="l00269" name="l00269"></a><span class="lineno">  269</span>                    }</div>
+<div class="line"><a id="l00270" name="l00270"></a><span class="lineno">  270</span>                }</div>
+<div class="line"><a id="l00271" name="l00271"></a><span class="lineno">  271</span> </div>
+<div class="line"><a id="l00272" name="l00272"></a><span class="lineno">  272</span>                <span class="keywordflow">if</span> (flag) {</div>
+<div class="line"><a id="l00273" name="l00273"></a><span class="lineno">  273</span>                    <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00274" name="l00274"></a><span class="lineno">  274</span>                }</div>
+<div class="line"><a id="l00275" name="l00275"></a><span class="lineno">  275</span>                ++index;</div>
+<div class="line"><a id="l00276" name="l00276"></a><span class="lineno">  276</span>            }</div>
+<div class="line"><a id="l00277" name="l00277"></a><span class="lineno">  277</span>        }</div>
+<div class="line"><a id="l00278" name="l00278"></a><span class="lineno">  278</span>        <span class="keywordtype">unsigned</span> zero[4] = { 0 };</div>
+<div class="line"><a id="l00279" name="l00279"></a><span class="lineno">  279</span>        outFile.write(<span class="keyword">reinterpret_cast&lt;</span><span class="keywordtype">char</span>*<span class="keyword">&gt;</span>(zero), 16);</div>
+<div class="line"><a id="l00280" name="l00280"></a><span class="lineno">  280</span>        outFile.write(<span class="keyword">reinterpret_cast&lt;</span><span class="keywordtype">char</span>*<span class="keyword">&gt;</span>(&amp;<a class="code hl_variable" href="classyuki_1_1atri_1_1nfp_1_1_state.html#abb60e383d39983f9e55ac9de9aa8b8fc">depthIndexs</a>), <span class="keyword">sizeof</span> <a class="code hl_variable" href="classyuki_1_1atri_1_1nfp_1_1_state.html#abb60e383d39983f9e55ac9de9aa8b8fc">depthIndexs</a>);</div>
+<div class="line"><a id="l00281" name="l00281"></a><span class="lineno">  281</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt;= <a class="code hl_variable" href="classyuki_1_1atri_1_1nfp_1_1_state.html#ae36c3fd1a30a6cda505c1b6792ed75df">maxDepth</a>; ++i) {</div>
+<div class="line"><a id="l00282" name="l00282"></a><span class="lineno">  282</span>            cout &lt;&lt; <a class="code hl_variable" href="classyuki_1_1atri_1_1nfp_1_1_state.html#abb60e383d39983f9e55ac9de9aa8b8fc">depthIndexs</a>[i] &lt;&lt; endl;</div>
+<div class="line"><a id="l00283" name="l00283"></a><span class="lineno">  283</span>        }</div>
+<div class="line"><a id="l00284" name="l00284"></a><span class="lineno">  284</span>        cout &lt;&lt; <span class="stringliteral">&quot;allNFPStates.size() = &quot;</span> &lt;&lt; <a class="code hl_variable" href="classyuki_1_1atri_1_1nfp_1_1_state.html#ac68a597a5d0c4bcf8b9f686e74ee2b8c">allNFPStates</a>.size() &lt;&lt; endl;</div>
+<div class="line"><a id="l00285" name="l00285"></a><span class="lineno">  285</span> </div>
+<div class="line"><a id="l00286" name="l00286"></a><span class="lineno">  286</span>        outFile.close();</div>
+<div class="line"><a id="l00287" name="l00287"></a><span class="lineno">  287</span>    }</div>
+</div>
+<div class="line"><a id="l00288" name="l00288"></a><span class="lineno">  288</span> </div>
+<div class="foldopen" id="foldopen00289" data-start="{" data-end="};">
+<div class="line"><a id="l00289" name="l00289"></a><span class="lineno"><a class="line" href="classyuki_1_1atri_1_1nfp_1_1_state.html#ade05aba99b14a281166ac0de4d82cc3f">  289</a></span>    ostream&amp; <a class="code hl_function" href="namespaceyuki_1_1atri_1_1nfp.html#a9935f658d65be9f157ecb7109e7b291b">operator&lt;&lt;</a>(ostream&amp; os, <a class="code hl_class" href="classyuki_1_1atri_1_1nfp_1_1_state.html">State</a> <span class="keyword">const</span>&amp; NFPState) {</div>
+<div class="line"><a id="l00290" name="l00290"></a><span class="lineno">  290</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> r = 0, i = 0; r &lt; <a class="code hl_variable" href="classyuki_1_1atri_1_1nfp_1_1_state.html#a586c34fe492dfaa733327c99e8cef1a7">State::rows</a>; ++r) {</div>
+<div class="line"><a id="l00291" name="l00291"></a><span class="lineno">  291</span>            cout &lt;&lt; <span class="stringliteral">&quot;    &quot;</span>;</div>
+<div class="line"><a id="l00292" name="l00292"></a><span class="lineno">  292</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> c = 0; c &lt; <a class="code hl_variable" href="classyuki_1_1atri_1_1nfp_1_1_state.html#a8033bb7012818aa61af4cc5619b01d6b">State::cols</a>; ++c, i += 4) {</div>
+<div class="line"><a id="l00293" name="l00293"></a><span class="lineno">  293</span>                cout &lt;&lt; ((NFPState.<a class="code hl_variable" href="classyuki_1_1atri_1_1nfp_1_1_state.html#a27671e0f9a4564074fd4fcd3558ae075">data</a> &amp; <a class="code hl_variable" href="classyuki_1_1atri_1_1nfp_1_1_state.html#af3537592c969ff7d12cf5f02c4c93dfa">State::mask</a>[r][c]) &gt;&gt; i) &lt;&lt; <span class="charliteral">&#39; &#39;</span>;</div>
+<div class="line"><a id="l00294" name="l00294"></a><span class="lineno">  294</span>            }</div>
+<div class="line"><a id="l00295" name="l00295"></a><span class="lineno">  295</span>            cout &lt;&lt; <span class="charliteral">&#39;\n&#39;</span>;</div>
+<div class="line"><a id="l00296" name="l00296"></a><span class="lineno">  296</span>        }</div>
+<div class="line"><a id="l00297" name="l00297"></a><span class="lineno">  297</span>        cout &lt;&lt; <span class="stringliteral">&quot;data = &quot;</span> &lt;&lt; NFPState.<a class="code hl_variable" href="classyuki_1_1atri_1_1nfp_1_1_state.html#a27671e0f9a4564074fd4fcd3558ae075">data</a>;</div>
+<div class="line"><a id="l00298" name="l00298"></a><span class="lineno">  298</span>        <span class="keywordflow">return</span> os;</div>
+<div class="line"><a id="l00299" name="l00299"></a><span class="lineno">  299</span>    }</div>
+</div>
+<div class="line"><a id="l00300" name="l00300"></a><span class="lineno">  300</span>}</div>
+<div class="ttc" id="a_n_f_p_state_8h_html"><div class="ttname"><a href="_n_f_p_state_8h.html">NFPState.h</a></div></div>
+<div class="ttc" id="aclassyuki_1_1atri_1_1_vector2_html"><div class="ttname"><a href="classyuki_1_1atri_1_1_vector2.html">yuki::atri::Vector2</a></div><div class="ttdoc">二维整型向量类</div><div class="ttdef"><b>定义</b> <a href="_position2_8h_source.html#l00009">Position2.h:9</a></div></div>
+<div class="ttc" id="aclassyuki_1_1atri_1_1_vector2_html_a1a886e40a748ff17d9ce4d5bd931c0c4"><div class="ttname"><a href="classyuki_1_1atri_1_1_vector2.html#a1a886e40a748ff17d9ce4d5bd931c0c4">yuki::atri::Vector2::r</a></div><div class="ttdeci">i32 r</div><div class="ttdoc">行数据</div><div class="ttdef"><b>定义</b> <a href="_position2_8h_source.html#l00011">Position2.h:11</a></div></div>
+<div class="ttc" id="aclassyuki_1_1atri_1_1_vector2_html_a540180068a19e39eca3271cd9916ebca"><div class="ttname"><a href="classyuki_1_1atri_1_1_vector2.html#a540180068a19e39eca3271cd9916ebca">yuki::atri::Vector2::c</a></div><div class="ttdeci">i32 c</div><div class="ttdoc">列数据</div><div class="ttdef"><b>定义</b> <a href="_position2_8h_source.html#l00012">Position2.h:12</a></div></div>
+<div class="ttc" id="aclassyuki_1_1atri_1_1nfp_1_1_state_html"><div class="ttname"><a href="classyuki_1_1atri_1_1nfp_1_1_state.html">yuki::atri::nfp::State</a></div><div class="ttdoc">用来描述棋盘状态的类。</div><div class="ttdef"><b>定义</b> <a href="_n_f_p_state_8h_source.html#l00014">NFPState.h:14</a></div></div>
+<div class="ttc" id="aclassyuki_1_1atri_1_1nfp_1_1_state_html_a1bc53bb6cc497f0ada4186caeb9b00d0"><div class="ttname"><a href="classyuki_1_1atri_1_1nfp_1_1_state.html#a1bc53bb6cc497f0ada4186caeb9b00d0">yuki::atri::nfp::State::operator==</a></div><div class="ttdeci">bool operator==(State const &amp;other) const</div><div class="ttdef"><b>定义</b> <a href="#l00126">NFPState.cpp:126</a></div></div>
+<div class="ttc" id="aclassyuki_1_1atri_1_1nfp_1_1_state_html_a27671e0f9a4564074fd4fcd3558ae075"><div class="ttname"><a href="classyuki_1_1atri_1_1nfp_1_1_state.html#a27671e0f9a4564074fd4fcd3558ae075">yuki::atri::nfp::State::data</a></div><div class="ttdeci">usize data</div><div class="ttdoc">状态压缩，64位每4位存一个数，最多可以测试到15数码问题</div><div class="ttdef"><b>定义</b> <a href="_n_f_p_state_8h_source.html#l00031">NFPState.h:31</a></div></div>
+<div class="ttc" id="aclassyuki_1_1atri_1_1nfp_1_1_state_html_a295ca02676e42c0f3aae733697abeef9"><div class="ttname"><a href="classyuki_1_1atri_1_1nfp_1_1_state.html#a295ca02676e42c0f3aae733697abeef9">yuki::atri::nfp::State::zeroPos</a></div><div class="ttdeci">Vector2 zeroPos</div><div class="ttdoc">0 的位置</div><div class="ttdef"><b>定义</b> <a href="_n_f_p_state_8h_source.html#l00032">NFPState.h:32</a></div></div>
+<div class="ttc" id="aclassyuki_1_1atri_1_1nfp_1_1_state_html_a2a7248bc89ab676358633078fbc32d33"><div class="ttname"><a href="classyuki_1_1atri_1_1nfp_1_1_state.html#a2a7248bc89ab676358633078fbc32d33">yuki::atri::nfp::State::updateNextActions</a></div><div class="ttdeci">void updateNextActions(Action const *const &amp;lastAction=nullptr)</div><div class="ttdoc">更新本节点的后继节点序列。可以输入上一步的动作来避免序列中生成其反动作导致走回头。</div><div class="ttdef"><b>定义</b> <a href="#l00199">NFPState.cpp:199</a></div></div>
+<div class="ttc" id="aclassyuki_1_1atri_1_1nfp_1_1_state_html_a2ceea2a152c37f7a4530433c2231d079"><div class="ttname"><a href="classyuki_1_1atri_1_1nfp_1_1_state.html#a2ceea2a152c37f7a4530433c2231d079">yuki::atri::nfp::State::operator&lt;</a></div><div class="ttdeci">bool operator&lt;(State const &amp;other) const</div><div class="ttdef"><b>定义</b> <a href="#l00122">NFPState.cpp:122</a></div></div>
+<div class="ttc" id="aclassyuki_1_1atri_1_1nfp_1_1_state_html_a351c912b2aa4f003200a7a21165ae3d1"><div class="ttname"><a href="classyuki_1_1atri_1_1nfp_1_1_state.html#a351c912b2aa4f003200a7a21165ae3d1">yuki::atri::nfp::State::gen</a></div><div class="ttdeci">static mt19937 gen</div><div class="ttdoc">以真随机数为种子的伪随机数生成器</div><div class="ttdef"><b>定义</b> <a href="_n_f_p_state_8h_source.html#l00043">NFPState.h:43</a></div></div>
+<div class="ttc" id="aclassyuki_1_1atri_1_1nfp_1_1_state_html_a3a09c46648a27c97536f820f6621dbc6"><div class="ttname"><a href="classyuki_1_1atri_1_1nfp_1_1_state.html#a3a09c46648a27c97536f820f6621dbc6">yuki::atri::nfp::State::actionInfo</a></div><div class="ttdeci">static string const actionInfo[actionsNum]</div><div class="ttdoc">actionInfo[i] 对应 actions[i] 的具体信息（如向上走等）</div><div class="ttdef"><b>定义</b> <a href="_n_f_p_state_8h_source.html#l00026">NFPState.h:26</a></div></div>
+<div class="ttc" id="aclassyuki_1_1atri_1_1nfp_1_1_state_html_a43f5e6ac75a53b7410b9ad588f543961"><div class="ttname"><a href="classyuki_1_1atri_1_1nfp_1_1_state.html#a43f5e6ac75a53b7410b9ad588f543961">yuki::atri::nfp::State::printPath</a></div><div class="ttdeci">void printPath() const</div><div class="ttdef"><b>定义</b> <a href="#l00215">NFPState.cpp:215</a></div></div>
+<div class="ttc" id="aclassyuki_1_1atri_1_1nfp_1_1_state_html_a44a0d935586155e821aa5d1189155d87"><div class="ttname"><a href="classyuki_1_1atri_1_1nfp_1_1_state.html#a44a0d935586155e821aa5d1189155d87">yuki::atri::nfp::State::genRandomAction</a></div><div class="ttdeci">Action const * genRandomAction() const</div><div class="ttdoc">从本节点的后继节点序列随机获取一个动作指针返回（不消耗动作）。</div><div class="ttdef"><b>定义</b> <a href="#l00207">NFPState.cpp:207</a></div></div>
+<div class="ttc" id="aclassyuki_1_1atri_1_1nfp_1_1_state_html_a56f4b4d7201e0172c08c9086f2c376dd"><div class="ttname"><a href="classyuki_1_1atri_1_1nfp_1_1_state.html#a56f4b4d7201e0172c08c9086f2c376dd">yuki::atri::nfp::State::init</a></div><div class="ttdeci">static void init(State const &amp;targetNFPState)</div><div class="ttdoc">初始化，一定要执行。</div><div class="ttdef"><b>定义</b> <a href="#l00015">NFPState.cpp:15</a></div></div>
+<div class="ttc" id="aclassyuki_1_1atri_1_1nfp_1_1_state_html_a5734a27d605bdde7c49061fb3bcbbbcc"><div class="ttname"><a href="classyuki_1_1atri_1_1nfp_1_1_state.html#a5734a27d605bdde7c49061fb3bcbbbcc">yuki::atri::nfp::State::operator!=</a></div><div class="ttdeci">bool operator!=(State const &amp;other) const</div><div class="ttdef"><b>定义</b> <a href="#l00130">NFPState.cpp:130</a></div></div>
+<div class="ttc" id="aclassyuki_1_1atri_1_1nfp_1_1_state_html_a586c34fe492dfaa733327c99e8cef1a7"><div class="ttname"><a href="classyuki_1_1atri_1_1nfp_1_1_state.html#a586c34fe492dfaa733327c99e8cef1a7">yuki::atri::nfp::State::rows</a></div><div class="ttdeci">static int const rows</div><div class="ttdoc">数码盘的行数</div><div class="ttdef"><b>定义</b> <a href="_n_f_p_state_8h_source.html#l00017">NFPState.h:17</a></div></div>
+<div class="ttc" id="aclassyuki_1_1atri_1_1nfp_1_1_state_html_a5d66186d4435fc567b869cee9d956550"><div class="ttname"><a href="classyuki_1_1atri_1_1nfp_1_1_state.html#a5d66186d4435fc567b869cee9d956550">yuki::atri::nfp::State::operator=</a></div><div class="ttdeci">State &amp; operator=(State const &amp;other)</div><div class="ttdef"><b>定义</b> <a href="#l00109">NFPState.cpp:109</a></div></div>
+<div class="ttc" id="aclassyuki_1_1atri_1_1nfp_1_1_state_html_a5e7d225ba5a0794a0473ca8ddc08aaa3"><div class="ttname"><a href="classyuki_1_1atri_1_1nfp_1_1_state.html#a5e7d225ba5a0794a0473ca8ddc08aaa3">yuki::atri::nfp::State::rd</a></div><div class="ttdeci">static random_device rd</div><div class="ttdoc">真随机数生成器</div><div class="ttdef"><b>定义</b> <a href="_n_f_p_state_8h_source.html#l00042">NFPState.h:42</a></div></div>
+<div class="ttc" id="aclassyuki_1_1atri_1_1nfp_1_1_state_html_a681a048e9c16ad615ead48b96e61806d"><div class="ttname"><a href="classyuki_1_1atri_1_1nfp_1_1_state.html#a681a048e9c16ad615ead48b96e61806d">yuki::atri::nfp::State::genPrecision</a></div><div class="ttdeci">static void genPrecision(State const &amp;originalNFPState)</div><div class="ttdef"><b>定义</b> <a href="#l00230">NFPState.cpp:230</a></div></div>
+<div class="ttc" id="aclassyuki_1_1atri_1_1nfp_1_1_state_html_a73c158802a46ff6eb0ba850537d921fd"><div class="ttname"><a href="classyuki_1_1atri_1_1nfp_1_1_state.html#a73c158802a46ff6eb0ba850537d921fd">yuki::atri::nfp::State::at</a></div><div class="ttdeci">usize at(int const &amp;row, int const &amp;col) const</div><div class="ttdoc">获取row行col列的数码。</div><div class="ttdef"><b>定义</b> <a href="#l00118">NFPState.cpp:118</a></div></div>
+<div class="ttc" id="aclassyuki_1_1atri_1_1nfp_1_1_state_html_a8033bb7012818aa61af4cc5619b01d6b"><div class="ttname"><a href="classyuki_1_1atri_1_1nfp_1_1_state.html#a8033bb7012818aa61af4cc5619b01d6b">yuki::atri::nfp::State::cols</a></div><div class="ttdeci">static int const cols</div><div class="ttdoc">数码盘的列数</div><div class="ttdef"><b>定义</b> <a href="_n_f_p_state_8h_source.html#l00018">NFPState.h:18</a></div></div>
+<div class="ttc" id="aclassyuki_1_1atri_1_1nfp_1_1_state_html_a82091510de7ed0f5b951b08992f1366f"><div class="ttname"><a href="classyuki_1_1atri_1_1nfp_1_1_state.html#a82091510de7ed0f5b951b08992f1366f">yuki::atri::nfp::State::nextActions</a></div><div class="ttdeci">vector&lt; Action const  * &gt; nextActions</div><div class="ttdoc">可行的后继动作序列</div><div class="ttdef"><b>定义</b> <a href="_n_f_p_state_8h_source.html#l00035">NFPState.h:35</a></div></div>
+<div class="ttc" id="aclassyuki_1_1atri_1_1nfp_1_1_state_html_a8f13c339dcaf512c1957eabc8079bad0"><div class="ttname"><a href="classyuki_1_1atri_1_1nfp_1_1_state.html#a8f13c339dcaf512c1957eabc8079bad0">yuki::atri::nfp::State::hasNextAction</a></div><div class="ttdeci">bool hasNextAction() const</div><div class="ttdoc">检测本节点是否存在可行后继动作。</div><div class="ttdef"><b>定义</b> <a href="#l00134">NFPState.cpp:134</a></div></div>
+<div class="ttc" id="aclassyuki_1_1atri_1_1nfp_1_1_state_html_a9205455170d40a1883ac408d8348df32"><div class="ttname"><a href="classyuki_1_1atri_1_1nfp_1_1_state.html#a9205455170d40a1883ac408d8348df32">yuki::atri::nfp::State::genRandomNFPState</a></div><div class="ttdeci">static State genRandomNFPState(int const &amp;depth=-1)</div><div class="ttdoc">随机生成最优解深度为depth的初始状态。</div><div class="ttdef"><b>定义</b> <a href="#l00065">NFPState.cpp:65</a></div></div>
+<div class="ttc" id="aclassyuki_1_1atri_1_1nfp_1_1_state_html_a96b10df6448be2b76001abc1ba8b7271"><div class="ttname"><a href="classyuki_1_1atri_1_1nfp_1_1_state.html#a96b10df6448be2b76001abc1ba8b7271">yuki::atri::nfp::State::prevActions</a></div><div class="ttdeci">vector&lt; Action const  * &gt; prevActions</div><div class="ttdoc">前序动作序列</div><div class="ttdef"><b>定义</b> <a href="_n_f_p_state_8h_source.html#l00036">NFPState.h:36</a></div></div>
+<div class="ttc" id="aclassyuki_1_1atri_1_1nfp_1_1_state_html_a9c1d5d625192a37da3c0416b80f2c9c2"><div class="ttname"><a href="classyuki_1_1atri_1_1nfp_1_1_state.html#a9c1d5d625192a37da3c0416b80f2c9c2">yuki::atri::nfp::State::zeroMoveTo</a></div><div class="ttdeci">void zeroMoveTo(Vector2 const &amp;swapPos)</div><div class="ttdoc">将 0 移动到 swapPos。</div><div class="ttdef"><b>定义</b> <a href="#l00171">NFPState.cpp:171</a></div></div>
+<div class="ttc" id="aclassyuki_1_1atri_1_1nfp_1_1_state_html_ab0585158237b9631b0210ca9388f6535"><div class="ttname"><a href="classyuki_1_1atri_1_1nfp_1_1_state.html#ab0585158237b9631b0210ca9388f6535">yuki::atri::nfp::State::State</a></div><div class="ttdeci">State(usize const &amp;data, Vector2 const &amp;pZero, int const &amp;depth=0)</div><div class="ttdef"><b>定义</b> <a href="#l00073">NFPState.cpp:73</a></div></div>
+<div class="ttc" id="aclassyuki_1_1atri_1_1nfp_1_1_state_html_ab1e6e20845952f084240f2cf8876f04c"><div class="ttname"><a href="classyuki_1_1atri_1_1nfp_1_1_state.html#ab1e6e20845952f084240f2cf8876f04c">yuki::atri::nfp::State::actions</a></div><div class="ttdeci">static Action const actions[actionsNum]</div><div class="ttdoc">可能的 Action 初始化存在 actions 里</div><div class="ttdef"><b>定义</b> <a href="_n_f_p_state_8h_source.html#l00025">NFPState.h:25</a></div></div>
+<div class="ttc" id="aclassyuki_1_1atri_1_1nfp_1_1_state_html_abb60e383d39983f9e55ac9de9aa8b8fc"><div class="ttname"><a href="classyuki_1_1atri_1_1nfp_1_1_state.html#abb60e383d39983f9e55ac9de9aa8b8fc">yuki::atri::nfp::State::depthIndexs</a></div><div class="ttdeci">static int depthIndexs[maxDepth+1]</div><div class="ttdoc">索引数组</div><div class="ttdef"><b>定义</b> <a href="_n_f_p_state_8h_source.html#l00029">NFPState.h:29</a></div></div>
+<div class="ttc" id="aclassyuki_1_1atri_1_1nfp_1_1_state_html_abcc222f8c879ad17d85b7001ad0e59c5"><div class="ttname"><a href="classyuki_1_1atri_1_1nfp_1_1_state.html#abcc222f8c879ad17d85b7001ad0e59c5">yuki::atri::nfp::State::_targetNFPState</a></div><div class="ttdeci">static State _targetNFPState</div><div class="ttdoc">目标状态</div><div class="ttdef"><b>定义</b> <a href="_n_f_p_state_8h_source.html#l00027">NFPState.h:27</a></div></div>
+<div class="ttc" id="aclassyuki_1_1atri_1_1nfp_1_1_state_html_ac1e4f5404a2f3a827f0674116635f39e"><div class="ttname"><a href="classyuki_1_1atri_1_1nfp_1_1_state.html#ac1e4f5404a2f3a827f0674116635f39e">yuki::atri::nfp::State::genNextNFPState</a></div><div class="ttdeci">State genNextNFPState()</div><div class="ttdoc">消耗一个可行后继动作生成一个后继 NFPState。 会导致本节点减少一个后继动作。 生成的后继节点默认已经初始化了可行后继动作序列并且继承了本节点的前序动作序列，并且深度+1。</div><div class="ttdef"><b>定义</b> <a href="#l00156">NFPState.cpp:156</a></div></div>
+<div class="ttc" id="aclassyuki_1_1atri_1_1nfp_1_1_state_html_ac68a597a5d0c4bcf8b9f686e74ee2b8c"><div class="ttname"><a href="classyuki_1_1atri_1_1nfp_1_1_state.html#ac68a597a5d0c4bcf8b9f686e74ee2b8c">yuki::atri::nfp::State::allNFPStates</a></div><div class="ttdeci">static vector&lt; State &gt; allNFPStates</div><div class="ttdoc">存放 最优解在 0~maxDepth 深度的所有 NFPState</div><div class="ttdef"><b>定义</b> <a href="_n_f_p_state_8h_source.html#l00028">NFPState.h:28</a></div></div>
+<div class="ttc" id="aclassyuki_1_1atri_1_1nfp_1_1_state_html_acb5ba97551079e0b072c62c21d784ac5"><div class="ttname"><a href="classyuki_1_1atri_1_1nfp_1_1_state.html#acb5ba97551079e0b072c62c21d784ac5">yuki::atri::nfp::State::depth</a></div><div class="ttdeci">int depth</div><div class="ttdoc">深度</div><div class="ttdef"><b>定义</b> <a href="_n_f_p_state_8h_source.html#l00033">NFPState.h:33</a></div></div>
+<div class="ttc" id="aclassyuki_1_1atri_1_1nfp_1_1_state_html_ad20897c5c8bd47f5d4005989bead0e55"><div class="ttname"><a href="classyuki_1_1atri_1_1nfp_1_1_state.html#ad20897c5c8bd47f5d4005989bead0e55">yuki::atri::nfp::State::reset</a></div><div class="ttdeci">void reset()</div><div class="ttdoc">重置状态的深度、后继动作以及前序动作。</div><div class="ttdef"><b>定义</b> <a href="#l00150">NFPState.cpp:150</a></div></div>
+<div class="ttc" id="aclassyuki_1_1atri_1_1nfp_1_1_state_html_ae36c3fd1a30a6cda505c1b6792ed75df"><div class="ttname"><a href="classyuki_1_1atri_1_1nfp_1_1_state.html#ae36c3fd1a30a6cda505c1b6792ed75df">yuki::atri::nfp::State::maxDepth</a></div><div class="ttdeci">static int const maxDepth</div><div class="ttdoc">最大深度</div><div class="ttdef"><b>定义</b> <a href="_n_f_p_state_8h_source.html#l00019">NFPState.h:19</a></div></div>
+<div class="ttc" id="aclassyuki_1_1atri_1_1nfp_1_1_state_html_ae594e908404b048ed8092ffef74e565d"><div class="ttname"><a href="classyuki_1_1atri_1_1nfp_1_1_state.html#ae594e908404b048ed8092ffef74e565d">yuki::atri::nfp::State::executeAction</a></div><div class="ttdeci">void executeAction(Action const *const &amp;action)</div><div class="ttdoc">对本节点执行动作，产生的后继节点直接覆盖在本节点变量上。</div><div class="ttdef"><b>定义</b> <a href="#l00138">NFPState.cpp:138</a></div></div>
+<div class="ttc" id="aclassyuki_1_1atri_1_1nfp_1_1_state_html_aeb25f8c0c00ad8d47645e11f48e9bc0c"><div class="ttname"><a href="classyuki_1_1atri_1_1nfp_1_1_state.html#aeb25f8c0c00ad8d47645e11f48e9bc0c">yuki::atri::nfp::State::precisionFilename</a></div><div class="ttdeci">static string const precisionFilename</div><div class="ttdoc">设置文件的名称</div><div class="ttdef"><b>定义</b> <a href="_n_f_p_state_8h_source.html#l00040">NFPState.h:40</a></div></div>
+<div class="ttc" id="aclassyuki_1_1atri_1_1nfp_1_1_state_html_af28c4f9c7da9b1130279f30cdc8281e2"><div class="ttname"><a href="classyuki_1_1atri_1_1nfp_1_1_state.html#af28c4f9c7da9b1130279f30cdc8281e2">yuki::atri::nfp::State::genRandomDepth</a></div><div class="ttdeci">int genRandomDepth(int const &amp;min, int const &amp;max) const</div><div class="ttdoc">随机生成深度。</div><div class="ttdef"><b>定义</b> <a href="#l00060">NFPState.cpp:60</a></div></div>
+<div class="ttc" id="aclassyuki_1_1atri_1_1nfp_1_1_state_html_af3537592c969ff7d12cf5f02c4c93dfa"><div class="ttname"><a href="classyuki_1_1atri_1_1nfp_1_1_state.html#af3537592c969ff7d12cf5f02c4c93dfa">yuki::atri::nfp::State::mask</a></div><div class="ttdeci">static usize mask[rows][cols]</div><div class="ttdoc">掩码，用于提取压缩进 data 的数码信息，需要在 main函数 显式调用 initMask() 初始化</div><div class="ttdef"><b>定义</b> <a href="_n_f_p_state_8h_source.html#l00038">NFPState.h:38</a></div></div>
+<div class="ttc" id="aclassyuki_1_1atri_1_1nfp_1_1_state_html_af8595de5d3b7b7f207175b9c0554956a"><div class="ttname"><a href="classyuki_1_1atri_1_1nfp_1_1_state.html#af8595de5d3b7b7f207175b9c0554956a">yuki::atri::nfp::State::actionsNum</a></div><div class="ttdeci">static int const actionsNum</div><div class="ttdoc">可能的 Action 总数有四种</div><div class="ttdef"><b>定义</b> <a href="_n_f_p_state_8h_source.html#l00024">NFPState.h:24</a></div></div>
+<div class="ttc" id="anamespaceyuki_1_1atri_1_1nfp_html"><div class="ttname"><a href="namespaceyuki_1_1atri_1_1nfp.html">yuki::atri::nfp</a></div><div class="ttdef"><b>定义</b> <a href="_n_f_p_algorithm_8h_source.html#l00005">NFPAlgorithm.h:5</a></div></div>
+<div class="ttc" id="anamespaceyuki_1_1atri_1_1nfp_html_a9935f658d65be9f157ecb7109e7b291b"><div class="ttname"><a href="namespaceyuki_1_1atri_1_1nfp.html#a9935f658d65be9f157ecb7109e7b291b">yuki::atri::nfp::operator&lt;&lt;</a></div><div class="ttdeci">std::ostream &amp; operator&lt;&lt;(std::ostream &amp;os, yuki::atri::nfp::State const &amp;NFPState)</div></div>
+<div class="ttc" id="anamespaceyuki_html_a67cb024aa20a9cffd9c230409152959c"><div class="ttname"><a href="namespaceyuki.html#a67cb024aa20a9cffd9c230409152959c">yuki::usize</a></div><div class="ttdeci">unsigned long long usize</div><div class="ttdef"><b>定义</b> <a href="core_8h_source.html#l00100">core.h:100</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0
+</small></address>
+</div><!-- doc-content -->
+</body>
+</html>

@@ -1,0 +1,128 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.12.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>AI: D:/user/Project/Code/AI/src/DT/BDT/BDTNode.cpp 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">AI<span id="projectnumber">&#160;1.0.0</span>
+   </div>
+   <div id="projectbrief">YUKII的AI库</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.12.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','搜索',false);
+  $(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){ initResizable(false); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_31f03d1c4f0f1911de09f66cb427ffc4.html">DT</a></li><li class="navelem"><a class="el" href="dir_87e330c03d4f96c13aa7f1d93a962457.html">BDT</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div id="doc-content">
+<div class="header">
+  <div class="headertitle"><div class="title">BDTNode.cpp</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="_b_d_t_node_8cpp.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#include &quot;<a class="code" href="_b_d_t_node_8h.html">BDTNode.h</a>&quot;</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespaceyuki_1_1atri_1_1dt_1_1bdt.html">yuki::atri::dt::bdt</a> {</div>
+<div class="foldopen" id="foldopen00004" data-start="{" data-end="}">
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno"><a class="line" href="classyuki_1_1atri_1_1dt_1_1bdt_1_1_boolean_decision_tree_node.html#a01cf64adc6d04d95ed11d9d50db93403">    4</a></span>    <a class="code hl_function" href="classyuki_1_1atri_1_1dt_1_1bdt_1_1_boolean_decision_tree_node.html#a01cf64adc6d04d95ed11d9d50db93403">BooleanDecisionTreeNode::BooleanDecisionTreeNode</a>(<span class="keywordtype">bool</span> <span class="keyword">const</span>&amp; value, <span class="keywordtype">string</span> <span class="keyword">const</span>&amp; labelAttribute):</div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span>        value(value), attribute(labelAttribute) {}</div>
+</div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span> </div>
+<div class="foldopen" id="foldopen00007" data-start="{" data-end="}">
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno"><a class="line" href="classyuki_1_1atri_1_1dt_1_1bdt_1_1_boolean_decision_tree_node.html#aa4d84e3bbc47194b684c48f1224899e1">    7</a></span>    <a class="code hl_function" href="classyuki_1_1atri_1_1dt_1_1bdt_1_1_boolean_decision_tree_node.html#a01cf64adc6d04d95ed11d9d50db93403">BooleanDecisionTreeNode::BooleanDecisionTreeNode</a>(<span class="keywordtype">string</span> <span class="keyword">const</span>&amp; attribute):</div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span>        attribute(attribute) {}</div>
+</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
+<div class="foldopen" id="foldopen00010" data-start="{" data-end="}">
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno"><a class="line" href="classyuki_1_1atri_1_1dt_1_1bdt_1_1_boolean_decision_tree_node.html#aeb6567c601328b5418d1d9cfbe9a7572">   10</a></span>    <a class="code hl_function" href="classyuki_1_1atri_1_1dt_1_1bdt_1_1_boolean_decision_tree_node.html#aeb6567c601328b5418d1d9cfbe9a7572">BooleanDecisionTreeNode::~BooleanDecisionTreeNode</a>() {</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>        <span class="keywordflow">for</span> (pair&lt;f64, BooleanDecisionTreeNode*&gt; c : <a class="code hl_variable" href="classyuki_1_1atri_1_1dt_1_1bdt_1_1_boolean_decision_tree_node.html#ae772df03729f5fdccf8362c959abbc65">options</a>) {</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>            <span class="keyword">delete</span> c.second;</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>        }</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>    }</div>
+</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>}</div>
+<div class="ttc" id="a_b_d_t_node_8h_html"><div class="ttname"><a href="_b_d_t_node_8h.html">BDTNode.h</a></div></div>
+<div class="ttc" id="aclassyuki_1_1atri_1_1dt_1_1bdt_1_1_boolean_decision_tree_node_html_a01cf64adc6d04d95ed11d9d50db93403"><div class="ttname"><a href="classyuki_1_1atri_1_1dt_1_1bdt_1_1_boolean_decision_tree_node.html#a01cf64adc6d04d95ed11d9d50db93403">yuki::atri::dt::bdt::BooleanDecisionTreeNode::BooleanDecisionTreeNode</a></div><div class="ttdeci">BooleanDecisionTreeNode(bool const &amp;value, string const &amp;labelAttribute)</div><div class="ttdoc">构造叶子结点</div><div class="ttdef"><b>定义</b> <a href="#l00004">BDTNode.cpp:4</a></div></div>
+<div class="ttc" id="aclassyuki_1_1atri_1_1dt_1_1bdt_1_1_boolean_decision_tree_node_html_ae772df03729f5fdccf8362c959abbc65"><div class="ttname"><a href="classyuki_1_1atri_1_1dt_1_1bdt_1_1_boolean_decision_tree_node.html#ae772df03729f5fdccf8362c959abbc65">yuki::atri::dt::bdt::BooleanDecisionTreeNode::options</a></div><div class="ttdeci">map&lt; f64, BooleanDecisionTreeNode * &gt; options</div><div class="ttdef"><b>定义</b> <a href="_b_d_t_node_8h_source.html#l00009">BDTNode.h:9</a></div></div>
+<div class="ttc" id="aclassyuki_1_1atri_1_1dt_1_1bdt_1_1_boolean_decision_tree_node_html_aeb6567c601328b5418d1d9cfbe9a7572"><div class="ttname"><a href="classyuki_1_1atri_1_1dt_1_1bdt_1_1_boolean_decision_tree_node.html#aeb6567c601328b5418d1d9cfbe9a7572">yuki::atri::dt::bdt::BooleanDecisionTreeNode::~BooleanDecisionTreeNode</a></div><div class="ttdeci">~BooleanDecisionTreeNode()</div><div class="ttdef"><b>定义</b> <a href="#l00010">BDTNode.cpp:10</a></div></div>
+<div class="ttc" id="anamespaceyuki_1_1atri_1_1dt_1_1bdt_html"><div class="ttname"><a href="namespaceyuki_1_1atri_1_1dt_1_1bdt.html">yuki::atri::dt::bdt</a></div><div class="ttdef"><b>定义</b> <a href="_b_d_t_node_8h_source.html#l00004">BDTNode.h:4</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0
+</small></address>
+</div><!-- doc-content -->
+</body>
+</html>

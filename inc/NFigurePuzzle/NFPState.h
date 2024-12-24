@@ -14,33 +14,33 @@ namespace yuki::atri::nfp {
     class State {
     public:
         // 修改以下两个参数，整个框架可以自动转换到 rows * cols 数码问题（需要保证 rows * cols <= 16）
-        static int const rows     = 3;  // 数码盘的行数
-        static int const cols     = 3;  // 数码盘的列数
-        static int const maxDepth = 20; // 最大深度
-        static int const size = rows * cols;
+        static int const rows     = 3;  ///< 数码盘的行数
+        static int const cols     = 3;  ///< 数码盘的列数
+        static int const maxDepth = 20; ///< 最大深度
+        static int const size = rows * cols; ///< 数码盘的总大小
 
-        using Action = Vector2; // 使用 Vector2 作为动作类型，向哪里走就相当于加上哪个方向的单位方向向量
+        using Action = Vector2; ///< 使用 Vector2 作为动作类型，向哪里走就相当于加上哪个方向的单位方向向量
 
-        static int const     actionsNum = 4;            // 可能的 Action 总数有四种
-        static Action const  actions[actionsNum];       // 可能的 Action 初始化存在 actions 里
-        static string const  actionInfo[actionsNum];    // actionInfo[i] 对应 actions[i] 的具体信息（如向上走等）
-        static State         _targetNFPState;              // 目标状态
-        static vector<State> allNFPStates;                 // 存放 最优解在 0~maxDepth 深度的所有 NFPState
-        static int           depthIndexs[maxDepth + 1]; // 索引数组
+        static int const     actionsNum = 4;             ///< 可能的 Action 总数有四种
+        static Action const  actions[actionsNum];        ///< 可能的 Action 初始化存在 actions 里
+        static string const  actionInfo[actionsNum];     ///< actionInfo[i] 对应 actions[i] 的具体信息（如向上走等）
+        static State         _targetNFPState;            ///< 目标状态
+        static vector<State> allNFPStates;               ///< 存放 最优解在 0~maxDepth 深度的所有 NFPState
+        static int           depthIndexs[maxDepth + 1];  ///< 索引数组
 
-        usize    data;    // 状态压缩，64位每4位存一个数，最多可以测试到15数码问题
-        Vector2 zeroPos; // 0 的位置
-        int      depth;   // 深度
+        usize    data;    ///< 状态压缩，64位每4位存一个数，最多可以测试到15数码问题
+        Vector2 zeroPos;  ///< 0 的位置
+        int      depth;   ///< 深度
 
-        vector<Action const*> nextActions; // 可行的后继动作序列
-        vector<Action const*> prevActions; // 前序动作序列
+        vector<Action const*> nextActions; ///< 可行的后继动作序列
+        vector<Action const*> prevActions; ///< 前序动作序列
     private:
-        static usize mask[rows][cols]; // 掩码，用于提取压缩进 data 的数码信息，需要在 main函数 显式调用 initMask() 初始化
+        static usize mask[rows][cols]; ///< 掩码，用于提取压缩进 data 的数码信息，需要在 main函数 显式调用 initMask() 初始化
 
-        static string const precisionFilename; // 设置文件的名称
+        static string const precisionFilename; ///< 设置文件的名称
 
-        static random_device rd;  // 真随机数生成器
-        static mt19937       gen; // 以真随机数为种子的伪随机数生成器
+        static random_device rd;  ///< 真随机数生成器
+        static mt19937       gen; ///< 以真随机数为种子的伪随机数生成器
 
     public:
         /**

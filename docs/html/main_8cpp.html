@@ -1,0 +1,312 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.12.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>AI: D:/user/Project/Code/AI/src/main.cpp 文件参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">AI<span id="projectnumber">&#160;1.0.0</span>
+   </div>
+   <div id="projectbrief">YUKII的AI库</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.12.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','搜索',false);
+  $(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){ initResizable(false); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div id="doc-content">
+<div class="header">
+  <div class="summary">
+<a href="#func-members">函数</a>  </div>
+  <div class="headertitle"><div class="title">main.cpp 文件参考</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;<a class="el" href="core_8h_source.html">core.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="_n_queen_8h_source.html">NQueen.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="_n_f_p_algorithm_8h_source.html">NFPAlgorithm.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="_boolean_decision_tree_8h_source.html">BooleanDecisionTree.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="_decision_tree_8h_source.html">DecisionTree.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="_tree_node_base_8h_source.html">TreeNodeBase.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="_decision_tree_builder_8h_source.html">DecisionTreeBuilder.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="_k_d_tree_8h_source.html">KDTree.h</a>&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+main.cpp 的引用(Include)关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="main_8cpp__incl.png" border="0" usemap="#a_d_1_2user_2_project_2_code_2_a_i_2src_2main_8cpp" alt=""/></div>
+<map name="a_d_1_2user_2_project_2_code_2_a_i_2src_2main_8cpp" id="a_d_1_2user_2_project_2_code_2_a_i_2src_2main_8cpp">
+<area shape="rect" title=" " alt="" coords="964,5,1108,48"/>
+<area shape="rect" href="core_8h.html" title="核心库" alt="" coords="946,619,1003,645"/>
+<area shape="poly" title=" " alt="" coords="963,36,829,52,752,64,676,80,607,99,551,123,529,137,513,151,503,166,500,183,500,484,502,504,509,520,520,531,534,540,614,568,699,596,786,614,867,623,931,627,930,633,866,629,786,619,698,602,612,573,532,544,517,535,505,523,497,506,495,484,495,182,498,164,509,148,526,132,548,118,605,94,674,75,751,59,828,46,963,31"/>
+<area shape="rect" href="_n_queen_8h.html" title=" " alt="" coords="688,320,768,347"/>
+<area shape="poly" title=" " alt="" coords="992,51,906,100,860,134,818,172,792,206,770,242,740,306,735,304,765,239,787,202,814,169,856,130,903,96,990,46"/>
+<area shape="rect" href="_n_f_p_algorithm_8h.html" title=" " alt="" coords="603,171,716,197"/>
+<area shape="poly" title=" " alt="" coords="964,35,911,41,853,53,793,72,737,98,703,127,677,160,673,156,699,124,734,94,791,67,851,48,910,36,963,29"/>
+<area shape="rect" href="_boolean_decision_tree_8h.html" title=" " alt="" coords="828,171,985,197"/>
+<area shape="poly" title=" " alt="" coords="1021,50,929,160,925,157,1017,47"/>
+<area shape="rect" href="_decision_tree_8h.html" title=" " alt="" coords="1073,171,1182,197"/>
+<area shape="poly" title=" " alt="" coords="1050,47,1115,156,1110,159,1046,50"/>
+<area shape="rect" href="_tree_node_base_8h.html" title=" " alt="" coords="1327,320,1446,347"/>
+<area shape="poly" title=" " alt="" coords="1109,35,1226,58,1278,75,1312,94,1333,117,1350,144,1372,202,1384,259,1389,304,1383,305,1379,259,1367,204,1345,146,1329,121,1309,98,1276,80,1225,64,1108,41"/>
+<area shape="rect" href="_decision_tree_builder_8h.html" title=" " alt="" coords="1149,96,1298,123"/>
+<area shape="poly" title=" " alt="" coords="1085,46,1181,87,1179,92,1083,51"/>
+<area shape="rect" href="_k_d_tree_8h.html" title=" " alt="" coords="1424,245,1501,272"/>
+<area shape="poly" title=" " alt="" coords="1109,32,1263,54,1334,72,1362,82,1383,94,1412,124,1434,161,1450,198,1459,229,1454,231,1445,199,1430,163,1408,128,1380,98,1360,87,1332,77,1262,60,1108,37"/>
+<area shape="rect" title=" " alt="" coords="5,693,56,720"/>
+<area shape="poly" title=" " alt="" coords="946,637,533,655,273,672,161,683,71,696,71,690,160,678,273,667,533,649,945,632"/>
+<area shape="rect" title=" " alt="" coords="79,693,136,720"/>
+<area shape="poly" title=" " alt="" coords="945,636,822,638,628,645,395,663,273,678,152,696,152,691,272,672,395,658,628,640,821,632,945,631"/>
+<area shape="rect" title=" " alt="" coords="161,693,199,720"/>
+<area shape="poly" title=" " alt="" coords="945,637,599,656,383,673,290,684,215,696,214,691,289,679,383,668,598,650,945,632"/>
+<area shape="rect" title=" " alt="" coords="223,693,262,720"/>
+<area shape="poly" title=" " alt="" coords="945,636,838,637,675,644,480,662,379,677,278,696,277,691,378,672,480,657,675,639,838,631,945,630"/>
+<area shape="rect" title=" " alt="" coords="286,693,332,720"/>
+<area shape="poly" title=" " alt="" coords="945,636,848,640,702,649,529,667,348,696,347,691,528,661,702,643,848,634,945,631"/>
+<area shape="rect" title=" " alt="" coords="357,693,467,720"/>
+<area shape="poly" title=" " alt="" coords="946,639,756,660,483,696,482,690,755,655,945,634"/>
+<area shape="rect" title=" " alt="" coords="492,693,548,720"/>
+<area shape="poly" title=" " alt="" coords="946,639,787,657,678,674,564,696,563,690,677,669,786,652,945,633"/>
+<area shape="rect" title=" " alt="" coords="572,693,625,720"/>
+<area shape="poly" title=" " alt="" coords="946,640,817,660,641,696,640,690,816,655,945,635"/>
+<area shape="rect" title=" " alt="" coords="649,693,702,720"/>
+<area shape="poly" title=" " alt="" coords="946,642,849,663,718,695,717,690,847,658,945,637"/>
+<area shape="rect" title=" " alt="" coords="726,693,823,720"/>
+<area shape="poly" title=" " alt="" coords="946,646,825,690,823,685,945,641"/>
+<area shape="rect" title=" " alt="" coords="846,693,924,720"/>
+<area shape="poly" title=" " alt="" coords="961,648,914,685,911,681,957,644"/>
+<area shape="rect" title=" " alt="" coords="948,693,1001,720"/>
+<area shape="poly" title=" " alt="" coords="977,646,977,678,972,678,972,646"/>
+<area shape="rect" title=" " alt="" coords="1025,693,1095,720"/>
+<area shape="poly" title=" " alt="" coords="991,644,1036,681,1032,685,988,648"/>
+<area shape="rect" title=" " alt="" coords="1119,693,1190,720"/>
+<area shape="poly" title=" " alt="" coords="1005,643,1110,685,1109,690,1003,648"/>
+<area shape="rect" title=" " alt="" coords="1215,693,1281,720"/>
+<area shape="poly" title=" " alt="" coords="1004,638,1200,690,1199,695,1003,644"/>
+<area shape="rect" title=" " alt="" coords="1304,693,1370,720"/>
+<area shape="poly" title=" " alt="" coords="1004,635,1125,656,1290,690,1289,695,1124,662,1003,641"/>
+<area shape="rect" title=" " alt="" coords="1394,693,1462,720"/>
+<area shape="poly" title=" " alt="" coords="1004,634,1160,654,1379,690,1378,695,1159,659,1003,639"/>
+<area shape="rect" title=" " alt="" coords="1486,693,1551,720"/>
+<area shape="poly" title=" " alt="" coords="1004,633,1196,650,1331,667,1471,690,1471,696,1330,673,1196,656,1003,638"/>
+<area shape="rect" title=" " alt="" coords="1574,693,1652,720"/>
+<area shape="poly" title=" " alt="" coords="1004,632,1230,650,1391,667,1560,690,1559,696,1391,672,1230,655,1003,638"/>
+<area shape="rect" title=" " alt="" coords="1676,693,1750,720"/>
+<area shape="poly" title=" " alt="" coords="1004,632,1269,647,1461,664,1661,691,1660,696,1460,669,1269,652,1003,637"/>
+<area shape="rect" title=" " alt="" coords="1775,693,1833,720"/>
+<area shape="poly" title=" " alt="" coords="1004,631,1123,633,1307,641,1529,659,1645,673,1760,691,1759,696,1644,678,1528,664,1307,646,1123,638,1004,636"/>
+<area shape="rect" title=" " alt="" coords="1858,693,1918,720"/>
+<area shape="poly" title=" " alt="" coords="1004,631,1134,632,1338,639,1585,657,1715,672,1843,691,1842,696,1714,677,1585,663,1338,645,1134,637,1004,636"/>
+<area shape="rect" title=" " alt="" coords="1942,693,2002,720"/>
+<area shape="poly" title=" " alt="" coords="1004,630,1145,630,1370,636,1643,654,1786,670,1927,690,1926,696,1785,675,1643,660,1370,642,1145,635,1004,636"/>
+<area shape="rect" href="_c_s_p_8hpp.html" title=" " alt="" coords="696,395,768,421"/>
+<area shape="poly" title=" " alt="" coords="731,347,733,379,728,379,726,347"/>
+<area shape="rect" href="_position2_8h.html" title=" " alt="" coords="585,395,671,421"/>
+<area shape="poly" title=" " alt="" coords="712,349,659,387,656,383,709,345"/>
+<area shape="rect" href="tools_8h.html" title="工具库" alt="" coords="982,469,1042,496"/>
+<area shape="poly" title=" " alt="" coords="769,416,967,467,966,472,768,421"/>
+<area shape="rect" href="_variable_8hpp.html" title=" " alt="" coords="686,544,778,571"/>
+<area shape="poly" title=" " alt="" coords="734,422,734,528,729,528,729,422"/>
+<area shape="rect" href="_default_8h.html" title="错误库" alt="" coords="975,544,1049,571"/>
+<area shape="poly" title=" " alt="" coords="1014,497,1014,528,1009,528,1009,497"/>
+<area shape="poly" title=" " alt="" coords="1008,572,990,606,985,604,1003,570"/>
+<area shape="poly" title=" " alt="" coords="775,569,931,615,930,620,773,574"/>
+<area shape="poly" title=" " alt="" coords="630,422,631,452,636,492,650,534,661,552,675,569,693,580,719,590,788,607,864,618,930,625,930,630,863,623,787,612,718,596,691,585,671,573,656,555,645,536,631,493,625,452,625,422"/>
+<area shape="rect" href="_n_f_p_state_8h.html" title=" " alt="" coords="564,320,654,347"/>
+<area shape="poly" title=" " alt="" coords="667,197,675,232,675,253,670,273,657,294,641,312,637,308,653,291,665,271,670,252,669,232,662,198"/>
+<area shape="rect" href="_n_f_p_state_set_8h.html" title=" " alt="" coords="546,245,656,272"/>
+<area shape="poly" title=" " alt="" coords="652,200,623,235,619,231,648,196"/>
+<area shape="poly" title=" " alt="" coords="601,349,587,370,576,395,574,408,576,421,586,468,597,505,616,537,649,569,670,580,700,590,777,606,931,625,930,630,776,612,699,595,668,585,646,573,611,540,592,507,581,470,571,422,568,408,571,394,582,367,597,346"/>
+<area shape="poly" title=" " alt="" coords="615,347,623,379,618,380,610,348"/>
+<area shape="poly" title=" " alt="" coords="605,272,609,304,603,305,600,273"/>
+<area shape="poly" title=" " alt="" coords="909,198,911,237,918,294,933,358,957,420,970,440,986,457,982,461,966,443,952,423,927,360,913,295,906,238,904,198"/>
+<area shape="rect" href="_model_base_8h.html" title=" " alt="" coords="802,544,899,571"/>
+<area shape="poly" title=" " alt="" coords="892,200,866,222,839,253,817,291,810,311,808,332,808,409,811,442,819,475,840,529,835,531,814,476,806,443,803,409,803,332,805,310,812,288,835,250,863,218,888,196"/>
+<area shape="rect" href="_b_d_t_node_8h.html" title=" " alt="" coords="855,469,945,496"/>
+<area shape="poly" title=" " alt="" coords="904,199,890,246,883,333,890,421,896,454,891,455,885,422,878,333,885,245,899,197"/>
+<area shape="rect" href="_d_t_dataset_8h.html" title=" " alt="" coords="944,245,1040,272"/>
+<area shape="poly" title=" " alt="" coords="923,196,968,233,964,237,920,200"/>
+<area shape="poly" title=" " alt="" coords="873,569,941,608,939,613,871,574"/>
+<area shape="poly" title=" " alt="" coords="909,495,964,604,959,606,904,498"/>
+<area shape="rect" href="_d_t_example_8h.html" title=" " alt="" coords="994,320,1096,347"/>
+<area shape="poly" title=" " alt="" coords="1003,271,1029,306,1025,309,999,274"/>
+<area shape="rect" href="_attribute_8h.html" title=" " alt="" coords="966,395,1047,421"/>
+<area shape="poly" title=" " alt="" coords="991,273,984,306,985,346,996,380,991,381,980,347,979,306,986,272"/>
+<area shape="poly" title=" " alt="" coords="1053,346,1066,386,1079,443,1082,476,1081,509,1075,541,1063,572,1044,597,1018,614,1015,610,1040,593,1059,569,1070,540,1076,508,1076,476,1073,444,1061,387,1048,348"/>
+<area shape="poly" title=" " alt="" coords="1041,348,1023,382,1018,380,1036,346"/>
+<area shape="poly" title=" " alt="" coords="1010,422,1012,453,1007,454,1005,422"/>
+<area shape="poly" title=" " alt="" coords="1105,200,1030,240,1028,235,1103,196"/>
+<area shape="rect" href="_decision_tree_node_8h.html" title=" " alt="" coords="1064,245,1205,272"/>
+<area shape="poly" title=" " alt="" coords="1132,198,1135,229,1129,230,1126,198"/>
+<area shape="poly" title=" " alt="" coords="1145,271,1172,328,1184,366,1189,407,1189,484,1184,513,1171,539,1151,561,1127,579,1072,607,1019,624,1017,619,1070,602,1124,575,1148,557,1167,536,1179,512,1184,484,1184,407,1179,368,1167,330,1140,274"/>
+<area shape="poly" title=" " alt="" coords="1134,273,1125,307,1110,348,1088,387,1062,423,1034,459,1030,455,1058,420,1084,384,1105,346,1120,305,1129,271"/>
+<area shape="poly" title=" " alt="" coords="1121,275,1074,312,1071,308,1117,270"/>
+<area shape="poly" title=" " alt="" coords="1179,270,1329,313,1327,318,1178,275"/>
+<area shape="poly" title=" " alt="" coords="1389,347,1386,391,1376,452,1366,485,1352,517,1333,547,1310,573,1288,586,1257,597,1178,614,1092,625,1019,631,1018,626,1091,620,1177,609,1255,592,1285,581,1306,569,1329,544,1347,515,1361,483,1370,451,1381,390,1384,347"/>
+<area shape="poly" title=" " alt="" coords="1233,122,1252,170,1283,287,1290,339,1292,407,1292,484,1290,506,1283,525,1261,558,1228,583,1187,602,1143,615,1098,624,1019,632,1018,627,1097,619,1142,610,1185,597,1225,579,1257,554,1279,523,1284,505,1287,484,1287,407,1284,339,1278,288,1247,172,1228,124"/>
+<area shape="poly" title=" " alt="" coords="1229,123,1234,188,1230,231,1220,273,1204,305,1185,335,1138,388,1089,431,1046,463,1043,458,1086,427,1135,384,1181,332,1200,302,1215,271,1225,230,1228,188,1223,123"/>
+<area shape="poly" title=" " alt="" coords="1209,125,1158,163,1155,159,1206,121"/>
+<area shape="poly" title=" " alt="" coords="1476,271,1494,294,1514,327,1530,365,1537,406,1537,484,1533,504,1520,522,1500,538,1474,553,1407,577,1327,596,1241,610,1156,620,1019,631,1019,626,1155,615,1240,605,1326,591,1406,572,1472,548,1497,534,1516,519,1528,502,1532,484,1532,407,1525,367,1509,329,1489,297,1471,274"/>
+<area shape="poly" title=" " alt="" coords="1469,272,1472,308,1470,329,1461,348,1433,373,1391,395,1339,414,1279,432,1157,460,1058,477,1057,472,1156,454,1278,427,1337,409,1389,390,1430,368,1456,345,1464,328,1467,308,1463,273"/>
+<area shape="poly" title=" " alt="" coords="1451,274,1412,311,1409,307,1447,271"/>
+</map>
+</div>
+</div>
+<p><a href="main_8cpp_source.html">浏览该文件的源代码.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+函数</h2></td></tr>
+<tr class="memitem:a956789368c525ec65d42251064531261" id="r_a956789368c525ec65d42251064531261"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a956789368c525ec65d42251064531261">testDTQuickSort</a> () -&gt; void</td></tr>
+<tr class="separator:a956789368c525ec65d42251064531261"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae66f6b31b5ad750f1fe042a706a4e3d4" id="r_ae66f6b31b5ad750f1fe042a706a4e3d4"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae66f6b31b5ad750f1fe042a706a4e3d4">main</a> ()</td></tr>
+<tr class="separator:ae66f6b31b5ad750f1fe042a706a4e3d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">函数说明</h2>
+<a id="ae66f6b31b5ad750f1fe042a706a4e3d4" name="ae66f6b31b5ad750f1fe042a706a4e3d4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae66f6b31b5ad750f1fe042a706a4e3d4">&#9670;&#160;</a></span>main()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int main </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="main_8cpp_source.html">main.cpp</a> 第 <a class="el" href="main_8cpp_source.html#l00071">71</a> 行定义.</p>
+
+<p class="reference">引用了 <a class="el" href="_d_t_dataset_8h_source.html#l00012">Dataset::attributes</a>, <a class="el" href="_d_t_dataset_8h_source.html#l00015">Dataset::examples</a>, <a class="el" href="_decision_tree_builder_8h_source.html#l00223">DecisionTreeBuilder::learn()</a> , 以及 <a class="el" href="_d_t_dataset_8h_source.html#l00014">Dataset::rawValues</a>.</p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4_cgraph.png" border="0" usemap="#amain_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4_cgraph" alt=""/></div>
+<map name="amain_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4_cgraph" id="amain_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4_cgraph">
+<area shape="rect" title=" " alt="" coords="5,13,55,40"/>
+<area shape="rect" href="classyuki_1_1atri_1_1dt_1_1_decision_tree_builder.html#a2530fe4ce9c9901c010d5ee1ef11d33c" title="建树" alt="" coords="103,5,252,48"/>
+<area shape="poly" title=" " alt="" coords="55,24,87,24,87,29,55,29"/>
+<area shape="rect" href="classyuki_1_1atri_1_1dt_1_1_decision_tree_builder.html#a87522ac5530722f0c1b7aace895d099d" title="采用 learn 算法建树（队列迭代）" alt="" coords="300,5,449,48"/>
+<area shape="poly" title=" " alt="" coords="252,24,285,24,285,29,252,29"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a956789368c525ec65d42251064531261" name="a956789368c525ec65d42251064531261"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a956789368c525ec65d42251064531261">&#9670;&#160;</a></span>testDTQuickSort()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto testDTQuickSort </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> -&gt; void </td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="main_8cpp_source.html">main.cpp</a> 第 <a class="el" href="main_8cpp_source.html#l00013">13</a> 行定义.</p>
+
+<p class="reference">引用了 <a class="el" href="tools_8cpp_source.html#l00056">yuki::statistics::entropy()</a>, <a class="el" href="_attribute_8h_source.html#l00022">Attribute::index</a>, <a class="el" href="_decision_tree_builder_8cpp_source.html#l00252">DecisionTreeBuilder::infoGain()</a>, <a class="el" href="_attribute_8h_source.html#l00023">Attribute::name</a>, <a class="el" href="_decision_tree_builder_8cpp_source.html#l00004">DecisionTreeBuilder::quickSort()</a>, <a class="el" href="_attribute_8h_source.html#l00024">Attribute::type</a> , 以及 <a class="el" href="_attribute_8h_source.html#l00025">Attribute::values</a>.</p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="main_8cpp_a956789368c525ec65d42251064531261_cgraph.png" border="0" usemap="#amain_8cpp_a956789368c525ec65d42251064531261_cgraph" alt=""/></div>
+<map name="amain_8cpp_a956789368c525ec65d42251064531261_cgraph" id="amain_8cpp_a956789368c525ec65d42251064531261_cgraph">
+<area shape="rect" title=" " alt="" coords="5,35,125,61"/>
+<area shape="rect" href="namespaceyuki_1_1statistics.html#ac0c56aaf28b0dab3080545241577ff4f" title="计算随机变量的信息熵" alt="" coords="371,5,528,32"/>
+<area shape="poly" title=" " alt="" coords="100,32,135,20,172,12,267,5,356,7,355,12,267,10,173,17,136,26,102,37"/>
+<area shape="rect" href="classyuki_1_1atri_1_1dt_1_1_decision_tree_builder.html#a9598a2aa8fe1f9b71cd834369f49dc84" title="计算给定属性在数据集中的信息增益" alt="" coords="173,27,322,69"/>
+<area shape="poly" title=" " alt="" coords="125,45,158,45,158,51,125,51"/>
+<area shape="rect" href="classyuki_1_1atri_1_1dt_1_1_decision_tree_builder.html#a6c2726e48b4ef41e57043f6fbc7fa7c0" title="对样本集排序（快速排序）" alt="" coords="173,93,323,136"/>
+<area shape="poly" title=" " alt="" coords="105,59,174,85,172,90,103,64"/>
+<area shape="poly" title=" " alt="" coords="322,35,355,30,356,35,323,40"/>
+</map>
+</div>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0
+</small></address>
+</div><!-- doc-content -->
+</body>
+</html>

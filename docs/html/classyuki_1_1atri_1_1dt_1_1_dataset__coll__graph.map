@@ -1,0 +1,15 @@
+<map id="Dataset" name="Dataset">
+<area shape="rect" id="Node000001" title="决策树数据集" alt="" coords="448,97,515,124"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="197,5,316,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="332,41,378,56,425,74,462,94,459,99,423,78,377,61,330,46"/>
+<area shape="rect" id="Node000003" href="$classyuki_1_1atri_1_1dt_1_1_attribute.html" title="属性类" alt="" coords="221,72,292,99"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="307,88,448,104,447,110,307,94"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="19,47,73,73"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="88,62,221,79,221,84,88,68"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="5,97,87,124"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="101,101,221,87,221,92,102,107"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="177,123,336,149"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="351,130,424,123,447,118,448,123,424,128,352,136"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="197,173,316,216"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="331,180,377,168,423,151,445,137,464,122,467,127,448,142,425,156,379,174,332,186"/>
+</map>

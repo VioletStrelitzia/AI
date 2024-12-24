@@ -1,0 +1,19 @@
+<map id="AStar" name="AStar">
+<area shape="rect" id="Node000001" title="启发式搜索" alt="" coords="5,105,60,132"/>
+<area shape="rect" id="Node000002" href="$classyuki_1_1atri_1_1nfp_1_1_state.html#ac1e4f5404a2f3a827f0674116635f39e" title="消耗一个可行后继动作生成一个后继 NFPState。 会导致本节点减少一个后继动作。 生成的后继节点默认已经初始化了可行后继动作序列并且继承了本节点的前序动作序列，并且深度+1。" alt="" coords="108,9,244,52"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="53,103,106,68,123,58,126,63,109,73,56,107"/>
+<area shape="rect" id="Node000006" href="$classyuki_1_1atri_1_1nfp_1_1_state.html#a8f13c339dcaf512c1957eabc8079bad0" title="检测本节点是否存在可行后继动作。" alt="" coords="292,72,428,115"/>
+<area shape="poly" id="edge6_Node000001_Node000006" title=" " alt="" coords="60,114,276,97,277,102,60,119"/>
+<area shape="rect" id="Node000007" href="$classyuki_1_1atri_1_1nfp_1_1_state.html#a43f5e6ac75a53b7410b9ad588f543961" title=" " alt="" coords="108,127,244,169"/>
+<area shape="poly" id="edge7_Node000001_Node000007" title=" " alt="" coords="61,122,93,128,92,133,60,127"/>
+<area shape="rect" id="Node000008" href="$classyuki_1_1atri_1_1nfp_1_1_state.html#ad20897c5c8bd47f5d4005989bead0e55" title="重置状态的深度、后继动作以及前序动作。" alt="" coords="292,160,428,203"/>
+<area shape="poly" id="edge8_Node000001_Node000008" title=" " alt="" coords="46,130,73,157,90,169,109,179,150,190,194,195,276,193,277,198,193,200,149,195,107,184,87,174,69,161,43,134"/>
+<area shape="rect" id="Node000003" href="$classyuki_1_1atri_1_1nfp_1_1_state.html#ae594e908404b048ed8092ffef74e565d" title="对本节点执行动作，产生的后继节点直接覆盖在本节点变量上。" alt="" coords="292,5,428,48"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="244,27,276,26,276,31,244,32"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="242,50,282,64,280,69,240,55"/>
+<area shape="rect" id="Node000004" href="$classyuki_1_1atri_1_1nfp_1_1_state.html#a2a7248bc89ab676358633078fbc32d33" title="更新本节点的后继节点序列。可以输入上一步的动作来避免序列中生成其反动作导致走回头。" alt="" coords="476,116,617,159"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="408,46,430,58,504,105,501,109,427,62,406,51"/>
+<area shape="rect" id="Node000005" href="$classyuki_1_1atri_1_1nfp_1_1_state.html#a9c1d5d625192a37da3c0416b80f2c9c2" title="将 0 移动到 swapPos。" alt="" coords="478,5,615,48"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="429,24,463,24,463,29,429,29"/>
+<area shape="poly" id="edge9_Node000008_Node000004" title=" " alt="" coords="428,163,461,155,462,160,429,168"/>
+</map>

@@ -1,0 +1,7 @@
+<map id="addBinaryConstraint" name="addBinaryConstraint">
+<area shape="rect" id="Node000001" title="为序号为 varId1，varId2 的 var 添加二元约束" alt="" coords="260,47,399,73"/>
+<area shape="rect" id="Node000002" href="$namespaceyuki_1_1atri_1_1csp.html#af40865bd2424273ed5a402ba56087e86" title=" " alt="" coords="5,5,212,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="244,50,212,45,212,40,245,45"/>
+<area shape="rect" id="Node000003" href="$namespaceyuki_1_1atri_1_1csp.html#a1b1cfe52a93c9d9ada969f68fabd5de1" title=" " alt="" coords="33,72,184,115"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="245,75,185,85,184,79,244,70"/>
+</map>

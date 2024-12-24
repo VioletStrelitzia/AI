@@ -1,0 +1,166 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.12.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>AI: D:/user/Project/Code/AI/inc/NFigurePuzzle/NFPAlgorithm.h 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">AI<span id="projectnumber">&#160;1.0.0</span>
+   </div>
+   <div id="projectbrief">YUKII的AI库</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.12.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','搜索',false);
+  $(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){ initResizable(false); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_bfccd401955b95cf8c75461437045ac0.html">inc</a></li><li class="navelem"><a class="el" href="dir_5ab2aef7e91aaf138f9b3e9c4a4fecb4.html">NFigurePuzzle</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div id="doc-content">
+<div class="header">
+  <div class="headertitle"><div class="title">NFPAlgorithm.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="_n_f_p_algorithm_8h.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#include &quot;<a class="code" href="_n_f_p_state_8h.html">NFPState.h</a>&quot;</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &quot;<a class="code" href="_n_f_p_state_set_8h.html">NFPStateSet.h</a>&quot;</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
+<div class="foldopen" id="foldopen00005" data-start="{" data-end="}">
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno"><a class="line" href="namespaceyuki_1_1atri_1_1nfp.html">    5</a></span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespaceyuki_1_1atri_1_1nfp.html">yuki::atri::nfp</a> {</div>
+<div class="foldopen" id="foldopen00006" data-start="{" data-end="};">
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno"><a class="line" href="classyuki_1_1atri_1_1nfp_1_1_algorithm.html">    6</a></span>    <span class="keyword">class </span><a class="code hl_class" href="classyuki_1_1atri_1_1nfp_1_1_algorithm.html">Algorithm</a> {</div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span>    <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno"><a class="line" href="classyuki_1_1atri_1_1nfp_1_1_algorithm.html#ab108b7c8d4f187ab05e0ceab0768b53a">    8</a></span>        <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code hl_variable" href="classyuki_1_1atri_1_1nfp_1_1_algorithm.html#ab108b7c8d4f187ab05e0ceab0768b53a">printPath</a>;</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno"><a class="line" href="classyuki_1_1atri_1_1nfp_1_1_algorithm.html#afe3a1ea7242f1bef5149a4d10d62edb6">   10</a></span>        <span class="keyword">static</span> <a class="code hl_typedef" href="namespaceyuki.html#a77a52b9640a0c8600feb48e548425a40">i32</a> <a class="code hl_variable" href="classyuki_1_1atri_1_1nfp_1_1_algorithm.html#afe3a1ea7242f1bef5149a4d10d62edb6">nodeCountTemp</a>;</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno"><a class="line" href="classyuki_1_1atri_1_1nfp_1_1_algorithm.html#ac2339d17ab0a449fce68fbc2aeb87a9b">   11</a></span>        <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code hl_variable" href="classyuki_1_1atri_1_1nfp_1_1_algorithm.html#ac2339d17ab0a449fce68fbc2aeb87a9b">underExperiment</a>;</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>    <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>        <span class="keyword">static</span> <span class="keyword">auto</span> <a class="code hl_function" href="classyuki_1_1atri_1_1nfp_1_1_algorithm.html#a8062cc0fe3bbd86e03fe07bf78b87db7">statisticalExperiment</a>() -&gt; void;</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span> </div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>        <span class="keyword">static</span> <span class="keyword">auto</span> <a class="code hl_function" href="classyuki_1_1atri_1_1nfp_1_1_algorithm.html#a826919b9561b71cf81a2521ebc28af98">IDS</a>(<a class="code hl_class" href="classyuki_1_1atri_1_1nfp_1_1_state.html">State</a>&amp; originalState,</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>                        <a class="code hl_class" href="classyuki_1_1atri_1_1nfp_1_1_state.html">State</a> <span class="keyword">const</span>&amp; targetState,</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>                        <a class="code hl_class" href="classyuki_1_1atri_1_1_vector2.html">Vector2</a> <span class="keyword">const</span>&amp; preZeroPos,</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>                        <a class="code hl_typedef" href="namespaceyuki.html#a77a52b9640a0c8600feb48e548425a40">i32</a> <span class="keyword">const</span>&amp; depthLimit, <a class="code hl_typedef" href="namespaceyuki.html#a77a52b9640a0c8600feb48e548425a40">i32</a>&amp; ans) -&gt; bool;</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>        <span class="keyword">static</span> <span class="keyword">auto</span> <a class="code hl_function" href="classyuki_1_1atri_1_1nfp_1_1_algorithm.html#af7995dba9c93f4d37c02d1c294459e97">BFS_Demo</a>(<a class="code hl_class" href="classyuki_1_1atri_1_1nfp_1_1_state.html">State</a>&amp; originalState, <a class="code hl_class" href="classyuki_1_1atri_1_1nfp_1_1_state.html">State</a> <span class="keyword">const</span>&amp; targetState) -&gt; <a class="code hl_typedef" href="namespaceyuki.html#a77a52b9640a0c8600feb48e548425a40">i32</a>;</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span> </div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>        <span class="keyword">static</span> <span class="keyword">auto</span> <a class="code hl_function" href="classyuki_1_1atri_1_1nfp_1_1_algorithm.html#ad020df13255f87e7aad6fb445b52640e">BFS</a>(<a class="code hl_class" href="classyuki_1_1atri_1_1nfp_1_1_state.html">State</a>&amp; originalState, <a class="code hl_class" href="classyuki_1_1atri_1_1nfp_1_1_state.html">State</a> <span class="keyword">const</span>&amp; targetState) -&gt; <a class="code hl_typedef" href="namespaceyuki.html#a77a52b9640a0c8600feb48e548425a40">i32</a>;</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span> </div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>        <span class="keyword">static</span> <span class="keyword">auto</span> <a class="code hl_function" href="classyuki_1_1atri_1_1nfp_1_1_algorithm.html#a02a259aae6d65719ca6f71eb3c5d65a7">DLS</a>(<a class="code hl_class" href="classyuki_1_1atri_1_1nfp_1_1_state.html">State</a>&amp; originalState, <a class="code hl_class" href="classyuki_1_1atri_1_1nfp_1_1_state.html">State</a> <span class="keyword">const</span>&amp; targetState, <a class="code hl_typedef" href="namespaceyuki.html#a77a52b9640a0c8600feb48e548425a40">i32</a> <span class="keyword">const</span>&amp; depthLimit = <a class="code hl_variable" href="classyuki_1_1atri_1_1nfp_1_1_state.html#ae36c3fd1a30a6cda505c1b6792ed75df">State::maxDepth</a>) -&gt; <a class="code hl_typedef" href="namespaceyuki.html#a77a52b9640a0c8600feb48e548425a40">i32</a>;</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span> </div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>        <span class="keyword">static</span> <span class="keyword">auto</span> <a class="code hl_function" href="classyuki_1_1atri_1_1nfp_1_1_algorithm.html#a5191c75b02bac462606ffd3cb18ab9f4">incorrectCount</a>(<a class="code hl_class" href="classyuki_1_1atri_1_1nfp_1_1_state.html">State</a> <span class="keyword">const</span>&amp; originalState, <a class="code hl_class" href="classyuki_1_1atri_1_1nfp_1_1_state.html">State</a> <span class="keyword">const</span>&amp; targetState) -&gt; <a class="code hl_typedef" href="namespaceyuki.html#a77a52b9640a0c8600feb48e548425a40">i32</a>;</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span> </div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>        <span class="keyword">static</span> <span class="keyword">auto</span> <a class="code hl_function" href="classyuki_1_1atri_1_1nfp_1_1_algorithm.html#abf1546ac14e807b00cb4c5aac3459164">manhattanDistance</a>(<a class="code hl_class" href="classyuki_1_1atri_1_1nfp_1_1_state.html">State</a> <span class="keyword">const</span>&amp; originalState, <a class="code hl_class" href="classyuki_1_1atri_1_1nfp_1_1_state.html">State</a> <span class="keyword">const</span>&amp; targetState) -&gt; <a class="code hl_typedef" href="namespaceyuki.html#a77a52b9640a0c8600feb48e548425a40">i32</a>;</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span> </div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>        <span class="keyword">static</span> <span class="keyword">auto</span> <a class="code hl_function" href="classyuki_1_1atri_1_1nfp_1_1_algorithm.html#a8698314719fbdd2dd46e3aeb347a57a0">AStar</a>(<a class="code hl_class" href="classyuki_1_1atri_1_1nfp_1_1_state.html">State</a>&amp; originalState, <a class="code hl_class" href="classyuki_1_1atri_1_1nfp_1_1_state.html">State</a> <span class="keyword">const</span>&amp; targetState, function&lt;<a class="code hl_typedef" href="namespaceyuki.html#a77a52b9640a0c8600feb48e548425a40">i32</a>(<a class="code hl_class" href="classyuki_1_1atri_1_1nfp_1_1_state.html">State</a> <span class="keyword">const</span>&amp;, <a class="code hl_class" href="classyuki_1_1atri_1_1nfp_1_1_state.html">State</a> <span class="keyword">const</span>&amp;)&gt; <span class="keyword">const</span>&amp; heuristicFunc) -&gt; <a class="code hl_typedef" href="namespaceyuki.html#a77a52b9640a0c8600feb48e548425a40">i32</a>;</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span> </div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>        <span class="keyword">static</span> <span class="keyword">auto</span> <a class="code hl_function" href="classyuki_1_1atri_1_1nfp_1_1_algorithm.html#ab22f2bde087abcbd73700c0108138d60">interactiveMode</a>() -&gt; void;</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span> </div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>        <span class="keyword">static</span> <span class="keyword">auto</span> <a class="code hl_function" href="classyuki_1_1atri_1_1nfp_1_1_algorithm.html#ad6e68a316b23076f9b9bc0b2427b9fea">testSearch</a>() -&gt; void;</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>    };</div>
+</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>    </div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>    <span class="keyword">auto</span> <a class="code hl_function" href="namespaceyuki_1_1atri_1_1nfp.html#aadb7443b48bbe2cbcd08f9d96470dc1c">test</a>() -&gt; void;</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>}</div>
+</div>
+<div class="ttc" id="a_n_f_p_state_8h_html"><div class="ttname"><a href="_n_f_p_state_8h.html">NFPState.h</a></div></div>
+<div class="ttc" id="a_n_f_p_state_set_8h_html"><div class="ttname"><a href="_n_f_p_state_set_8h.html">NFPStateSet.h</a></div></div>
+<div class="ttc" id="aclassyuki_1_1atri_1_1_vector2_html"><div class="ttname"><a href="classyuki_1_1atri_1_1_vector2.html">yuki::atri::Vector2</a></div><div class="ttdoc">二维整型向量类</div><div class="ttdef"><b>定义</b> <a href="_position2_8h_source.html#l00009">Position2.h:9</a></div></div>
+<div class="ttc" id="aclassyuki_1_1atri_1_1nfp_1_1_algorithm_html"><div class="ttname"><a href="classyuki_1_1atri_1_1nfp_1_1_algorithm.html">yuki::atri::nfp::Algorithm</a></div><div class="ttdef"><b>定义</b> <a href="#l00006">NFPAlgorithm.h:6</a></div></div>
+<div class="ttc" id="aclassyuki_1_1atri_1_1nfp_1_1_algorithm_html_a02a259aae6d65719ca6f71eb3c5d65a7"><div class="ttname"><a href="classyuki_1_1atri_1_1nfp_1_1_algorithm.html#a02a259aae6d65719ca6f71eb3c5d65a7">yuki::atri::nfp::Algorithm::DLS</a></div><div class="ttdeci">static auto DLS(State &amp;originalState, State const &amp;targetState, i32 const &amp;depthLimit=State::maxDepth) -&gt; i32</div><div class="ttdoc">深度有限搜素</div><div class="ttdef"><b>定义</b> <a href="_n_f_p_algorithm_8cpp_source.html#l00209">NFPAlgorithm.cpp:209</a></div></div>
+<div class="ttc" id="aclassyuki_1_1atri_1_1nfp_1_1_algorithm_html_a5191c75b02bac462606ffd3cb18ab9f4"><div class="ttname"><a href="classyuki_1_1atri_1_1nfp_1_1_algorithm.html#a5191c75b02bac462606ffd3cb18ab9f4">yuki::atri::nfp::Algorithm::incorrectCount</a></div><div class="ttdeci">static auto incorrectCount(State const &amp;originalState, State const &amp;targetState) -&gt; i32</div><div class="ttdoc">启发函数 1 ：错位数码数</div><div class="ttdef"><b>定义</b> <a href="_n_f_p_algorithm_8cpp_source.html#l00249">NFPAlgorithm.cpp:249</a></div></div>
+<div class="ttc" id="aclassyuki_1_1atri_1_1nfp_1_1_algorithm_html_a8062cc0fe3bbd86e03fe07bf78b87db7"><div class="ttname"><a href="classyuki_1_1atri_1_1nfp_1_1_algorithm.html#a8062cc0fe3bbd86e03fe07bf78b87db7">yuki::atri::nfp::Algorithm::statisticalExperiment</a></div><div class="ttdeci">static auto statisticalExperiment() -&gt; void</div><div class="ttdoc">统计测试函数，在这个函数里设计并输出统计数据</div><div class="ttdef"><b>定义</b> <a href="_n_f_p_algorithm_8cpp_source.html#l00008">NFPAlgorithm.cpp:8</a></div></div>
+<div class="ttc" id="aclassyuki_1_1atri_1_1nfp_1_1_algorithm_html_a826919b9561b71cf81a2521ebc28af98"><div class="ttname"><a href="classyuki_1_1atri_1_1nfp_1_1_algorithm.html#a826919b9561b71cf81a2521ebc28af98">yuki::atri::nfp::Algorithm::IDS</a></div><div class="ttdeci">static auto IDS(State &amp;originalState, State const &amp;targetState, Vector2 const &amp;preZeroPos, i32 const &amp;depthLimit, i32 &amp;ans) -&gt; bool</div><div class="ttdoc">曼哈顿距离优化的迭代加深搜索</div><div class="ttdef"><b>定义</b> <a href="_n_f_p_algorithm_8cpp_source.html#l00097">NFPAlgorithm.cpp:97</a></div></div>
+<div class="ttc" id="aclassyuki_1_1atri_1_1nfp_1_1_algorithm_html_a8698314719fbdd2dd46e3aeb347a57a0"><div class="ttname"><a href="classyuki_1_1atri_1_1nfp_1_1_algorithm.html#a8698314719fbdd2dd46e3aeb347a57a0">yuki::atri::nfp::Algorithm::AStar</a></div><div class="ttdeci">static auto AStar(State &amp;originalState, State const &amp;targetState, function&lt; i32(State const &amp;, State const &amp;)&gt; const &amp;heuristicFunc) -&gt; i32</div><div class="ttdoc">启发式搜索</div><div class="ttdef"><b>定义</b> <a href="_n_f_p_algorithm_8cpp_source.html#l00287">NFPAlgorithm.cpp:287</a></div></div>
+<div class="ttc" id="aclassyuki_1_1atri_1_1nfp_1_1_algorithm_html_ab108b7c8d4f187ab05e0ceab0768b53a"><div class="ttname"><a href="classyuki_1_1atri_1_1nfp_1_1_algorithm.html#ab108b7c8d4f187ab05e0ceab0768b53a">yuki::atri::nfp::Algorithm::printPath</a></div><div class="ttdeci">static bool printPath</div><div class="ttdef"><b>定义</b> <a href="#l00008">NFPAlgorithm.h:8</a></div></div>
+<div class="ttc" id="aclassyuki_1_1atri_1_1nfp_1_1_algorithm_html_ab22f2bde087abcbd73700c0108138d60"><div class="ttname"><a href="classyuki_1_1atri_1_1nfp_1_1_algorithm.html#ab22f2bde087abcbd73700c0108138d60">yuki::atri::nfp::Algorithm::interactiveMode</a></div><div class="ttdeci">static auto interactiveMode() -&gt; void</div><div class="ttdoc">交互模式</div><div class="ttdef"><b>定义</b> <a href="_n_f_p_algorithm_8cpp_source.html#l00321">NFPAlgorithm.cpp:321</a></div></div>
+<div class="ttc" id="aclassyuki_1_1atri_1_1nfp_1_1_algorithm_html_abf1546ac14e807b00cb4c5aac3459164"><div class="ttname"><a href="classyuki_1_1atri_1_1nfp_1_1_algorithm.html#abf1546ac14e807b00cb4c5aac3459164">yuki::atri::nfp::Algorithm::manhattanDistance</a></div><div class="ttdeci">static auto manhattanDistance(State const &amp;originalState, State const &amp;targetState) -&gt; i32</div><div class="ttdoc">启发函数 2 ：曼哈顿距离</div><div class="ttdef"><b>定义</b> <a href="_n_f_p_algorithm_8cpp_source.html#l00269">NFPAlgorithm.cpp:269</a></div></div>
+<div class="ttc" id="aclassyuki_1_1atri_1_1nfp_1_1_algorithm_html_ac2339d17ab0a449fce68fbc2aeb87a9b"><div class="ttname"><a href="classyuki_1_1atri_1_1nfp_1_1_algorithm.html#ac2339d17ab0a449fce68fbc2aeb87a9b">yuki::atri::nfp::Algorithm::underExperiment</a></div><div class="ttdeci">static bool underExperiment</div><div class="ttdef"><b>定义</b> <a href="#l00011">NFPAlgorithm.h:11</a></div></div>
+<div class="ttc" id="aclassyuki_1_1atri_1_1nfp_1_1_algorithm_html_ad020df13255f87e7aad6fb445b52640e"><div class="ttname"><a href="classyuki_1_1atri_1_1nfp_1_1_algorithm.html#ad020df13255f87e7aad6fb445b52640e">yuki::atri::nfp::Algorithm::BFS</a></div><div class="ttdeci">static auto BFS(State &amp;originalState, State const &amp;targetState) -&gt; i32</div><div class="ttdoc">宽度优先搜素</div><div class="ttdef"><b>定义</b> <a href="_n_f_p_algorithm_8cpp_source.html#l00177">NFPAlgorithm.cpp:177</a></div></div>
+<div class="ttc" id="aclassyuki_1_1atri_1_1nfp_1_1_algorithm_html_ad6e68a316b23076f9b9bc0b2427b9fea"><div class="ttname"><a href="classyuki_1_1atri_1_1nfp_1_1_algorithm.html#ad6e68a316b23076f9b9bc0b2427b9fea">yuki::atri::nfp::Algorithm::testSearch</a></div><div class="ttdeci">static auto testSearch() -&gt; void</div><div class="ttdoc">正确性测试函数</div><div class="ttdef"><b>定义</b> <a href="_n_f_p_algorithm_8cpp_source.html#l00405">NFPAlgorithm.cpp:405</a></div></div>
+<div class="ttc" id="aclassyuki_1_1atri_1_1nfp_1_1_algorithm_html_af7995dba9c93f4d37c02d1c294459e97"><div class="ttname"><a href="classyuki_1_1atri_1_1nfp_1_1_algorithm.html#af7995dba9c93f4d37c02d1c294459e97">yuki::atri::nfp::Algorithm::BFS_Demo</a></div><div class="ttdeci">static auto BFS_Demo(State &amp;originalState, State const &amp;targetState) -&gt; i32</div><div class="ttdoc">宽度优先搜素示例</div><div class="ttdef"><b>定义</b> <a href="_n_f_p_algorithm_8cpp_source.html#l00146">NFPAlgorithm.cpp:146</a></div></div>
+<div class="ttc" id="aclassyuki_1_1atri_1_1nfp_1_1_algorithm_html_afe3a1ea7242f1bef5149a4d10d62edb6"><div class="ttname"><a href="classyuki_1_1atri_1_1nfp_1_1_algorithm.html#afe3a1ea7242f1bef5149a4d10d62edb6">yuki::atri::nfp::Algorithm::nodeCountTemp</a></div><div class="ttdeci">static i32 nodeCountTemp</div><div class="ttdef"><b>定义</b> <a href="#l00010">NFPAlgorithm.h:10</a></div></div>
+<div class="ttc" id="aclassyuki_1_1atri_1_1nfp_1_1_state_html"><div class="ttname"><a href="classyuki_1_1atri_1_1nfp_1_1_state.html">yuki::atri::nfp::State</a></div><div class="ttdoc">用来描述棋盘状态的类。</div><div class="ttdef"><b>定义</b> <a href="_n_f_p_state_8h_source.html#l00014">NFPState.h:14</a></div></div>
+<div class="ttc" id="aclassyuki_1_1atri_1_1nfp_1_1_state_html_ae36c3fd1a30a6cda505c1b6792ed75df"><div class="ttname"><a href="classyuki_1_1atri_1_1nfp_1_1_state.html#ae36c3fd1a30a6cda505c1b6792ed75df">yuki::atri::nfp::State::maxDepth</a></div><div class="ttdeci">static int const maxDepth</div><div class="ttdoc">最大深度</div><div class="ttdef"><b>定义</b> <a href="_n_f_p_state_8h_source.html#l00019">NFPState.h:19</a></div></div>
+<div class="ttc" id="anamespaceyuki_1_1atri_1_1nfp_html"><div class="ttname"><a href="namespaceyuki_1_1atri_1_1nfp.html">yuki::atri::nfp</a></div><div class="ttdef"><b>定义</b> <a href="#l00005">NFPAlgorithm.h:5</a></div></div>
+<div class="ttc" id="anamespaceyuki_1_1atri_1_1nfp_html_aadb7443b48bbe2cbcd08f9d96470dc1c"><div class="ttname"><a href="namespaceyuki_1_1atri_1_1nfp.html#aadb7443b48bbe2cbcd08f9d96470dc1c">yuki::atri::nfp::test</a></div><div class="ttdeci">auto test() -&gt; void</div><div class="ttdef"><b>定义</b> <a href="_n_f_p_algorithm_8cpp_source.html#l00519">NFPAlgorithm.cpp:519</a></div></div>
+<div class="ttc" id="anamespaceyuki_html_a77a52b9640a0c8600feb48e548425a40"><div class="ttname"><a href="namespaceyuki.html#a77a52b9640a0c8600feb48e548425a40">yuki::i32</a></div><div class="ttdeci">int i32</div><div class="ttdef"><b>定义</b> <a href="core_8h_source.html#l00088">core.h:88</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0
+</small></address>
+</div><!-- doc-content -->
+</body>
+</html>

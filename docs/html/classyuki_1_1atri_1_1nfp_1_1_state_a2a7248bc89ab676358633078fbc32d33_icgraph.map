@@ -1,0 +1,46 @@
+<map id="updateNextActions" name="updateNextActions">
+<area shape="rect" id="Node000001" title="更新本节点的后继节点序列。可以输入上一步的动作来避免序列中生成其反动作导致走回头。" alt="" coords="960,261,1092,288"/>
+<area shape="rect" id="Node000002" href="$classyuki_1_1atri_1_1nfp_1_1_state.html#ae594e908404b048ed8092ffef74e565d" title="对本节点执行动作，产生的后继节点直接覆盖在本节点变量上。" alt="" coords="808,211,912,237"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="964,259,905,240,907,235,966,254"/>
+<area shape="rect" id="Node000011" href="$classyuki_1_1atri_1_1nfp_1_1_state.html#a56f4b4d7201e0172c08c9086f2c376dd" title="初始化，一定要执行。" alt="" coords="467,248,505,275"/>
+<area shape="poly" id="edge15_Node000001_Node000011" title=" " alt="" coords="944,275,506,264,506,259,945,270"/>
+<area shape="rect" id="Node000012" href="$classyuki_1_1atri_1_1nfp_1_1_state.html#ad20897c5c8bd47f5d4005989bead0e55" title="重置状态的深度、后继动作以及前序动作。" alt="" coords="670,109,721,136"/>
+<area shape="poly" id="edge16_Node000001_Node000012" title=" " alt="" coords="994,254,955,227,911,201,859,178,806,158,720,132,722,126,808,153,861,173,913,196,958,223,997,250"/>
+<area shape="rect" id="Node000015" href="$classyuki_1_1atri_1_1nfp_1_1_state.html#a69e48d8c502fdc635cb401005d5d75b9" title=" " alt="" coords="834,312,886,339"/>
+<area shape="poly" id="edge27_Node000001_Node000015" title=" " alt="" coords="966,296,887,320,886,315,964,291"/>
+<area shape="rect" id="Node000016" href="$classyuki_1_1atri_1_1nfp_1_1_state.html#ab0585158237b9631b0210ca9388f6535" title=" " alt="" coords="834,363,886,389"/>
+<area shape="poly" id="edge28_Node000001_Node000016" title=" " alt="" coords="995,299,913,353,888,367,885,362,911,348,992,295"/>
+<area shape="rect" id="Node000003" href="$classyuki_1_1atri_1_1nfp_1_1_state.html#ac1e4f5404a2f3a827f0674116635f39e" title="消耗一个可行后继动作生成一个后继 NFPState。 会导致本节点减少一个后继动作。 生成的后继节点默认已经初始化了可行后继动作序列并且继承了本节点的前序动作序列，并且深度+1。" alt="" coords="631,160,760,187"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="799,208,740,190,742,185,800,203"/>
+<area shape="rect" id="Node000010" href="$classyuki_1_1atri_1_1nfp_1_1_state.html#a681a048e9c16ad615ead48b96e61806d" title=" " alt="" coords="647,211,744,237"/>
+<area shape="poly" id="edge12_Node000002_Node000010" title=" " alt="" coords="792,227,744,227,744,221,792,221"/>
+<area shape="rect" id="Node000004" href="$classyuki_1_1atri_1_1nfp_1_1_algorithm.html#a8698314719fbdd2dd46e3aeb347a57a0" title="启发式搜索" alt="" coords="406,115,566,157"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="616,162,566,153,567,148,617,157"/>
+<area shape="rect" id="Node000009" href="$classyuki_1_1atri_1_1nfp_1_1_algorithm.html#af7995dba9c93f4d37c02d1c294459e97" title="宽度优先搜素示例" alt="" coords="406,181,566,224"/>
+<area shape="poly" id="edge10_Node000003_Node000009" title=" " alt="" coords="616,187,567,194,566,189,616,182"/>
+<area shape="rect" id="Node000005" href="$classyuki_1_1atri_1_1nfp_1_1_algorithm.html#ab22f2bde087abcbd73700c0108138d60" title="交互模式" alt="" coords="181,139,341,181"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="391,149,342,154,341,149,391,143"/>
+<area shape="rect" id="Node000007" href="$classyuki_1_1atri_1_1nfp_1_1_algorithm.html#a8062cc0fe3bbd86e03fe07bf78b87db7" title="统计测试函数，在这个函数里设计并输出统计数据" alt="" coords="181,72,341,115"/>
+<area shape="poly" id="edge6_Node000004_Node000007" title=" " alt="" coords="390,121,341,111,342,106,391,115"/>
+<area shape="rect" id="Node000008" href="$classyuki_1_1atri_1_1nfp_1_1_algorithm.html#ad6e68a316b23076f9b9bc0b2427b9fea" title="正确性测试函数" alt="" coords="181,5,341,48"/>
+<area shape="poly" id="edge8_Node000004_Node000008" title=" " alt="" coords="397,110,387,105,363,84,339,62,319,51,321,46,343,58,367,80,391,100,399,105"/>
+<area shape="rect" id="Node000006" href="$namespaceyuki_1_1atri_1_1nfp.html#aadb7443b48bbe2cbcd08f9d96470dc1c" title=" " alt="" coords="5,113,133,140"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="165,146,133,140,134,135,166,141"/>
+<area shape="poly" id="edge7_Node000007_Node000006" title=" " alt="" coords="166,113,134,118,133,113,165,107"/>
+<area shape="poly" id="edge9_Node000008_Node000006" title=" " alt="" coords="192,57,182,62,93,115,90,110,179,58,190,53"/>
+<area shape="poly" id="edge11_Node000009_Node000005" title=" " alt="" coords="390,187,341,178,342,173,391,182"/>
+<area shape="poly" id="edge13_Node000010_Node000011" title=" " alt="" coords="632,238,506,261,505,255,631,233"/>
+<area shape="poly" id="edge14_Node000011_Node000006" title=" " alt="" coords="451,260,329,239,254,221,180,196,128,170,87,143,90,138,131,165,182,191,255,216,330,234,452,255"/>
+<area shape="poly" id="edge17_Node000012_Node000004" title=" " alt="" coords="655,128,567,134,566,128,655,123"/>
+<area shape="poly" id="edge22_Node000012_Node000009" title=" " alt="" coords="657,140,632,150,584,172,554,183,552,178,582,167,630,146,655,135"/>
+<area shape="rect" id="Node000013" href="$classyuki_1_1atri_1_1nfp_1_1_algorithm.html#ad020df13255f87e7aad6fb445b52640e" title="宽度优先搜素" alt="" coords="389,13,583,40"/>
+<area shape="poly" id="edge18_Node000012_Node000013" title=" " alt="" coords="663,102,625,77,582,54,550,43,552,38,584,50,628,73,666,98"/>
+<area shape="rect" id="Node000014" href="$classyuki_1_1atri_1_1nfp_1_1_algorithm.html#a02a259aae6d65719ca6f71eb3c5d65a7" title="深度有限搜素" alt="" coords="389,64,583,91"/>
+<area shape="poly" id="edge23_Node000012_Node000014" title=" " alt="" coords="655,117,551,94,552,89,656,111"/>
+<area shape="poly" id="edge19_Node000013_Node000005" title=" " alt="" coords="398,49,391,54,375,71,367,90,359,109,343,129,326,140,323,136,339,125,354,106,362,87,370,68,387,50,395,45"/>
+<area shape="poly" id="edge20_Node000013_Node000007" title=" " alt="" coords="416,47,390,55,328,74,326,69,388,49,414,42"/>
+<area shape="poly" id="edge21_Node000013_Node000008" title=" " alt="" coords="373,29,342,29,342,24,373,24"/>
+<area shape="poly" id="edge24_Node000014_Node000005" title=" " alt="" coords="411,98,390,105,342,129,316,140,314,136,340,124,388,100,409,93"/>
+<area shape="poly" id="edge25_Node000014_Node000007" title=" " alt="" coords="374,88,342,90,341,85,373,83"/>
+<area shape="poly" id="edge26_Node000014_Node000008" title=" " alt="" coords="408,63,341,47,342,42,409,57"/>
+</map>

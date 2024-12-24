@@ -31,7 +31,7 @@ namespace yuki::atri::dt::bdt {
             vector<Example*> exs = getExamples(examples, attributeIndex, value);
             if (!exs.empty()) {
                 f64 pk = (f64)exs.size() / (f64)examples.size();
-                f64 nk = entropyBinary((f64)positiveCount(exs) / (f64)exs.size());
+                f64 nk = statistics::entropyBinary((f64)positiveCount(exs) / (f64)exs.size());
                 result += pk * nk;
             }
         }
@@ -39,7 +39,7 @@ namespace yuki::atri::dt::bdt {
     }
 
     auto BooleanDecisionTree::infoGain(i32 const& attributeIndex, vector<Example*> const& examples) -> f64 {
-        return entropyBinary((f64)positiveCount(examples) / (f64)examples.size()) - entropyRemain(attributeIndex, examples);
+        return statistics::entropyBinary((f64)positiveCount(examples) / (f64)examples.size()) - entropyRemain(attributeIndex, examples);
     }
 
     auto BooleanDecisionTree::importance(vector<i32> const& attributeIndexs, vector<Example*> const& examples) -> i32 {

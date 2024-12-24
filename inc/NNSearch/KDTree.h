@@ -1,7 +1,7 @@
 #pragma
 #include "core.h"
 #include "TreeNodeBase.h"
-#include "YukiTools.h"
+#include "tools.h"
 
 namespace yuki::atri::nns {
     class KDTreeNode: public TreeNodeBase {
@@ -101,7 +101,7 @@ namespace yuki::atri::nns {
                     splitDimensions.push_back(i);
                 }
             }
-            splitDimension = randomChoose(splitDimensions);
+            splitDimension = random::choose(splitDimensions);
 
             rg::sort(examples, [this](vector<f64> const*& v1, vector<f64> const*v2) -> bool {
                 return (*v1)[splitDimension] > (*v2)[splitDimension];
@@ -123,7 +123,7 @@ namespace yuki::atri::nns {
         }
 
         auto search(vector<f64> const& target, vector<f64> const*& nearest) -> void {
-            if (distance(target, data) < distance(target, *nearest)) {
+            if (distanceEuclidean(target, data) < distanceEuclidean(target, *nearest)) {
                 nearest = &data;
             }
 
@@ -131,14 +131,14 @@ namespace yuki::atri::nns {
                 if (lchild) {
                     lchild->search(target, nearest);                
                 }
-                if (rchild && distance(target, *nearest) >= abs(target[splitDimension] - data[splitDimension])) {
+                if (rchild && distanceEuclidean(target, *nearest) >= abs(target[splitDimension] - data[splitDimension])) {
                     rchild->search(target, nearest);
                 }
             } else {
                 if (rchild) {
                     rchild->search(target, nearest);
                 }
-                if (lchild && distance(target, *nearest) >= abs(target[splitDimension] - data[splitDimension])) {
+                if (lchild && distanceEuclidean(target, *nearest) >= abs(target[splitDimension] - data[splitDimension])) {
                     lchild->search(target, nearest);
                 }
             }

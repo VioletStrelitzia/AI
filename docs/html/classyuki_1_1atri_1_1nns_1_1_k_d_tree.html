@@ -1,0 +1,346 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.12.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>AI: KDTree类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">AI<span id="projectnumber">&#160;1.0.0</span>
+   </div>
+   <div id="projectbrief">YUKII的AI库</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.12.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','搜索',false);
+  $(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){ initResizable(false); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespaceyuki.html">yuki</a></li><li class="navelem"><a class="el" href="namespaceyuki_1_1atri.html">atri</a></li><li class="navelem"><a class="el" href="namespaceyuki_1_1atri_1_1nns.html">nns</a></li><li class="navelem"><a class="el" href="classyuki_1_1atri_1_1nns_1_1_k_d_tree.html">KDTree</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div id="doc-content">
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="#pri-attribs">Private 属性</a> &#124;
+<a href="classyuki_1_1atri_1_1nns_1_1_k_d_tree-members.html">所有成员列表</a>  </div>
+  <div class="headertitle"><div class="title">KDTree类 参考</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p><code>#include &lt;<a class="el" href="_k_d_tree_8h_source.html">KDTree.h</a>&gt;</code></p>
+<div class="dynheader">
+KDTree 的协作图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classyuki_1_1atri_1_1nns_1_1_k_d_tree__coll__graph.png" border="0" usemap="#a_k_d_tree_coll__map" alt="Collaboration graph"/></div>
+<map name="a_k_d_tree_coll__map" id="a_k_d_tree_coll__map">
+<area shape="rect" title=" " alt="" coords="45,112,112,139"/>
+<area shape="rect" title=" " alt="" coords="5,5,152,48"/>
+<area shape="poly" title=" " alt="" coords="81,64,81,112,76,112,76,64"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">图例</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:a5d8d987d7156b0e67ce98fcdfd396068" id="r_a5d8d987d7156b0e67ce98fcdfd396068"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5d8d987d7156b0e67ce98fcdfd396068">KDTree</a> (<a class="el" href="namespaceyuki.html#a77a52b9640a0c8600feb48e548425a40">i32</a> const &amp;<a class="el" href="#a26013c4b6a9468ef9ad579614b0e282a">dimension</a>)</td></tr>
+<tr class="separator:a5d8d987d7156b0e67ce98fcdfd396068"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3f9e16a9ef8315718e1d31d4c62cd899" id="r_a3f9e16a9ef8315718e1d31d4c62cd899"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3f9e16a9ef8315718e1d31d4c62cd899">~KDTree</a> ()=default</td></tr>
+<tr class="separator:a3f9e16a9ef8315718e1d31d4c62cd899"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4d1a3c97978506ba06cf4a6cb76641b2" id="r_a4d1a3c97978506ba06cf4a6cb76641b2"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4d1a3c97978506ba06cf4a6cb76641b2">build</a> (vector&lt; vector&lt; <a class="el" href="namespaceyuki.html#abc2f107791bd7c1d49ecf0f168c085a3">f64</a> &gt; &gt; const &amp;examples) -&gt; void</td></tr>
+<tr class="separator:a4d1a3c97978506ba06cf4a6cb76641b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab19c6800aa45f23be0ec1250546abd11" id="r_ab19c6800aa45f23be0ec1250546abd11"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab19c6800aa45f23be0ec1250546abd11">search</a> (vector&lt; <a class="el" href="namespaceyuki.html#abc2f107791bd7c1d49ecf0f168c085a3">f64</a> &gt; const &amp;target) -&gt; vector&lt; <a class="el" href="namespaceyuki.html#abc2f107791bd7c1d49ecf0f168c085a3">f64</a> &gt;</td></tr>
+<tr class="separator:ab19c6800aa45f23be0ec1250546abd11"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aefd68cc5abef21b6cc60d19ab407de67" id="r_aefd68cc5abef21b6cc60d19ab407de67"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aefd68cc5abef21b6cc60d19ab407de67">dot</a> (string path, bool const &amp;genGraph=true, string const &amp;extension=&quot;pdf&quot;) -&gt; void</td></tr>
+<tr class="separator:aefd68cc5abef21b6cc60d19ab407de67"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Private 属性</h2></td></tr>
+<tr class="memitem:a26013c4b6a9468ef9ad579614b0e282a" id="r_a26013c4b6a9468ef9ad579614b0e282a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceyuki.html#a77a52b9640a0c8600feb48e548425a40">i32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a26013c4b6a9468ef9ad579614b0e282a">dimension</a> = 0</td></tr>
+<tr class="separator:a26013c4b6a9468ef9ad579614b0e282a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acfc32ad5efcd897f736d919e5bff2daa" id="r_acfc32ad5efcd897f736d919e5bff2daa"><td class="memItemLeft" align="right" valign="top">shared_ptr&lt; <a class="el" href="classyuki_1_1atri_1_1nns_1_1_k_d_tree_node.html">KDTreeNode</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acfc32ad5efcd897f736d919e5bff2daa">root</a></td></tr>
+<tr class="separator:acfc32ad5efcd897f736d919e5bff2daa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock">
+<p class="definition">在文件 <a class="el" href="_k_d_tree_8h_source.html">KDTree.h</a> 第 <a class="el" href="_k_d_tree_8h_source.html#l00149">149</a> 行定义.</p>
+</div><h2 class="groupheader">构造及析构函数说明</h2>
+<a id="a5d8d987d7156b0e67ce98fcdfd396068" name="a5d8d987d7156b0e67ce98fcdfd396068"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5d8d987d7156b0e67ce98fcdfd396068">&#9670;&#160;</a></span>KDTree()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classyuki_1_1atri_1_1nns_1_1_k_d_tree.html">KDTree</a> </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespaceyuki.html#a77a52b9640a0c8600feb48e548425a40">i32</a> const &amp;</td>          <td class="paramname"><span class="paramname"><em>dimension</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="_k_d_tree_8h_source.html">KDTree.h</a> 第 <a class="el" href="_k_d_tree_8h_source.html#l00155">155</a> 行定义.</p>
+
+</div>
+</div>
+<a id="a3f9e16a9ef8315718e1d31d4c62cd899" name="a3f9e16a9ef8315718e1d31d4c62cd899"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3f9e16a9ef8315718e1d31d4c62cd899">&#9670;&#160;</a></span>~KDTree()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">~<a class="el" href="classyuki_1_1atri_1_1nns_1_1_k_d_tree.html">KDTree</a> </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">成员函数说明</h2>
+<a id="a4d1a3c97978506ba06cf4a6cb76641b2" name="a4d1a3c97978506ba06cf4a6cb76641b2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4d1a3c97978506ba06cf4a6cb76641b2">&#9670;&#160;</a></span>build()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto build </td>
+          <td>(</td>
+          <td class="paramtype">vector&lt; vector&lt; <a class="el" href="namespaceyuki.html#abc2f107791bd7c1d49ecf0f168c085a3">f64</a> &gt; &gt; const &amp;</td>          <td class="paramname"><span class="paramname"><em>examples</em></span></td><td>)</td>
+          <td> -&gt; void </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="_k_d_tree_8h_source.html">KDTree.h</a> 第 <a class="el" href="_k_d_tree_8h_source.html#l00159">159</a> 行定义.</p>
+
+<p class="reference">引用了 <a class="el" href="_k_d_tree_8h_source.html#l00152">KDTree::root</a>.</p>
+
+</div>
+</div>
+<a id="aefd68cc5abef21b6cc60d19ab407de67" name="aefd68cc5abef21b6cc60d19ab407de67"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aefd68cc5abef21b6cc60d19ab407de67">&#9670;&#160;</a></span>dot()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto dot </td>
+          <td>(</td>
+          <td class="paramtype">string</td>          <td class="paramname"><span class="paramname"><em>path</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool const &amp;</td>          <td class="paramname"><span class="paramname"><em>genGraph</em></span><span class="paramdefsep"> = </span><span class="paramdefval">true</span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string const &amp;</td>          <td class="paramname"><span class="paramname"><em>extension</em></span><span class="paramdefsep"> = </span><span class="paramdefval">&quot;pdf&quot;</span>&#160;) -&gt; void </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="_k_d_tree_8h_source.html">KDTree.h</a> 第 <a class="el" href="_k_d_tree_8h_source.html#l00173">173</a> 行定义.</p>
+
+<p class="reference">引用了 <a class="el" href="_k_d_tree_8h_source.html#l00152">KDTree::root</a>.</p>
+
+</div>
+</div>
+<a id="ab19c6800aa45f23be0ec1250546abd11" name="ab19c6800aa45f23be0ec1250546abd11"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab19c6800aa45f23be0ec1250546abd11">&#9670;&#160;</a></span>search()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto search </td>
+          <td>(</td>
+          <td class="paramtype">vector&lt; <a class="el" href="namespaceyuki.html#abc2f107791bd7c1d49ecf0f168c085a3">f64</a> &gt; const &amp;</td>          <td class="paramname"><span class="paramname"><em>target</em></span></td><td>)</td>
+          <td> -&gt; vector&lt;<a class="el" href="namespaceyuki.html#abc2f107791bd7c1d49ecf0f168c085a3">f64</a>&gt; </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="_k_d_tree_8h_source.html">KDTree.h</a> 第 <a class="el" href="_k_d_tree_8h_source.html#l00167">167</a> 行定义.</p>
+
+<p class="reference">引用了 <a class="el" href="_k_d_tree_8h_source.html#l00152">KDTree::root</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">类成员变量说明</h2>
+<a id="a26013c4b6a9468ef9ad579614b0e282a" name="a26013c4b6a9468ef9ad579614b0e282a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a26013c4b6a9468ef9ad579614b0e282a">&#9670;&#160;</a></span>dimension</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespaceyuki.html#a77a52b9640a0c8600feb48e548425a40">i32</a> dimension = 0</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="_k_d_tree_8h_source.html">KDTree.h</a> 第 <a class="el" href="_k_d_tree_8h_source.html#l00151">151</a> 行定义.</p>
+
+</div>
+</div>
+<a id="acfc32ad5efcd897f736d919e5bff2daa" name="acfc32ad5efcd897f736d919e5bff2daa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acfc32ad5efcd897f736d919e5bff2daa">&#9670;&#160;</a></span>root</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">shared_ptr&lt;<a class="el" href="classyuki_1_1atri_1_1nns_1_1_k_d_tree_node.html">KDTreeNode</a>&gt; root</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="_k_d_tree_8h_source.html">KDTree.h</a> 第 <a class="el" href="_k_d_tree_8h_source.html#l00152">152</a> 行定义.</p>
+
+<p class="reference">被这些函数引用 <a class="el" href="_k_d_tree_8h_source.html#l00159">KDTree::build()</a>, <a class="el" href="_k_d_tree_8h_source.html#l00173">KDTree::dot()</a> , 以及 <a class="el" href="_k_d_tree_8h_source.html#l00167">KDTree::search()</a>.</p>
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>D:/user/Project/Code/AI/inc/NNSearch/<a class="el" href="_k_d_tree_8h_source.html">KDTree.h</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0
+</small></address>
+</div><!-- doc-content -->
+</body>
+</html>

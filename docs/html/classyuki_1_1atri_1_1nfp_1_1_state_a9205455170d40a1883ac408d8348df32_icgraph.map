@@ -1,0 +1,10 @@
+<map id="genRandomNFPState" name="genRandomNFPState">
+<area shape="rect" id="Node000001" title="随机生成最优解深度为depth的初始状态。" alt="" coords="389,47,538,73"/>
+<area shape="rect" id="Node000002" href="$classyuki_1_1atri_1_1nfp_1_1_algorithm.html#ab22f2bde087abcbd73700c0108138d60" title="交互模式" alt="" coords="181,5,341,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="373,48,341,43,342,37,374,43"/>
+<area shape="rect" id="Node000004" href="$classyuki_1_1atri_1_1nfp_1_1_algorithm.html#a8062cc0fe3bbd86e03fe07bf78b87db7" title="统计测试函数，在这个函数里设计并输出统计数据" alt="" coords="181,72,341,115"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="374,77,342,83,341,77,373,72"/>
+<area shape="rect" id="Node000003" href="$namespaceyuki_1_1atri_1_1nfp.html#aadb7443b48bbe2cbcd08f9d96470dc1c" title=" " alt="" coords="5,47,133,73"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="166,46,134,52,133,46,165,41"/>
+<area shape="poly" id="edge4_Node000004_Node000003" title=" " alt="" coords="165,79,133,74,134,68,166,74"/>
+</map>

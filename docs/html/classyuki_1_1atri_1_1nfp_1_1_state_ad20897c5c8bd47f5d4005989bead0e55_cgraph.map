@@ -1,0 +1,5 @@
+<map id="reset" name="reset">
+<area shape="rect" id="Node000001" title="重置状态的深度、后继动作以及前序动作。" alt="" coords="5,5,56,32"/>
+<area shape="rect" id="Node000002" href="$classyuki_1_1atri_1_1nfp_1_1_state.html#a2a7248bc89ab676358633078fbc32d33" title="更新本节点的后继节点序列。可以输入上一步的动作来避免序列中生成其反动作导致走回头。" alt="" coords="104,5,236,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="56,16,88,16,88,21,56,21"/>
+</map>
