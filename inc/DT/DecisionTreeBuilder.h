@@ -241,9 +241,10 @@ public:
     };
 
     /**
-     * @brief 采用 learn 算法建树（递归）
+     * @brief 采用 learn 算法建树
      * 
      * @tparam Criterion 度量标准
+     * @tparam PreCut 是否预剪枝
      * @tparam UsingQueue 是否使用队列迭代
      * @param attributes 候选属性集合
      * @param target 目标属性
@@ -400,6 +401,8 @@ public:
      * @brief 建树
      * 
      * @tparam Criterion 度量标准
+     * @tparam PreCut 是否预剪枝
+     * @tparam UsingQueue 是否使用队列迭代
      * @param dataset 样本集
      * @param maxDepth 最大深度
      * @return DecisionTree* 决策树
