@@ -1,0 +1,25 @@
+digraph Tree {
+node [shape=box, style="filled", color="black", fontname="Microsoft YaHei", fontsize=26];
+edge [fontname="Microsoft YaHei", fontsize=26];
+0 [label="Root\nSamples: 10\nSplit by 脐部\n好瓜: 是\nINFO_GAIN: 0.2755", fillcolor="#e58139"];
+0 -> 1;
+1 [label="脐部 == 平坦\nSamples: 2\n好瓜: 否\nAll same: 1", fillcolor="#64a1c3"];
+0 -> 2;
+2 [label="脐部 == 凹陷\nSamples: 4\nSplit by 色泽\n好瓜: 是\nINFO_GAIN: 0.8113", fillcolor="#9183e3"];
+2 -> 3;
+3 [label="色泽 == 青绿\nSamples: 1\n好瓜: 是\nAll same: 1", fillcolor="#64a1c3"];
+2 -> 4;
+4 [label="色泽 == 乌黑\nSamples: 2\n好瓜: 是\nAll same: 1", fillcolor="#64a1c3"];
+0 -> 5;
+5 [label="脐部 == 稍凹\nSamples: 4\nSplit by 敲声\n好瓜: 否\nINFO_GAIN: 0.3113", fillcolor="#e58139"];
+5 -> 6;
+6 [label="敲声 == 清脆\nSamples: 0\n好瓜: 是\nExampls empty: 1", fillcolor="#64a1c3"];
+5 -> 7;
+7 [label="敲声 == 浊响\nSamples: 3\nSplit by 纹理\n好瓜: 是\nINFO_GAIN: 0.2516", fillcolor="#9183e3"];
+7 -> 8;
+8 [label="纹理 == 模糊\nSamples: 0\n好瓜: 是\nExampls empty: 1", fillcolor="#64a1c3"];
+7 -> 9;
+9 [label="纹理 == 稍糊\nSamples: 1\n好瓜: 是\nAll same: 1", fillcolor="#64a1c3"];
+5 -> 10;
+10 [label="敲声 == 沉闷\nSamples: 1\n好瓜: 否\nAll same: 1", fillcolor="#64a1c3"];
+}

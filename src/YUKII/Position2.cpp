@@ -1,4 +1,4 @@
-#include "Position2.h"
+#include "YPosition2.h"
 
 namespace yuki::atri {
     Vector2::Vector2(i32 const& r, i32 const& c):

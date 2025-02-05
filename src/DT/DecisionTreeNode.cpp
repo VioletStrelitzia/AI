@@ -1,21 +1,8 @@
 #include "DecisionTreeNode.h"
 
 namespace yuki::atri::dt {
-    DecisionTreeNode::DecisionTreeNode(string const& attribute_, DecisionTreeNodeType const& nodeType_):
-        attribute(attribute_), type(nodeType_) {}
-
-    DiscreteDecisionTreeNode::DiscreteDecisionTreeNode(
-        string const& attribute_,
-        f64 const& classification_,
-        i32 const& sampleCount_,
-        pair<string, f64> const& splitInfo_):
-        DecisionTreeNode(attribute_, DecisionTreeNodeType::DISCRETE_MUT),
-        classification(classification_),
-        sampleCount(sampleCount_),
-        splitInfo(splitInfo_) {}
-
     // 评估样本并返回叶结点的类别
-    auto DiscreteDecisionTreeNode::classify(map<string, f64>& sample) const -> f64 {
+    auto DiscreteDecisionTreeNode::classify(unordered_map<string, f64> const& sample) const -> f64 {
         auto valueIt = sample.find(attribute);
         // 如果 sample 里找到了该结点用于分裂的属性的值
         if (valueIt != sample.end()) {
@@ -31,31 +18,34 @@ namespace yuki::atri::dt {
     // 用于打印树的结构（递归）
     auto DiscreteDecisionTreeNode::printTree(i32 const& depth) const -> void {
         if (!children.empty()) {
-            for (pair<f64, shared_ptr<DecisionTreeNode>> p : children) {
+            bool flag = false;
+            for (pair<f64, DecisionTreeNode*> p : children) {
+                if (p.second) {
+                    printSpacer(depth + 1);
+                    cout << attribute << " == ";
+                    if (valueStrMap) {
+                        cout << (*valueStrMap)[attribute][p.first] << endl;
+                    } else {
+                        cout << p.first << endl;
+                    }
+                    p.second->printTree(depth + 1);
+                } else {
+                    flag = true;
+                }
+            }
+            if (flag) {
                 printSpacer(depth + 1);
-                cout << attribute << " == " << p.first << endl;
-                p.second->printTree(depth + 1);
+                cout << attribute << " == 其他" << endl;
+                cout << *target << ": " << (*valueStrMap)[*target][classification] << endl;
             }
         } else {
             printSpacer(depth + 1);
-            cout << attribute << ": " << classification << endl;
+            cout << *target << ": " << (*valueStrMap)[*target][classification] << endl;
         }
     }
 
-    ContinuousBinaryDecisionTreeNode::ContinuousBinaryDecisionTreeNode(
-        string const& attribute_,
-        f64 const& value_,
-        f64 const& classification_,
-        i32 const& sampleCount_,
-        pair<string, f64> const& splitInfo_):
-        DecisionTreeNode(attribute_, DecisionTreeNodeType::CONTINUOUS_BINARY),
-        value(value_),
-        classification(classification_),
-        sampleCount(sampleCount_),
-        splitInfo(splitInfo_) {}
-
     // 评估样本并返回叶结点的类别
-    auto ContinuousBinaryDecisionTreeNode::classify(map<string, f64>& sample) const -> f64 {
+    auto ContinuousBinaryDecisionTreeNode::classify(unordered_map<string, f64> const& sample) const -> f64 {
         // 根据属性索引和样本值选择子结点
         auto valueIt = sample.find(attribute);
         // 如果 sample 里找到了该结点用于分裂的属性的值
@@ -77,13 +67,21 @@ namespace yuki::atri::dt {
         if (lchild && rchild) {
             printSpacer(depth + 1);
             cout << attribute << " <= " << value << endl;
-            lchild->printTree(depth + 2);
+            if (lchild) {
+                lchild->printTree(depth + 2);
+            } else {
+                cout << *target << ": " << (*valueStrMap)[*target][classification] << endl;
+            }
             printSpacer(depth + 1);
             cout << attribute << " > " << value << endl;
-            rchild->printTree(depth + 2);
+            if (rchild) {
+                rchild->printTree(depth + 2);
+            } else {
+                cout << *target << ": " << (*valueStrMap)[*target][classification] << endl;
+            }
         } else {
             printSpacer(depth + 1);
-            cout << attribute << ": " << classification << endl;
+            cout << *target << ": " << (*valueStrMap)[*target][classification] << endl;
         }
     }
 
@@ -91,14 +89,14 @@ namespace yuki::atri::dt {
         string const& targetAttribute,
         f64 const& classification,
         i32 const& sampleCount_,
-        pair<string, f64> const& splitInfo_):
-        DecisionTreeNode(targetAttribute, DecisionTreeNodeType::DISCRETE_LEAF),
+        pair<string, f64> const& splitInfo_,
+        unordered_map<string, unordered_map<f64, string>>* valueStr_):
         classification(classification),
         sampleCount(sampleCount_),
         splitInfo(splitInfo_) {}
 
     // 评估样本并返回叶结点的类别
-    auto DiscreteDecisionTreeLeafNode::classify(map<string, f64>& sample) const -> f64 {
+    auto DiscreteDecisionTreeLeafNode::classify(unordered_map<string, f64> const& sample) const -> f64 {
         // 直接返回叶节点的类别
         return classification;
     }
@@ -114,13 +112,12 @@ namespace yuki::atri::dt {
         f64 const& classification,
         i32 const& sampleCount_,
         pair<string, f64> const& splitInfo_):
-        DecisionTreeNode(targetAttribute, DecisionTreeNodeType::DISCRETE_LEAF),
         classification(classification),
         sampleCount(sampleCount_),
         splitInfo(splitInfo_) {}
 
     // 评估样本并返回叶结点的类别
-    auto ContinuousDecisionTreeLeafNode::classify(map<string, f64>& sample) const -> f64 {
+    auto ContinuousDecisionTreeLeafNode::classify(unordered_map<string, f64> const& sample) const -> f64 {
         // 直接返回叶节点的类别
         return classification;
     }

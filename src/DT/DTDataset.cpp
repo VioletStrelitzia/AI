@@ -5,7 +5,7 @@ namespace yuki::atri::dt {
         return Example(values, values.back(), hasLable);
     }
 
-    Dataset::Dataset(string const& filename) {
+    Dataset::Dataset(string const& filename, unordered_map<string, unordered_map<string, f64>>* map_) {
         ifstream inFile(filename);
         if (inFile.fail()) {
             cout << "cannot open file: " << filename << endl;
@@ -21,6 +21,7 @@ namespace yuki::atri::dt {
             for (i32 i = 0; i < attributes.size(); ++i) {
                 attributes[i].index = i;
                 attributes[i].name = names[i];
+                valueStrMap[names[i]] = unordered_map<f64, string>();
             }
         }
 
@@ -33,13 +34,20 @@ namespace yuki::atri::dt {
         }
 
         vector<bool> canRead(attributes.size(), true);
-        vector<pair<f64, map<string, f64>>> countType(attributes.size(), { 0, map<string, f64>() });
+        vector<pair<f64, unordered_map<string, f64>>> countType(attributes.size(), { 0, unordered_map<string, f64>() });
 
         // 读取属性是否可以直接读取，还是需要转换成数值
         if (getline(inFile, line)) {
             vector<string> reads = readStrValues(line);
             for (i32 i = 0; i < attributes.size(); ++i) {
                 canRead[i] = stoi(reads[i]);
+            }
+        }
+
+        if (map_) {
+            strValueMap = *map_;
+            for (i32 i = 0; i < attributes.size(); ++i) {
+                countType[i].second = (*map_)[attributes[i].name];
             }
         }
 
@@ -57,18 +65,31 @@ namespace yuki::atri::dt {
                     if (canRead[i]) {
                         value = stod(valueStr);
                     } else {
-                        if (countType[i].second.find(valueStr) == countType[i].second.end()) {
-                            countType[i].second[valueStr] = countType[i].first++;
+                        if (map_) {
+                            cout << attributes[i].name << ' ' << valueStr << ' ';
+                            if ((*map_)[attributes[i].name].find(valueStr) == (*map_)[attributes[i].name].end()) {
+                                value = -1;
+                            } else {
+                                value = (*(*map_)[attributes[i].name].find(valueStr)).second;
+                            }
+                        } else {
+                            if (countType[i].second.find(valueStr) == countType[i].second.end()) {
+                                countType[i].second[valueStr] = countType[i].first++;
+                                strValueMap[attributes[i].name][valueStr] = countType[i].second[valueStr];
+                            }
+                            value = countType[i].second[valueStr];
                         }
-                        value = countType[i].second[valueStr];
                     }
                     if (attributes[i].type == AttributeType::DISCRETE) {
-                        attributes[i].values.insert(value);                    
+                        attributes[i].values.insert(value);
+                        valueStrMap[attributes[i].name][value] = valueStr;
                     }
                 }
+                cout << value << ' ';
                 rawValues.back().push_back(value);
                 ++i;
             }
+            cout << endl;
             // 检查最后目标属性是否缺失，缺失则抛弃
             if (line.back() == ',') {
                 rawValues.pop_back();

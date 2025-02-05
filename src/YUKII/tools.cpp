@@ -1,4 +1,4 @@
-#include "tools.h"
+#include "Ytools.h"
 
 namespace yuki::random {
 random_device GLOBAL_RD;
@@ -6,6 +6,54 @@ mt19937 GLOBAL_MT19937(GLOBAL_RD());
 
 auto reflash() -> void {
 	GLOBAL_MT19937 = mt19937(GLOBAL_RD());
+}
+auto chooseByProbability(vector<f64> const& P, f64 const& sum) -> i32 {
+    f64 cumulativeProbability = 0.0, randomValue = uniformReal(0., sum);
+	i32 i = 0;
+	for (f64 const& p: P) {
+		cumulativeProbability += p;
+        if (cumulativeProbability > randomValue) {
+            return i;
+        }
+		++i;
+	}
+	return i;
+}
+
+auto chooseByWeights(vector<f64> const& weights) -> i32 {
+	f64 sum = 0.;
+	for (f64 const& w: weights) {
+		sum += w;
+	}
+
+    f64 cumulativeWeights = 0.0, randomValue = uniformReal(0., sum);
+	i32 i = 0;
+	for (f64 const& w: weights) {
+		cumulativeWeights += w;
+        if (cumulativeWeights > randomValue) {
+            return i;
+        }
+		++i;
+	}
+	return i;
+}
+
+auto chooseByWeights(vector<f64> const& weights, f64 const& sum) -> i32 {
+    f64 cumulativeWeights = 0.0, randomValue = uniformReal(0., sum);
+	
+	i32 i = 0;
+	for (f64 const& w: weights) {
+		cumulativeWeights += w;
+        if (cumulativeWeights > randomValue) {
+            return i;
+        }
+		++i;
+	}
+	return i;
+}
+
+auto trigger(f64 const& p) -> bool {
+	return uniformReal(0., 1.) < p;
 }
 }
 
@@ -108,6 +156,14 @@ auto printSpacer(i32 const& number) -> void {
 	if (number) {
 		cout << "|--- ";
 	}
+}
+
+auto StringcodeToInt(string const& word) -> int {
+	int dst = 0;
+	for (int i = 0; i < word.size(); ++i) {
+		dst += static_cast<unsigned>(word[i]) << (i << 3);
+	}
+	return dst;
 }
 
 template <>
