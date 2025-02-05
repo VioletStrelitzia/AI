@@ -1,6 +1,0 @@
-<map id="median" name="median">
-<area shape="rect" id="Node000001" title="求中位元素（递归）" alt="" coords="5,29,69,56"/>
-<area shape="poly" id="edge1_Node000001_Node000001" title=" " alt="" coords="9,30,4,21,8,11,19,5,37,3,56,5,67,12,64,16,55,10,37,8,20,10,12,15,10,20,14,28"/>
-<area shape="rect" id="Node000002" href="$namespaceyuki_1_1random.html#aa4d10691eb9a4df34e4a64ee06bc2aa3" title="生成一个随机整型数" alt="" coords="117,29,279,56"/>
-<area shape="poly" id="edge2_Node000001_Node000002" title=" " alt="" coords="69,40,101,40,101,45,69,45"/>
-</map>

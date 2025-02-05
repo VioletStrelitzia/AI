@@ -1,34 +1,35 @@
 #pragma once
 #include "DecisionTreeNode.h"
-#include "DTDataset.h"
+#include "ModelBase.h"
 
 namespace yuki::atri::dt {
 /**
  * @brief 决策树类
  * 
  */
-class DecisionTree {
+class DecisionTree: public ModelBase {
 public:
     vector<Attribute>            attributes;         ///< 属性集合
     Attribute                    target;             ///< 目标属性
     unordered_map<string, i32>   attributeIndexMap;  ///< 属性的序号映射
+    unordered_map<string, unordered_map<f64, string>> valueStrMap;
     
-    shared_ptr<DecisionTreeNode> root = nullptr;     ///< 树的根节点
+    DecisionTreeNode* root = nullptr;     ///< 树的根节点
 
     friend class DecisionTreeBuilder;
 public:
-    auto postCut(Dataset* dataset) -> void {
-
-    }
-
     /**
      * @brief 分类
      * 
      * @param input 输入
      * @return f64 分类
      */
-    auto classify(map<string, f64>& input) -> f64 {
+    auto classify(unordered_map<string, f64> const& input) -> f64 {
         return root->classify(input);
+    }
+
+    auto predict(void* input_, void* output_) -> void override {
+        *static_cast<f64*>(output_) = root->classify(*static_cast<unordered_map<string, f64>*>(input_));
     }
 
     /**
@@ -59,7 +60,9 @@ public:
     }
 
     DecisionTree() = default;
-    ~DecisionTree() = default;
+    ~DecisionTree() {
+        delete root;
+    }
     friend auto operator << (ostream& os, DecisionTree const& tree) -> ostream&;
     friend auto operator << (ofstream& os, DecisionTree const& tree) -> ofstream&;
 };

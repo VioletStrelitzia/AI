@@ -1,5 +1,0 @@
-<map id="randomAssign" name="randomAssign">
-<area shape="rect" id="Node000001" title="对 variables 的所有 var 从其值域里随机赋值（不重置值域）" alt="" coords="5,5,110,32"/>
-<area shape="rect" id="Node000002" href="$namespaceyuki_1_1random.html#a57c0eec1cc36e8248289ee107445d6c3" title="从数组里随机选择一个元素" alt="" coords="158,5,304,32"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="110,16,142,16,142,21,110,21"/>
-</map>

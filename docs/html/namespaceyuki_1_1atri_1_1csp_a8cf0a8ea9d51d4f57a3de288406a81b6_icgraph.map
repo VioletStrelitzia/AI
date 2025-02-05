@@ -1,7 +1,0 @@
-<map id="nQueenBinaryConstraint" name="nQueenBinaryConstraint">
-<area shape="rect" id="Node000001" title=" " alt="" coords="214,31,377,57"/>
-<area shape="rect" id="Node000002" href="$namespaceyuki_1_1atri_1_1csp.html#af40865bd2424273ed5a402ba56087e86" title=" " alt="" coords="5,5,166,32"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="198,35,166,31,167,26,199,30"/>
-<area shape="rect" id="Node000003" href="$namespaceyuki_1_1atri_1_1csp.html#a1b1cfe52a93c9d9ada969f68fabd5de1" title=" " alt="" coords="31,56,140,83"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="199,58,141,65,140,60,198,53"/>
-</map>

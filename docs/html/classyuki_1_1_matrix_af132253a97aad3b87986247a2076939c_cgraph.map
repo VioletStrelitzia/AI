@@ -1,7 +1,0 @@
-<map id="reshape" name="reshape">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,63,73,89"/>
-<area shape="rect" id="Node000002" href="$classyuki_1_1_matrix_base.html#ac28c4ff99ff14af612054e17c0c54a18" title=" " alt="" coords="121,5,354,64"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="73,66,105,60,106,65,74,72"/>
-<area shape="rect" id="Node000003" href="$classyuki_1_1_matrix_base.html#ad183ed34b29cb13ac3ea1f10422adad1" title=" " alt="" coords="121,88,354,147"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="74,80,106,87,105,92,73,86"/>
-</map>

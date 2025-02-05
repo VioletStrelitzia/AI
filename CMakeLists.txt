@@ -21,9 +21,12 @@ include_directories(inc/DT)
 include_directories(inc/DT/BDT)
 include_directories(inc/ModelEvaluation)
 include_directories(inc/NNSearch)
+include_directories(inc/GA)
+include_directories(inc/BN)
+include_directories(inc/NN)
 include_directories(inc/YUKII)
 include_directories(test)
- 
+
 # 指定生成目标
 aux_source_directory(src SOURCES)
 aux_source_directory(src/YUKII SOURCES_YUKII)

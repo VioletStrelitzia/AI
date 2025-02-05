@@ -1,7 +1,7 @@
-#pragma
-#include "core.h"
-#include "TreeNodeBase.h"
-#include "tools.h"
+#pragma once
+#include "Ycore.h"
+#include "YTreeNodeBase.h"
+#include "Ytools.h"
 
 namespace yuki::atri::nns {
     class KDTreeNode: public TreeNodeBase {

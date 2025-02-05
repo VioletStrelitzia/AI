@@ -1,5 +1,0 @@
-<map id="StateSet" name="StateSet">
-<area shape="rect" id="Node000001" title="用于记录 State 是否被搜索过" alt="" coords="16,96,89,123"/>
-<area shape="rect" id="Node000002" title=" " alt="" coords="5,5,100,32"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="55,48,55,95,50,95,50,48"/>
-</map>

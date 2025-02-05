@@ -1,9 +1,0 @@
-<map id="KDTreeNode" name="KDTreeNode">
-<area shape="rect" id="Node000001" title=" " alt="" coords="139,128,236,155"/>
-<area shape="rect" id="Node000002" href="$classyuki_1_1_tree_node_base.html" title="树结点基类" alt="" coords="5,13,114,40"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="87,48,175,126,171,130,83,52"/>
-<area shape="rect" id="Node000003" title=" " alt="" coords="138,13,237,40"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="190,56,190,128,185,128,185,56"/>
-<area shape="rect" id="Node000004" title=" " alt="" coords="261,5,407,48"/>
-<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="297,60,205,130,202,125,294,56"/>
-</map>

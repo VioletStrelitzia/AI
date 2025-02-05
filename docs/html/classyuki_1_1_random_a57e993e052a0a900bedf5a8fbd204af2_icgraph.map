@@ -1,9 +1,0 @@
-<map id="choose" name="choose">
-<area shape="rect" id="Node000001" title="从数组里随机选择一个元素" alt="" coords="238,80,301,107"/>
-<area shape="rect" id="Node000002" href="$classyuki_1_1atri_1_1nns_1_1_k_d_tree_node.html#a3db1e3b1017c1b609fe84170c23c86c6" title=" " alt="" coords="5,5,190,48"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="222,76,189,62,159,51,161,46,191,58,224,71"/>
-<area shape="rect" id="Node000003" href="$classyuki_1_1atri_1_1dt_1_1_decision_tree_builder.html#a648a3592c7035034b976887714298567" title="获取信息增益最大的属性" alt="" coords="18,72,177,115"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="222,96,177,96,177,91,222,91"/>
-<area shape="rect" id="Node000004" href="$classyuki_1_1atri_1_1dt_1_1_decision_tree_builder.html#a5d0dc286a8325ae013b6d8aa3e7dddd0" title="从样本集里选取占比最多的 target 取值作为叶子结点" alt="" coords="11,139,184,181"/>
-<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="224,115,191,129,161,140,159,136,189,124,222,110"/>
-</map>

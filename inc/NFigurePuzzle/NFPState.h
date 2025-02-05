@@ -1,6 +1,6 @@
 #pragma once
-#include "Position2.h"
-#include "core.h"
+#include "YPosition2.h"
+#include "Ycore.h"
 
 namespace yuki::atri::nfp {
     /**

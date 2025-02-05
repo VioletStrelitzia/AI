@@ -1,7 +1,0 @@
-<map id="uniformInt" name="uniformInt">
-<area shape="rect" id="Node000001" title="生成一个随机整型数" alt="" coords="212,31,291,57"/>
-<area shape="rect" id="Node000002" href="$classyuki_1_1_statistics.html#aac4623dfb9c2a7fc172d71245d53e358" title="求中位元素（递归）" alt="" coords="5,5,164,32"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="196,38,163,33,164,28,196,33"/>
-<area shape="rect" id="Node000003" href="$classyuki_1_1_statistics.html#a57687ba71207cb5db117fdc62518d3f5" title="求中位元素（迭代）" alt="" coords="5,56,164,83"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="196,55,164,60,163,55,196,50"/>
-</map>

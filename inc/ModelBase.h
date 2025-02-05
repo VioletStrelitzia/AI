@@ -1,4 +1,5 @@
-#include "core.h"
+#pragma once
+#include "Ycore.h"
 
 namespace yuki::atri {
 /**
@@ -14,8 +15,9 @@ public:
      * @brief 预测输入的结果
      * 
      * @param input_ 输入
+     * @param output_ 输出
      */
-    virtual auto predict(void* input_) -> void {}
+    virtual auto predict(void* input_, void* output_) -> void {}
 
     /**
      * @brief 训练模型
@@ -28,8 +30,9 @@ public:
      * @brief 评估模型的性能
      * 
      * @param dataset_ 用于评估的数据集
+     * @param output_ 输出
      */
-    virtual auto evaluate(void* dataset_) -> void {}
+    virtual auto evaluate(void* dataset_, void* output_) -> void {}
 
     /**
      * @brief 从外部文件导入模型

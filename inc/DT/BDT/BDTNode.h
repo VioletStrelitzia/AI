@@ -1,5 +1,5 @@
 #pragma once
-#include "core.h"
+#include "Ycore.h"
 
 namespace yuki::atri::dt::bdt {
     class BooleanDecisionTreeNode {

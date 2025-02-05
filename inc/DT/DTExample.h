@@ -1,6 +1,6 @@
 #pragma once
 #include "Attribute.h"
-#include "YUKII/data/Example.h"
+#include "YUKII/data/YExample.h"
 
 namespace yuki::atri::dt {
 /**

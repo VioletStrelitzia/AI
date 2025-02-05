@@ -1,5 +1,5 @@
 #pragma once
-#include "core.h"
+#include "Ycore.h"
 
 namespace yuki::atri::csp {
 /// @brief 变量类

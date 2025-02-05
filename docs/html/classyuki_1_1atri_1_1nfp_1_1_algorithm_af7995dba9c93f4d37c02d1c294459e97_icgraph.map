@@ -1,7 +1,0 @@
-<map id="BFS_Demo" name="BFS_Demo">
-<area shape="rect" id="Node000001" title="宽度优先搜素示例" alt="" coords="342,5,431,32"/>
-<area shape="rect" id="Node000002" href="$classyuki_1_1atri_1_1nfp_1_1_algorithm.html#ab22f2bde087abcbd73700c0108138d60" title="交互模式" alt="" coords="181,5,294,32"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="327,21,294,21,294,16,327,16"/>
-<area shape="rect" id="Node000003" href="$namespaceyuki_1_1atri_1_1nfp.html#aadb7443b48bbe2cbcd08f9d96470dc1c" title=" " alt="" coords="5,5,133,32"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="165,21,133,21,133,16,165,16"/>
-</map>

@@ -13,11 +13,13 @@ public:
     Attribute           target;      ///< 标签的名称
     vector<vector<f64>> rawValues;   ///< 数据列表，每条数据包含所有特征和一个标签（在末尾）
     vector<Example>     examples;    ///< 把数据保存为 Example 的形式
+    unordered_map<string, unordered_map<string, f64>> strValueMap;
+    unordered_map<string, unordered_map<f64, string>> valueStrMap;
 
     auto buildExample(vector<f64> const& values, bool const& hasLable = true) -> Example;
 
 public:
-    Dataset(string const& path);
+    Dataset(string const& path, unordered_map<string, unordered_map<string, f64>>* map = nullptr);
 
     /**
      * @brief Get the Attribute Index object

@@ -1,7 +1,0 @@
-<map id="entropyBinary" name="entropyBinary">
-<area shape="rect" id="Node000001" title="计算布尔随机变量的信息熵" alt="" coords="207,63,308,89"/>
-<area shape="rect" id="Node000002" href="$classyuki_1_1atri_1_1dt_1_1bdt_1_1_boolean_decision_tree.html#a962f35f16decef7397b3b346fdaff5c8" title="计算给定属性在数据集中的熵" alt="" coords="5,5,159,64"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="191,63,158,55,159,50,192,58"/>
-<area shape="rect" id="Node000003" href="$classyuki_1_1atri_1_1dt_1_1bdt_1_1_boolean_decision_tree.html#a84e04b0e2ecc4da1f25038271914c02e" title="计算给定属性在数据集中的信息增益" alt="" coords="5,88,159,147"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="192,94,159,102,158,97,191,89"/>
-</map>

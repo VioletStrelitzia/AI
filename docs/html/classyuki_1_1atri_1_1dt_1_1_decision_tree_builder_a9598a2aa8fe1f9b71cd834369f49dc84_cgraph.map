@@ -1,5 +1,0 @@
-<map id="infoGain" name="infoGain">
-<area shape="rect" id="Node000001" title="计算给定属性在数据集中的信息增益" alt="" coords="5,5,75,32"/>
-<area shape="rect" id="Node000002" href="$namespaceyuki_1_1statistics.html#ac0c56aaf28b0dab3080545241577ff4f" title="计算随机变量的信息熵" alt="" coords="123,5,280,32"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="75,16,107,16,107,21,75,21"/>
-</map>

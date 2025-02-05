@@ -1,5 +1,0 @@
-<map id="infoGainRatio" name="infoGainRatio">
-<area shape="rect" id="Node000001" title="计算指定属性对于样本集的信息增益率" alt="" coords="5,5,106,32"/>
-<area shape="rect" id="Node000002" href="$namespaceyuki_1_1statistics.html#ac0c56aaf28b0dab3080545241577ff4f" title="计算随机变量的信息熵" alt="" coords="154,5,311,32"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="106,16,138,16,138,21,106,21"/>
-</map>
