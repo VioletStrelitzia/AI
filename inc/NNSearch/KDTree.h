@@ -27,12 +27,12 @@ namespace yuki::atri::nns {
             if (lchild) {
                 ++idx;
                 outFile << format("{} -> {};", curIdx, idx);
-                lchild->dot(outFile, idx, format("[{}] < {}", splitDimension, data[splitDimension]));
+                lchild->dot(outFile, idx, format("[{}]: < {}", splitDimension, data[splitDimension]));
             }
             if (rchild) {
                 ++idx;
                 outFile << format("{} -> {};", curIdx, idx);
-                rchild->dot(outFile, idx, format("[{}] > {}", splitDimension, data[splitDimension]));
+                rchild->dot(outFile, idx, format("[{}]: > {}", splitDimension, data[splitDimension]));
             }
         }
 

@@ -1,6 +1,15 @@
 #include "DecisionTreeBuilder.h"
 
 namespace yuki::atri::dt {
+    auto DecisionTreeBuilder::getCriterionTypeStr(CriterionType const& criterion) -> string {
+        switch (criterion) {
+        case CriterionType::INFO_GAIN:  return "INFO_GAIN";
+        case CriterionType::INFO_RATIO: return "INFO_RATIO";
+        case CriterionType::GINI_INDEX: return "GINI_INDEX";
+        default: return "REEOR";
+        }
+    }
+
     auto DecisionTreeBuilder::quickSort(vector<pair<Example*, f64>>& examples, Attribute* const& attr, i32 const& left, i32 const& right) -> void {
         if (left < right) {
             // 左闭右闭

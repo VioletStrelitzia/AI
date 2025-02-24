@@ -1,3 +1,4 @@
+#pragma once
 #include "NQueen.h"
 #include "NFPAlgorithm.h"
 #include "BooleanDecisionTree.h"
@@ -73,7 +74,6 @@ auto decisionTreePostcut() -> void {
 
 }
 
-
 auto GAFitFunction() -> void {
     // pow(x, 2.71828182845904523536) - 3. * pow(x, atan(3.14159265358979323846 * x)) + 3 + sin(3.14159265358979323846 * 5. * x)
     // pow(x, 2.71828182845904523536) - 3. * pow(x, atan(3.14159265358979323846 * x)) + 3
@@ -85,6 +85,39 @@ auto GAFitFunction() -> void {
 
     atri::ga::GA<bool> g(2, 0, 0.000001, 64, fitFunc);
     g.solution(100);
+}
+
+/**
+ * @brief kd 树测试函数
+ * 
+ */
+auto KDTreeTest() -> void {
+	yuki::atri::nns::KDTree kdtree(2);
+
+	vector<vector<f64>> examples{
+		{ 1, 1 }, { 0.9, 0 }, { 0, 1 }, { 2, 2 }, { 1.1, 0.5 }, { 0.7, 0.34 }
+	};
+
+	kdtree.build(examples);
+
+	vector<f64> target{ 0.9, 0.5 };
+
+	cout << kdtree.search(target) << endl;
+
+	vector<vector<f64>> points(1, examples.front());
+
+	for (int i = 1; i < examples.size(); ++i) {
+		if (distanceEuclidean(points.back(), target) > distanceEuclidean(examples[i], target)) {
+			points.clear();
+			points.push_back(examples[i]);
+		} else if (distanceEuclidean(points.back(), target) == distanceEuclidean(examples[i], target)) {
+			points.push_back(examples[i]);
+		}
+	}
+
+	cout << points;
+
+	kdtree.dot("../../kdtree.dot");
 }
 
 }

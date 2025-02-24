@@ -354,6 +354,12 @@ public:
         }
     }
 
+    /**
+     * @brief 计算种群的总适应度
+     * 
+     * @param pop 种群
+     * @return FitnessInfo 适应度信息
+     */
     auto fitness(Population const& pop) -> FitnessInfo {
         FitnessInfo fi;
         for (Individual const& individual: population) {

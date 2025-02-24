@@ -75,6 +75,8 @@ auto testDTQuickSort() -> void {
 
 
 int main() {
+	demo::KDTreeTest();
+	return 0;
 	Float* mat1 = (Float*)malloc(2 * 3 * sizeof(Float));
 	Float* mat2 = (Float*)malloc(3 * 2 * sizeof(Float));
 	Float* mat3 = (Float*)malloc(3 * 3 * sizeof(Float));
@@ -163,35 +165,6 @@ int main() {
 	tree->dot(format("../../resources/DT/trees/{}.dot", datasetName));
 	cout << "Accuracy: " << count << '/' << dataset.rawValues.size() << " = " << count / dataset.rawValues.size() << endl;
 
-
-/*
-	nns::KDTree kdtree(2);
-
-	vector<vector<f64>> examples{
-		{ 1, 1 }, { 0.9, 0 }, { 0, 1 }, { 2, 2 }, { 1.1, 0.5 }, { 0.7, 0.34 }
-	};
-
-	kdtree.build(examples);
-
-	vector<f64> target{ 0.9, 0.5 };
-
-	cout << kdtree.search(target) << endl;
-
-	vector<vector<f64>> points(1, examples.front());
-
-	for (int i = 1; i < examples.size(); ++i) {
-		if (distanceEuclidean(points.back(), target) > distanceEuclidean(examples[i], target)) {
-			points.clear();
-			points.push_back(examples[i]);
-		} else if (distanceEuclidean(points.back(), target) == distanceEuclidean(examples[i], target)) {
-			points.push_back(examples[i]);
-		}
-	}
-
-	cout << points;
-
-	kdtree.dot("../../kdtree.dot");
-*/
 /*
     vector<i32> numbers{ 1, 2, 3, 4, 5, 6 };
     auto results = numbers

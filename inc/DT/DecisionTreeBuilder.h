@@ -23,14 +23,7 @@ public:
      * @param criterion 度量标准
      * @return string 字符串
      */
-    static auto getCriterionTypeStr(CriterionType const& criterion) -> string {
-        switch (criterion) {
-        case CriterionType::INFO_GAIN:  return "INFO_GAIN";
-        case CriterionType::INFO_RATIO: return "INFO_RATIO";
-        case CriterionType::GINI_INDEX: return "GINI_INDEX";
-        default: return "REEOR";
-        }
-    }
+    static auto getCriterionTypeStr(CriterionType const& criterion) -> string;
 
     /**
      * @brief 对样本集排序（快速排序）
