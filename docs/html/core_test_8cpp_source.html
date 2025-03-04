@@ -1,0 +1,127 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.12.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>AI: D:/user/Project/Code/AI/cxx_src/test/CoreTest/coreTest.cpp 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">AI<span id="projectnumber">&#160;1.0.0</span>
+   </div>
+   <div id="projectbrief">YUKII的AI库</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.12.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','搜索',false);
+  $(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){ initResizable(false); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_7f512dd0749495d1be0f144cf126d477.html">cxx_src</a></li><li class="navelem"><a class="el" href="dir_84e16b12f6fb1309d4d80affea43bbfc.html">test</a></li><li class="navelem"><a class="el" href="dir_86e9fcbeda3cd9903760e5b77e52fa3c.html">CoreTest</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div id="doc-content">
+<div class="header">
+  <div class="headertitle"><div class="title">coreTest.cpp</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="core_test_8cpp.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#include &lt;iostream&gt;</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &quot;<a class="code" href="core_8h.html">core.h</a>&quot;</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="keyword">using namespace </span><a class="code hl_namespace" href="namespaceyuki.html">yuki</a>;</div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span> </div>
+<div class="foldopen" id="foldopen00007" data-start="{" data-end="}">
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno"><a class="line" href="core_test_8cpp.html#a388f572c62279f839ee138a9afbdeeb5">    7</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="core_test_8cpp.html#a388f572c62279f839ee138a9afbdeeb5">print</a>() {</div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span>    <a class="code hl_typedef" href="namespaceyuki.html#a77a52b9640a0c8600feb48e548425a40">i32</a> x = 1;</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>    cout &lt;&lt; <span class="stringliteral">&quot;YUKII Test! &quot;</span> &lt;&lt; x &lt;&lt; endl;</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>}</div>
+</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
+<div class="foldopen" id="foldopen00012" data-start="{" data-end="}">
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno"><a class="line" href="core_test_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4">   12</a></span><span class="keywordtype">int</span> <a class="code hl_function" href="core_test_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main</a>() {</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>    <a class="code hl_function" href="core_test_8cpp.html#a388f572c62279f839ee138a9afbdeeb5">print</a>();</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>    system(<span class="stringliteral">&quot;pause&quot;</span>);</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>    <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>}</div>
+</div>
+<div class="ttc" id="acore_8h_html"><div class="ttname"><a href="core_8h.html">core.h</a></div><div class="ttdoc">核心库</div></div>
+<div class="ttc" id="acore_test_8cpp_html_a388f572c62279f839ee138a9afbdeeb5"><div class="ttname"><a href="core_test_8cpp.html#a388f572c62279f839ee138a9afbdeeb5">print</a></div><div class="ttdeci">void print()</div><div class="ttdef"><b>定义</b> <a href="#l00007">coreTest.cpp:7</a></div></div>
+<div class="ttc" id="acore_test_8cpp_html_ae66f6b31b5ad750f1fe042a706a4e3d4"><div class="ttname"><a href="core_test_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main</a></div><div class="ttdeci">int main()</div><div class="ttdef"><b>定义</b> <a href="#l00012">coreTest.cpp:12</a></div></div>
+<div class="ttc" id="anamespaceyuki_html"><div class="ttname"><a href="namespaceyuki.html">yuki</a></div><div class="ttdef"><b>定义</b> <a href="core_8h_source.html#l00045">core.h:45</a></div></div>
+<div class="ttc" id="anamespaceyuki_html_a77a52b9640a0c8600feb48e548425a40"><div class="ttname"><a href="namespaceyuki.html#a77a52b9640a0c8600feb48e548425a40">yuki::i32</a></div><div class="ttdeci">int i32</div><div class="ttdef"><b>定义</b> <a href="core_8h_source.html#l00090">core.h:90</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0
+</small></address>
+</div><!-- doc-content -->
+</body>
+</html>

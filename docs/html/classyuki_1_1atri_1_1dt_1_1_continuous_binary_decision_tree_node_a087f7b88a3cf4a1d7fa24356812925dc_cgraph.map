@@ -1,0 +1,5 @@
+<map id="dot" name="dot">
+<area shape="rect" id="Node000001" title="为树生成 dot 文件" alt="" coords="5,5,45,32"/>
+<area shape="rect" id="Node000002" href="$classyuki_1_1_tree_node_base.html#ac099f6eb7443d10b581c8dbe5e04c0f9" title="为树生成 dot 文件" alt="" coords="93,5,259,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="45,16,77,16,77,21,45,21"/>
+</map>

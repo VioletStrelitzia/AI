@@ -1,0 +1,8 @@
+<map id="median" name="median">
+<area shape="rect" id="Node000001" title="求中位元素" alt="" coords="5,29,69,56"/>
+<area shape="rect" id="Node000002" href="$namespaceyuki_1_1statistics.html#aac4623dfb9c2a7fc172d71245d53e358" title="求中位元素（递归）" alt="" coords="117,29,180,56"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="69,40,101,40,101,45,69,45"/>
+<area shape="poly" id="edge2_Node000002_Node000002" title=" " alt="" coords="128,30,125,20,127,11,135,5,148,3,162,5,170,12,166,16,160,10,148,8,137,10,132,14,130,20,133,28"/>
+<area shape="rect" id="Node000003" href="$namespaceyuki_1_1random.html#aa4d10691eb9a4df34e4a64ee06bc2aa3" title="生成一个随机整型数" alt="" coords="228,29,390,56"/>
+<area shape="poly" id="edge3_Node000002_Node000003" title=" " alt="" coords="181,40,213,40,213,45,181,45"/>
+</map>

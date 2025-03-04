@@ -1,0 +1,1090 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.12.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>AI: Algorithm类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">AI<span id="projectnumber">&#160;1.0.0</span>
+   </div>
+   <div id="projectbrief">YUKII的AI库</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.12.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','搜索',false);
+  $(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){ initResizable(false); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespaceyuki.html">yuki</a></li><li class="navelem"><a class="el" href="namespaceyuki_1_1atri.html">atri</a></li><li class="navelem"><a class="el" href="namespaceyuki_1_1atri_1_1nfp.html">nfp</a></li><li class="navelem"><a class="el" href="classyuki_1_1atri_1_1nfp_1_1_algorithm.html">Algorithm</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div id="doc-content">
+<div class="header">
+  <div class="summary">
+<a href="#pub-static-methods">静态 Public 成员函数</a> &#124;
+<a href="#pub-static-attribs">静态 Public 属性</a> &#124;
+<a href="classyuki_1_1atri_1_1nfp_1_1_algorithm-members.html">所有成员列表</a>  </div>
+  <div class="headertitle"><div class="title">Algorithm类 参考</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p><code>#include &lt;<a class="el" href="_n_f_p_algorithm_8h_source.html">NFPAlgorithm.h</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
+静态 Public 成员函数</h2></td></tr>
+<tr class="memitem:a8062cc0fe3bbd86e03fe07bf78b87db7" id="r_a8062cc0fe3bbd86e03fe07bf78b87db7"><td class="memItemLeft" align="right" valign="top">static auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8062cc0fe3bbd86e03fe07bf78b87db7">statisticalExperiment</a> () -&gt; void</td></tr>
+<tr class="memdesc:a8062cc0fe3bbd86e03fe07bf78b87db7"><td class="mdescLeft">&#160;</td><td class="mdescRight">统计测试函数，在这个函数里设计并输出统计数据  <br /></td></tr>
+<tr class="separator:a8062cc0fe3bbd86e03fe07bf78b87db7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a826919b9561b71cf81a2521ebc28af98" id="r_a826919b9561b71cf81a2521ebc28af98"><td class="memItemLeft" align="right" valign="top">static auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a826919b9561b71cf81a2521ebc28af98">IDS</a> (<a class="el" href="classyuki_1_1atri_1_1nfp_1_1_state.html">State</a> &amp;originalState, <a class="el" href="classyuki_1_1atri_1_1nfp_1_1_state.html">State</a> const &amp;targetState, <a class="el" href="classyuki_1_1atri_1_1_vector2.html">Vector2</a> const &amp;preZeroPos, <a class="el" href="namespaceyuki.html#a77a52b9640a0c8600feb48e548425a40">i32</a> const &amp;depthLimit, <a class="el" href="namespaceyuki.html#a77a52b9640a0c8600feb48e548425a40">i32</a> &amp;ans) -&gt; bool</td></tr>
+<tr class="memdesc:a826919b9561b71cf81a2521ebc28af98"><td class="mdescLeft">&#160;</td><td class="mdescRight">曼哈顿距离优化的迭代加深搜索  <br /></td></tr>
+<tr class="separator:a826919b9561b71cf81a2521ebc28af98"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af7995dba9c93f4d37c02d1c294459e97" id="r_af7995dba9c93f4d37c02d1c294459e97"><td class="memItemLeft" align="right" valign="top">static auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af7995dba9c93f4d37c02d1c294459e97">BFS_Demo</a> (<a class="el" href="classyuki_1_1atri_1_1nfp_1_1_state.html">State</a> &amp;originalState, <a class="el" href="classyuki_1_1atri_1_1nfp_1_1_state.html">State</a> const &amp;targetState) -&gt; <a class="el" href="namespaceyuki.html#a77a52b9640a0c8600feb48e548425a40">i32</a></td></tr>
+<tr class="memdesc:af7995dba9c93f4d37c02d1c294459e97"><td class="mdescLeft">&#160;</td><td class="mdescRight">宽度优先搜素示例  <br /></td></tr>
+<tr class="separator:af7995dba9c93f4d37c02d1c294459e97"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad020df13255f87e7aad6fb445b52640e" id="r_ad020df13255f87e7aad6fb445b52640e"><td class="memItemLeft" align="right" valign="top">static auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad020df13255f87e7aad6fb445b52640e">BFS</a> (<a class="el" href="classyuki_1_1atri_1_1nfp_1_1_state.html">State</a> &amp;originalState, <a class="el" href="classyuki_1_1atri_1_1nfp_1_1_state.html">State</a> const &amp;targetState) -&gt; <a class="el" href="namespaceyuki.html#a77a52b9640a0c8600feb48e548425a40">i32</a></td></tr>
+<tr class="memdesc:ad020df13255f87e7aad6fb445b52640e"><td class="mdescLeft">&#160;</td><td class="mdescRight">宽度优先搜素  <br /></td></tr>
+<tr class="separator:ad020df13255f87e7aad6fb445b52640e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a02a259aae6d65719ca6f71eb3c5d65a7" id="r_a02a259aae6d65719ca6f71eb3c5d65a7"><td class="memItemLeft" align="right" valign="top">static auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a02a259aae6d65719ca6f71eb3c5d65a7">DLS</a> (<a class="el" href="classyuki_1_1atri_1_1nfp_1_1_state.html">State</a> &amp;originalState, <a class="el" href="classyuki_1_1atri_1_1nfp_1_1_state.html">State</a> const &amp;targetState, <a class="el" href="namespaceyuki.html#a77a52b9640a0c8600feb48e548425a40">i32</a> const &amp;depthLimit=<a class="el" href="classyuki_1_1atri_1_1nfp_1_1_state.html#ae36c3fd1a30a6cda505c1b6792ed75df">State::maxDepth</a>) -&gt; <a class="el" href="namespaceyuki.html#a77a52b9640a0c8600feb48e548425a40">i32</a></td></tr>
+<tr class="memdesc:a02a259aae6d65719ca6f71eb3c5d65a7"><td class="mdescLeft">&#160;</td><td class="mdescRight">深度有限搜素  <br /></td></tr>
+<tr class="separator:a02a259aae6d65719ca6f71eb3c5d65a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5191c75b02bac462606ffd3cb18ab9f4" id="r_a5191c75b02bac462606ffd3cb18ab9f4"><td class="memItemLeft" align="right" valign="top">static auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5191c75b02bac462606ffd3cb18ab9f4">incorrectCount</a> (<a class="el" href="classyuki_1_1atri_1_1nfp_1_1_state.html">State</a> const &amp;originalState, <a class="el" href="classyuki_1_1atri_1_1nfp_1_1_state.html">State</a> const &amp;targetState) -&gt; <a class="el" href="namespaceyuki.html#a77a52b9640a0c8600feb48e548425a40">i32</a></td></tr>
+<tr class="memdesc:a5191c75b02bac462606ffd3cb18ab9f4"><td class="mdescLeft">&#160;</td><td class="mdescRight">启发函数 1 ：错位数码数  <br /></td></tr>
+<tr class="separator:a5191c75b02bac462606ffd3cb18ab9f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abf1546ac14e807b00cb4c5aac3459164" id="r_abf1546ac14e807b00cb4c5aac3459164"><td class="memItemLeft" align="right" valign="top">static auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abf1546ac14e807b00cb4c5aac3459164">manhattanDistance</a> (<a class="el" href="classyuki_1_1atri_1_1nfp_1_1_state.html">State</a> const &amp;originalState, <a class="el" href="classyuki_1_1atri_1_1nfp_1_1_state.html">State</a> const &amp;targetState) -&gt; <a class="el" href="namespaceyuki.html#a77a52b9640a0c8600feb48e548425a40">i32</a></td></tr>
+<tr class="memdesc:abf1546ac14e807b00cb4c5aac3459164"><td class="mdescLeft">&#160;</td><td class="mdescRight">启发函数 2 ：曼哈顿距离  <br /></td></tr>
+<tr class="separator:abf1546ac14e807b00cb4c5aac3459164"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8698314719fbdd2dd46e3aeb347a57a0" id="r_a8698314719fbdd2dd46e3aeb347a57a0"><td class="memItemLeft" align="right" valign="top">static auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8698314719fbdd2dd46e3aeb347a57a0">AStar</a> (<a class="el" href="classyuki_1_1atri_1_1nfp_1_1_state.html">State</a> &amp;originalState, <a class="el" href="classyuki_1_1atri_1_1nfp_1_1_state.html">State</a> const &amp;targetState, function&lt; <a class="el" href="namespaceyuki.html#a77a52b9640a0c8600feb48e548425a40">i32</a>(<a class="el" href="classyuki_1_1atri_1_1nfp_1_1_state.html">State</a> const &amp;, <a class="el" href="classyuki_1_1atri_1_1nfp_1_1_state.html">State</a> const &amp;)&gt; const &amp;heuristicFunc) -&gt; <a class="el" href="namespaceyuki.html#a77a52b9640a0c8600feb48e548425a40">i32</a></td></tr>
+<tr class="memdesc:a8698314719fbdd2dd46e3aeb347a57a0"><td class="mdescLeft">&#160;</td><td class="mdescRight">启发式搜索  <br /></td></tr>
+<tr class="separator:a8698314719fbdd2dd46e3aeb347a57a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab22f2bde087abcbd73700c0108138d60" id="r_ab22f2bde087abcbd73700c0108138d60"><td class="memItemLeft" align="right" valign="top">static auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab22f2bde087abcbd73700c0108138d60">interactiveMode</a> () -&gt; void</td></tr>
+<tr class="memdesc:ab22f2bde087abcbd73700c0108138d60"><td class="mdescLeft">&#160;</td><td class="mdescRight">交互模式  <br /></td></tr>
+<tr class="separator:ab22f2bde087abcbd73700c0108138d60"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad6e68a316b23076f9b9bc0b2427b9fea" id="r_ad6e68a316b23076f9b9bc0b2427b9fea"><td class="memItemLeft" align="right" valign="top">static auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad6e68a316b23076f9b9bc0b2427b9fea">testSearch</a> () -&gt; void</td></tr>
+<tr class="memdesc:ad6e68a316b23076f9b9bc0b2427b9fea"><td class="mdescLeft">&#160;</td><td class="mdescRight">正确性测试函数  <br /></td></tr>
+<tr class="separator:ad6e68a316b23076f9b9bc0b2427b9fea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-attribs" name="pub-static-attribs"></a>
+静态 Public 属性</h2></td></tr>
+<tr class="memitem:ab108b7c8d4f187ab05e0ceab0768b53a" id="r_ab108b7c8d4f187ab05e0ceab0768b53a"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab108b7c8d4f187ab05e0ceab0768b53a">printPath</a> = true</td></tr>
+<tr class="separator:ab108b7c8d4f187ab05e0ceab0768b53a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afe3a1ea7242f1bef5149a4d10d62edb6" id="r_afe3a1ea7242f1bef5149a4d10d62edb6"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="namespaceyuki.html#a77a52b9640a0c8600feb48e548425a40">i32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afe3a1ea7242f1bef5149a4d10d62edb6">nodeCountTemp</a> = 0</td></tr>
+<tr class="separator:afe3a1ea7242f1bef5149a4d10d62edb6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac2339d17ab0a449fce68fbc2aeb87a9b" id="r_ac2339d17ab0a449fce68fbc2aeb87a9b"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac2339d17ab0a449fce68fbc2aeb87a9b">underExperiment</a> = false</td></tr>
+<tr class="separator:ac2339d17ab0a449fce68fbc2aeb87a9b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock">
+<p class="definition">在文件 <a class="el" href="_n_f_p_algorithm_8h_source.html">NFPAlgorithm.h</a> 第 <a class="el" href="_n_f_p_algorithm_8h_source.html#l00006">6</a> 行定义.</p>
+</div><h2 class="groupheader">成员函数说明</h2>
+<a id="a8698314719fbdd2dd46e3aeb347a57a0" name="a8698314719fbdd2dd46e3aeb347a57a0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8698314719fbdd2dd46e3aeb347a57a0">&#9670;&#160;</a></span>AStar()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespaceyuki.html#a77a52b9640a0c8600feb48e548425a40">i32</a> AStar </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classyuki_1_1atri_1_1nfp_1_1_state.html">State</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>originalState</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classyuki_1_1atri_1_1nfp_1_1_state.html">State</a> const &amp;</td>          <td class="paramname"><span class="paramname"><em>targetState</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">function&lt; <a class="el" href="namespaceyuki.html#a77a52b9640a0c8600feb48e548425a40">i32</a>(<a class="el" href="classyuki_1_1atri_1_1nfp_1_1_state.html">State</a> const &amp;, <a class="el" href="classyuki_1_1atri_1_1nfp_1_1_state.html">State</a> const &amp;)&gt; const &amp;</td>          <td class="paramname"><span class="paramname"><em>heuristicFunc</em></span>&#160;) -&gt; <a class="el" href="namespaceyuki.html#a77a52b9640a0c8600feb48e548425a40">i32</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>启发式搜索 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">originalState</td><td>目前的 state </td></tr>
+    <tr><td class="paramname">targetState</td><td>目标 state </td></tr>
+    <tr><td class="paramname">heuristicFunc</td><td>启发函数 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>i32 答案步数 </dd></dl>
+<dl class="retval"><dt>返回值</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">-1</td><td>未搜索到有效路径 </td></tr>
+    <tr><td class="paramname">其他</td><td>答案步数 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">在文件 <a class="el" href="_n_f_p_algorithm_8cpp_source.html">NFPAlgorithm.cpp</a> 第 <a class="el" href="_n_f_p_algorithm_8cpp_source.html#l00287">287</a> 行定义.</p>
+
+<p class="reference">引用了 <a class="el" href="_n_f_p_state_8h_source.html#l00033">State::depth</a>, <a class="el" href="_n_f_p_state_8cpp_source.html#l00156">State::genNextNFPState()</a>, <a class="el" href="_n_f_p_state_8cpp_source.html#l00134">State::hasNextAction()</a>, <a class="el" href="_n_f_p_algorithm_8h_source.html#l00010">Algorithm::nodeCountTemp</a>, <a class="el" href="_n_f_p_algorithm_8h_source.html#l00008">Algorithm::printPath</a>, <a class="el" href="_n_f_p_state_8cpp_source.html#l00215">State::printPath()</a>, <a class="el" href="_n_f_p_state_8cpp_source.html#l00150">State::reset()</a> , 以及 <a class="el" href="_n_f_p_algorithm_8h_source.html#l00011">Algorithm::underExperiment</a>.</p>
+
+<p class="reference">被这些函数引用 <a class="el" href="_n_f_p_algorithm_8cpp_source.html#l00321">Algorithm::interactiveMode()</a>, <a class="el" href="_n_f_p_algorithm_8cpp_source.html#l00008">Algorithm::statisticalExperiment()</a> , 以及 <a class="el" href="_n_f_p_algorithm_8cpp_source.html#l00405">Algorithm::testSearch()</a>.</p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classyuki_1_1atri_1_1nfp_1_1_algorithm_a8698314719fbdd2dd46e3aeb347a57a0_cgraph.png" border="0" usemap="#aclassyuki_1_1atri_1_1nfp_1_1_algorithm_a8698314719fbdd2dd46e3aeb347a57a0_cgraph" alt=""/></div>
+<map name="aclassyuki_1_1atri_1_1nfp_1_1_algorithm_a8698314719fbdd2dd46e3aeb347a57a0_cgraph" id="aclassyuki_1_1atri_1_1nfp_1_1_algorithm_a8698314719fbdd2dd46e3aeb347a57a0_cgraph">
+<area shape="rect" title="启发式搜索" alt="" coords="5,105,60,132"/>
+<area shape="rect" href="classyuki_1_1atri_1_1nfp_1_1_state.html#ac1e4f5404a2f3a827f0674116635f39e" title="消耗一个可行后继动作生成一个后继 NFPState。 会导致本节点减少一个后继动作。 生成的后继节点默认已经初始化了可行后继动作序列并且继承了本节点的前序动作序列，并且深度+1。" alt="" coords="108,9,244,52"/>
+<area shape="poly" title=" " alt="" coords="53,103,106,68,123,58,126,63,109,73,56,107"/>
+<area shape="rect" href="classyuki_1_1atri_1_1nfp_1_1_state.html#a8f13c339dcaf512c1957eabc8079bad0" title="检测本节点是否存在可行后继动作。" alt="" coords="292,72,428,115"/>
+<area shape="poly" title=" " alt="" coords="60,114,276,97,277,102,60,119"/>
+<area shape="rect" href="classyuki_1_1atri_1_1nfp_1_1_state.html#a43f5e6ac75a53b7410b9ad588f543961" title=" " alt="" coords="108,127,244,169"/>
+<area shape="poly" title=" " alt="" coords="61,122,93,128,92,133,60,127"/>
+<area shape="rect" href="classyuki_1_1atri_1_1nfp_1_1_state.html#ad20897c5c8bd47f5d4005989bead0e55" title="重置状态的深度、后继动作以及前序动作。" alt="" coords="292,160,428,203"/>
+<area shape="poly" title=" " alt="" coords="46,130,73,157,90,169,109,179,150,190,194,195,276,193,277,198,193,200,149,195,107,184,87,174,69,161,43,134"/>
+<area shape="rect" href="classyuki_1_1atri_1_1nfp_1_1_state.html#ae594e908404b048ed8092ffef74e565d" title="对本节点执行动作，产生的后继节点直接覆盖在本节点变量上。" alt="" coords="292,5,428,48"/>
+<area shape="poly" title=" " alt="" coords="244,27,276,26,276,31,244,32"/>
+<area shape="poly" title=" " alt="" coords="242,50,282,64,280,69,240,55"/>
+<area shape="rect" href="classyuki_1_1atri_1_1nfp_1_1_state.html#a2a7248bc89ab676358633078fbc32d33" title="更新本节点的后继节点序列。可以输入上一步的动作来避免序列中生成其反动作导致走回头。" alt="" coords="476,116,617,159"/>
+<area shape="poly" title=" " alt="" coords="408,46,430,58,504,105,501,109,427,62,406,51"/>
+<area shape="rect" href="classyuki_1_1atri_1_1nfp_1_1_state.html#a9c1d5d625192a37da3c0416b80f2c9c2" title="将 0 移动到 swapPos。" alt="" coords="478,5,615,48"/>
+<area shape="poly" title=" " alt="" coords="429,24,463,24,463,29,429,29"/>
+<area shape="poly" title=" " alt="" coords="428,163,461,155,462,160,429,168"/>
+</map>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classyuki_1_1atri_1_1nfp_1_1_algorithm_a8698314719fbdd2dd46e3aeb347a57a0_icgraph.png" border="0" usemap="#aclassyuki_1_1atri_1_1nfp_1_1_algorithm_a8698314719fbdd2dd46e3aeb347a57a0_icgraph" alt=""/></div>
+<map name="aclassyuki_1_1atri_1_1nfp_1_1_algorithm_a8698314719fbdd2dd46e3aeb347a57a0_icgraph" id="aclassyuki_1_1atri_1_1nfp_1_1_algorithm_a8698314719fbdd2dd46e3aeb347a57a0_icgraph">
+<area shape="rect" title="启发式搜索" alt="" coords="372,56,426,83"/>
+<area shape="rect" href="classyuki_1_1atri_1_1nfp_1_1_algorithm.html#ab22f2bde087abcbd73700c0108138d60" title="交互模式" alt="" coords="196,5,309,32"/>
+<area shape="poly" title=" " alt="" coords="356,57,292,35,294,30,358,52"/>
+<area shape="rect" href="classyuki_1_1atri_1_1nfp_1_1_algorithm.html#a8062cc0fe3bbd86e03fe07bf78b87db7" title="统计测试函数，在这个函数里设计并输出统计数据" alt="" coords="181,56,324,83"/>
+<area shape="poly" title=" " alt="" coords="356,72,324,72,324,67,356,67"/>
+<area shape="rect" href="classyuki_1_1atri_1_1nfp_1_1_algorithm.html#ad6e68a316b23076f9b9bc0b2427b9fea" title="正确性测试函数" alt="" coords="210,107,294,133"/>
+<area shape="poly" title=" " alt="" coords="358,86,294,109,292,104,356,81"/>
+<area shape="rect" href="namespaceyuki_1_1atri_1_1nfp.html#aadb7443b48bbe2cbcd08f9d96470dc1c" title=" " alt="" coords="5,56,133,83"/>
+<area shape="poly" title=" " alt="" coords="187,39,121,58,119,53,186,34"/>
+<area shape="poly" title=" " alt="" coords="165,72,133,72,133,67,165,67"/>
+<area shape="poly" title=" " alt="" coords="194,107,119,86,121,81,196,102"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ad020df13255f87e7aad6fb445b52640e" name="ad020df13255f87e7aad6fb445b52640e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad020df13255f87e7aad6fb445b52640e">&#9670;&#160;</a></span>BFS()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespaceyuki.html#a77a52b9640a0c8600feb48e548425a40">i32</a> BFS </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classyuki_1_1atri_1_1nfp_1_1_state.html">State</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>originalState</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classyuki_1_1atri_1_1nfp_1_1_state.html">State</a> const &amp;</td>          <td class="paramname"><span class="paramname"><em>targetState</em></span>&#160;) -&gt; <a class="el" href="namespaceyuki.html#a77a52b9640a0c8600feb48e548425a40">i32</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>宽度优先搜素 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">originalState</td><td>目前的 state </td></tr>
+    <tr><td class="paramname">targetState</td><td>目标 state </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>i32 答案步数 </dd></dl>
+<dl class="retval"><dt>返回值</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">-1</td><td>未搜索到有效路径 </td></tr>
+    <tr><td class="paramname">其他</td><td>答案步数 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">在文件 <a class="el" href="_n_f_p_algorithm_8cpp_source.html">NFPAlgorithm.cpp</a> 第 <a class="el" href="_n_f_p_algorithm_8cpp_source.html#l00177">177</a> 行定义.</p>
+
+<p class="reference">引用了 <a class="el" href="_n_f_p_algorithm_8h_source.html#l00010">Algorithm::nodeCountTemp</a>, <a class="el" href="_n_f_p_algorithm_8h_source.html#l00008">Algorithm::printPath</a>, <a class="el" href="_n_f_p_state_8cpp_source.html#l00150">State::reset()</a> , 以及 <a class="el" href="_n_f_p_algorithm_8h_source.html#l00011">Algorithm::underExperiment</a>.</p>
+
+<p class="reference">被这些函数引用 <a class="el" href="_n_f_p_algorithm_8cpp_source.html#l00321">Algorithm::interactiveMode()</a>, <a class="el" href="_n_f_p_algorithm_8cpp_source.html#l00008">Algorithm::statisticalExperiment()</a> , 以及 <a class="el" href="_n_f_p_algorithm_8cpp_source.html#l00405">Algorithm::testSearch()</a>.</p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classyuki_1_1atri_1_1nfp_1_1_algorithm_ad020df13255f87e7aad6fb445b52640e_cgraph.png" border="0" usemap="#aclassyuki_1_1atri_1_1nfp_1_1_algorithm_ad020df13255f87e7aad6fb445b52640e_cgraph" alt=""/></div>
+<map name="aclassyuki_1_1atri_1_1nfp_1_1_algorithm_ad020df13255f87e7aad6fb445b52640e_cgraph" id="aclassyuki_1_1atri_1_1nfp_1_1_algorithm_ad020df13255f87e7aad6fb445b52640e_cgraph">
+<area shape="rect" title="宽度优先搜素" alt="" coords="5,13,53,40"/>
+<area shape="rect" href="classyuki_1_1atri_1_1nfp_1_1_state.html#ad20897c5c8bd47f5d4005989bead0e55" title="重置状态的深度、后继动作以及前序动作。" alt="" coords="101,5,237,48"/>
+<area shape="poly" title=" " alt="" coords="53,24,85,24,85,29,53,29"/>
+<area shape="rect" href="classyuki_1_1atri_1_1nfp_1_1_state.html#a2a7248bc89ab676358633078fbc32d33" title="更新本节点的后继节点序列。可以输入上一步的动作来避免序列中生成其反动作导致走回头。" alt="" coords="285,5,425,48"/>
+<area shape="poly" title=" " alt="" coords="238,24,270,24,270,29,238,29"/>
+</map>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classyuki_1_1atri_1_1nfp_1_1_algorithm_ad020df13255f87e7aad6fb445b52640e_icgraph.png" border="0" usemap="#aclassyuki_1_1atri_1_1nfp_1_1_algorithm_ad020df13255f87e7aad6fb445b52640e_icgraph" alt=""/></div>
+<map name="aclassyuki_1_1atri_1_1nfp_1_1_algorithm_ad020df13255f87e7aad6fb445b52640e_icgraph" id="aclassyuki_1_1atri_1_1nfp_1_1_algorithm_ad020df13255f87e7aad6fb445b52640e_icgraph">
+<area shape="rect" title="宽度优先搜素" alt="" coords="372,56,419,83"/>
+<area shape="rect" href="classyuki_1_1atri_1_1nfp_1_1_algorithm.html#ab22f2bde087abcbd73700c0108138d60" title="交互模式" alt="" coords="196,5,309,32"/>
+<area shape="poly" title=" " alt="" coords="357,59,291,35,293,30,358,54"/>
+<area shape="rect" href="classyuki_1_1atri_1_1nfp_1_1_algorithm.html#a8062cc0fe3bbd86e03fe07bf78b87db7" title="统计测试函数，在这个函数里设计并输出统计数据" alt="" coords="181,56,324,83"/>
+<area shape="poly" title=" " alt="" coords="357,72,324,72,324,67,357,67"/>
+<area shape="rect" href="classyuki_1_1atri_1_1nfp_1_1_algorithm.html#ad6e68a316b23076f9b9bc0b2427b9fea" title="正确性测试函数" alt="" coords="210,107,294,133"/>
+<area shape="poly" title=" " alt="" coords="358,85,293,109,291,104,357,80"/>
+<area shape="rect" href="namespaceyuki_1_1atri_1_1nfp.html#aadb7443b48bbe2cbcd08f9d96470dc1c" title=" " alt="" coords="5,56,133,83"/>
+<area shape="poly" title=" " alt="" coords="187,39,121,58,119,53,186,34"/>
+<area shape="poly" title=" " alt="" coords="165,72,133,72,133,67,165,67"/>
+<area shape="poly" title=" " alt="" coords="194,107,119,86,121,81,196,102"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="af7995dba9c93f4d37c02d1c294459e97" name="af7995dba9c93f4d37c02d1c294459e97"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af7995dba9c93f4d37c02d1c294459e97">&#9670;&#160;</a></span>BFS_Demo()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespaceyuki.html#a77a52b9640a0c8600feb48e548425a40">i32</a> BFS_Demo </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classyuki_1_1atri_1_1nfp_1_1_state.html">State</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>originalState</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classyuki_1_1atri_1_1nfp_1_1_state.html">State</a> const &amp;</td>          <td class="paramname"><span class="paramname"><em>targetState</em></span>&#160;) -&gt; <a class="el" href="namespaceyuki.html#a77a52b9640a0c8600feb48e548425a40">i32</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>宽度优先搜素示例 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">originalState</td><td>目前的 state </td></tr>
+    <tr><td class="paramname">targetState</td><td>目标 state </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>i32 答案步数 </dd></dl>
+<dl class="retval"><dt>返回值</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">-1</td><td>未搜索到有效路径 </td></tr>
+    <tr><td class="paramname">其他</td><td>答案步数 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">在文件 <a class="el" href="_n_f_p_algorithm_8cpp_source.html">NFPAlgorithm.cpp</a> 第 <a class="el" href="_n_f_p_algorithm_8cpp_source.html#l00146">146</a> 行定义.</p>
+
+<p class="reference">引用了 <a class="el" href="_n_f_p_state_8h_source.html#l00033">State::depth</a>, <a class="el" href="_n_f_p_state_8cpp_source.html#l00156">State::genNextNFPState()</a>, <a class="el" href="_n_f_p_state_8cpp_source.html#l00134">State::hasNextAction()</a>, <a class="el" href="_n_f_p_algorithm_8h_source.html#l00010">Algorithm::nodeCountTemp</a>, <a class="el" href="_n_f_p_algorithm_8h_source.html#l00008">Algorithm::printPath</a>, <a class="el" href="_n_f_p_state_8cpp_source.html#l00215">State::printPath()</a>, <a class="el" href="_n_f_p_state_8cpp_source.html#l00150">State::reset()</a> , 以及 <a class="el" href="_n_f_p_algorithm_8h_source.html#l00011">Algorithm::underExperiment</a>.</p>
+
+<p class="reference">被这些函数引用 <a class="el" href="_n_f_p_algorithm_8cpp_source.html#l00321">Algorithm::interactiveMode()</a>.</p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classyuki_1_1atri_1_1nfp_1_1_algorithm_af7995dba9c93f4d37c02d1c294459e97_cgraph.png" border="0" usemap="#aclassyuki_1_1atri_1_1nfp_1_1_algorithm_af7995dba9c93f4d37c02d1c294459e97_cgraph" alt=""/></div>
+<map name="aclassyuki_1_1atri_1_1nfp_1_1_algorithm_af7995dba9c93f4d37c02d1c294459e97_cgraph" id="aclassyuki_1_1atri_1_1nfp_1_1_algorithm_af7995dba9c93f4d37c02d1c294459e97_cgraph">
+<area shape="rect" title="宽度优先搜素示例" alt="" coords="5,105,95,132"/>
+<area shape="rect" href="classyuki_1_1atri_1_1nfp_1_1_state.html#ac1e4f5404a2f3a827f0674116635f39e" title="消耗一个可行后继动作生成一个后继 NFPState。 会导致本节点减少一个后继动作。 生成的后继节点默认已经初始化了可行后继动作序列并且继承了本节点的前序动作序列，并且深度+1。" alt="" coords="143,9,279,52"/>
+<area shape="poly" title=" " alt="" coords="75,102,156,57,158,62,78,107"/>
+<area shape="rect" href="classyuki_1_1atri_1_1nfp_1_1_state.html#a8f13c339dcaf512c1957eabc8079bad0" title="检测本节点是否存在可行后继动作。" alt="" coords="327,72,463,115"/>
+<area shape="poly" title=" " alt="" coords="95,113,312,97,312,102,95,118"/>
+<area shape="rect" href="classyuki_1_1atri_1_1nfp_1_1_state.html#a43f5e6ac75a53b7410b9ad588f543961" title=" " alt="" coords="143,127,279,169"/>
+<area shape="poly" title=" " alt="" coords="95,124,128,130,127,135,94,129"/>
+<area shape="rect" href="classyuki_1_1atri_1_1nfp_1_1_state.html#ad20897c5c8bd47f5d4005989bead0e55" title="重置状态的深度、后继动作以及前序动作。" alt="" coords="327,160,463,203"/>
+<area shape="poly" title=" " alt="" coords="67,130,100,157,121,169,143,179,185,188,229,193,312,191,312,196,229,198,185,194,142,184,119,174,97,161,64,134"/>
+<area shape="rect" href="classyuki_1_1atri_1_1nfp_1_1_state.html#ae594e908404b048ed8092ffef74e565d" title="对本节点执行动作，产生的后继节点直接覆盖在本节点变量上。" alt="" coords="327,5,463,48"/>
+<area shape="poly" title=" " alt="" coords="279,27,311,26,311,31,279,32"/>
+<area shape="poly" title=" " alt="" coords="277,50,317,64,315,69,275,55"/>
+<area shape="rect" href="classyuki_1_1atri_1_1nfp_1_1_state.html#a2a7248bc89ab676358633078fbc32d33" title="更新本节点的后继节点序列。可以输入上一步的动作来避免序列中生成其反动作导致走回头。" alt="" coords="511,116,652,159"/>
+<area shape="poly" title=" " alt="" coords="443,46,465,58,539,105,536,109,462,62,441,51"/>
+<area shape="rect" href="classyuki_1_1atri_1_1nfp_1_1_state.html#a9c1d5d625192a37da3c0416b80f2c9c2" title="将 0 移动到 swapPos。" alt="" coords="513,5,650,48"/>
+<area shape="poly" title=" " alt="" coords="464,24,498,24,498,29,464,29"/>
+<area shape="poly" title=" " alt="" coords="463,163,496,155,497,160,464,168"/>
+</map>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classyuki_1_1atri_1_1nfp_1_1_algorithm_af7995dba9c93f4d37c02d1c294459e97_icgraph.png" border="0" usemap="#aclassyuki_1_1atri_1_1nfp_1_1_algorithm_af7995dba9c93f4d37c02d1c294459e97_icgraph" alt=""/></div>
+<map name="aclassyuki_1_1atri_1_1nfp_1_1_algorithm_af7995dba9c93f4d37c02d1c294459e97_icgraph" id="aclassyuki_1_1atri_1_1nfp_1_1_algorithm_af7995dba9c93f4d37c02d1c294459e97_icgraph">
+<area shape="rect" title="宽度优先搜素示例" alt="" coords="342,5,431,32"/>
+<area shape="rect" href="classyuki_1_1atri_1_1nfp_1_1_algorithm.html#ab22f2bde087abcbd73700c0108138d60" title="交互模式" alt="" coords="181,5,294,32"/>
+<area shape="poly" title=" " alt="" coords="327,21,294,21,294,16,327,16"/>
+<area shape="rect" href="namespaceyuki_1_1atri_1_1nfp.html#aadb7443b48bbe2cbcd08f9d96470dc1c" title=" " alt="" coords="5,5,133,32"/>
+<area shape="poly" title=" " alt="" coords="165,21,133,21,133,16,165,16"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a02a259aae6d65719ca6f71eb3c5d65a7" name="a02a259aae6d65719ca6f71eb3c5d65a7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a02a259aae6d65719ca6f71eb3c5d65a7">&#9670;&#160;</a></span>DLS()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespaceyuki.html#a77a52b9640a0c8600feb48e548425a40">i32</a> DLS </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classyuki_1_1atri_1_1nfp_1_1_state.html">State</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>originalState</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classyuki_1_1atri_1_1nfp_1_1_state.html">State</a> const &amp;</td>          <td class="paramname"><span class="paramname"><em>targetState</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespaceyuki.html#a77a52b9640a0c8600feb48e548425a40">i32</a> const &amp;</td>          <td class="paramname"><span class="paramname"><em>depthLimit</em></span><span class="paramdefsep"> = </span><span class="paramdefval"><a class="el" href="classyuki_1_1atri_1_1nfp_1_1_state.html#ae36c3fd1a30a6cda505c1b6792ed75df">State::maxDepth</a></span>&#160;) -&gt; <a class="el" href="namespaceyuki.html#a77a52b9640a0c8600feb48e548425a40">i32</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>深度有限搜素 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">originalState</td><td>目前的 state </td></tr>
+    <tr><td class="paramname">targetState</td><td>目标 state </td></tr>
+    <tr><td class="paramname">depthLimit</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>i32 答案步数 </dd></dl>
+<dl class="retval"><dt>返回值</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">-1</td><td>未搜索到有效路径 </td></tr>
+    <tr><td class="paramname">其他</td><td>答案步数 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">在文件 <a class="el" href="_n_f_p_algorithm_8cpp_source.html">NFPAlgorithm.cpp</a> 第 <a class="el" href="_n_f_p_algorithm_8cpp_source.html#l00209">209</a> 行定义.</p>
+
+<p class="reference">引用了 <a class="el" href="_n_f_p_algorithm_8h_source.html#l00010">Algorithm::nodeCountTemp</a>, <a class="el" href="_n_f_p_algorithm_8h_source.html#l00008">Algorithm::printPath</a>, <a class="el" href="_n_f_p_state_8cpp_source.html#l00150">State::reset()</a> , 以及 <a class="el" href="_n_f_p_algorithm_8h_source.html#l00011">Algorithm::underExperiment</a>.</p>
+
+<p class="reference">被这些函数引用 <a class="el" href="_n_f_p_algorithm_8cpp_source.html#l00321">Algorithm::interactiveMode()</a>, <a class="el" href="_n_f_p_algorithm_8cpp_source.html#l00008">Algorithm::statisticalExperiment()</a> , 以及 <a class="el" href="_n_f_p_algorithm_8cpp_source.html#l00405">Algorithm::testSearch()</a>.</p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classyuki_1_1atri_1_1nfp_1_1_algorithm_a02a259aae6d65719ca6f71eb3c5d65a7_cgraph.png" border="0" usemap="#aclassyuki_1_1atri_1_1nfp_1_1_algorithm_a02a259aae6d65719ca6f71eb3c5d65a7_cgraph" alt=""/></div>
+<map name="aclassyuki_1_1atri_1_1nfp_1_1_algorithm_a02a259aae6d65719ca6f71eb3c5d65a7_cgraph" id="aclassyuki_1_1atri_1_1nfp_1_1_algorithm_a02a259aae6d65719ca6f71eb3c5d65a7_cgraph">
+<area shape="rect" title="深度有限搜素" alt="" coords="5,13,53,40"/>
+<area shape="rect" href="classyuki_1_1atri_1_1nfp_1_1_state.html#ad20897c5c8bd47f5d4005989bead0e55" title="重置状态的深度、后继动作以及前序动作。" alt="" coords="101,5,237,48"/>
+<area shape="poly" title=" " alt="" coords="53,24,85,24,85,29,53,29"/>
+<area shape="rect" href="classyuki_1_1atri_1_1nfp_1_1_state.html#a2a7248bc89ab676358633078fbc32d33" title="更新本节点的后继节点序列。可以输入上一步的动作来避免序列中生成其反动作导致走回头。" alt="" coords="285,5,425,48"/>
+<area shape="poly" title=" " alt="" coords="238,24,270,24,270,29,238,29"/>
+</map>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classyuki_1_1atri_1_1nfp_1_1_algorithm_a02a259aae6d65719ca6f71eb3c5d65a7_icgraph.png" border="0" usemap="#aclassyuki_1_1atri_1_1nfp_1_1_algorithm_a02a259aae6d65719ca6f71eb3c5d65a7_icgraph" alt=""/></div>
+<map name="aclassyuki_1_1atri_1_1nfp_1_1_algorithm_a02a259aae6d65719ca6f71eb3c5d65a7_icgraph" id="aclassyuki_1_1atri_1_1nfp_1_1_algorithm_a02a259aae6d65719ca6f71eb3c5d65a7_icgraph">
+<area shape="rect" title="深度有限搜素" alt="" coords="372,56,419,83"/>
+<area shape="rect" href="classyuki_1_1atri_1_1nfp_1_1_algorithm.html#ab22f2bde087abcbd73700c0108138d60" title="交互模式" alt="" coords="196,5,309,32"/>
+<area shape="poly" title=" " alt="" coords="357,59,291,35,293,30,358,54"/>
+<area shape="rect" href="classyuki_1_1atri_1_1nfp_1_1_algorithm.html#a8062cc0fe3bbd86e03fe07bf78b87db7" title="统计测试函数，在这个函数里设计并输出统计数据" alt="" coords="181,56,324,83"/>
+<area shape="poly" title=" " alt="" coords="357,72,324,72,324,67,357,67"/>
+<area shape="rect" href="classyuki_1_1atri_1_1nfp_1_1_algorithm.html#ad6e68a316b23076f9b9bc0b2427b9fea" title="正确性测试函数" alt="" coords="210,107,294,133"/>
+<area shape="poly" title=" " alt="" coords="358,85,293,109,291,104,357,80"/>
+<area shape="rect" href="namespaceyuki_1_1atri_1_1nfp.html#aadb7443b48bbe2cbcd08f9d96470dc1c" title=" " alt="" coords="5,56,133,83"/>
+<area shape="poly" title=" " alt="" coords="187,39,121,58,119,53,186,34"/>
+<area shape="poly" title=" " alt="" coords="165,72,133,72,133,67,165,67"/>
+<area shape="poly" title=" " alt="" coords="194,107,119,86,121,81,196,102"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a826919b9561b71cf81a2521ebc28af98" name="a826919b9561b71cf81a2521ebc28af98"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a826919b9561b71cf81a2521ebc28af98">&#9670;&#160;</a></span>IDS()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto IDS </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classyuki_1_1atri_1_1nfp_1_1_state.html">State</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>originalState</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classyuki_1_1atri_1_1nfp_1_1_state.html">State</a> const &amp;</td>          <td class="paramname"><span class="paramname"><em>targetState</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classyuki_1_1atri_1_1_vector2.html">Vector2</a> const &amp;</td>          <td class="paramname"><span class="paramname"><em>preZeroPos</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespaceyuki.html#a77a52b9640a0c8600feb48e548425a40">i32</a> const &amp;</td>          <td class="paramname"><span class="paramname"><em>depthLimit</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespaceyuki.html#a77a52b9640a0c8600feb48e548425a40">i32</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>ans</em></span>&#160;) -&gt; bool</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>曼哈顿距离优化的迭代加深搜索 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">originalState</td><td>目前的 state </td></tr>
+    <tr><td class="paramname">targetState</td><td>目标 state </td></tr>
+    <tr><td class="paramname">preZeroPos</td><td>上一个 state 的 0 的位置 </td></tr>
+    <tr><td class="paramname">depthLimit</td><td>搜索深度限制 </td></tr>
+    <tr><td class="paramname">ans</td><td>答案步数 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>在深度限制内的搜索是否成功 </dd></dl>
+
+<p class="definition">在文件 <a class="el" href="_n_f_p_algorithm_8cpp_source.html">NFPAlgorithm.cpp</a> 第 <a class="el" href="_n_f_p_algorithm_8cpp_source.html#l00097">97</a> 行定义.</p>
+
+<p class="reference">引用了 <a class="el" href="_n_f_p_state_8h_source.html#l00026">State::actionInfo</a>, <a class="el" href="_n_f_p_state_8h_source.html#l00025">State::actions</a>, <a class="el" href="_n_f_p_state_8h_source.html#l00024">State::actionsNum</a>, <a class="el" href="_position2_8h_source.html#l00012">Vector2::c</a>, <a class="el" href="_n_f_p_state_8h_source.html#l00018">State::cols</a>, <a class="el" href="_position2_8h_source.html#l00011">Vector2::r</a> , 以及 <a class="el" href="_n_f_p_state_8h_source.html#l00017">State::rows</a>.</p>
+
+<p class="reference">被这些函数引用 <a class="el" href="_n_f_p_algorithm_8cpp_source.html#l00321">Algorithm::interactiveMode()</a>, <a class="el" href="_n_f_p_algorithm_8cpp_source.html#l00008">Algorithm::statisticalExperiment()</a> , 以及 <a class="el" href="_n_f_p_algorithm_8cpp_source.html#l00405">Algorithm::testSearch()</a>.</p>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classyuki_1_1atri_1_1nfp_1_1_algorithm_a826919b9561b71cf81a2521ebc28af98_icgraph.png" border="0" usemap="#aclassyuki_1_1atri_1_1nfp_1_1_algorithm_a826919b9561b71cf81a2521ebc28af98_icgraph" alt=""/></div>
+<map name="aclassyuki_1_1atri_1_1nfp_1_1_algorithm_a826919b9561b71cf81a2521ebc28af98_icgraph" id="aclassyuki_1_1atri_1_1nfp_1_1_algorithm_a826919b9561b71cf81a2521ebc28af98_icgraph">
+<area shape="rect" title="曼哈顿距离优化的迭代加深搜索" alt="" coords="372,56,416,83"/>
+<area shape="rect" href="classyuki_1_1atri_1_1nfp_1_1_algorithm.html#ab22f2bde087abcbd73700c0108138d60" title="交互模式" alt="" coords="196,5,309,32"/>
+<area shape="poly" title=" " alt="" coords="357,59,323,47,291,35,293,30,325,41,358,54"/>
+<area shape="rect" href="classyuki_1_1atri_1_1nfp_1_1_algorithm.html#a8062cc0fe3bbd86e03fe07bf78b87db7" title="统计测试函数，在这个函数里设计并输出统计数据" alt="" coords="181,56,324,83"/>
+<area shape="poly" title=" " alt="" coords="356,72,325,72,325,67,356,67"/>
+<area shape="rect" href="classyuki_1_1atri_1_1nfp_1_1_algorithm.html#ad6e68a316b23076f9b9bc0b2427b9fea" title="正确性测试函数" alt="" coords="210,107,294,133"/>
+<area shape="poly" title=" " alt="" coords="358,85,325,97,293,109,291,104,323,92,357,80"/>
+<area shape="rect" href="namespaceyuki_1_1atri_1_1nfp.html#aadb7443b48bbe2cbcd08f9d96470dc1c" title=" " alt="" coords="5,56,133,83"/>
+<area shape="poly" title=" " alt="" coords="187,39,121,58,119,53,186,34"/>
+<area shape="poly" title=" " alt="" coords="165,72,133,72,133,67,165,67"/>
+<area shape="poly" title=" " alt="" coords="194,107,119,86,121,81,196,102"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a5191c75b02bac462606ffd3cb18ab9f4" name="a5191c75b02bac462606ffd3cb18ab9f4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5191c75b02bac462606ffd3cb18ab9f4">&#9670;&#160;</a></span>incorrectCount()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespaceyuki.html#a77a52b9640a0c8600feb48e548425a40">i32</a> incorrectCount </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classyuki_1_1atri_1_1nfp_1_1_state.html">State</a> const &amp;</td>          <td class="paramname"><span class="paramname"><em>originalState</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classyuki_1_1atri_1_1nfp_1_1_state.html">State</a> const &amp;</td>          <td class="paramname"><span class="paramname"><em>targetState</em></span>&#160;) -&gt; <a class="el" href="namespaceyuki.html#a77a52b9640a0c8600feb48e548425a40">i32</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>启发函数 1 ：错位数码数 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">originalState</td><td>目前的 state </td></tr>
+    <tr><td class="paramname">targetState</td><td>目标 state </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>i32 错位数码数 </dd></dl>
+
+<p class="definition">在文件 <a class="el" href="_n_f_p_algorithm_8cpp_source.html">NFPAlgorithm.cpp</a> 第 <a class="el" href="_n_f_p_algorithm_8cpp_source.html#l00249">249</a> 行定义.</p>
+
+<p class="reference">引用了 <a class="el" href="_n_f_p_state_8cpp_source.html#l00118">State::at()</a>, <a class="el" href="_n_f_p_state_8h_source.html#l00018">State::cols</a>, <a class="el" href="_n_f_p_state_8h_source.html#l00033">State::depth</a>, <a class="el" href="_n_f_p_algorithm_8cpp_source.html#l00249">Algorithm::incorrectCount()</a>, <a class="el" href="_n_f_p_state_8h_source.html#l00017">State::rows</a> , 以及 <a class="el" href="_n_f_p_state_8h_source.html#l00020">State::size</a>.</p>
+
+<p class="reference">被这些函数引用 <a class="el" href="_n_f_p_algorithm_8cpp_source.html#l00249">Algorithm::incorrectCount()</a>, <a class="el" href="_n_f_p_algorithm_8cpp_source.html#l00321">Algorithm::interactiveMode()</a>, <a class="el" href="_n_f_p_algorithm_8cpp_source.html#l00008">Algorithm::statisticalExperiment()</a> , 以及 <a class="el" href="_n_f_p_algorithm_8cpp_source.html#l00405">Algorithm::testSearch()</a>.</p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classyuki_1_1atri_1_1nfp_1_1_algorithm_a5191c75b02bac462606ffd3cb18ab9f4_cgraph.png" border="0" usemap="#aclassyuki_1_1atri_1_1nfp_1_1_algorithm_a5191c75b02bac462606ffd3cb18ab9f4_cgraph" alt=""/></div>
+<map name="aclassyuki_1_1atri_1_1nfp_1_1_algorithm_a5191c75b02bac462606ffd3cb18ab9f4_cgraph" id="aclassyuki_1_1atri_1_1nfp_1_1_algorithm_a5191c75b02bac462606ffd3cb18ab9f4_cgraph">
+<area shape="rect" title="启发函数 1 ：错位数码数" alt="" coords="5,29,112,56"/>
+<area shape="poly" title=" " alt="" coords="28,30,22,21,26,11,39,5,59,3,80,5,91,12,89,16,78,10,58,8,40,10,30,15,28,20,32,28"/>
+<area shape="rect" href="classyuki_1_1atri_1_1nfp_1_1_state.html#a73c158802a46ff6eb0ba850537d921fd" title="获取row行col列的数码。" alt="" coords="160,29,315,56"/>
+<area shape="poly" title=" " alt="" coords="112,40,144,40,144,45,112,45"/>
+</map>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classyuki_1_1atri_1_1nfp_1_1_algorithm_a5191c75b02bac462606ffd3cb18ab9f4_icgraph.png" border="0" usemap="#aclassyuki_1_1atri_1_1nfp_1_1_algorithm_a5191c75b02bac462606ffd3cb18ab9f4_icgraph" alt=""/></div>
+<map name="aclassyuki_1_1atri_1_1nfp_1_1_algorithm_a5191c75b02bac462606ffd3cb18ab9f4_icgraph" id="aclassyuki_1_1atri_1_1nfp_1_1_algorithm_a5191c75b02bac462606ffd3cb18ab9f4_icgraph">
+<area shape="rect" title="启发函数 1 ：错位数码数" alt="" coords="372,56,478,83"/>
+<area shape="poly" title=" " alt="" coords="454,43,444,37,425,35,407,37,398,41,395,47,400,54,395,57,390,47,394,38,406,32,425,29,446,32,457,38"/>
+<area shape="rect" href="classyuki_1_1atri_1_1nfp_1_1_algorithm.html#ab22f2bde087abcbd73700c0108138d60" title="交互模式" alt="" coords="196,5,309,32"/>
+<area shape="poly" title=" " alt="" coords="362,54,300,35,301,30,363,48"/>
+<area shape="rect" href="classyuki_1_1atri_1_1nfp_1_1_algorithm.html#a8062cc0fe3bbd86e03fe07bf78b87db7" title="统计测试函数，在这个函数里设计并输出统计数据" alt="" coords="181,56,324,83"/>
+<area shape="poly" title=" " alt="" coords="356,72,324,72,324,67,356,67"/>
+<area shape="rect" href="classyuki_1_1atri_1_1nfp_1_1_algorithm.html#ad6e68a316b23076f9b9bc0b2427b9fea" title="正确性测试函数" alt="" coords="210,107,294,133"/>
+<area shape="poly" title=" " alt="" coords="363,90,295,110,294,105,362,85"/>
+<area shape="rect" href="namespaceyuki_1_1atri_1_1nfp.html#aadb7443b48bbe2cbcd08f9d96470dc1c" title=" " alt="" coords="5,56,133,83"/>
+<area shape="poly" title=" " alt="" coords="187,39,121,58,119,53,186,34"/>
+<area shape="poly" title=" " alt="" coords="165,72,133,72,133,67,165,67"/>
+<area shape="poly" title=" " alt="" coords="194,107,119,86,121,81,196,102"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ab22f2bde087abcbd73700c0108138d60" name="ab22f2bde087abcbd73700c0108138d60"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab22f2bde087abcbd73700c0108138d60">&#9670;&#160;</a></span>interactiveMode()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void interactiveMode </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> -&gt; void</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>交互模式 </p>
+
+<p class="definition">在文件 <a class="el" href="_n_f_p_algorithm_8cpp_source.html">NFPAlgorithm.cpp</a> 第 <a class="el" href="_n_f_p_algorithm_8cpp_source.html#l00321">321</a> 行定义.</p>
+
+<p class="reference">引用了 <a class="el" href="_n_f_p_state_8h_source.html#l00027">State::_targetNFPState</a>, <a class="el" href="_n_f_p_algorithm_8cpp_source.html#l00287">Algorithm::AStar()</a>, <a class="el" href="_n_f_p_algorithm_8cpp_source.html#l00177">Algorithm::BFS()</a>, <a class="el" href="_n_f_p_algorithm_8cpp_source.html#l00146">Algorithm::BFS_Demo()</a>, <a class="el" href="_n_f_p_algorithm_8cpp_source.html#l00209">Algorithm::DLS()</a>, <a class="el" href="_n_f_p_state_8cpp_source.html#l00065">State::genRandomNFPState()</a>, <a class="el" href="_n_f_p_algorithm_8cpp_source.html#l00097">Algorithm::IDS()</a>, <a class="el" href="_n_f_p_algorithm_8cpp_source.html#l00249">Algorithm::incorrectCount()</a>, <a class="el" href="_n_f_p_algorithm_8cpp_source.html#l00269">Algorithm::manhattanDistance()</a>, <a class="el" href="_n_f_p_state_8h_source.html#l00019">State::maxDepth</a> , 以及 <a class="el" href="_n_f_p_state_8h_source.html#l00032">State::zeroPos</a>.</p>
+
+<p class="reference">被这些函数引用 <a class="el" href="_n_f_p_algorithm_8cpp_source.html#l00519">yuki::atri::nfp::test()</a>.</p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classyuki_1_1atri_1_1nfp_1_1_algorithm_ab22f2bde087abcbd73700c0108138d60_cgraph.png" border="0" usemap="#aclassyuki_1_1atri_1_1nfp_1_1_algorithm_ab22f2bde087abcbd73700c0108138d60_cgraph" alt=""/></div>
+<map name="aclassyuki_1_1atri_1_1nfp_1_1_algorithm_ab22f2bde087abcbd73700c0108138d60_cgraph" id="aclassyuki_1_1atri_1_1nfp_1_1_algorithm_ab22f2bde087abcbd73700c0108138d60_cgraph">
+<area shape="rect" title="交互模式" alt="" coords="5,187,119,213"/>
+<area shape="rect" href="classyuki_1_1atri_1_1nfp_1_1_algorithm.html#a8698314719fbdd2dd46e3aeb347a57a0" title="启发式搜索" alt="" coords="218,157,272,184"/>
+<area shape="poly" title=" " alt="" coords="119,188,203,175,204,180,119,194"/>
+<area shape="rect" href="classyuki_1_1atri_1_1nfp_1_1_algorithm.html#ad020df13255f87e7aad6fb445b52640e" title="宽度优先搜素" alt="" coords="222,5,269,32"/>
+<area shape="poly" title=" " alt="" coords="66,185,101,117,129,77,165,42,185,30,206,23,208,28,187,35,168,46,133,80,105,120,71,187"/>
+<area shape="rect" href="classyuki_1_1atri_1_1nfp_1_1_algorithm.html#af7995dba9c93f4d37c02d1c294459e97" title="宽度优先搜素示例" alt="" coords="201,107,290,133"/>
+<area shape="poly" title=" " alt="" coords="86,184,166,143,185,135,187,140,168,148,88,188"/>
+<area shape="rect" href="classyuki_1_1atri_1_1nfp_1_1_algorithm.html#a02a259aae6d65719ca6f71eb3c5d65a7" title="深度有限搜素" alt="" coords="222,56,269,83"/>
+<area shape="poly" title=" " alt="" coords="71,185,109,140,136,114,165,92,205,75,208,80,168,97,139,118,113,143,75,188"/>
+<area shape="rect" href="classyuki_1_1atri_1_1nfp_1_1_state.html#a9205455170d40a1883ac408d8348df32" title="随机生成最优解深度为depth的初始状态。" alt="" coords="167,208,324,251"/>
+<area shape="poly" title=" " alt="" coords="119,206,152,212,151,217,119,212"/>
+<area shape="rect" href="classyuki_1_1atri_1_1nfp_1_1_algorithm.html#a826919b9561b71cf81a2521ebc28af98" title="曼哈顿距离优化的迭代加深搜索" alt="" coords="223,275,268,301"/>
+<area shape="poly" title=" " alt="" coords="85,212,122,236,168,260,209,276,207,281,166,265,120,240,82,216"/>
+<area shape="rect" href="classyuki_1_1atri_1_1nfp_1_1_algorithm.html#a5191c75b02bac462606ffd3cb18ab9f4" title="启发函数 1 ：错位数码数" alt="" coords="192,349,298,376"/>
+<area shape="poly" title=" " alt="" coords="76,212,115,258,168,311,207,339,204,343,165,315,111,262,72,216"/>
+<area shape="rect" href="classyuki_1_1atri_1_1nfp_1_1_algorithm.html#abf1546ac14e807b00cb4c5aac3459164" title="启发函数 2 ：曼哈顿距离" alt="" coords="178,400,312,427"/>
+<area shape="poly" title=" " alt="" coords="70,213,81,248,101,294,130,344,148,366,168,386,174,390,171,394,165,390,144,370,126,347,96,297,76,249,64,214"/>
+<area shape="rect" href="classyuki_1_1atri_1_1nfp_1_1_state.html#ac1e4f5404a2f3a827f0674116635f39e" title="消耗一个可行后继动作生成一个后继 NFPState。 会导致本节点减少一个后继动作。 生成的后继节点默认已经初始化了可行后继动作序列并且继承了本节点的前序动作序列，并且深度+1。" alt="" coords="382,132,518,175"/>
+<area shape="poly" title=" " alt="" coords="273,166,366,158,366,163,273,171"/>
+<area shape="rect" href="classyuki_1_1atri_1_1nfp_1_1_state.html#a8f13c339dcaf512c1957eabc8079bad0" title="检测本节点是否存在可行后继动作。" alt="" coords="575,144,712,187"/>
+<area shape="poly" title=" " alt="" coords="274,173,300,181,326,194,341,209,349,225,358,239,373,251,414,266,449,270,484,264,526,251,572,227,610,196,613,200,575,231,528,256,485,269,449,275,413,271,371,256,354,243,345,228,337,212,322,198,298,186,272,178"/>
+<area shape="rect" href="classyuki_1_1atri_1_1nfp_1_1_state.html#a43f5e6ac75a53b7410b9ad588f543961" title=" " alt="" coords="382,199,518,241"/>
+<area shape="poly" title=" " alt="" coords="274,175,367,197,366,203,272,180"/>
+<area shape="rect" href="classyuki_1_1atri_1_1nfp_1_1_state.html#ad20897c5c8bd47f5d4005989bead0e55" title="重置状态的深度、后继动作以及前序动作。" alt="" coords="382,15,518,57"/>
+<area shape="poly" title=" " alt="" coords="272,162,297,155,323,143,374,106,417,66,421,70,378,110,325,148,299,160,274,167"/>
+<area shape="rect" href="classyuki_1_1atri_1_1nfp_1_1_state.html#ae594e908404b048ed8092ffef74e565d" title="对本节点执行动作，产生的后继节点直接覆盖在本节点变量上。" alt="" coords="575,77,712,120"/>
+<area shape="poly" title=" " alt="" coords="518,131,560,119,561,125,519,137"/>
+<area shape="poly" title=" " alt="" coords="519,155,560,157,559,163,518,160"/>
+<area shape="rect" href="classyuki_1_1atri_1_1nfp_1_1_state.html#a2a7248bc89ab676358633078fbc32d33" title="更新本节点的后继节点序列。可以输入上一步的动作来避免序列中生成其反动作导致走回头。" alt="" coords="760,15,900,57"/>
+<area shape="poly" title=" " alt="" coords="708,74,750,60,751,65,710,79"/>
+<area shape="rect" href="classyuki_1_1atri_1_1nfp_1_1_state.html#a9c1d5d625192a37da3c0416b80f2c9c2" title="将 0 移动到 swapPos。" alt="" coords="762,81,898,124"/>
+<area shape="poly" title=" " alt="" coords="712,97,746,98,746,104,712,103"/>
+<area shape="poly" title=" " alt="" coords="518,33,744,33,744,39,518,39"/>
+<area shape="poly" title=" " alt="" coords="270,18,366,26,365,32,269,23"/>
+<area shape="poly" title=" " alt="" coords="291,125,366,137,365,142,290,130"/>
+<area shape="poly" title=" " alt="" coords="290,112,399,107,464,109,528,117,585,135,583,140,527,123,463,115,399,112,291,118"/>
+<area shape="poly" title=" " alt="" coords="292,129,325,143,350,164,374,185,381,189,378,193,370,189,347,168,323,148,289,133"/>
+<area shape="poly" title=" " alt="" coords="289,104,323,92,391,62,393,67,325,97,291,109"/>
+<area shape="poly" title=" " alt="" coords="269,63,366,47,367,52,270,68"/>
+<area shape="poly" title=" " alt="" coords="214,350,208,341,212,331,225,325,245,323,267,325,279,332,276,336,266,330,245,328,226,330,216,335,214,340,218,347"/>
+<area shape="rect" href="classyuki_1_1atri_1_1nfp_1_1_state.html#a73c158802a46ff6eb0ba850537d921fd" title="获取row行col列的数码。" alt="" coords="372,375,527,401"/>
+<area shape="poly" title=" " alt="" coords="299,367,357,374,356,379,299,372"/>
+<area shape="poly" title=" " alt="" coords="312,402,356,397,357,402,313,408"/>
+</map>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classyuki_1_1atri_1_1nfp_1_1_algorithm_ab22f2bde087abcbd73700c0108138d60_icgraph.png" border="0" usemap="#aclassyuki_1_1atri_1_1nfp_1_1_algorithm_ab22f2bde087abcbd73700c0108138d60_icgraph" alt=""/></div>
+<map name="aclassyuki_1_1atri_1_1nfp_1_1_algorithm_ab22f2bde087abcbd73700c0108138d60_icgraph" id="aclassyuki_1_1atri_1_1nfp_1_1_algorithm_ab22f2bde087abcbd73700c0108138d60_icgraph">
+<area shape="rect" title="交互模式" alt="" coords="181,5,294,32"/>
+<area shape="rect" href="namespaceyuki_1_1atri_1_1nfp.html#aadb7443b48bbe2cbcd08f9d96470dc1c" title=" " alt="" coords="5,5,133,32"/>
+<area shape="poly" title=" " alt="" coords="165,21,133,21,133,16,165,16"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="abf1546ac14e807b00cb4c5aac3459164" name="abf1546ac14e807b00cb4c5aac3459164"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abf1546ac14e807b00cb4c5aac3459164">&#9670;&#160;</a></span>manhattanDistance()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespaceyuki.html#a77a52b9640a0c8600feb48e548425a40">i32</a> manhattanDistance </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classyuki_1_1atri_1_1nfp_1_1_state.html">State</a> const &amp;</td>          <td class="paramname"><span class="paramname"><em>originalState</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classyuki_1_1atri_1_1nfp_1_1_state.html">State</a> const &amp;</td>          <td class="paramname"><span class="paramname"><em>targetState</em></span>&#160;) -&gt; <a class="el" href="namespaceyuki.html#a77a52b9640a0c8600feb48e548425a40">i32</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>启发函数 2 ：曼哈顿距离 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">originalState</td><td>目前的 state </td></tr>
+    <tr><td class="paramname">targetState</td><td>目标 state </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>i32 曼哈顿距离 </dd></dl>
+
+<p class="definition">在文件 <a class="el" href="_n_f_p_algorithm_8cpp_source.html">NFPAlgorithm.cpp</a> 第 <a class="el" href="_n_f_p_algorithm_8cpp_source.html#l00269">269</a> 行定义.</p>
+
+<p class="reference">引用了 <a class="el" href="_n_f_p_state_8cpp_source.html#l00118">State::at()</a>, <a class="el" href="_n_f_p_state_8h_source.html#l00018">State::cols</a>, <a class="el" href="_n_f_p_state_8h_source.html#l00033">State::depth</a>, <a class="el" href="_n_f_p_state_8h_source.html#l00017">State::rows</a> , 以及 <a class="el" href="_n_f_p_state_8h_source.html#l00020">State::size</a>.</p>
+
+<p class="reference">被这些函数引用 <a class="el" href="_n_f_p_algorithm_8cpp_source.html#l00321">Algorithm::interactiveMode()</a>, <a class="el" href="_n_f_p_algorithm_8cpp_source.html#l00008">Algorithm::statisticalExperiment()</a> , 以及 <a class="el" href="_n_f_p_algorithm_8cpp_source.html#l00405">Algorithm::testSearch()</a>.</p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classyuki_1_1atri_1_1nfp_1_1_algorithm_abf1546ac14e807b00cb4c5aac3459164_cgraph.png" border="0" usemap="#aclassyuki_1_1atri_1_1nfp_1_1_algorithm_abf1546ac14e807b00cb4c5aac3459164_cgraph" alt=""/></div>
+<map name="aclassyuki_1_1atri_1_1nfp_1_1_algorithm_abf1546ac14e807b00cb4c5aac3459164_cgraph" id="aclassyuki_1_1atri_1_1nfp_1_1_algorithm_abf1546ac14e807b00cb4c5aac3459164_cgraph">
+<area shape="rect" title="启发函数 2 ：曼哈顿距离" alt="" coords="5,5,140,32"/>
+<area shape="rect" href="classyuki_1_1atri_1_1nfp_1_1_state.html#a73c158802a46ff6eb0ba850537d921fd" title="获取row行col列的数码。" alt="" coords="188,5,343,32"/>
+<area shape="poly" title=" " alt="" coords="140,16,172,16,172,21,140,21"/>
+</map>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classyuki_1_1atri_1_1nfp_1_1_algorithm_abf1546ac14e807b00cb4c5aac3459164_icgraph.png" border="0" usemap="#aclassyuki_1_1atri_1_1nfp_1_1_algorithm_abf1546ac14e807b00cb4c5aac3459164_icgraph" alt=""/></div>
+<map name="aclassyuki_1_1atri_1_1nfp_1_1_algorithm_abf1546ac14e807b00cb4c5aac3459164_icgraph" id="aclassyuki_1_1atri_1_1nfp_1_1_algorithm_abf1546ac14e807b00cb4c5aac3459164_icgraph">
+<area shape="rect" title="启发函数 2 ：曼哈顿距离" alt="" coords="372,56,506,83"/>
+<area shape="rect" href="classyuki_1_1atri_1_1nfp_1_1_algorithm.html#ab22f2bde087abcbd73700c0108138d60" title="交互模式" alt="" coords="196,5,309,32"/>
+<area shape="poly" title=" " alt="" coords="372,54,304,35,305,30,373,49"/>
+<area shape="rect" href="classyuki_1_1atri_1_1nfp_1_1_algorithm.html#a8062cc0fe3bbd86e03fe07bf78b87db7" title="统计测试函数，在这个函数里设计并输出统计数据" alt="" coords="181,56,324,83"/>
+<area shape="poly" title=" " alt="" coords="356,72,324,72,324,67,356,67"/>
+<area shape="rect" href="classyuki_1_1atri_1_1nfp_1_1_algorithm.html#ad6e68a316b23076f9b9bc0b2427b9fea" title="正确性测试函数" alt="" coords="210,107,294,133"/>
+<area shape="poly" title=" " alt="" coords="373,90,296,111,294,106,372,85"/>
+<area shape="rect" href="namespaceyuki_1_1atri_1_1nfp.html#aadb7443b48bbe2cbcd08f9d96470dc1c" title=" " alt="" coords="5,56,133,83"/>
+<area shape="poly" title=" " alt="" coords="187,39,121,58,119,53,186,34"/>
+<area shape="poly" title=" " alt="" coords="165,72,133,72,133,67,165,67"/>
+<area shape="poly" title=" " alt="" coords="194,107,119,86,121,81,196,102"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a8062cc0fe3bbd86e03fe07bf78b87db7" name="a8062cc0fe3bbd86e03fe07bf78b87db7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8062cc0fe3bbd86e03fe07bf78b87db7">&#9670;&#160;</a></span>statisticalExperiment()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void statisticalExperiment </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> -&gt; void</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>统计测试函数，在这个函数里设计并输出统计数据 </p>
+
+<p class="definition">在文件 <a class="el" href="_n_f_p_algorithm_8cpp_source.html">NFPAlgorithm.cpp</a> 第 <a class="el" href="_n_f_p_algorithm_8cpp_source.html#l00008">8</a> 行定义.</p>
+
+<p class="reference">引用了 <a class="el" href="_n_f_p_state_8h_source.html#l00027">State::_targetNFPState</a>, <a class="el" href="_n_f_p_algorithm_8cpp_source.html#l00287">Algorithm::AStar()</a>, <a class="el" href="_n_f_p_algorithm_8cpp_source.html#l00177">Algorithm::BFS()</a>, <a class="el" href="_n_f_p_algorithm_8cpp_source.html#l00209">Algorithm::DLS()</a>, <a class="el" href="_n_f_p_state_8cpp_source.html#l00065">State::genRandomNFPState()</a>, <a class="el" href="_n_f_p_algorithm_8cpp_source.html#l00097">Algorithm::IDS()</a>, <a class="el" href="_n_f_p_algorithm_8cpp_source.html#l00249">Algorithm::incorrectCount()</a>, <a class="el" href="_n_f_p_algorithm_8cpp_source.html#l00269">Algorithm::manhattanDistance()</a>, <a class="el" href="_n_f_p_state_8h_source.html#l00019">State::maxDepth</a>, <a class="el" href="_n_f_p_algorithm_8h_source.html#l00010">Algorithm::nodeCountTemp</a>, <a class="el" href="_n_f_p_algorithm_8h_source.html#l00011">Algorithm::underExperiment</a> , 以及 <a class="el" href="_n_f_p_state_8h_source.html#l00032">State::zeroPos</a>.</p>
+
+<p class="reference">被这些函数引用 <a class="el" href="_n_f_p_algorithm_8cpp_source.html#l00519">yuki::atri::nfp::test()</a>.</p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classyuki_1_1atri_1_1nfp_1_1_algorithm_a8062cc0fe3bbd86e03fe07bf78b87db7_cgraph.png" border="0" usemap="#aclassyuki_1_1atri_1_1nfp_1_1_algorithm_a8062cc0fe3bbd86e03fe07bf78b87db7_cgraph" alt=""/></div>
+<map name="aclassyuki_1_1atri_1_1nfp_1_1_algorithm_a8062cc0fe3bbd86e03fe07bf78b87db7_cgraph" id="aclassyuki_1_1atri_1_1nfp_1_1_algorithm_a8062cc0fe3bbd86e03fe07bf78b87db7_cgraph">
+<area shape="rect" title="统计测试函数，在这个函数里设计并输出统计数据" alt="" coords="5,277,149,304"/>
+<area shape="rect" href="classyuki_1_1atri_1_1nfp_1_1_algorithm.html#a8698314719fbdd2dd46e3aeb347a57a0" title="启发式搜索" alt="" coords="248,117,302,144"/>
+<area shape="poly" title=" " alt="" coords="85,275,127,217,159,183,195,154,232,137,234,142,198,158,162,187,131,221,89,279"/>
+<area shape="rect" href="classyuki_1_1atri_1_1nfp_1_1_algorithm.html#ad020df13255f87e7aad6fb445b52640e" title="宽度优先搜素" alt="" coords="252,168,299,195"/>
+<area shape="poly" title=" " alt="" coords="93,275,138,240,195,204,236,189,238,194,198,209,141,244,96,279"/>
+<area shape="rect" href="classyuki_1_1atri_1_1nfp_1_1_algorithm.html#a02a259aae6d65719ca6f71eb3c5d65a7" title="深度有限搜素" alt="" coords="252,219,299,245"/>
+<area shape="poly" title=" " alt="" coords="124,274,236,241,237,246,125,279"/>
+<area shape="rect" href="classyuki_1_1atri_1_1nfp_1_1_state.html#a9205455170d40a1883ac408d8348df32" title="随机生成最优解深度为depth的初始状态。" alt="" coords="197,269,354,312"/>
+<area shape="poly" title=" " alt="" coords="149,288,181,288,181,293,149,293"/>
+<area shape="rect" href="classyuki_1_1atri_1_1nfp_1_1_algorithm.html#a826919b9561b71cf81a2521ebc28af98" title="曼哈顿距离优化的迭代加深搜索" alt="" coords="253,336,298,363"/>
+<area shape="poly" title=" " alt="" coords="125,302,239,336,237,341,124,307"/>
+<area shape="rect" href="classyuki_1_1atri_1_1nfp_1_1_algorithm.html#a5191c75b02bac462606ffd3cb18ab9f4" title="启发函数 1 ：错位数码数" alt="" coords="222,411,328,437"/>
+<area shape="poly" title=" " alt="" coords="99,302,198,372,240,400,237,404,195,377,96,307"/>
+<area shape="rect" href="classyuki_1_1atri_1_1nfp_1_1_algorithm.html#abf1546ac14e807b00cb4c5aac3459164" title="启发函数 2 ：曼哈顿距离" alt="" coords="208,461,342,488"/>
+<area shape="poly" title=" " alt="" coords="87,303,128,372,160,412,198,447,206,452,203,456,195,451,156,416,123,375,83,306"/>
+<area shape="rect" href="classyuki_1_1atri_1_1nfp_1_1_state.html#ac1e4f5404a2f3a827f0674116635f39e" title="消耗一个可行后继动作生成一个后继 NFPState。 会导致本节点减少一个后继动作。 生成的后继节点默认已经初始化了可行后继动作序列并且继承了本节点的前序动作序列，并且深度+1。" alt="" coords="412,9,548,52"/>
+<area shape="poly" title=" " alt="" coords="302,115,419,57,422,62,304,120"/>
+<area shape="rect" href="classyuki_1_1atri_1_1nfp_1_1_state.html#a8f13c339dcaf512c1957eabc8079bad0" title="检测本节点是否存在可行后继动作。" alt="" coords="605,72,742,115"/>
+<area shape="poly" title=" " alt="" coords="303,124,402,112,589,96,590,101,402,117,303,130"/>
+<area shape="rect" href="classyuki_1_1atri_1_1nfp_1_1_state.html#a43f5e6ac75a53b7410b9ad588f543961" title=" " alt="" coords="412,127,548,169"/>
+<area shape="poly" title=" " alt="" coords="303,130,396,138,396,144,303,136"/>
+<area shape="rect" href="classyuki_1_1atri_1_1nfp_1_1_state.html#ad20897c5c8bd47f5d4005989bead0e55" title="重置状态的深度、后继动作以及前序动作。" alt="" coords="412,193,548,236"/>
+<area shape="poly" title=" " alt="" coords="304,136,355,154,403,179,414,184,412,189,401,184,353,158,302,141"/>
+<area shape="rect" href="classyuki_1_1atri_1_1nfp_1_1_state.html#ae594e908404b048ed8092ffef74e565d" title="对本节点执行动作，产生的后继节点直接覆盖在本节点变量上。" alt="" coords="605,5,742,48"/>
+<area shape="poly" title=" " alt="" coords="548,27,589,26,590,31,548,32"/>
+<area shape="poly" title=" " alt="" coords="549,50,592,64,591,69,547,55"/>
+<area shape="rect" href="classyuki_1_1atri_1_1nfp_1_1_state.html#a2a7248bc89ab676358633078fbc32d33" title="更新本节点的后继节点序列。可以输入上一步的动作来避免序列中生成其反动作导致走回头。" alt="" coords="790,116,930,159"/>
+<area shape="poly" title=" " alt="" coords="722,46,743,58,817,105,814,109,740,62,719,51"/>
+<area shape="rect" href="classyuki_1_1atri_1_1nfp_1_1_state.html#a9c1d5d625192a37da3c0416b80f2c9c2" title="将 0 移动到 swapPos。" alt="" coords="792,5,928,48"/>
+<area shape="poly" title=" " alt="" coords="742,24,776,24,776,29,742,29"/>
+<area shape="poly" title=" " alt="" coords="548,198,774,152,775,157,549,203"/>
+<area shape="poly" title=" " alt="" coords="300,182,397,198,396,204,299,188"/>
+<area shape="poly" title=" " alt="" coords="299,227,395,219,396,224,300,233"/>
+<area shape="poly" title=" " alt="" coords="242,412,236,402,240,392,253,386,275,384,299,387,312,393,309,398,297,392,275,389,255,391,243,396,241,401,246,409"/>
+<area shape="rect" href="classyuki_1_1atri_1_1nfp_1_1_state.html#a73c158802a46ff6eb0ba850537d921fd" title="获取row行col列的数码。" alt="" coords="402,436,557,463"/>
+<area shape="poly" title=" " alt="" coords="329,428,387,435,386,440,329,433"/>
+<area shape="poly" title=" " alt="" coords="342,464,386,458,387,464,343,469"/>
+</map>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classyuki_1_1atri_1_1nfp_1_1_algorithm_a8062cc0fe3bbd86e03fe07bf78b87db7_icgraph.png" border="0" usemap="#aclassyuki_1_1atri_1_1nfp_1_1_algorithm_a8062cc0fe3bbd86e03fe07bf78b87db7_icgraph" alt=""/></div>
+<map name="aclassyuki_1_1atri_1_1nfp_1_1_algorithm_a8062cc0fe3bbd86e03fe07bf78b87db7_icgraph" id="aclassyuki_1_1atri_1_1nfp_1_1_algorithm_a8062cc0fe3bbd86e03fe07bf78b87db7_icgraph">
+<area shape="rect" title="统计测试函数，在这个函数里设计并输出统计数据" alt="" coords="181,5,324,32"/>
+<area shape="rect" href="namespaceyuki_1_1atri_1_1nfp.html#aadb7443b48bbe2cbcd08f9d96470dc1c" title=" " alt="" coords="5,5,133,32"/>
+<area shape="poly" title=" " alt="" coords="165,21,133,21,133,16,165,16"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ad6e68a316b23076f9b9bc0b2427b9fea" name="ad6e68a316b23076f9b9bc0b2427b9fea"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad6e68a316b23076f9b9bc0b2427b9fea">&#9670;&#160;</a></span>testSearch()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void testSearch </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> -&gt; void</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>正确性测试函数 </p>
+
+<p class="definition">在文件 <a class="el" href="_n_f_p_algorithm_8cpp_source.html">NFPAlgorithm.cpp</a> 第 <a class="el" href="_n_f_p_algorithm_8cpp_source.html#l00405">405</a> 行定义.</p>
+
+<p class="reference">引用了 <a class="el" href="_n_f_p_state_8h_source.html#l00027">State::_targetNFPState</a>, <a class="el" href="_n_f_p_state_8h_source.html#l00028">State::allNFPStates</a>, <a class="el" href="_n_f_p_algorithm_8cpp_source.html#l00287">Algorithm::AStar()</a>, <a class="el" href="_n_f_p_algorithm_8cpp_source.html#l00177">Algorithm::BFS()</a>, <a class="el" href="_n_f_p_state_8h_source.html#l00029">State::depthIndexs</a>, <a class="el" href="_n_f_p_algorithm_8cpp_source.html#l00209">Algorithm::DLS()</a>, <a class="el" href="_n_f_p_algorithm_8cpp_source.html#l00097">Algorithm::IDS()</a>, <a class="el" href="_n_f_p_algorithm_8cpp_source.html#l00249">Algorithm::incorrectCount()</a>, <a class="el" href="_n_f_p_algorithm_8cpp_source.html#l00269">Algorithm::manhattanDistance()</a> , 以及 <a class="el" href="_n_f_p_state_8h_source.html#l00019">State::maxDepth</a>.</p>
+
+<p class="reference">被这些函数引用 <a class="el" href="_n_f_p_algorithm_8cpp_source.html#l00519">yuki::atri::nfp::test()</a>.</p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classyuki_1_1atri_1_1nfp_1_1_algorithm_ad6e68a316b23076f9b9bc0b2427b9fea_cgraph.png" border="0" usemap="#aclassyuki_1_1atri_1_1nfp_1_1_algorithm_ad6e68a316b23076f9b9bc0b2427b9fea_cgraph" alt=""/></div>
+<map name="aclassyuki_1_1atri_1_1nfp_1_1_algorithm_ad6e68a316b23076f9b9bc0b2427b9fea_cgraph" id="aclassyuki_1_1atri_1_1nfp_1_1_algorithm_ad6e68a316b23076f9b9bc0b2427b9fea_cgraph">
+<area shape="rect" title="正确性测试函数" alt="" coords="5,244,90,271"/>
+<area shape="rect" href="classyuki_1_1atri_1_1nfp_1_1_algorithm.html#a8698314719fbdd2dd46e3aeb347a57a0" title="启发式搜索" alt="" coords="178,117,232,144"/>
+<area shape="poly" title=" " alt="" coords="55,242,88,199,110,175,136,154,162,140,164,145,139,158,114,179,92,203,60,245"/>
+<area shape="rect" href="classyuki_1_1atri_1_1nfp_1_1_algorithm.html#ad020df13255f87e7aad6fb445b52640e" title="宽度优先搜素" alt="" coords="181,168,228,195"/>
+<area shape="poly" title=" " alt="" coords="70,241,137,204,165,192,167,197,139,209,72,246"/>
+<area shape="rect" href="classyuki_1_1atri_1_1nfp_1_1_algorithm.html#a02a259aae6d65719ca6f71eb3c5d65a7" title="深度有限搜素" alt="" coords="181,219,228,245"/>
+<area shape="poly" title=" " alt="" coords="90,248,166,236,166,241,91,253"/>
+<area shape="rect" href="classyuki_1_1atri_1_1nfp_1_1_algorithm.html#a826919b9561b71cf81a2521ebc28af98" title="曼哈顿距离优化的迭代加深搜索" alt="" coords="183,269,227,296"/>
+<area shape="poly" title=" " alt="" coords="91,261,168,274,167,279,90,267"/>
+<area shape="rect" href="classyuki_1_1atri_1_1nfp_1_1_algorithm.html#a5191c75b02bac462606ffd3cb18ab9f4" title="启发函数 1 ：错位数码数" alt="" coords="152,344,258,371"/>
+<area shape="poly" title=" " alt="" coords="72,269,171,333,168,337,69,273"/>
+<area shape="rect" href="classyuki_1_1atri_1_1nfp_1_1_algorithm.html#abf1546ac14e807b00cb4c5aac3459164" title="启发函数 2 ：曼哈顿距离" alt="" coords="138,395,272,421"/>
+<area shape="poly" title=" " alt="" coords="57,270,88,323,111,354,139,381,145,385,142,389,136,385,107,357,84,326,53,272"/>
+<area shape="rect" href="classyuki_1_1atri_1_1nfp_1_1_state.html#ac1e4f5404a2f3a827f0674116635f39e" title="消耗一个可行后继动作生成一个后继 NFPState。 会导致本节点减少一个后继动作。 生成的后继节点默认已经初始化了可行后继动作序列并且继承了本节点的前序动作序列，并且深度+1。" alt="" coords="330,9,466,52"/>
+<area shape="poly" title=" " alt="" coords="231,114,319,68,340,57,342,62,321,73,234,119"/>
+<area shape="rect" href="classyuki_1_1atri_1_1nfp_1_1_state.html#a8f13c339dcaf512c1957eabc8079bad0" title="检测本节点是否存在可行后继动作。" alt="" coords="523,72,660,115"/>
+<area shape="poly" title=" " alt="" coords="232,124,320,112,508,96,508,101,320,117,233,129"/>
+<area shape="rect" href="classyuki_1_1atri_1_1nfp_1_1_state.html#a43f5e6ac75a53b7410b9ad588f543961" title=" " alt="" coords="330,127,466,169"/>
+<area shape="poly" title=" " alt="" coords="233,130,314,138,314,143,232,136"/>
+<area shape="rect" href="classyuki_1_1atri_1_1nfp_1_1_state.html#ad20897c5c8bd47f5d4005989bead0e55" title="重置状态的深度、后继动作以及前序动作。" alt="" coords="330,193,466,236"/>
+<area shape="poly" title=" " alt="" coords="233,137,273,154,321,179,332,184,330,189,319,184,271,158,231,142"/>
+<area shape="rect" href="classyuki_1_1atri_1_1nfp_1_1_state.html#ae594e908404b048ed8092ffef74e565d" title="对本节点执行动作，产生的后继节点直接覆盖在本节点变量上。" alt="" coords="523,5,660,48"/>
+<area shape="poly" title=" " alt="" coords="466,27,507,26,508,31,466,32"/>
+<area shape="poly" title=" " alt="" coords="467,50,510,64,509,69,465,55"/>
+<area shape="rect" href="classyuki_1_1atri_1_1nfp_1_1_state.html#a2a7248bc89ab676358633078fbc32d33" title="更新本节点的后继节点序列。可以输入上一步的动作来避免序列中生成其反动作导致走回头。" alt="" coords="708,116,848,159"/>
+<area shape="poly" title=" " alt="" coords="640,46,661,58,735,105,732,109,658,62,637,51"/>
+<area shape="rect" href="classyuki_1_1atri_1_1nfp_1_1_state.html#a9c1d5d625192a37da3c0416b80f2c9c2" title="将 0 移动到 swapPos。" alt="" coords="710,5,846,48"/>
+<area shape="poly" title=" " alt="" coords="660,24,694,24,694,29,660,29"/>
+<area shape="poly" title=" " alt="" coords="466,198,692,152,693,157,467,203"/>
+<area shape="poly" title=" " alt="" coords="230,183,315,198,314,203,229,188"/>
+<area shape="poly" title=" " alt="" coords="229,227,314,219,314,225,229,233"/>
+<area shape="poly" title=" " alt="" coords="177,345,173,335,176,326,187,320,205,317,224,320,234,327,231,331,222,325,205,323,189,325,180,329,178,335,182,342"/>
+<area shape="rect" href="classyuki_1_1atri_1_1nfp_1_1_state.html#a73c158802a46ff6eb0ba850537d921fd" title="获取row行col列的数码。" alt="" coords="320,369,475,396"/>
+<area shape="poly" title=" " alt="" coords="259,362,305,368,304,373,258,367"/>
+<area shape="poly" title=" " alt="" coords="272,397,304,392,305,398,272,402"/>
+</map>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classyuki_1_1atri_1_1nfp_1_1_algorithm_ad6e68a316b23076f9b9bc0b2427b9fea_icgraph.png" border="0" usemap="#aclassyuki_1_1atri_1_1nfp_1_1_algorithm_ad6e68a316b23076f9b9bc0b2427b9fea_icgraph" alt=""/></div>
+<map name="aclassyuki_1_1atri_1_1nfp_1_1_algorithm_ad6e68a316b23076f9b9bc0b2427b9fea_icgraph" id="aclassyuki_1_1atri_1_1nfp_1_1_algorithm_ad6e68a316b23076f9b9bc0b2427b9fea_icgraph">
+<area shape="rect" title="正确性测试函数" alt="" coords="181,5,265,32"/>
+<area shape="rect" href="namespaceyuki_1_1atri_1_1nfp.html#aadb7443b48bbe2cbcd08f9d96470dc1c" title=" " alt="" coords="5,5,133,32"/>
+<area shape="poly" title=" " alt="" coords="165,21,133,21,133,16,165,16"/>
+</map>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">类成员变量说明</h2>
+<a id="afe3a1ea7242f1bef5149a4d10d62edb6" name="afe3a1ea7242f1bef5149a4d10d62edb6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afe3a1ea7242f1bef5149a4d10d62edb6">&#9670;&#160;</a></span>nodeCountTemp</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespaceyuki.html#a77a52b9640a0c8600feb48e548425a40">i32</a> nodeCountTemp = 0</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="_n_f_p_algorithm_8h_source.html">NFPAlgorithm.h</a> 第 <a class="el" href="_n_f_p_algorithm_8h_source.html#l00010">10</a> 行定义.</p>
+
+<p class="reference">被这些函数引用 <a class="el" href="_n_f_p_algorithm_8cpp_source.html#l00287">Algorithm::AStar()</a>, <a class="el" href="_n_f_p_algorithm_8cpp_source.html#l00177">Algorithm::BFS()</a>, <a class="el" href="_n_f_p_algorithm_8cpp_source.html#l00146">Algorithm::BFS_Demo()</a>, <a class="el" href="_n_f_p_algorithm_8cpp_source.html#l00209">Algorithm::DLS()</a> , 以及 <a class="el" href="_n_f_p_algorithm_8cpp_source.html#l00008">Algorithm::statisticalExperiment()</a>.</p>
+
+</div>
+</div>
+<a id="ab108b7c8d4f187ab05e0ceab0768b53a" name="ab108b7c8d4f187ab05e0ceab0768b53a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab108b7c8d4f187ab05e0ceab0768b53a">&#9670;&#160;</a></span>printPath</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool printPath = true</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="_n_f_p_algorithm_8h_source.html">NFPAlgorithm.h</a> 第 <a class="el" href="_n_f_p_algorithm_8h_source.html#l00008">8</a> 行定义.</p>
+
+<p class="reference">被这些函数引用 <a class="el" href="_n_f_p_algorithm_8cpp_source.html#l00287">Algorithm::AStar()</a>, <a class="el" href="_n_f_p_algorithm_8cpp_source.html#l00177">Algorithm::BFS()</a>, <a class="el" href="_n_f_p_algorithm_8cpp_source.html#l00146">Algorithm::BFS_Demo()</a>, <a class="el" href="_n_f_p_algorithm_8cpp_source.html#l00209">Algorithm::DLS()</a> , 以及 <a class="el" href="_n_f_p_algorithm_8cpp_source.html#l00519">yuki::atri::nfp::test()</a>.</p>
+
+</div>
+</div>
+<a id="ac2339d17ab0a449fce68fbc2aeb87a9b" name="ac2339d17ab0a449fce68fbc2aeb87a9b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac2339d17ab0a449fce68fbc2aeb87a9b">&#9670;&#160;</a></span>underExperiment</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool underExperiment = false</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="_n_f_p_algorithm_8h_source.html">NFPAlgorithm.h</a> 第 <a class="el" href="_n_f_p_algorithm_8h_source.html#l00011">11</a> 行定义.</p>
+
+<p class="reference">被这些函数引用 <a class="el" href="_n_f_p_algorithm_8cpp_source.html#l00287">Algorithm::AStar()</a>, <a class="el" href="_n_f_p_algorithm_8cpp_source.html#l00177">Algorithm::BFS()</a>, <a class="el" href="_n_f_p_algorithm_8cpp_source.html#l00146">Algorithm::BFS_Demo()</a>, <a class="el" href="_n_f_p_algorithm_8cpp_source.html#l00209">Algorithm::DLS()</a> , 以及 <a class="el" href="_n_f_p_algorithm_8cpp_source.html#l00008">Algorithm::statisticalExperiment()</a>.</p>
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>D:/user/Project/Code/AI/cxx_src/NFigurePuzzle/include/<a class="el" href="_n_f_p_algorithm_8h_source.html">NFPAlgorithm.h</a></li>
+<li>D:/user/Project/Code/AI/cxx_src/NFigurePuzzle/src/<a class="el" href="_n_f_p_algorithm_8cpp_source.html">NFPAlgorithm.cpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0
+</small></address>
+</div><!-- doc-content -->
+</body>
+</html>

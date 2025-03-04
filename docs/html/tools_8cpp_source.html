@@ -1,0 +1,368 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.12.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>AI: D:/user/Project/Code/AI/cxx_src/Core/src/tools.cpp 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">AI<span id="projectnumber">&#160;1.0.0</span>
+   </div>
+   <div id="projectbrief">YUKII的AI库</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.12.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','搜索',false);
+  $(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){ initResizable(false); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_7f512dd0749495d1be0f144cf126d477.html">cxx_src</a></li><li class="navelem"><a class="el" href="dir_578a9cec2bbd02b938bd83c28da2c557.html">Core</a></li><li class="navelem"><a class="el" href="dir_b5a77fa52ebe8386825b1e3c4a76c2ad.html">src</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div id="doc-content">
+<div class="header">
+  <div class="headertitle"><div class="title">tools.cpp</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="tools_8cpp.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#include &quot;<a class="code" href="tools_8h.html">tools.h</a>&quot;</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespaceyuki_1_1random.html">yuki::random</a> {</div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno"><a class="line" href="namespaceyuki_1_1random.html#a4a3c5cb1607a250c757d3a8aaff98502">    4</a></span>random_device <a class="code hl_variable" href="namespaceyuki_1_1random.html#a4a3c5cb1607a250c757d3a8aaff98502">GLOBAL_RD</a>;</div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno"><a class="line" href="namespaceyuki_1_1random.html#aa394d008ee9364a187380c19bd3e3b05">    5</a></span>mt19937 <a class="code hl_variable" href="namespaceyuki_1_1random.html#a9bfa9061814027f6286185ff4e08f223">GLOBAL_MT19937</a>(<a class="code hl_variable" href="namespaceyuki_1_1random.html#a4a3c5cb1607a250c757d3a8aaff98502">GLOBAL_RD</a>());</div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span> </div>
+<div class="foldopen" id="foldopen00007" data-start="{" data-end="}">
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno"><a class="line" href="namespaceyuki_1_1random.html#a86d3a6b3083b1637408e87a38ce35ef8">    7</a></span><span class="keyword">auto</span> <a class="code hl_function" href="namespaceyuki_1_1random.html#a86d3a6b3083b1637408e87a38ce35ef8">reflash</a>() -&gt; <span class="keywordtype">void</span> {</div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span>    <a class="code hl_variable" href="namespaceyuki_1_1random.html#a9bfa9061814027f6286185ff4e08f223">GLOBAL_MT19937</a> = mt19937(<a class="code hl_variable" href="namespaceyuki_1_1random.html#a4a3c5cb1607a250c757d3a8aaff98502">GLOBAL_RD</a>());</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>}</div>
+</div>
+<div class="foldopen" id="foldopen00010" data-start="{" data-end="}">
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno"><a class="line" href="namespaceyuki_1_1random.html#a5acc06b9834dbda82def841de72f79db">   10</a></span><span class="keyword">auto</span> <a class="code hl_function" href="namespaceyuki_1_1random.html#a5acc06b9834dbda82def841de72f79db">chooseByProbability</a>(vector&lt;f64&gt; <span class="keyword">const</span>&amp; P, <a class="code hl_typedef" href="namespaceyuki.html#abc2f107791bd7c1d49ecf0f168c085a3">f64</a> <span class="keyword">const</span>&amp; sum) -&gt; <a class="code hl_typedef" href="namespaceyuki.html#a77a52b9640a0c8600feb48e548425a40">i32</a> {</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>    <a class="code hl_typedef" href="namespaceyuki.html#abc2f107791bd7c1d49ecf0f168c085a3">f64</a> cumulativeProbability = 0.0, randomValue = <a class="code hl_function" href="namespaceyuki_1_1random.html#ac88f03eaee39420d241f2f74adfa6676">uniformReal</a>(0., sum);</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>    <a class="code hl_typedef" href="namespaceyuki.html#a77a52b9640a0c8600feb48e548425a40">i32</a> i = 0;</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>    <span class="keywordflow">for</span> (<a class="code hl_typedef" href="namespaceyuki.html#abc2f107791bd7c1d49ecf0f168c085a3">f64</a> <span class="keyword">const</span>&amp; p: P) {</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>        cumulativeProbability += p;</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>        <span class="keywordflow">if</span> (cumulativeProbability &gt; randomValue) {</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>            <span class="keywordflow">return</span> i;</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>        }</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>        ++i;</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>    }</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>    <span class="keywordflow">return</span> i;</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>}</div>
+</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
+<div class="foldopen" id="foldopen00023" data-start="{" data-end="}">
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno"><a class="line" href="namespaceyuki_1_1random.html#ab7c55f66c7dfbb064cae5e074cd1d47d">   23</a></span><span class="keyword">auto</span> <a class="code hl_function" href="namespaceyuki_1_1random.html#ab7c55f66c7dfbb064cae5e074cd1d47d">chooseByWeights</a>(vector&lt;f64&gt; <span class="keyword">const</span>&amp; weights) -&gt; <a class="code hl_typedef" href="namespaceyuki.html#a77a52b9640a0c8600feb48e548425a40">i32</a> {</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    <a class="code hl_typedef" href="namespaceyuki.html#abc2f107791bd7c1d49ecf0f168c085a3">f64</a> sum = 0.;</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    <span class="keywordflow">for</span> (<a class="code hl_typedef" href="namespaceyuki.html#abc2f107791bd7c1d49ecf0f168c085a3">f64</a> <span class="keyword">const</span>&amp; w: weights) {</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>        sum += w;</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    }</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    <a class="code hl_typedef" href="namespaceyuki.html#abc2f107791bd7c1d49ecf0f168c085a3">f64</a> cumulativeWeights = 0.0, randomValue = <a class="code hl_function" href="namespaceyuki_1_1random.html#ac88f03eaee39420d241f2f74adfa6676">uniformReal</a>(0., sum);</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    <a class="code hl_typedef" href="namespaceyuki.html#a77a52b9640a0c8600feb48e548425a40">i32</a> i = 0;</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    <span class="keywordflow">for</span> (<a class="code hl_typedef" href="namespaceyuki.html#abc2f107791bd7c1d49ecf0f168c085a3">f64</a> <span class="keyword">const</span>&amp; w: weights) {</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>        cumulativeWeights += w;</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>        <span class="keywordflow">if</span> (cumulativeWeights &gt; randomValue) {</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>            <span class="keywordflow">return</span> i;</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>        }</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>        ++i;</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    }</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    <span class="keywordflow">return</span> i;</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>}</div>
+</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> </div>
+<div class="foldopen" id="foldopen00041" data-start="{" data-end="}">
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno"><a class="line" href="namespaceyuki_1_1random.html#a1c9d958c21f5089201ed998e6b3ea88e">   41</a></span><span class="keyword">auto</span> <a class="code hl_function" href="namespaceyuki_1_1random.html#ab7c55f66c7dfbb064cae5e074cd1d47d">chooseByWeights</a>(vector&lt;f64&gt; <span class="keyword">const</span>&amp; weights, <a class="code hl_typedef" href="namespaceyuki.html#abc2f107791bd7c1d49ecf0f168c085a3">f64</a> <span class="keyword">const</span>&amp; sum) -&gt; <a class="code hl_typedef" href="namespaceyuki.html#a77a52b9640a0c8600feb48e548425a40">i32</a> {</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    <a class="code hl_typedef" href="namespaceyuki.html#abc2f107791bd7c1d49ecf0f168c085a3">f64</a> cumulativeWeights = 0.0, randomValue = <a class="code hl_function" href="namespaceyuki_1_1random.html#ac88f03eaee39420d241f2f74adfa6676">uniformReal</a>(0., sum);</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    </div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    <a class="code hl_typedef" href="namespaceyuki.html#a77a52b9640a0c8600feb48e548425a40">i32</a> i = 0;</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    <span class="keywordflow">for</span> (<a class="code hl_typedef" href="namespaceyuki.html#abc2f107791bd7c1d49ecf0f168c085a3">f64</a> <span class="keyword">const</span>&amp; w: weights) {</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>        cumulativeWeights += w;</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>        <span class="keywordflow">if</span> (cumulativeWeights &gt; randomValue) {</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>            <span class="keywordflow">return</span> i;</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>        }</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>        ++i;</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    }</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    <span class="keywordflow">return</span> i;</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>}</div>
+</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span> </div>
+<div class="foldopen" id="foldopen00055" data-start="{" data-end="}">
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno"><a class="line" href="namespaceyuki_1_1random.html#a26df2ef248949574bb4da90bd486127b">   55</a></span><span class="keyword">auto</span> <a class="code hl_function" href="namespaceyuki_1_1random.html#a26df2ef248949574bb4da90bd486127b">trigger</a>(<a class="code hl_typedef" href="namespaceyuki.html#abc2f107791bd7c1d49ecf0f168c085a3">f64</a> <span class="keyword">const</span>&amp; p) -&gt; <span class="keywordtype">bool</span> {</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    <span class="keywordflow">return</span> <a class="code hl_function" href="namespaceyuki_1_1random.html#ac88f03eaee39420d241f2f74adfa6676">uniformReal</a>(0., 1.) &lt; p;</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>}</div>
+</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>}</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span> </div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespaceyuki_1_1statistics.html">yuki::statistics</a> {</div>
+<div class="foldopen" id="foldopen00061" data-start="{" data-end="}">
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno"><a class="line" href="namespaceyuki_1_1statistics.html#a9f5ddc0a8af3796b52b9be539498893e">   61</a></span><span class="keyword">auto</span> <a class="code hl_function" href="namespaceyuki_1_1statistics.html#a9f5ddc0a8af3796b52b9be539498893e">varianceTwoPass</a>(vector&lt;f64&gt; <span class="keyword">const</span>&amp; data) -&gt; <a class="code hl_typedef" href="namespaceyuki.html#abc2f107791bd7c1d49ecf0f168c085a3">f64</a> {</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>    <a class="code hl_typedef" href="namespaceyuki.html#abc2f107791bd7c1d49ecf0f168c085a3">f64</a> mean = 0.,</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>            s = 0.,</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>            n = <span class="keyword">static_cast&lt;</span><a class="code hl_typedef" href="namespaceyuki.html#abc2f107791bd7c1d49ecf0f168c085a3">f64</a><span class="keyword">&gt;</span>(data.size());</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>    </div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>    <span class="keywordflow">for</span> (<a class="code hl_typedef" href="namespaceyuki.html#abc2f107791bd7c1d49ecf0f168c085a3">f64</a> <span class="keyword">const</span>&amp; x: data) {</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>        mean += x;</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>    }</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>    mean /= n;</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>    <span class="keywordflow">for</span> (<a class="code hl_typedef" href="namespaceyuki.html#abc2f107791bd7c1d49ecf0f168c085a3">f64</a> <span class="keyword">const</span>&amp; x: data) {</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>        s += pow(x - mean, 2);</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>    }</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>    <span class="keywordflow">return</span> s / n;</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>}</div>
+</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span> </div>
+<div class="foldopen" id="foldopen00076" data-start="{" data-end="}">
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno"><a class="line" href="namespaceyuki_1_1statistics.html#a11eeb4cbe502140aee06bcec744782e0">   76</a></span><span class="keyword">auto</span> <a class="code hl_function" href="namespaceyuki_1_1statistics.html#a11eeb4cbe502140aee06bcec744782e0">varianceOnePass</a>(vector&lt;f64&gt; <span class="keyword">const</span>&amp; data) -&gt; <a class="code hl_typedef" href="namespaceyuki.html#abc2f107791bd7c1d49ecf0f168c085a3">f64</a> {</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>    <a class="code hl_typedef" href="namespaceyuki.html#abc2f107791bd7c1d49ecf0f168c085a3">f64</a> mean = 0.,</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>            s = 0.,</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>            n = <span class="keyword">static_cast&lt;</span><a class="code hl_typedef" href="namespaceyuki.html#abc2f107791bd7c1d49ecf0f168c085a3">f64</a><span class="keyword">&gt;</span>(data.size());</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>    </div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>    <span class="keywordflow">for</span> (<a class="code hl_typedef" href="namespaceyuki.html#abc2f107791bd7c1d49ecf0f168c085a3">f64</a> <span class="keyword">const</span>&amp; x: data) {</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>        mean += x;</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>        s += x * x;</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>    }</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>    mean /= n;</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>    <span class="keywordflow">return</span> s / n - mean * mean;</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>}</div>
+</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span> </div>
+<div class="foldopen" id="foldopen00089" data-start="{" data-end="}">
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno"><a class="line" href="namespaceyuki_1_1statistics.html#a55d030798b22764edcd313f75df660ba">   89</a></span><span class="keyword">auto</span> <a class="code hl_function" href="namespaceyuki_1_1statistics.html#a55d030798b22764edcd313f75df660ba">variance</a>(vector&lt;f64&gt; <span class="keyword">const</span>&amp; data) -&gt; <a class="code hl_typedef" href="namespaceyuki.html#abc2f107791bd7c1d49ecf0f168c085a3">f64</a> {</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>    <a class="code hl_typedef" href="namespaceyuki.html#abc2f107791bd7c1d49ecf0f168c085a3">f64</a> prevMean = 0.,</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>            curMean = 0.,</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>                s = 0.;</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>    <a class="code hl_typedef" href="namespaceyuki.html#a67cb024aa20a9cffd9c230409152959c">usize</a>      n = data.size();</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span> </div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>    <span class="keywordflow">for</span> (<a class="code hl_typedef" href="namespaceyuki.html#a67cb024aa20a9cffd9c230409152959c">usize</a> i = 0; i &lt; n; ++i) {</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>        prevMean = curMean;</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>        curMean += (data[i] - curMean) / (i + 1);</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>        s += (data[i] - curMean) * (data[i] - prevMean);</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>    }</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span> </div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>    <span class="keywordflow">return</span> s / <span class="keyword">static_cast&lt;</span><a class="code hl_typedef" href="namespaceyuki.html#abc2f107791bd7c1d49ecf0f168c085a3">f64</a><span class="keyword">&gt;</span>(n);</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>}</div>
+</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span> </div>
+<div class="foldopen" id="foldopen00104" data-start="{" data-end="}">
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno"><a class="line" href="namespaceyuki_1_1statistics.html#ac0c56aaf28b0dab3080545241577ff4f">  104</a></span><span class="keyword">auto</span> <a class="code hl_function" href="namespaceyuki_1_1statistics.html#ac0c56aaf28b0dab3080545241577ff4f">entropy</a>(vector&lt;f64&gt; <span class="keyword">const</span>&amp; P) -&gt; <a class="code hl_typedef" href="namespaceyuki.html#abc2f107791bd7c1d49ecf0f168c085a3">f64</a> {</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>    <a class="code hl_typedef" href="namespaceyuki.html#abc2f107791bd7c1d49ecf0f168c085a3">f64</a> H = 0.;</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>    <span class="keywordflow">for</span> (<a class="code hl_typedef" href="namespaceyuki.html#abc2f107791bd7c1d49ecf0f168c085a3">f64</a> <span class="keyword">const</span>&amp; p: P) {</div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>        <span class="keywordflow">if</span> (p == 0.) {</div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>            <span class="keywordflow">continue</span>;</div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>        }</div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>        H -= p * log2(p);</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>    }</div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>    <span class="keywordflow">return</span> H;</div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>}</div>
+</div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span> </div>
+<div class="foldopen" id="foldopen00115" data-start="{" data-end="}">
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno"><a class="line" href="namespaceyuki_1_1statistics.html#a829519289008e44fe0bb5f5aec7edbaa">  115</a></span><span class="keyword">auto</span> <a class="code hl_function" href="namespaceyuki_1_1statistics.html#a829519289008e44fe0bb5f5aec7edbaa">entropyBinary</a>(<a class="code hl_typedef" href="namespaceyuki.html#abc2f107791bd7c1d49ecf0f168c085a3">f64</a> <span class="keyword">const</span>&amp; p) -&gt; <a class="code hl_typedef" href="namespaceyuki.html#abc2f107791bd7c1d49ecf0f168c085a3">f64</a> {</div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>    <span class="keywordflow">if</span> (p == 0. || p == 1.) <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>    <a class="code hl_typedef" href="namespaceyuki.html#abc2f107791bd7c1d49ecf0f168c085a3">f64</a> _p = 1. - p;</div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>    <span class="keywordflow">return</span> -(p * log2(p) + _p * log2(_p));</div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>}</div>
+</div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span> </div>
+<div class="foldopen" id="foldopen00121" data-start="{" data-end="}">
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno"><a class="line" href="namespaceyuki_1_1statistics.html#a089b6b377afd975cdb34990feab306ce">  121</a></span><span class="keyword">auto</span> <a class="code hl_function" href="namespaceyuki_1_1statistics.html#a089b6b377afd975cdb34990feab306ce">gini</a>(vector&lt;f64&gt; <span class="keyword">const</span>&amp; P) -&gt; <a class="code hl_typedef" href="namespaceyuki.html#abc2f107791bd7c1d49ecf0f168c085a3">f64</a> {</div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>    <a class="code hl_typedef" href="namespaceyuki.html#abc2f107791bd7c1d49ecf0f168c085a3">f64</a> G = 1.;</div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>    <span class="keywordflow">for</span> (<a class="code hl_typedef" href="namespaceyuki.html#abc2f107791bd7c1d49ecf0f168c085a3">f64</a> <span class="keyword">const</span>&amp; p: P) {</div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>        G -= p * p;</div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>    }</div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>    <span class="keywordflow">return</span> G;</div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>}</div>
+</div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>}</div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span> </div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespaceyuki.html">yuki</a> {</div>
+<div class="foldopen" id="foldopen00131" data-start="{" data-end="}">
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno"><a class="line" href="namespaceyuki.html#aa9e1882d826e9e6af6b3f24708d54ac0">  131</a></span><span class="keyword">auto</span> <a class="code hl_function" href="namespaceyuki.html#aa9e1882d826e9e6af6b3f24708d54ac0">distanceEuclidean</a>(vector&lt;f64&gt; <span class="keyword">const</span>&amp; v1, vector&lt;f64&gt; <span class="keyword">const</span>&amp; v2) -&gt; <a class="code hl_typedef" href="namespaceyuki.html#abc2f107791bd7c1d49ecf0f168c085a3">f64</a> {</div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span><span class="preprocessor">    #ifdef YUKI_DEBUG</span></div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>    <span class="keywordflow">if</span> (v1.size() != v2.size()) {</div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>        <span class="keywordflow">throw</span> <a class="code hl_struct" href="structyuki_1_1dflt_1_1_dimension_mismatch.html">dflt::DimensionMismatch</a>();</div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>    }</div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span><span class="preprocessor">    #endif</span></div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>    <a class="code hl_typedef" href="namespaceyuki.html#abc2f107791bd7c1d49ecf0f168c085a3">f64</a> sum = 0.;</div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span>    <span class="keywordflow">for</span> (<a class="code hl_typedef" href="namespaceyuki.html#a77a52b9640a0c8600feb48e548425a40">i32</a> i = (<a class="code hl_typedef" href="namespaceyuki.html#a77a52b9640a0c8600feb48e548425a40">i32</a>)v1.size() - 1; i &gt; -1; --i) {</div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span>        sum += pow(v1[i] - v2[i], 2);</div>
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span>    }</div>
+<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span>    <span class="keywordflow">return</span> sqrt(sum);</div>
+<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span>}</div>
+</div>
+<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span> </div>
+<div class="foldopen" id="foldopen00144" data-start="{" data-end="}">
+<div class="line"><a id="l00144" name="l00144"></a><span class="lineno"><a class="line" href="namespaceyuki.html#aa50181d389ac3f46f1e422b5e6b7eda2">  144</a></span><span class="keyword">auto</span> <a class="code hl_function" href="namespaceyuki.html#aa50181d389ac3f46f1e422b5e6b7eda2">equalsZero</a>(<a class="code hl_typedef" href="namespaceyuki.html#a2857d958db519b983102904390ebe63e">Real</a> <span class="keyword">const</span>&amp; val) -&gt; <span class="keywordtype">bool</span> {</div>
+<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span>    <span class="keywordflow">return</span> abs(val) &lt; <a class="code hl_variable" href="namespaceyuki.html#a6e32187e7660a8330dda8f56465893f4">ACCURACY</a>;</div>
+<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span>}</div>
+</div>
+<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span> </div>
+<div class="foldopen" id="foldopen00148" data-start="{" data-end="}">
+<div class="line"><a id="l00148" name="l00148"></a><span class="lineno"><a class="line" href="namespaceyuki.html#aa8c80de6d5d2f626f428e0cc5551d963">  148</a></span><span class="keyword">auto</span> <a class="code hl_function" href="namespaceyuki.html#aa50181d389ac3f46f1e422b5e6b7eda2">equalsZero</a>(<a class="code hl_typedef" href="namespaceyuki.html#a77a52b9640a0c8600feb48e548425a40">i32</a> <span class="keyword">const</span>&amp; val) -&gt; <span class="keywordtype">bool</span> {</div>
+<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span>    <span class="keywordflow">return</span> val == 0;</div>
+<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span>}</div>
+</div>
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span> </div>
+<div class="foldopen" id="foldopen00152" data-start="{" data-end="}">
+<div class="line"><a id="l00152" name="l00152"></a><span class="lineno"><a class="line" href="namespaceyuki.html#a5a75fc158cd1a918b4e6ea36d23fdefd">  152</a></span><span class="keyword">auto</span> <a class="code hl_function" href="namespaceyuki.html#a5a75fc158cd1a918b4e6ea36d23fdefd">printSpacer</a>(<a class="code hl_typedef" href="namespaceyuki.html#a77a52b9640a0c8600feb48e548425a40">i32</a> <span class="keyword">const</span>&amp; number) -&gt; <span class="keywordtype">void</span> {</div>
+<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>    <span class="keywordflow">for</span> (<a class="code hl_typedef" href="namespaceyuki.html#a77a52b9640a0c8600feb48e548425a40">i32</a> i = 0; i &lt; number - 1; ++i) {</div>
+<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span>        cout &lt;&lt; <span class="stringliteral">&quot;|   &quot;</span>;</div>
+<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span>    }</div>
+<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span>    <span class="keywordflow">if</span> (number) {</div>
+<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span>        cout &lt;&lt; <span class="stringliteral">&quot;|--- &quot;</span>;</div>
+<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span>    }</div>
+<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span>}</div>
+</div>
+<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span> </div>
+<div class="foldopen" id="foldopen00161" data-start="{" data-end="}">
+<div class="line"><a id="l00161" name="l00161"></a><span class="lineno"><a class="line" href="namespaceyuki.html#a919566a6831686cc116489fa59a09062">  161</a></span><span class="keyword">auto</span> <a class="code hl_function" href="namespaceyuki.html#a919566a6831686cc116489fa59a09062">StringcodeToInt</a>(<span class="keywordtype">string</span> <span class="keyword">const</span>&amp; word) -&gt; <span class="keywordtype">int</span> {</div>
+<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span>    <span class="keywordtype">int</span> dst = 0;</div>
+<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span>    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; word.size(); ++i) {</div>
+<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span>        dst += <span class="keyword">static_cast&lt;</span><span class="keywordtype">unsigned</span><span class="keyword">&gt;</span>(word[i]) &lt;&lt; (i &lt;&lt; 3);</div>
+<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span>    }</div>
+<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>    <span class="keywordflow">return</span> dst;</div>
+<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span>}</div>
+</div>
+<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span> </div>
+<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span><span class="keyword">template</span> &lt;&gt;</div>
+<div class="foldopen" id="foldopen00170" data-start="{" data-end="}">
+<div class="line"><a id="l00170" name="l00170"></a><span class="lineno"><a class="line" href="namespaceyuki.html#a9a4a67a4044909317e303bd465dc32d0">  170</a></span><span class="keywordtype">string</span> <a class="code hl_function" href="namespaceyuki.html#a9a4a67a4044909317e303bd465dc32d0">toString&lt;i32&gt;</a>(<a class="code hl_typedef" href="namespaceyuki.html#a77a52b9640a0c8600feb48e548425a40">i32</a> <span class="keyword">const</span>&amp; x) {</div>
+<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span>    <span class="keywordflow">return</span> to_string(x);</div>
+<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span>}</div>
+</div>
+<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span> </div>
+<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span><span class="keyword">template</span> &lt;&gt;</div>
+<div class="foldopen" id="foldopen00175" data-start="{" data-end="}">
+<div class="line"><a id="l00175" name="l00175"></a><span class="lineno"><a class="line" href="namespaceyuki.html#a9af4facc071ec61d6963adafe2134cb5">  175</a></span><span class="keywordtype">string</span> <a class="code hl_function" href="namespaceyuki.html#a9af4facc071ec61d6963adafe2134cb5">toString&lt;usize&gt;</a>(<a class="code hl_typedef" href="namespaceyuki.html#a67cb024aa20a9cffd9c230409152959c">usize</a> <span class="keyword">const</span>&amp; x) {</div>
+<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span>    <span class="keywordflow">return</span> to_string(x);</div>
+<div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span>}</div>
+</div>
+<div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span> </div>
+<div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span><span class="keyword">template</span> &lt;&gt;</div>
+<div class="foldopen" id="foldopen00180" data-start="{" data-end="}">
+<div class="line"><a id="l00180" name="l00180"></a><span class="lineno"><a class="line" href="namespaceyuki.html#a8649c50af2dd4ca42f2d2f0550bc24fe">  180</a></span><span class="keywordtype">string</span> <a class="code hl_function" href="namespaceyuki.html#a8649c50af2dd4ca42f2d2f0550bc24fe">toString&lt;char&gt;</a>(<span class="keywordtype">char</span> <span class="keyword">const</span>&amp; x) {</div>
+<div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span>    <span class="keywordflow">return</span> to_string(x);</div>
+<div class="line"><a id="l00182" name="l00182"></a><span class="lineno">  182</span>}</div>
+</div>
+<div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span> </div>
+<div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span><span class="keyword">template</span> &lt;&gt;</div>
+<div class="foldopen" id="foldopen00185" data-start="{" data-end="}">
+<div class="line"><a id="l00185" name="l00185"></a><span class="lineno"><a class="line" href="namespaceyuki.html#a8653b1706c6f5aa3e2e61daddf3c2aad">  185</a></span><span class="keywordtype">string</span> <a class="code hl_function" href="namespaceyuki.html#a0244a066e11dbc15586aa448bb45900a">toString&lt;pair&lt;usize, i32&gt;</a>&gt;(pair&lt;usize, i32&gt; <span class="keyword">const</span>&amp; x) {</div>
+<div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span>    <span class="keywordflow">return</span> <span class="stringliteral">&quot;&lt;&quot;</span> + to_string(x.first) + <span class="stringliteral">&quot;, &quot;</span> + to_string(x.second) + <span class="stringliteral">&quot;&gt;&quot;</span>;</div>
+<div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span>}</div>
+</div>
+<div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span> </div>
+<div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span><span class="keyword">template</span> &lt;&gt;</div>
+<div class="foldopen" id="foldopen00190" data-start="{" data-end="}">
+<div class="line"><a id="l00190" name="l00190"></a><span class="lineno"><a class="line" href="namespaceyuki.html#a699e92f9db55d0f5184d23a990327b41">  190</a></span><span class="keywordtype">string</span> <a class="code hl_function" href="namespaceyuki.html#a0244a066e11dbc15586aa448bb45900a">toString&lt;pair&lt;i32, i32&gt;</a>&gt;(pair&lt;i32, i32&gt; <span class="keyword">const</span>&amp; x) {</div>
+<div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span>    <span class="keywordflow">return</span> <span class="stringliteral">&quot;&lt;&quot;</span> + to_string(x.first) + <span class="stringliteral">&quot;, &quot;</span> + to_string(x.second) + <span class="stringliteral">&quot;&gt;&quot;</span>;</div>
+<div class="line"><a id="l00192" name="l00192"></a><span class="lineno">  192</span>}</div>
+</div>
+<div class="line"><a id="l00193" name="l00193"></a><span class="lineno">  193</span>}</div>
+<div class="ttc" id="anamespaceyuki_1_1random_html"><div class="ttname"><a href="namespaceyuki_1_1random.html">yuki::random</a></div><div class="ttdoc">随机库</div><div class="ttdef"><b>定义</b> <a href="tools_8h_source.html#l00020">tools.h:20</a></div></div>
+<div class="ttc" id="anamespaceyuki_1_1random_html_a26df2ef248949574bb4da90bd486127b"><div class="ttname"><a href="namespaceyuki_1_1random.html#a26df2ef248949574bb4da90bd486127b">yuki::random::trigger</a></div><div class="ttdeci">auto trigger(f64 const &amp;p) -&gt; bool</div><div class="ttdoc">依概率 p 随机选择是否触发</div><div class="ttdef"><b>定义</b> <a href="#l00055">tools.cpp:55</a></div></div>
+<div class="ttc" id="anamespaceyuki_1_1random_html_a4a3c5cb1607a250c757d3a8aaff98502"><div class="ttname"><a href="namespaceyuki_1_1random.html#a4a3c5cb1607a250c757d3a8aaff98502">yuki::random::GLOBAL_RD</a></div><div class="ttdeci">random_device GLOBAL_RD</div><div class="ttdef"><b>定义</b> <a href="#l00004">tools.cpp:4</a></div></div>
+<div class="ttc" id="anamespaceyuki_1_1random_html_a5acc06b9834dbda82def841de72f79db"><div class="ttname"><a href="namespaceyuki_1_1random.html#a5acc06b9834dbda82def841de72f79db">yuki::random::chooseByProbability</a></div><div class="ttdeci">auto chooseByProbability(vector&lt; f64 &gt; const &amp;P, f64 const &amp;sum=1.) -&gt; i32</div><div class="ttdoc">依概率选择</div><div class="ttdef"><b>定义</b> <a href="#l00010">tools.cpp:10</a></div></div>
+<div class="ttc" id="anamespaceyuki_1_1random_html_a86d3a6b3083b1637408e87a38ce35ef8"><div class="ttname"><a href="namespaceyuki_1_1random.html#a86d3a6b3083b1637408e87a38ce35ef8">yuki::random::reflash</a></div><div class="ttdeci">auto reflash() -&gt; void</div><div class="ttdoc">刷新gen</div><div class="ttdef"><b>定义</b> <a href="#l00007">tools.cpp:7</a></div></div>
+<div class="ttc" id="anamespaceyuki_1_1random_html_a9bfa9061814027f6286185ff4e08f223"><div class="ttname"><a href="namespaceyuki_1_1random.html#a9bfa9061814027f6286185ff4e08f223">yuki::random::GLOBAL_MT19937</a></div><div class="ttdeci">mt19937 GLOBAL_MT19937</div></div>
+<div class="ttc" id="anamespaceyuki_1_1random_html_ab7c55f66c7dfbb064cae5e074cd1d47d"><div class="ttname"><a href="namespaceyuki_1_1random.html#ab7c55f66c7dfbb064cae5e074cd1d47d">yuki::random::chooseByWeights</a></div><div class="ttdeci">auto chooseByWeights(vector&lt; f64 &gt; const &amp;weights) -&gt; i32</div><div class="ttdoc">依权重选择</div><div class="ttdef"><b>定义</b> <a href="#l00023">tools.cpp:23</a></div></div>
+<div class="ttc" id="anamespaceyuki_1_1random_html_ac88f03eaee39420d241f2f74adfa6676"><div class="ttname"><a href="namespaceyuki_1_1random.html#ac88f03eaee39420d241f2f74adfa6676">yuki::random::uniformReal</a></div><div class="ttdeci">auto uniformReal(uniform_real_distribution&lt; ElemType &gt; const &amp;dis) -&gt; ElemType</div><div class="ttdoc">生成一个随机浮点数</div><div class="ttdef"><b>定义</b> <a href="tools_8h_source.html#l00367">tools.h:367</a></div></div>
+<div class="ttc" id="anamespaceyuki_1_1statistics_html"><div class="ttname"><a href="namespaceyuki_1_1statistics.html">yuki::statistics</a></div><div class="ttdoc">统计库</div><div class="ttdef"><b>定义</b> <a href="tools_8h_source.html#l00147">tools.h:147</a></div></div>
+<div class="ttc" id="anamespaceyuki_1_1statistics_html_a089b6b377afd975cdb34990feab306ce"><div class="ttname"><a href="namespaceyuki_1_1statistics.html#a089b6b377afd975cdb34990feab306ce">yuki::statistics::gini</a></div><div class="ttdeci">auto gini(vector&lt; f64 &gt; const &amp;P) -&gt; f64</div><div class="ttdoc">计算基尼指数</div><div class="ttdef"><b>定义</b> <a href="#l00121">tools.cpp:121</a></div></div>
+<div class="ttc" id="anamespaceyuki_1_1statistics_html_a11eeb4cbe502140aee06bcec744782e0"><div class="ttname"><a href="namespaceyuki_1_1statistics.html#a11eeb4cbe502140aee06bcec744782e0">yuki::statistics::varianceOnePass</a></div><div class="ttdeci">auto varianceOnePass(vector&lt; f64 &gt; const &amp;data) -&gt; f64</div><div class="ttdoc">计算方差（一趟法，数值误差大）</div><div class="ttdef"><b>定义</b> <a href="#l00076">tools.cpp:76</a></div></div>
+<div class="ttc" id="anamespaceyuki_1_1statistics_html_a55d030798b22764edcd313f75df660ba"><div class="ttname"><a href="namespaceyuki_1_1statistics.html#a55d030798b22764edcd313f75df660ba">yuki::statistics::variance</a></div><div class="ttdeci">auto variance(vector&lt; f64 &gt; const &amp;data) -&gt; f64</div><div class="ttdoc">计算方差（Welford迭代法）</div><div class="ttdef"><b>定义</b> <a href="#l00089">tools.cpp:89</a></div></div>
+<div class="ttc" id="anamespaceyuki_1_1statistics_html_a829519289008e44fe0bb5f5aec7edbaa"><div class="ttname"><a href="namespaceyuki_1_1statistics.html#a829519289008e44fe0bb5f5aec7edbaa">yuki::statistics::entropyBinary</a></div><div class="ttdeci">auto entropyBinary(f64 const &amp;p) -&gt; f64</div><div class="ttdoc">计算布尔随机变量的信息熵</div><div class="ttdef"><b>定义</b> <a href="#l00115">tools.cpp:115</a></div></div>
+<div class="ttc" id="anamespaceyuki_1_1statistics_html_a9f5ddc0a8af3796b52b9be539498893e"><div class="ttname"><a href="namespaceyuki_1_1statistics.html#a9f5ddc0a8af3796b52b9be539498893e">yuki::statistics::varianceTwoPass</a></div><div class="ttdeci">auto varianceTwoPass(vector&lt; f64 &gt; const &amp;data) -&gt; f64</div><div class="ttdoc">计算方差（朴素方法）</div><div class="ttdef"><b>定义</b> <a href="#l00061">tools.cpp:61</a></div></div>
+<div class="ttc" id="anamespaceyuki_1_1statistics_html_ac0c56aaf28b0dab3080545241577ff4f"><div class="ttname"><a href="namespaceyuki_1_1statistics.html#ac0c56aaf28b0dab3080545241577ff4f">yuki::statistics::entropy</a></div><div class="ttdeci">auto entropy(vector&lt; f64 &gt; const &amp;P) -&gt; f64</div><div class="ttdoc">计算随机变量的信息熵</div><div class="ttdef"><b>定义</b> <a href="#l00104">tools.cpp:104</a></div></div>
+<div class="ttc" id="anamespaceyuki_html"><div class="ttname"><a href="namespaceyuki.html">yuki</a></div><div class="ttdef"><b>定义</b> <a href="core_8h_source.html#l00045">core.h:45</a></div></div>
+<div class="ttc" id="anamespaceyuki_html_a0244a066e11dbc15586aa448bb45900a"><div class="ttname"><a href="namespaceyuki.html#a0244a066e11dbc15586aa448bb45900a">yuki::toString</a></div><div class="ttdeci">string toString(ElemType const &amp;x)</div><div class="ttdoc">将一个变量转换成字符串</div><div class="ttdef"><b>定义</b> <a href="tools_8h_source.html#l00332">tools.h:332</a></div></div>
+<div class="ttc" id="anamespaceyuki_html_a2857d958db519b983102904390ebe63e"><div class="ttname"><a href="namespaceyuki.html#a2857d958db519b983102904390ebe63e">yuki::Real</a></div><div class="ttdeci">f64 Real</div><div class="ttdef"><b>定义</b> <a href="core_8h_source.html#l00105">core.h:105</a></div></div>
+<div class="ttc" id="anamespaceyuki_html_a5a75fc158cd1a918b4e6ea36d23fdefd"><div class="ttname"><a href="namespaceyuki.html#a5a75fc158cd1a918b4e6ea36d23fdefd">yuki::printSpacer</a></div><div class="ttdeci">auto printSpacer(i32 const &amp;number) -&gt; void</div><div class="ttdoc">打印制表填充</div><div class="ttdef"><b>定义</b> <a href="#l00152">tools.cpp:152</a></div></div>
+<div class="ttc" id="anamespaceyuki_html_a67cb024aa20a9cffd9c230409152959c"><div class="ttname"><a href="namespaceyuki.html#a67cb024aa20a9cffd9c230409152959c">yuki::usize</a></div><div class="ttdeci">unsigned long long usize</div><div class="ttdef"><b>定义</b> <a href="core_8h_source.html#l00102">core.h:102</a></div></div>
+<div class="ttc" id="anamespaceyuki_html_a6e32187e7660a8330dda8f56465893f4"><div class="ttname"><a href="namespaceyuki.html#a6e32187e7660a8330dda8f56465893f4">yuki::ACCURACY</a></div><div class="ttdeci">const f64 ACCURACY</div><div class="ttdef"><b>定义</b> <a href="core_8h_source.html#l00135">core.h:135</a></div></div>
+<div class="ttc" id="anamespaceyuki_html_a77a52b9640a0c8600feb48e548425a40"><div class="ttname"><a href="namespaceyuki.html#a77a52b9640a0c8600feb48e548425a40">yuki::i32</a></div><div class="ttdeci">int i32</div><div class="ttdef"><b>定义</b> <a href="core_8h_source.html#l00090">core.h:90</a></div></div>
+<div class="ttc" id="anamespaceyuki_html_a8649c50af2dd4ca42f2d2f0550bc24fe"><div class="ttname"><a href="namespaceyuki.html#a8649c50af2dd4ca42f2d2f0550bc24fe">yuki::toString&lt; char &gt;</a></div><div class="ttdeci">string toString&lt; char &gt;(char const &amp;x)</div><div class="ttdef"><b>定义</b> <a href="#l00180">tools.cpp:180</a></div></div>
+<div class="ttc" id="anamespaceyuki_html_a919566a6831686cc116489fa59a09062"><div class="ttname"><a href="namespaceyuki.html#a919566a6831686cc116489fa59a09062">yuki::StringcodeToInt</a></div><div class="ttdeci">auto StringcodeToInt(string const &amp;word) -&gt; int</div><div class="ttdoc">单个字符转 int</div><div class="ttdef"><b>定义</b> <a href="#l00161">tools.cpp:161</a></div></div>
+<div class="ttc" id="anamespaceyuki_html_a9a4a67a4044909317e303bd465dc32d0"><div class="ttname"><a href="namespaceyuki.html#a9a4a67a4044909317e303bd465dc32d0">yuki::toString&lt; i32 &gt;</a></div><div class="ttdeci">string toString&lt; i32 &gt;(i32 const &amp;x)</div><div class="ttdef"><b>定义</b> <a href="#l00170">tools.cpp:170</a></div></div>
+<div class="ttc" id="anamespaceyuki_html_a9af4facc071ec61d6963adafe2134cb5"><div class="ttname"><a href="namespaceyuki.html#a9af4facc071ec61d6963adafe2134cb5">yuki::toString&lt; usize &gt;</a></div><div class="ttdeci">string toString&lt; usize &gt;(usize const &amp;x)</div><div class="ttdef"><b>定义</b> <a href="#l00175">tools.cpp:175</a></div></div>
+<div class="ttc" id="anamespaceyuki_html_aa50181d389ac3f46f1e422b5e6b7eda2"><div class="ttname"><a href="namespaceyuki.html#aa50181d389ac3f46f1e422b5e6b7eda2">yuki::equalsZero</a></div><div class="ttdeci">auto equalsZero(Real const &amp;val) -&gt; bool</div><div class="ttdoc">检查一个数是否等于 0</div><div class="ttdef"><b>定义</b> <a href="#l00144">tools.cpp:144</a></div></div>
+<div class="ttc" id="anamespaceyuki_html_aa9e1882d826e9e6af6b3f24708d54ac0"><div class="ttname"><a href="namespaceyuki.html#aa9e1882d826e9e6af6b3f24708d54ac0">yuki::distanceEuclidean</a></div><div class="ttdeci">auto distanceEuclidean(vector&lt; f64 &gt; const &amp;v1, vector&lt; f64 &gt; const &amp;v2) -&gt; f64</div><div class="ttdoc">计算两个向量的欧几里得距离</div><div class="ttdef"><b>定义</b> <a href="#l00131">tools.cpp:131</a></div></div>
+<div class="ttc" id="anamespaceyuki_html_abc2f107791bd7c1d49ecf0f168c085a3"><div class="ttname"><a href="namespaceyuki.html#abc2f107791bd7c1d49ecf0f168c085a3">yuki::f64</a></div><div class="ttdeci">double f64</div><div class="ttdef"><b>定义</b> <a href="core_8h_source.html#l00098">core.h:98</a></div></div>
+<div class="ttc" id="astructyuki_1_1dflt_1_1_dimension_mismatch_html"><div class="ttname"><a href="structyuki_1_1dflt_1_1_dimension_mismatch.html">yuki::dflt::DimensionMismatch</a></div><div class="ttdoc">矩阵计算中行列不对应错误类</div><div class="ttdef"><b>定义</b> <a href="_default_8h_source.html#l00073">Default.h:73</a></div></div>
+<div class="ttc" id="atools_8h_html"><div class="ttname"><a href="tools_8h.html">tools.h</a></div><div class="ttdoc">工具库</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0
+</small></address>
+</div><!-- doc-content -->
+</body>
+</html>

@@ -1,0 +1,136 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.12.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>AI: D:/user/Project/Code/AI/cxx_src/Core/include/ModelBase.h 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">AI<span id="projectnumber">&#160;1.0.0</span>
+   </div>
+   <div id="projectbrief">YUKII的AI库</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.12.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','搜索',false);
+  $(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){ initResizable(false); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_7f512dd0749495d1be0f144cf126d477.html">cxx_src</a></li><li class="navelem"><a class="el" href="dir_578a9cec2bbd02b938bd83c28da2c557.html">Core</a></li><li class="navelem"><a class="el" href="dir_b532db470b7606a8cc74a6cf60e78199.html">include</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div id="doc-content">
+<div class="header">
+  <div class="headertitle"><div class="title">ModelBase.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="_model_base_8h.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#include &quot;<a class="code" href="core_8h.html">core.h</a>&quot;</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
+<div class="foldopen" id="foldopen00004" data-start="{" data-end="}">
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno"><a class="line" href="namespaceyuki_1_1atri.html">    4</a></span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespaceyuki_1_1atri.html">yuki::atri</a> {</div>
+<div class="foldopen" id="foldopen00009" data-start="{" data-end="};">
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno"><a class="line" href="classyuki_1_1atri_1_1_model_base.html">    9</a></span><span class="keyword">class </span><a class="code hl_class" href="classyuki_1_1atri_1_1_model_base.html">ModelBase</a> {</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno"><a class="line" href="classyuki_1_1atri_1_1_model_base.html#a2c74d4a4d98aa3ef2eb5286fd2314efc">   11</a></span>    <a class="code hl_function" href="classyuki_1_1atri_1_1_model_base.html#a2c74d4a4d98aa3ef2eb5286fd2314efc">ModelBase</a>() = <span class="keywordflow">default</span>;</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno"><a class="line" href="classyuki_1_1atri_1_1_model_base.html#ad1834d71fad79adfc0b6b5de6ce243e5">   12</a></span>    <span class="keyword">virtual</span> <a class="code hl_function" href="classyuki_1_1atri_1_1_model_base.html#ad1834d71fad79adfc0b6b5de6ce243e5">~ModelBase</a>() = <span class="keywordflow">default</span>;</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> </div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno"><a class="line" href="classyuki_1_1atri_1_1_model_base.html#acb7ffefe44e1c0ba7c90015ae5662224">   20</a></span>    <span class="keyword">virtual</span> <span class="keyword">auto</span> <a class="code hl_function" href="classyuki_1_1atri_1_1_model_base.html#acb7ffefe44e1c0ba7c90015ae5662224">predict</a>(<span class="keywordtype">void</span>* input_, <span class="keywordtype">void</span>* output_) -&gt; <span class="keywordtype">void</span> {}</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno"><a class="line" href="classyuki_1_1atri_1_1_model_base.html#afd32666a80260196197f3c376477398e">   27</a></span>    <span class="keyword">virtual</span> <span class="keyword">auto</span> <a class="code hl_function" href="classyuki_1_1atri_1_1_model_base.html#afd32666a80260196197f3c376477398e">train</a>(<span class="keywordtype">void</span>* dataset_) -&gt; <span class="keywordtype">void</span> {}</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno"><a class="line" href="classyuki_1_1atri_1_1_model_base.html#add43ff0fe71e5c4eb0bb18a0f6a2a5cb">   35</a></span>    <span class="keyword">virtual</span> <span class="keyword">auto</span> <a class="code hl_function" href="classyuki_1_1atri_1_1_model_base.html#add43ff0fe71e5c4eb0bb18a0f6a2a5cb">evaluate</a>(<span class="keywordtype">void</span>* dataset_, <span class="keywordtype">void</span>* output_) -&gt; <span class="keywordtype">void</span> {}</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span> </div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno"><a class="line" href="classyuki_1_1atri_1_1_model_base.html#a1019bb17f3e57069435622545e364307">   42</a></span>    <span class="keyword">virtual</span> <span class="keyword">auto</span> <a class="code hl_function" href="classyuki_1_1atri_1_1_model_base.html#a1019bb17f3e57069435622545e364307">load</a>(<span class="keywordtype">string</span> <span class="keyword">const</span>&amp; path) -&gt; <span class="keywordtype">void</span> {}</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span> </div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno"><a class="line" href="classyuki_1_1atri_1_1_model_base.html#ab5dc05c8af6a630ea67677f249215c5a">   49</a></span>    <span class="keyword">virtual</span> <span class="keyword">auto</span> <a class="code hl_function" href="classyuki_1_1atri_1_1_model_base.html#ab5dc05c8af6a630ea67677f249215c5a">save</a>(<span class="keywordtype">string</span> <span class="keyword">const</span>&amp; path) -&gt; <span class="keywordtype">void</span> {}</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>};</div>
+</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>}</div>
+</div>
+<div class="ttc" id="aclassyuki_1_1atri_1_1_model_base_html"><div class="ttname"><a href="classyuki_1_1atri_1_1_model_base.html">yuki::atri::ModelBase</a></div><div class="ttdoc">模型基类</div><div class="ttdef"><b>定义</b> <a href="#l00009">ModelBase.h:9</a></div></div>
+<div class="ttc" id="aclassyuki_1_1atri_1_1_model_base_html_a1019bb17f3e57069435622545e364307"><div class="ttname"><a href="classyuki_1_1atri_1_1_model_base.html#a1019bb17f3e57069435622545e364307">yuki::atri::ModelBase::load</a></div><div class="ttdeci">virtual auto load(string const &amp;path) -&gt; void</div><div class="ttdoc">从外部文件导入模型</div><div class="ttdef"><b>定义</b> <a href="#l00042">ModelBase.h:42</a></div></div>
+<div class="ttc" id="aclassyuki_1_1atri_1_1_model_base_html_a2c74d4a4d98aa3ef2eb5286fd2314efc"><div class="ttname"><a href="classyuki_1_1atri_1_1_model_base.html#a2c74d4a4d98aa3ef2eb5286fd2314efc">yuki::atri::ModelBase::ModelBase</a></div><div class="ttdeci">ModelBase()=default</div></div>
+<div class="ttc" id="aclassyuki_1_1atri_1_1_model_base_html_ab5dc05c8af6a630ea67677f249215c5a"><div class="ttname"><a href="classyuki_1_1atri_1_1_model_base.html#ab5dc05c8af6a630ea67677f249215c5a">yuki::atri::ModelBase::save</a></div><div class="ttdeci">virtual auto save(string const &amp;path) -&gt; void</div><div class="ttdoc">保存模型</div><div class="ttdef"><b>定义</b> <a href="#l00049">ModelBase.h:49</a></div></div>
+<div class="ttc" id="aclassyuki_1_1atri_1_1_model_base_html_acb7ffefe44e1c0ba7c90015ae5662224"><div class="ttname"><a href="classyuki_1_1atri_1_1_model_base.html#acb7ffefe44e1c0ba7c90015ae5662224">yuki::atri::ModelBase::predict</a></div><div class="ttdeci">virtual auto predict(void *input_, void *output_) -&gt; void</div><div class="ttdoc">预测输入的结果</div><div class="ttdef"><b>定义</b> <a href="#l00020">ModelBase.h:20</a></div></div>
+<div class="ttc" id="aclassyuki_1_1atri_1_1_model_base_html_ad1834d71fad79adfc0b6b5de6ce243e5"><div class="ttname"><a href="classyuki_1_1atri_1_1_model_base.html#ad1834d71fad79adfc0b6b5de6ce243e5">yuki::atri::ModelBase::~ModelBase</a></div><div class="ttdeci">virtual ~ModelBase()=default</div></div>
+<div class="ttc" id="aclassyuki_1_1atri_1_1_model_base_html_add43ff0fe71e5c4eb0bb18a0f6a2a5cb"><div class="ttname"><a href="classyuki_1_1atri_1_1_model_base.html#add43ff0fe71e5c4eb0bb18a0f6a2a5cb">yuki::atri::ModelBase::evaluate</a></div><div class="ttdeci">virtual auto evaluate(void *dataset_, void *output_) -&gt; void</div><div class="ttdoc">评估模型的性能</div><div class="ttdef"><b>定义</b> <a href="#l00035">ModelBase.h:35</a></div></div>
+<div class="ttc" id="aclassyuki_1_1atri_1_1_model_base_html_afd32666a80260196197f3c376477398e"><div class="ttname"><a href="classyuki_1_1atri_1_1_model_base.html#afd32666a80260196197f3c376477398e">yuki::atri::ModelBase::train</a></div><div class="ttdeci">virtual auto train(void *dataset_) -&gt; void</div><div class="ttdoc">训练模型</div><div class="ttdef"><b>定义</b> <a href="#l00027">ModelBase.h:27</a></div></div>
+<div class="ttc" id="acore_8h_html"><div class="ttname"><a href="core_8h.html">core.h</a></div><div class="ttdoc">核心库</div></div>
+<div class="ttc" id="anamespaceyuki_1_1atri_html"><div class="ttname"><a href="namespaceyuki_1_1atri.html">yuki::atri</a></div><div class="ttdef"><b>定义</b> <a href="#l00004">ModelBase.h:4</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0
+</small></address>
+</div><!-- doc-content -->
+</body>
+</html>

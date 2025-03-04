@@ -1,0 +1,14 @@
+<map id="gini" name="gini">
+<area shape="rect" id="Node000001" title="计算基尼指数" alt="" coords="902,37,943,64"/>
+<area shape="rect" id="Node000002" href="$classyuki_1_1atri_1_1dt_1_1_decision_tree_builder.html#aa10ed40befae9f8350131087780f489b" title="计算指定属性对于样本集的基尼指数" alt="" coords="705,29,854,72"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="886,53,854,53,854,48,886,48"/>
+<area shape="rect" id="Node000003" href="$classyuki_1_1atri_1_1dt_1_1_decision_tree_builder.html#af5c09ddbcafc56b7b57135141fe9d649" title="获取信息增益最大的属性" alt="" coords="497,29,657,72"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="689,53,657,53,657,48,689,48"/>
+<area shape="rect" id="Node000004" href="$classyuki_1_1atri_1_1dt_1_1_decision_tree_builder.html#afb0815a4166a68bb5f1c60ec09abe4de" title="采用 learn 算法建树" alt="" coords="300,29,449,72"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="482,53,450,53,450,48,482,48"/>
+<area shape="poly" id="edge4_Node000004_Node000004" title=" " alt="" coords="406,16,394,10,375,8,356,10,345,15,341,21,342,28,337,29,335,19,342,10,355,5,375,3,396,5,409,11"/>
+<area shape="rect" id="Node000005" href="$classyuki_1_1atri_1_1dt_1_1_decision_tree_builder.html#a9525b1c74d534350359d9f205c35cba4" title="建树" alt="" coords="103,29,252,72"/>
+<area shape="poly" id="edge5_Node000004_Node000005" title=" " alt="" coords="285,53,252,53,252,48,285,48"/>
+<area shape="rect" id="Node000006" href="$_decision_tree_test1_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,37,55,64"/>
+<area shape="poly" id="edge6_Node000005_Node000006" title=" " alt="" coords="87,53,55,53,55,48,87,48"/>
+</map>

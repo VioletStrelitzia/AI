@@ -1,0 +1,7 @@
+project(cxx_src)
+
+add_subdirectory(CoreTest)
+add_subdirectory(DecisionTreeTest)
+add_subdirectory(CSPTest)
+add_subdirectory(NFigurePuzzleTest)
+add_subdirectory(GeneticAlgorithmTest)

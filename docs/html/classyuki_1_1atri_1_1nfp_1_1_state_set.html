@@ -1,0 +1,354 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.12.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>AI: StateSet类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">AI<span id="projectnumber">&#160;1.0.0</span>
+   </div>
+   <div id="projectbrief">YUKII的AI库</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.12.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','搜索',false);
+  $(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){ initResizable(false); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespaceyuki.html">yuki</a></li><li class="navelem"><a class="el" href="namespaceyuki_1_1atri.html">atri</a></li><li class="navelem"><a class="el" href="namespaceyuki_1_1atri_1_1nfp.html">nfp</a></li><li class="navelem"><a class="el" href="classyuki_1_1atri_1_1nfp_1_1_state_set.html">StateSet</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div id="doc-content">
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="#pri-attribs">Private 属性</a> &#124;
+<a href="classyuki_1_1atri_1_1nfp_1_1_state_set-members.html">所有成员列表</a>  </div>
+  <div class="headertitle"><div class="title">StateSet类 参考</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>用于记录 <a class="el" href="classyuki_1_1atri_1_1nfp_1_1_state.html" title="用来描述棋盘状态的类。">State</a> 是否被搜索过  
+ <a href="#details">更多...</a></p>
+
+<p><code>#include &lt;<a class="el" href="_n_f_p_state_set_8h_source.html">NFPStateSet.h</a>&gt;</code></p>
+<div class="dynheader">
+StateSet 的协作图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classyuki_1_1atri_1_1nfp_1_1_state_set__coll__graph.png" border="0" usemap="#a_state_set_coll__map" alt="Collaboration graph"/></div>
+<map name="a_state_set_coll__map" id="a_state_set_coll__map">
+<area shape="rect" title="用于记录 State 是否被搜索过" alt="" coords="16,96,89,123"/>
+<area shape="rect" title=" " alt="" coords="5,5,100,32"/>
+<area shape="poly" title=" " alt="" coords="55,48,55,95,50,95,50,48"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">图例</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:a01d06afdf1e7a1ca53220d8501e15210" id="r_a01d06afdf1e7a1ca53220d8501e15210"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a01d06afdf1e7a1ca53220d8501e15210">StateSet</a> ()=default</td></tr>
+<tr class="separator:a01d06afdf1e7a1ca53220d8501e15210"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac681c52dc86f00eb486f7e724b87c769" id="r_ac681c52dc86f00eb486f7e724b87c769"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac681c52dc86f00eb486f7e724b87c769">~StateSet</a> ()=default</td></tr>
+<tr class="separator:ac681c52dc86f00eb486f7e724b87c769"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac8bb3912a3ce86b15842e79d0b421204" id="r_ac8bb3912a3ce86b15842e79d0b421204"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac8bb3912a3ce86b15842e79d0b421204">clear</a> ()</td></tr>
+<tr class="memdesc:ac8bb3912a3ce86b15842e79d0b421204"><td class="mdescLeft">&#160;</td><td class="mdescRight">清空  <br /></td></tr>
+<tr class="separator:ac8bb3912a3ce86b15842e79d0b421204"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad637134bb0fdff8de3857fa3721eb271" id="r_ad637134bb0fdff8de3857fa3721eb271"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad637134bb0fdff8de3857fa3721eb271">visited</a> (<a class="el" href="classyuki_1_1atri_1_1nfp_1_1_state.html">State</a> const &amp;state)</td></tr>
+<tr class="memdesc:ad637134bb0fdff8de3857fa3721eb271"><td class="mdescLeft">&#160;</td><td class="mdescRight">查询某个 <a class="el" href="classyuki_1_1atri_1_1nfp_1_1_state.html" title="用来描述棋盘状态的类。">State</a> 是否已经被搜索过  <br /></td></tr>
+<tr class="separator:ad637134bb0fdff8de3857fa3721eb271"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a68ae9483632b89e683a6274370207300" id="r_a68ae9483632b89e683a6274370207300"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a68ae9483632b89e683a6274370207300">visit</a> (<a class="el" href="classyuki_1_1atri_1_1nfp_1_1_state.html">State</a> const &amp;state)</td></tr>
+<tr class="memdesc:a68ae9483632b89e683a6274370207300"><td class="mdescLeft">&#160;</td><td class="mdescRight">标记某个 <a class="el" href="classyuki_1_1atri_1_1nfp_1_1_state.html" title="用来描述棋盘状态的类。">State</a> 是否已经被搜索过  <br /></td></tr>
+<tr class="separator:a68ae9483632b89e683a6274370207300"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6380fc023df753bbb7596ee93d37811e" id="r_a6380fc023df753bbb7596ee93d37811e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6380fc023df753bbb7596ee93d37811e">remove</a> (<a class="el" href="classyuki_1_1atri_1_1nfp_1_1_state.html">State</a> const &amp;state)</td></tr>
+<tr class="memdesc:a6380fc023df753bbb7596ee93d37811e"><td class="mdescLeft">&#160;</td><td class="mdescRight">将某个 <a class="el" href="classyuki_1_1atri_1_1nfp_1_1_state.html" title="用来描述棋盘状态的类。">State</a> 的已被搜索过的标记移除  <br /></td></tr>
+<tr class="separator:a6380fc023df753bbb7596ee93d37811e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Private 属性</h2></td></tr>
+<tr class="memitem:a86eda0a5fbe3cd45fb0ea5df155fdadc" id="r_a86eda0a5fbe3cd45fb0ea5df155fdadc"><td class="memItemLeft" align="right" valign="top">set&lt; <a class="el" href="namespaceyuki.html#a67cb024aa20a9cffd9c230409152959c">usize</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a86eda0a5fbe3cd45fb0ea5df155fdadc">s</a></td></tr>
+<tr class="memdesc:a86eda0a5fbe3cd45fb0ea5df155fdadc"><td class="mdescLeft">&#160;</td><td class="mdescRight">用 set 记录  <br /></td></tr>
+<tr class="separator:a86eda0a5fbe3cd45fb0ea5df155fdadc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p>用于记录 <a class="el" href="classyuki_1_1atri_1_1nfp_1_1_state.html" title="用来描述棋盘状态的类。">State</a> 是否被搜索过 </p>
+
+<p class="definition">在文件 <a class="el" href="_n_f_p_state_set_8h_source.html">NFPStateSet.h</a> 第 <a class="el" href="_n_f_p_state_set_8h_source.html#l00009">9</a> 行定义.</p>
+</div><h2 class="groupheader">构造及析构函数说明</h2>
+<a id="a01d06afdf1e7a1ca53220d8501e15210" name="a01d06afdf1e7a1ca53220d8501e15210"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a01d06afdf1e7a1ca53220d8501e15210">&#9670;&#160;</a></span>StateSet()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classyuki_1_1atri_1_1nfp_1_1_state_set.html">StateSet</a> </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac681c52dc86f00eb486f7e724b87c769" name="ac681c52dc86f00eb486f7e724b87c769"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac681c52dc86f00eb486f7e724b87c769">&#9670;&#160;</a></span>~StateSet()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">~<a class="el" href="classyuki_1_1atri_1_1nfp_1_1_state_set.html">StateSet</a> </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">成员函数说明</h2>
+<a id="ac8bb3912a3ce86b15842e79d0b421204" name="ac8bb3912a3ce86b15842e79d0b421204"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac8bb3912a3ce86b15842e79d0b421204">&#9670;&#160;</a></span>clear()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void clear </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>清空 </p>
+
+<p class="definition">在文件 <a class="el" href="_n_f_p_state_set_8cpp_source.html">NFPStateSet.cpp</a> 第 <a class="el" href="_n_f_p_state_set_8cpp_source.html#l00004">4</a> 行定义.</p>
+
+<p class="reference">引用了 <a class="el" href="_n_f_p_state_set_8h_source.html#l00011">StateSet::s</a>.</p>
+
+</div>
+</div>
+<a id="a6380fc023df753bbb7596ee93d37811e" name="a6380fc023df753bbb7596ee93d37811e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6380fc023df753bbb7596ee93d37811e">&#9670;&#160;</a></span>remove()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void remove </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classyuki_1_1atri_1_1nfp_1_1_state.html">State</a> const &amp;</td>          <td class="paramname"><span class="paramname"><em>state</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>将某个 <a class="el" href="classyuki_1_1atri_1_1nfp_1_1_state.html" title="用来描述棋盘状态的类。">State</a> 的已被搜索过的标记移除 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">state</td><td><a class="el" href="classyuki_1_1atri_1_1nfp_1_1_state.html" title="用来描述棋盘状态的类。">State</a> </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">在文件 <a class="el" href="_n_f_p_state_set_8cpp_source.html">NFPStateSet.cpp</a> 第 <a class="el" href="_n_f_p_state_set_8cpp_source.html#l00016">16</a> 行定义.</p>
+
+<p class="reference">引用了 <a class="el" href="_n_f_p_state_8h_source.html#l00031">State::data</a> , 以及 <a class="el" href="_n_f_p_state_set_8h_source.html#l00011">StateSet::s</a>.</p>
+
+</div>
+</div>
+<a id="a68ae9483632b89e683a6274370207300" name="a68ae9483632b89e683a6274370207300"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a68ae9483632b89e683a6274370207300">&#9670;&#160;</a></span>visit()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void visit </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classyuki_1_1atri_1_1nfp_1_1_state.html">State</a> const &amp;</td>          <td class="paramname"><span class="paramname"><em>state</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>标记某个 <a class="el" href="classyuki_1_1atri_1_1nfp_1_1_state.html" title="用来描述棋盘状态的类。">State</a> 是否已经被搜索过 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">state</td><td><a class="el" href="classyuki_1_1atri_1_1nfp_1_1_state.html" title="用来描述棋盘状态的类。">State</a> </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">在文件 <a class="el" href="_n_f_p_state_set_8cpp_source.html">NFPStateSet.cpp</a> 第 <a class="el" href="_n_f_p_state_set_8cpp_source.html#l00012">12</a> 行定义.</p>
+
+<p class="reference">引用了 <a class="el" href="_n_f_p_state_8h_source.html#l00031">State::data</a> , 以及 <a class="el" href="_n_f_p_state_set_8h_source.html#l00011">StateSet::s</a>.</p>
+
+</div>
+</div>
+<a id="ad637134bb0fdff8de3857fa3721eb271" name="ad637134bb0fdff8de3857fa3721eb271"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad637134bb0fdff8de3857fa3721eb271">&#9670;&#160;</a></span>visited()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool visited </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classyuki_1_1atri_1_1nfp_1_1_state.html">State</a> const &amp;</td>          <td class="paramname"><span class="paramname"><em>state</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>查询某个 <a class="el" href="classyuki_1_1atri_1_1nfp_1_1_state.html" title="用来描述棋盘状态的类。">State</a> 是否已经被搜索过 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">state</td><td>要查询的 <a class="el" href="classyuki_1_1atri_1_1nfp_1_1_state.html" title="用来描述棋盘状态的类。">State</a> </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>bool 某个 <a class="el" href="classyuki_1_1atri_1_1nfp_1_1_state.html" title="用来描述棋盘状态的类。">State</a> 是否已经被搜索过 </dd></dl>
+<dl class="retval"><dt>返回值</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">true</td><td>该 <a class="el" href="classyuki_1_1atri_1_1nfp_1_1_state.html" title="用来描述棋盘状态的类。">State</a> 已经被搜索过 </td></tr>
+    <tr><td class="paramname">false</td><td>该 <a class="el" href="classyuki_1_1atri_1_1nfp_1_1_state.html" title="用来描述棋盘状态的类。">State</a> 未被搜索过 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">在文件 <a class="el" href="_n_f_p_state_set_8cpp_source.html">NFPStateSet.cpp</a> 第 <a class="el" href="_n_f_p_state_set_8cpp_source.html#l00008">8</a> 行定义.</p>
+
+<p class="reference">引用了 <a class="el" href="_n_f_p_state_8h_source.html#l00031">State::data</a> , 以及 <a class="el" href="_n_f_p_state_set_8h_source.html#l00011">StateSet::s</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">类成员变量说明</h2>
+<a id="a86eda0a5fbe3cd45fb0ea5df155fdadc" name="a86eda0a5fbe3cd45fb0ea5df155fdadc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a86eda0a5fbe3cd45fb0ea5df155fdadc">&#9670;&#160;</a></span>s</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">set&lt;<a class="el" href="namespaceyuki.html#a67cb024aa20a9cffd9c230409152959c">usize</a>&gt; s</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>用 set 记录 </p>
+
+<p class="definition">在文件 <a class="el" href="_n_f_p_state_set_8h_source.html">NFPStateSet.h</a> 第 <a class="el" href="_n_f_p_state_set_8h_source.html#l00011">11</a> 行定义.</p>
+
+<p class="reference">被这些函数引用 <a class="el" href="_n_f_p_state_set_8cpp_source.html#l00004">StateSet::clear()</a>, <a class="el" href="_n_f_p_state_set_8cpp_source.html#l00016">StateSet::remove()</a>, <a class="el" href="_n_f_p_state_set_8cpp_source.html#l00012">StateSet::visit()</a> , 以及 <a class="el" href="_n_f_p_state_set_8cpp_source.html#l00008">StateSet::visited()</a>.</p>
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>D:/user/Project/Code/AI/cxx_src/NFigurePuzzle/include/<a class="el" href="_n_f_p_state_set_8h_source.html">NFPStateSet.h</a></li>
+<li>D:/user/Project/Code/AI/cxx_src/NFigurePuzzle/src/<a class="el" href="_n_f_p_state_set_8cpp_source.html">NFPStateSet.cpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0
+</small></address>
+</div><!-- doc-content -->
+</body>
+</html>

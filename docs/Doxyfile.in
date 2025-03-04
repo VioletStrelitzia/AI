@@ -6,12 +6,11 @@ PROJECT_NUMBER          = "1.0.0"
 PROJECT_BRIEF           = "YUKII的AI库"
 
 # 程序文档输出目录
-OUTPUT_DIRECTORY        =  ../docs
+OUTPUT_DIRECTORY        = ../docs
  
 # 程序文档输入目录 
-INPUT                   = @CMAKE_CURRENT_LIST_DIR@/inc \
-                          @CMAKE_CURRENT_LIST_DIR@/src
- 
+INPUT                   = @CMAKE_CURRENT_LIST_DIR@/cxx_src
+
 # 程序文档语言环境
 OUTPUT_LANGUAGE         = Chinese
 DOXYFILE_ENCODING       = UTF-8

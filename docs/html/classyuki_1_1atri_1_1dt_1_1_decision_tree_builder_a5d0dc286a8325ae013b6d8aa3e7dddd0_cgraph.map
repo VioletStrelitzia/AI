@@ -1,0 +1,5 @@
+<map id="pluralityValue" name="pluralityValue">
+<area shape="rect" id="Node000001" title="从样本集里选取占比最多的 target 取值作为叶子结点" alt="" coords="5,5,104,32"/>
+<area shape="rect" id="Node000002" href="$namespaceyuki_1_1random.html#a5c4c6f66339f20f8b261def24a471f24" title="从数组里随机选择一个元素" alt="" coords="152,5,298,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="104,16,136,16,136,21,104,21"/>
+</map>

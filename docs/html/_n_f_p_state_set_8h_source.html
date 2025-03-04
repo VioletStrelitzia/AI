@@ -1,0 +1,136 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.12.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>AI: D:/user/Project/Code/AI/cxx_src/NFigurePuzzle/include/NFPStateSet.h 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">AI<span id="projectnumber">&#160;1.0.0</span>
+   </div>
+   <div id="projectbrief">YUKII的AI库</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.12.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','搜索',false);
+  $(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){ initResizable(false); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_7f512dd0749495d1be0f144cf126d477.html">cxx_src</a></li><li class="navelem"><a class="el" href="dir_54202c06f1eac1b59ec618616fd22062.html">NFigurePuzzle</a></li><li class="navelem"><a class="el" href="dir_35258636016ba1d7a3fac62f2b1c2f90.html">include</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div id="doc-content">
+<div class="header">
+  <div class="headertitle"><div class="title">NFPStateSet.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="_n_f_p_state_set_8h.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#include &quot;<a class="code" href="_n_f_p_state_8h.html">NFPState.h</a>&quot;</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespaceyuki_1_1atri_1_1nfp.html">yuki::atri::nfp</a> {</div>
+<div class="foldopen" id="foldopen00009" data-start="{" data-end="};">
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno"><a class="line" href="classyuki_1_1atri_1_1nfp_1_1_state_set.html">    9</a></span>    <span class="keyword">class </span><a class="code hl_class" href="classyuki_1_1atri_1_1nfp_1_1_state_set.html">StateSet</a> {</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>    <span class="keyword">private</span>:</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno"><a class="line" href="classyuki_1_1atri_1_1nfp_1_1_state_set.html#a86eda0a5fbe3cd45fb0ea5df155fdadc">   11</a></span>        set&lt;usize&gt; <a class="code hl_variable" href="classyuki_1_1atri_1_1nfp_1_1_state_set.html#a86eda0a5fbe3cd45fb0ea5df155fdadc">s</a>;  </div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>    <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno"><a class="line" href="classyuki_1_1atri_1_1nfp_1_1_state_set.html#a01d06afdf1e7a1ca53220d8501e15210">   14</a></span>        <a class="code hl_function" href="classyuki_1_1atri_1_1nfp_1_1_state_set.html#a01d06afdf1e7a1ca53220d8501e15210">StateSet</a>() = <span class="keywordflow">default</span>;</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno"><a class="line" href="classyuki_1_1atri_1_1nfp_1_1_state_set.html#ac681c52dc86f00eb486f7e724b87c769">   15</a></span>        <a class="code hl_function" href="classyuki_1_1atri_1_1nfp_1_1_state_set.html#ac681c52dc86f00eb486f7e724b87c769">~StateSet</a>() = <span class="keywordflow">default</span>;</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="classyuki_1_1atri_1_1nfp_1_1_state_set.html#ac8bb3912a3ce86b15842e79d0b421204">clear</a>();</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>        <span class="keywordtype">bool</span> <a class="code hl_function" href="classyuki_1_1atri_1_1nfp_1_1_state_set.html#ad637134bb0fdff8de3857fa3721eb271">visited</a>(<a class="code hl_class" href="classyuki_1_1atri_1_1nfp_1_1_state.html">State</a> <span class="keyword">const</span>&amp; state);</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="classyuki_1_1atri_1_1nfp_1_1_state_set.html#a68ae9483632b89e683a6274370207300">visit</a>(<a class="code hl_class" href="classyuki_1_1atri_1_1nfp_1_1_state.html">State</a> <span class="keyword">const</span>&amp; state);</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span> </div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="classyuki_1_1atri_1_1nfp_1_1_state_set.html#a6380fc023df753bbb7596ee93d37811e">remove</a>(<a class="code hl_class" href="classyuki_1_1atri_1_1nfp_1_1_state.html">State</a> <span class="keyword">const</span>&amp; state);</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    };</div>
+</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>}</div>
+<div class="ttc" id="a_n_f_p_state_8h_html"><div class="ttname"><a href="_n_f_p_state_8h.html">NFPState.h</a></div></div>
+<div class="ttc" id="aclassyuki_1_1atri_1_1nfp_1_1_state_html"><div class="ttname"><a href="classyuki_1_1atri_1_1nfp_1_1_state.html">yuki::atri::nfp::State</a></div><div class="ttdoc">用来描述棋盘状态的类。</div><div class="ttdef"><b>定义</b> <a href="_n_f_p_state_8h_source.html#l00014">NFPState.h:14</a></div></div>
+<div class="ttc" id="aclassyuki_1_1atri_1_1nfp_1_1_state_set_html"><div class="ttname"><a href="classyuki_1_1atri_1_1nfp_1_1_state_set.html">yuki::atri::nfp::StateSet</a></div><div class="ttdoc">用于记录 State 是否被搜索过</div><div class="ttdef"><b>定义</b> <a href="#l00009">NFPStateSet.h:9</a></div></div>
+<div class="ttc" id="aclassyuki_1_1atri_1_1nfp_1_1_state_set_html_a01d06afdf1e7a1ca53220d8501e15210"><div class="ttname"><a href="classyuki_1_1atri_1_1nfp_1_1_state_set.html#a01d06afdf1e7a1ca53220d8501e15210">yuki::atri::nfp::StateSet::StateSet</a></div><div class="ttdeci">StateSet()=default</div></div>
+<div class="ttc" id="aclassyuki_1_1atri_1_1nfp_1_1_state_set_html_a6380fc023df753bbb7596ee93d37811e"><div class="ttname"><a href="classyuki_1_1atri_1_1nfp_1_1_state_set.html#a6380fc023df753bbb7596ee93d37811e">yuki::atri::nfp::StateSet::remove</a></div><div class="ttdeci">void remove(State const &amp;state)</div><div class="ttdoc">将某个 State 的已被搜索过的标记移除</div><div class="ttdef"><b>定义</b> <a href="_n_f_p_state_set_8cpp_source.html#l00016">NFPStateSet.cpp:16</a></div></div>
+<div class="ttc" id="aclassyuki_1_1atri_1_1nfp_1_1_state_set_html_a68ae9483632b89e683a6274370207300"><div class="ttname"><a href="classyuki_1_1atri_1_1nfp_1_1_state_set.html#a68ae9483632b89e683a6274370207300">yuki::atri::nfp::StateSet::visit</a></div><div class="ttdeci">void visit(State const &amp;state)</div><div class="ttdoc">标记某个 State 是否已经被搜索过</div><div class="ttdef"><b>定义</b> <a href="_n_f_p_state_set_8cpp_source.html#l00012">NFPStateSet.cpp:12</a></div></div>
+<div class="ttc" id="aclassyuki_1_1atri_1_1nfp_1_1_state_set_html_a86eda0a5fbe3cd45fb0ea5df155fdadc"><div class="ttname"><a href="classyuki_1_1atri_1_1nfp_1_1_state_set.html#a86eda0a5fbe3cd45fb0ea5df155fdadc">yuki::atri::nfp::StateSet::s</a></div><div class="ttdeci">set&lt; usize &gt; s</div><div class="ttdoc">用 set 记录</div><div class="ttdef"><b>定义</b> <a href="#l00011">NFPStateSet.h:11</a></div></div>
+<div class="ttc" id="aclassyuki_1_1atri_1_1nfp_1_1_state_set_html_ac681c52dc86f00eb486f7e724b87c769"><div class="ttname"><a href="classyuki_1_1atri_1_1nfp_1_1_state_set.html#ac681c52dc86f00eb486f7e724b87c769">yuki::atri::nfp::StateSet::~StateSet</a></div><div class="ttdeci">~StateSet()=default</div></div>
+<div class="ttc" id="aclassyuki_1_1atri_1_1nfp_1_1_state_set_html_ac8bb3912a3ce86b15842e79d0b421204"><div class="ttname"><a href="classyuki_1_1atri_1_1nfp_1_1_state_set.html#ac8bb3912a3ce86b15842e79d0b421204">yuki::atri::nfp::StateSet::clear</a></div><div class="ttdeci">void clear()</div><div class="ttdoc">清空</div><div class="ttdef"><b>定义</b> <a href="_n_f_p_state_set_8cpp_source.html#l00004">NFPStateSet.cpp:4</a></div></div>
+<div class="ttc" id="aclassyuki_1_1atri_1_1nfp_1_1_state_set_html_ad637134bb0fdff8de3857fa3721eb271"><div class="ttname"><a href="classyuki_1_1atri_1_1nfp_1_1_state_set.html#ad637134bb0fdff8de3857fa3721eb271">yuki::atri::nfp::StateSet::visited</a></div><div class="ttdeci">bool visited(State const &amp;state)</div><div class="ttdoc">查询某个 State 是否已经被搜索过</div><div class="ttdef"><b>定义</b> <a href="_n_f_p_state_set_8cpp_source.html#l00008">NFPStateSet.cpp:8</a></div></div>
+<div class="ttc" id="anamespaceyuki_1_1atri_1_1nfp_html"><div class="ttname"><a href="namespaceyuki_1_1atri_1_1nfp.html">yuki::atri::nfp</a></div><div class="ttdef"><b>定义</b> <a href="_n_f_p_algorithm_8h_source.html#l00005">NFPAlgorithm.h:5</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0
+</small></address>
+</div><!-- doc-content -->
+</body>
+</html>

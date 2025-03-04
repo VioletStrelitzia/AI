@@ -1,0 +1,21 @@
+<map id="choose" name="choose">
+<area shape="rect" id="Node000001" title="从数组里随机选择一个元素" alt="" coords="720,80,783,107"/>
+<area shape="rect" id="Node000002" href="$classyuki_1_1atri_1_1dt_1_1_decision_tree_builder.html#af5c09ddbcafc56b7b57135141fe9d649" title="获取信息增益最大的属性" alt="" coords="506,5,665,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="704,77,671,62,642,51,644,46,673,58,706,72"/>
+<area shape="rect" id="Node000006" href="$classyuki_1_1atri_1_1dt_1_1_decision_tree_builder.html#a5d0dc286a8325ae013b6d8aa3e7dddd0" title="从样本集里选取占比最多的 target 取值作为叶子结点" alt="" coords="499,72,672,115"/>
+<area shape="poly" id="edge6_Node000001_Node000006" title=" " alt="" coords="704,96,672,96,672,91,704,91"/>
+<area shape="rect" id="Node000007" href="$classyuki_1_1atri_1_1csp_1_1_c_s_p.html#a007f7b8430262d9db2c44b4abdb8d033" title="对 variables 的所有 var 从其值域里随机赋值（不重置值域）" alt="" coords="517,139,654,181"/>
+<area shape="poly" id="edge8_Node000001_Node000007" title=" " alt="" coords="706,115,673,129,644,141,642,136,671,124,704,110"/>
+<area shape="rect" id="Node000003" href="$classyuki_1_1atri_1_1dt_1_1_decision_tree_builder.html#afb0815a4166a68bb5f1c60ec09abe4de" title="采用 learn 算法建树" alt="" coords="302,39,451,81"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="491,44,452,51,451,45,490,39"/>
+<area shape="poly" id="edge3_Node000003_Node000003" title=" " alt="" coords="409,25,397,20,377,17,358,19,347,24,342,30,344,38,339,39,337,29,343,20,357,14,377,12,398,14,411,21"/>
+<area shape="rect" id="Node000004" href="$classyuki_1_1atri_1_1dt_1_1_decision_tree_builder.html#a9525b1c74d534350359d9f205c35cba4" title="建树" alt="" coords="104,39,253,81"/>
+<area shape="poly" id="edge4_Node000003_Node000004" title=" " alt="" coords="286,63,253,63,253,57,286,57"/>
+<area shape="rect" id="Node000005" href="$_decision_tree_test1_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,47,55,73"/>
+<area shape="poly" id="edge5_Node000004_Node000005" title=" " alt="" coords="88,63,55,63,55,57,88,57"/>
+<area shape="poly" id="edge7_Node000006_Node000003" title=" " alt="" coords="484,80,451,75,452,69,485,75"/>
+<area shape="rect" id="Node000008" href="$classyuki_1_1atri_1_1csp_1_1_c_s_p.html#af2f2e4a4d85e553f2dd648dec8b427fc" title="最小冲突算法" alt="" coords="308,139,445,181"/>
+<area shape="poly" id="edge9_Node000007_Node000008" title=" " alt="" coords="502,163,445,163,445,157,502,157"/>
+<area shape="rect" id="Node000009" href="$namespaceyuki_1_1atri_1_1csp.html#a1b1cfe52a93c9d9ada969f68fabd5de1" title=" " alt="" coords="103,139,254,181"/>
+<area shape="poly" id="edge10_Node000008_Node000009" title=" " alt="" coords="293,163,255,163,255,157,293,157"/>
+</map>

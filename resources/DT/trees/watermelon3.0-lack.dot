@@ -3,13 +3,13 @@ node [shape=box, style="filled", color="black", fontname="Microsoft YaHei", font
 edge [fontname="Microsoft YaHei", fontsize=26];
 0 [label="Root\nSamples: 15\nSplit by 纹理\ntarget: 坏瓜\nINFO_GAIN: 0.4236", fillcolor="#e58139"];
 0 -> 1;
-1 [label="纹理 == 模糊\nSamples: 5\nSplit by 根蒂\ntarget: 坏瓜\nINFO_GAIN: 0.3228", fillcolor="#e58139"];
+1 [label="纹理 == 模糊\nSamples: 5\nSplit by 脐部\ntarget: 坏瓜\nINFO_GAIN: 0.3228", fillcolor="#e58139"];
 1 -> 2;
-2 [label="根蒂 == 硬挺\nSamples: 2\ntarget: 坏瓜\nAll same: 1", fillcolor="#64a1c3"];
+2 [label="脐部 == 平坦\nSamples: 4\ntarget: 坏瓜\nAll same: 1", fillcolor="#64a1c3"];
 1 -> 3;
-3 [label="根蒂 == 蜷缩\nSamples: 2\ntarget: 坏瓜\nAll same: 1", fillcolor="#64a1c3"];
+3 [label="脐部 == 凹陷\nSamples: 0\ntarget: 坏瓜\nExampls empty: 1", fillcolor="#64a1c3"];
 1 -> 4;
-4 [label="根蒂 == 稍蜷\nSamples: 1\ntarget: 好瓜\nAll same: 1", fillcolor="#64a1c3"];
+4 [label="脐部 == 稍凹\nSamples: 1\ntarget: 好瓜\nAll same: 1", fillcolor="#64a1c3"];
 0 -> 5;
 5 [label="纹理 == 清晰\nSamples: 9\nSplit by 根蒂\ntarget: 好瓜\nINFO_GAIN: 0.3878", fillcolor="#e58139"];
 5 -> 6;

@@ -1,0 +1,7 @@
+<map id="DivideByZero" name="DivideByZero">
+<area shape="rect" id="Node000001" title="除0错误类" alt="" coords="5,155,106,181"/>
+<area shape="rect" id="Node000002" href="$structyuki_1_1dflt_1_1_default_base.html" title="错误基类" alt="" coords="9,80,102,107"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="58,122,58,154,53,154,53,122"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="17,5,94,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="58,48,58,80,53,80,53,48"/>
+</map>

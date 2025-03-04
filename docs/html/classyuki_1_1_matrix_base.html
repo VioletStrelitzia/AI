@@ -1,0 +1,904 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.12.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>AI: MatrixBase&lt; Derived &gt; 模板类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">AI<span id="projectnumber">&#160;1.0.0</span>
+   </div>
+   <div id="projectbrief">YUKII的AI库</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.12.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','搜索',false);
+  $(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){ initResizable(false); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespaceyuki.html">yuki</a></li><li class="navelem"><a class="el" href="classyuki_1_1_matrix_base.html">MatrixBase</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div id="doc-content">
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="#friends">友元</a> &#124;
+<a href="classyuki_1_1_matrix_base-members.html">所有成员列表</a>  </div>
+  <div class="headertitle"><div class="title">MatrixBase&lt; Derived &gt; 模板类 参考</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>矩阵基类  
+ <a href="#details">更多...</a></p>
+
+<p><code>#include &lt;<a class="el" href="_matrix_base_8h_source.html">MatrixBase.h</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:a1ce30186016ff75d0285d7a0063e2c9c" id="r_a1ce30186016ff75d0285d7a0063e2c9c"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1ce30186016ff75d0285d7a0063e2c9c">operator()</a> (<a class="el" href="namespaceyuki.html#a77a52b9640a0c8600feb48e548425a40">i32</a> const &amp;row, <a class="el" href="namespaceyuki.html#a77a52b9640a0c8600feb48e548425a40">i32</a> const &amp;col) const</td></tr>
+<tr class="memdesc:a1ce30186016ff75d0285d7a0063e2c9c"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取矩阵 (row, col) 位置的元素的值  <br /></td></tr>
+<tr class="separator:a1ce30186016ff75d0285d7a0063e2c9c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a80c604e29217ccbbf15d9166b8d6de6d" id="r_a80c604e29217ccbbf15d9166b8d6de6d"><td class="memItemLeft" align="right" valign="top">auto &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a80c604e29217ccbbf15d9166b8d6de6d">operator()</a> (<a class="el" href="namespaceyuki.html#a77a52b9640a0c8600feb48e548425a40">i32</a> const &amp;row, <a class="el" href="namespaceyuki.html#a77a52b9640a0c8600feb48e548425a40">i32</a> const &amp;col)</td></tr>
+<tr class="memdesc:a80c604e29217ccbbf15d9166b8d6de6d"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取矩阵 (row, col) 位置的元素的引用  <br /></td></tr>
+<tr class="separator:a80c604e29217ccbbf15d9166b8d6de6d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9689ae8ccccb1c7e4d13939bcd6327ec" id="r_a9689ae8ccccb1c7e4d13939bcd6327ec"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9689ae8ccccb1c7e4d13939bcd6327ec">operator()</a> (<a class="el" href="namespaceyuki.html#a77a52b9640a0c8600feb48e548425a40">i32</a> const &amp;idx) const</td></tr>
+<tr class="memdesc:a9689ae8ccccb1c7e4d13939bcd6327ec"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取矩阵一维索引 idx 位置的元素的值  <br /></td></tr>
+<tr class="separator:a9689ae8ccccb1c7e4d13939bcd6327ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a876917898f8f85f947b12d2348163013" id="r_a876917898f8f85f947b12d2348163013"><td class="memItemLeft" align="right" valign="top">auto &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a876917898f8f85f947b12d2348163013">operator()</a> (<a class="el" href="namespaceyuki.html#a77a52b9640a0c8600feb48e548425a40">i32</a> const &amp;idx)</td></tr>
+<tr class="memdesc:a876917898f8f85f947b12d2348163013"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取矩阵一维索引 idx 位置的元素的引用  <br /></td></tr>
+<tr class="separator:a876917898f8f85f947b12d2348163013"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad183ed34b29cb13ac3ea1f10422adad1" id="r_ad183ed34b29cb13ac3ea1f10422adad1"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad183ed34b29cb13ac3ea1f10422adad1">rows</a> () const -&gt; <a class="el" href="namespaceyuki.html#a77a52b9640a0c8600feb48e548425a40">i32</a></td></tr>
+<tr class="memdesc:ad183ed34b29cb13ac3ea1f10422adad1"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取矩阵行数  <br /></td></tr>
+<tr class="separator:ad183ed34b29cb13ac3ea1f10422adad1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac28c4ff99ff14af612054e17c0c54a18" id="r_ac28c4ff99ff14af612054e17c0c54a18"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac28c4ff99ff14af612054e17c0c54a18">cols</a> () const -&gt; <a class="el" href="namespaceyuki.html#a77a52b9640a0c8600feb48e548425a40">i32</a></td></tr>
+<tr class="memdesc:ac28c4ff99ff14af612054e17c0c54a18"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取矩阵列数  <br /></td></tr>
+<tr class="separator:ac28c4ff99ff14af612054e17c0c54a18"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af3bae7d3167b0618bdcf9da8fbcee404" id="r_af3bae7d3167b0618bdcf9da8fbcee404"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af3bae7d3167b0618bdcf9da8fbcee404">capacity</a> () const -&gt; <a class="el" href="namespaceyuki.html#a77a52b9640a0c8600feb48e548425a40">i32</a></td></tr>
+<tr class="memdesc:af3bae7d3167b0618bdcf9da8fbcee404"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取矩阵容量  <br /></td></tr>
+<tr class="separator:af3bae7d3167b0618bdcf9da8fbcee404"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a572da5f0089665e56099eb38a582829a" id="r_a572da5f0089665e56099eb38a582829a"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a572da5f0089665e56099eb38a582829a">size</a> () const -&gt; <a class="el" href="namespaceyuki.html#a77a52b9640a0c8600feb48e548425a40">i32</a></td></tr>
+<tr class="memdesc:a572da5f0089665e56099eb38a582829a"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取矩阵大小  <br /></td></tr>
+<tr class="separator:a572da5f0089665e56099eb38a582829a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad4e9e54c3b2eb6e9bf3ba7c2c9fca2bb" id="r_ad4e9e54c3b2eb6e9bf3ba7c2c9fca2bb"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad4e9e54c3b2eb6e9bf3ba7c2c9fca2bb">push_back</a> (auto const &amp;val)</td></tr>
+<tr class="separator:ad4e9e54c3b2eb6e9bf3ba7c2c9fca2bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeab80b539176b17ec3fc87f73b7b7b9d" id="r_aeab80b539176b17ec3fc87f73b7b7b9d"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aeab80b539176b17ec3fc87f73b7b7b9d">push_back</a> (auto &amp;&amp;val)</td></tr>
+<tr class="separator:aeab80b539176b17ec3fc87f73b7b7b9d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0c4f579ae2de47bcddfc8e16059e16fc" id="r_a0c4f579ae2de47bcddfc8e16059e16fc"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0c4f579ae2de47bcddfc8e16059e16fc">back</a> ()</td></tr>
+<tr class="separator:a0c4f579ae2de47bcddfc8e16059e16fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a04c755a1ffa66e4a68702589c3752ab3" id="r_a04c755a1ffa66e4a68702589c3752ab3"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a04c755a1ffa66e4a68702589c3752ab3">back</a> () const</td></tr>
+<tr class="separator:a04c755a1ffa66e4a68702589c3752ab3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad950587c89b4306f927b08b5e5cb7e89" id="r_ad950587c89b4306f927b08b5e5cb7e89"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad950587c89b4306f927b08b5e5cb7e89">begin</a> ()</td></tr>
+<tr class="separator:ad950587c89b4306f927b08b5e5cb7e89"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab3a32777b35d370f6c73c1c927e635da" id="r_ab3a32777b35d370f6c73c1c927e635da"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab3a32777b35d370f6c73c1c927e635da">cbegin</a> () const</td></tr>
+<tr class="separator:ab3a32777b35d370f6c73c1c927e635da"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7727305d5e1ec66a181e22c43af9a581" id="r_a7727305d5e1ec66a181e22c43af9a581"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7727305d5e1ec66a181e22c43af9a581">end</a> ()</td></tr>
+<tr class="separator:a7727305d5e1ec66a181e22c43af9a581"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aed659bb3449b7216f3acd08df8a7f273" id="r_aed659bb3449b7216f3acd08df8a7f273"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aed659bb3449b7216f3acd08df8a7f273">cend</a> () const</td></tr>
+<tr class="separator:aed659bb3449b7216f3acd08df8a7f273"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a69ddd1f024b1e08a4585875d020f1492" id="r_a69ddd1f024b1e08a4585875d020f1492"><td class="memTemplParams" colspan="2">template&lt;typename _Derived &gt; </td></tr>
+<tr class="memitem:a69ddd1f024b1e08a4585875d020f1492"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a69ddd1f024b1e08a4585875d020f1492">operator+</a> (<a class="el" href="classyuki_1_1_matrix_base.html">MatrixBase</a>&lt; _Derived &gt; const &amp;other) const</td></tr>
+<tr class="separator:a69ddd1f024b1e08a4585875d020f1492"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5f556d1d22ea0cfe2bbdeaa067bb536b" id="r_a5f556d1d22ea0cfe2bbdeaa067bb536b"><td class="memTemplParams" colspan="2">template&lt;typename _Derived &gt; </td></tr>
+<tr class="memitem:a5f556d1d22ea0cfe2bbdeaa067bb536b"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a5f556d1d22ea0cfe2bbdeaa067bb536b">operator+=</a> (<a class="el" href="classyuki_1_1_matrix_base.html">MatrixBase</a>&lt; _Derived &gt; const &amp;other)</td></tr>
+<tr class="separator:a5f556d1d22ea0cfe2bbdeaa067bb536b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5c0b157f8ced391d7505aff18f6bdc77" id="r_a5c0b157f8ced391d7505aff18f6bdc77"><td class="memTemplParams" colspan="2">template&lt;typename _Derived &gt; </td></tr>
+<tr class="memitem:a5c0b157f8ced391d7505aff18f6bdc77"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a5c0b157f8ced391d7505aff18f6bdc77">operator-</a> (<a class="el" href="classyuki_1_1_matrix_base.html">MatrixBase</a>&lt; _Derived &gt; const &amp;other) const</td></tr>
+<tr class="separator:a5c0b157f8ced391d7505aff18f6bdc77"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abce217bb0be8ebb6e9014b6f99f5629a" id="r_abce217bb0be8ebb6e9014b6f99f5629a"><td class="memTemplParams" colspan="2">template&lt;typename _Derived &gt; </td></tr>
+<tr class="memitem:abce217bb0be8ebb6e9014b6f99f5629a"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#abce217bb0be8ebb6e9014b6f99f5629a">operator-=</a> (<a class="el" href="classyuki_1_1_matrix_base.html">MatrixBase</a>&lt; _Derived &gt; const &amp;other)</td></tr>
+<tr class="separator:abce217bb0be8ebb6e9014b6f99f5629a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abacf83b5b374a8af6b17199db4aa2320" id="r_abacf83b5b374a8af6b17199db4aa2320"><td class="memTemplParams" colspan="2">template&lt;typename _Derived &gt; </td></tr>
+<tr class="memitem:abacf83b5b374a8af6b17199db4aa2320"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#abacf83b5b374a8af6b17199db4aa2320">operator*</a> (<a class="el" href="classyuki_1_1_matrix_base.html">MatrixBase</a>&lt; _Derived &gt; const &amp;other) const</td></tr>
+<tr class="separator:abacf83b5b374a8af6b17199db4aa2320"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="friends" name="friends"></a>
+友元</h2></td></tr>
+<tr class="memitem:aceef818a0caff3567c1e50af7ac9e190" id="r_aceef818a0caff3567c1e50af7ac9e190"><td class="memTemplParams" colspan="2">template&lt;typename Derived &gt; </td></tr>
+<tr class="memitem:aceef818a0caff3567c1e50af7ac9e190"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#aceef818a0caff3567c1e50af7ac9e190">operator&lt;&lt;</a> (ostream &amp;os, <a class="el" href="classyuki_1_1_matrix_base.html">MatrixBase</a>&lt; Derived &gt; const &amp;mat) -&gt; ostream &amp;</td></tr>
+<tr class="separator:aceef818a0caff3567c1e50af7ac9e190"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><div class="compoundTemplParams">template&lt;typename Derived&gt;<br />
+class yuki::MatrixBase&lt; Derived &gt;</div><p>矩阵基类 </p>
+<dl class="tparams"><dt>模板参数</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">Derived</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">在文件 <a class="el" href="_matrix_base_8h_source.html">MatrixBase.h</a> 第 <a class="el" href="_matrix_base_8h_source.html#l00019">19</a> 行定义.</p>
+</div><h2 class="groupheader">成员函数说明</h2>
+<a id="a0c4f579ae2de47bcddfc8e16059e16fc" name="a0c4f579ae2de47bcddfc8e16059e16fc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0c4f579ae2de47bcddfc8e16059e16fc">&#9670;&#160;</a></span>back() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Derived &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto back </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="_matrix_base_8h_source.html">MatrixBase.h</a> 第 <a class="el" href="_matrix_base_8h_source.html#l00107">107</a> 行定义.</p>
+
+</div>
+</div>
+<a id="a04c755a1ffa66e4a68702589c3752ab3" name="a04c755a1ffa66e4a68702589c3752ab3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a04c755a1ffa66e4a68702589c3752ab3">&#9670;&#160;</a></span>back() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Derived &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto back </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="_matrix_base_8h_source.html">MatrixBase.h</a> 第 <a class="el" href="_matrix_base_8h_source.html#l00111">111</a> 行定义.</p>
+
+</div>
+</div>
+<a id="ad950587c89b4306f927b08b5e5cb7e89" name="ad950587c89b4306f927b08b5e5cb7e89"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad950587c89b4306f927b08b5e5cb7e89">&#9670;&#160;</a></span>begin()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Derived &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto begin </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="_matrix_base_8h_source.html">MatrixBase.h</a> 第 <a class="el" href="_matrix_base_8h_source.html#l00115">115</a> 行定义.</p>
+
+</div>
+</div>
+<a id="af3bae7d3167b0618bdcf9da8fbcee404" name="af3bae7d3167b0618bdcf9da8fbcee404"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af3bae7d3167b0618bdcf9da8fbcee404">&#9670;&#160;</a></span>capacity()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Derived &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto capacity </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const -&gt; <a class="el" href="namespaceyuki.html#a77a52b9640a0c8600feb48e548425a40">i32</a> </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>获取矩阵容量 </p>
+<dl class="section return"><dt>返回</dt><dd>i32 矩阵容量 </dd></dl>
+
+<p class="definition">在文件 <a class="el" href="_matrix_base_8h_source.html">MatrixBase.h</a> 第 <a class="el" href="_matrix_base_8h_source.html#l00086">86</a> 行定义.</p>
+
+</div>
+</div>
+<a id="ab3a32777b35d370f6c73c1c927e635da" name="ab3a32777b35d370f6c73c1c927e635da"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab3a32777b35d370f6c73c1c927e635da">&#9670;&#160;</a></span>cbegin()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Derived &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto cbegin </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="_matrix_base_8h_source.html">MatrixBase.h</a> 第 <a class="el" href="_matrix_base_8h_source.html#l00119">119</a> 行定义.</p>
+
+</div>
+</div>
+<a id="aed659bb3449b7216f3acd08df8a7f273" name="aed659bb3449b7216f3acd08df8a7f273"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aed659bb3449b7216f3acd08df8a7f273">&#9670;&#160;</a></span>cend()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Derived &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto cend </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="_matrix_base_8h_source.html">MatrixBase.h</a> 第 <a class="el" href="_matrix_base_8h_source.html#l00127">127</a> 行定义.</p>
+
+</div>
+</div>
+<a id="ac28c4ff99ff14af612054e17c0c54a18" name="ac28c4ff99ff14af612054e17c0c54a18"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac28c4ff99ff14af612054e17c0c54a18">&#9670;&#160;</a></span>cols()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Derived &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto cols </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const -&gt; <a class="el" href="namespaceyuki.html#a77a52b9640a0c8600feb48e548425a40">i32</a> </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>获取矩阵列数 </p>
+<dl class="section return"><dt>返回</dt><dd>i32 矩阵列数 </dd></dl>
+
+<p class="definition">在文件 <a class="el" href="_matrix_base_8h_source.html">MatrixBase.h</a> 第 <a class="el" href="_matrix_base_8h_source.html#l00077">77</a> 行定义.</p>
+
+</div>
+</div>
+<a id="a7727305d5e1ec66a181e22c43af9a581" name="a7727305d5e1ec66a181e22c43af9a581"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7727305d5e1ec66a181e22c43af9a581">&#9670;&#160;</a></span>end()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Derived &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto end </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="_matrix_base_8h_source.html">MatrixBase.h</a> 第 <a class="el" href="_matrix_base_8h_source.html#l00123">123</a> 行定义.</p>
+
+</div>
+</div>
+<a id="a876917898f8f85f947b12d2348163013" name="a876917898f8f85f947b12d2348163013"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a876917898f8f85f947b12d2348163013">&#9670;&#160;</a></span>operator()() <span class="overload">[1/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Derived &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto &amp; operator() </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespaceyuki.html#a77a52b9640a0c8600feb48e548425a40">i32</a> const &amp;</td>          <td class="paramname"><span class="paramname"><em>idx</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>获取矩阵一维索引 idx 位置的元素的引用 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">idx</td><td>一维索引 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>Derived::Scalar&amp; 元素 </dd></dl>
+
+<p class="definition">在文件 <a class="el" href="_matrix_base_8h_source.html">MatrixBase.h</a> 第 <a class="el" href="_matrix_base_8h_source.html#l00059">59</a> 行定义.</p>
+
+</div>
+</div>
+<a id="a9689ae8ccccb1c7e4d13939bcd6327ec" name="a9689ae8ccccb1c7e4d13939bcd6327ec"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9689ae8ccccb1c7e4d13939bcd6327ec">&#9670;&#160;</a></span>operator()() <span class="overload">[2/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Derived &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto operator() </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespaceyuki.html#a77a52b9640a0c8600feb48e548425a40">i32</a> const &amp;</td>          <td class="paramname"><span class="paramname"><em>idx</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>获取矩阵一维索引 idx 位置的元素的值 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">idx</td><td>一维索引 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>Derived::Scalar 元素 </dd></dl>
+
+<p class="definition">在文件 <a class="el" href="_matrix_base_8h_source.html">MatrixBase.h</a> 第 <a class="el" href="_matrix_base_8h_source.html#l00049">49</a> 行定义.</p>
+
+</div>
+</div>
+<a id="a80c604e29217ccbbf15d9166b8d6de6d" name="a80c604e29217ccbbf15d9166b8d6de6d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a80c604e29217ccbbf15d9166b8d6de6d">&#9670;&#160;</a></span>operator()() <span class="overload">[3/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Derived &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto &amp; operator() </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespaceyuki.html#a77a52b9640a0c8600feb48e548425a40">i32</a> const &amp;</td>          <td class="paramname"><span class="paramname"><em>row</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespaceyuki.html#a77a52b9640a0c8600feb48e548425a40">i32</a> const &amp;</td>          <td class="paramname"><span class="paramname"><em>col</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>获取矩阵 (row, col) 位置的元素的引用 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">row</td><td>行索引 </td></tr>
+    <tr><td class="paramname">col</td><td>列索引 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>Derived::Scalar&amp; 元素 </dd></dl>
+
+<p class="definition">在文件 <a class="el" href="_matrix_base_8h_source.html">MatrixBase.h</a> 第 <a class="el" href="_matrix_base_8h_source.html#l00039">39</a> 行定义.</p>
+
+</div>
+</div>
+<a id="a1ce30186016ff75d0285d7a0063e2c9c" name="a1ce30186016ff75d0285d7a0063e2c9c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1ce30186016ff75d0285d7a0063e2c9c">&#9670;&#160;</a></span>operator()() <span class="overload">[4/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Derived &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto operator() </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespaceyuki.html#a77a52b9640a0c8600feb48e548425a40">i32</a> const &amp;</td>          <td class="paramname"><span class="paramname"><em>row</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespaceyuki.html#a77a52b9640a0c8600feb48e548425a40">i32</a> const &amp;</td>          <td class="paramname"><span class="paramname"><em>col</em></span>&#160;) const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>获取矩阵 (row, col) 位置的元素的值 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">row</td><td>行索引 </td></tr>
+    <tr><td class="paramname">col</td><td>列索引 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>Derived::Scalar 元素 </dd></dl>
+
+<p class="definition">在文件 <a class="el" href="_matrix_base_8h_source.html">MatrixBase.h</a> 第 <a class="el" href="_matrix_base_8h_source.html#l00028">28</a> 行定义.</p>
+
+</div>
+</div>
+<a id="abacf83b5b374a8af6b17199db4aa2320" name="abacf83b5b374a8af6b17199db4aa2320"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abacf83b5b374a8af6b17199db4aa2320">&#9670;&#160;</a></span>operator*()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Derived &gt; </div>
+<div class="memtemplate">
+template&lt;typename _Derived &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto operator* </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classyuki_1_1_matrix_base.html">MatrixBase</a>&lt; _Derived &gt; const &amp;</td>          <td class="paramname"><span class="paramname"><em>other</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="_matrix_base_8h_source.html">MatrixBase.h</a> 第 <a class="el" href="_matrix_base_8h_source.html#l00156">156</a> 行定义.</p>
+
+</div>
+</div>
+<a id="a69ddd1f024b1e08a4585875d020f1492" name="a69ddd1f024b1e08a4585875d020f1492"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a69ddd1f024b1e08a4585875d020f1492">&#9670;&#160;</a></span>operator+()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Derived &gt; </div>
+<div class="memtemplate">
+template&lt;typename _Derived &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto operator+ </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classyuki_1_1_matrix_base.html">MatrixBase</a>&lt; _Derived &gt; const &amp;</td>          <td class="paramname"><span class="paramname"><em>other</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="_matrix_base_8h_source.html">MatrixBase.h</a> 第 <a class="el" href="_matrix_base_8h_source.html#l00132">132</a> 行定义.</p>
+
+</div>
+</div>
+<a id="a5f556d1d22ea0cfe2bbdeaa067bb536b" name="a5f556d1d22ea0cfe2bbdeaa067bb536b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5f556d1d22ea0cfe2bbdeaa067bb536b">&#9670;&#160;</a></span>operator+=()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Derived &gt; </div>
+<div class="memtemplate">
+template&lt;typename _Derived &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto operator+= </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classyuki_1_1_matrix_base.html">MatrixBase</a>&lt; _Derived &gt; const &amp;</td>          <td class="paramname"><span class="paramname"><em>other</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="_matrix_base_8h_source.html">MatrixBase.h</a> 第 <a class="el" href="_matrix_base_8h_source.html#l00138">138</a> 行定义.</p>
+
+</div>
+</div>
+<a id="a5c0b157f8ced391d7505aff18f6bdc77" name="a5c0b157f8ced391d7505aff18f6bdc77"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5c0b157f8ced391d7505aff18f6bdc77">&#9670;&#160;</a></span>operator-()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Derived &gt; </div>
+<div class="memtemplate">
+template&lt;typename _Derived &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto operator- </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classyuki_1_1_matrix_base.html">MatrixBase</a>&lt; _Derived &gt; const &amp;</td>          <td class="paramname"><span class="paramname"><em>other</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="_matrix_base_8h_source.html">MatrixBase.h</a> 第 <a class="el" href="_matrix_base_8h_source.html#l00144">144</a> 行定义.</p>
+
+</div>
+</div>
+<a id="abce217bb0be8ebb6e9014b6f99f5629a" name="abce217bb0be8ebb6e9014b6f99f5629a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abce217bb0be8ebb6e9014b6f99f5629a">&#9670;&#160;</a></span>operator-=()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Derived &gt; </div>
+<div class="memtemplate">
+template&lt;typename _Derived &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto operator-= </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classyuki_1_1_matrix_base.html">MatrixBase</a>&lt; _Derived &gt; const &amp;</td>          <td class="paramname"><span class="paramname"><em>other</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="_matrix_base_8h_source.html">MatrixBase.h</a> 第 <a class="el" href="_matrix_base_8h_source.html#l00150">150</a> 行定义.</p>
+
+</div>
+</div>
+<a id="aeab80b539176b17ec3fc87f73b7b7b9d" name="aeab80b539176b17ec3fc87f73b7b7b9d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeab80b539176b17ec3fc87f73b7b7b9d">&#9670;&#160;</a></span>push_back() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Derived &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto push_back </td>
+          <td>(</td>
+          <td class="paramtype">auto &amp;&amp;</td>          <td class="paramname"><span class="paramname"><em>val</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="_matrix_base_8h_source.html">MatrixBase.h</a> 第 <a class="el" href="_matrix_base_8h_source.html#l00103">103</a> 行定义.</p>
+
+</div>
+</div>
+<a id="ad4e9e54c3b2eb6e9bf3ba7c2c9fca2bb" name="ad4e9e54c3b2eb6e9bf3ba7c2c9fca2bb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad4e9e54c3b2eb6e9bf3ba7c2c9fca2bb">&#9670;&#160;</a></span>push_back() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Derived &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto push_back </td>
+          <td>(</td>
+          <td class="paramtype">auto const &amp;</td>          <td class="paramname"><span class="paramname"><em>val</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="_matrix_base_8h_source.html">MatrixBase.h</a> 第 <a class="el" href="_matrix_base_8h_source.html#l00099">99</a> 行定义.</p>
+
+</div>
+</div>
+<a id="ad183ed34b29cb13ac3ea1f10422adad1" name="ad183ed34b29cb13ac3ea1f10422adad1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad183ed34b29cb13ac3ea1f10422adad1">&#9670;&#160;</a></span>rows()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Derived &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto rows </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const -&gt; <a class="el" href="namespaceyuki.html#a77a52b9640a0c8600feb48e548425a40">i32</a> </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>获取矩阵行数 </p>
+<dl class="section return"><dt>返回</dt><dd>i32 矩阵行数 </dd></dl>
+
+<p class="definition">在文件 <a class="el" href="_matrix_base_8h_source.html">MatrixBase.h</a> 第 <a class="el" href="_matrix_base_8h_source.html#l00068">68</a> 行定义.</p>
+
+</div>
+</div>
+<a id="a572da5f0089665e56099eb38a582829a" name="a572da5f0089665e56099eb38a582829a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a572da5f0089665e56099eb38a582829a">&#9670;&#160;</a></span>size()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Derived &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto size </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const -&gt; <a class="el" href="namespaceyuki.html#a77a52b9640a0c8600feb48e548425a40">i32</a> </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>获取矩阵大小 </p>
+<dl class="section return"><dt>返回</dt><dd>i32 矩阵大小 </dd></dl>
+
+<p class="definition">在文件 <a class="el" href="_matrix_base_8h_source.html">MatrixBase.h</a> 第 <a class="el" href="_matrix_base_8h_source.html#l00095">95</a> 行定义.</p>
+
+</div>
+</div>
+<h2 class="groupheader">友元及相关符号说明</h2>
+<a id="aceef818a0caff3567c1e50af7ac9e190" name="aceef818a0caff3567c1e50af7ac9e190"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aceef818a0caff3567c1e50af7ac9e190">&#9670;&#160;</a></span>operator&lt;&lt;</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Derived &gt; </div>
+<div class="memtemplate">
+template&lt;typename Derived &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto operator&lt;&lt; </td>
+          <td>(</td>
+          <td class="paramtype">ostream &amp;</td>          <td class="paramname"><span class="paramname"><em>os</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classyuki_1_1_matrix_base.html">MatrixBase</a>&lt; Derived &gt; const &amp;</td>          <td class="paramname"><span class="paramname"><em>mat</em></span>&#160;) -&gt; ostream&amp;</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="_matrix_8h_source.html">Matrix.h</a> 第 <a class="el" href="_matrix_8h_source.html#l00268">268</a> 行定义.</p>
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>D:/user/Project/Code/AI/cxx_src/Core/include/<a class="el" href="_matrix_base_8h_source.html">MatrixBase.h</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0
+</small></address>
+</div><!-- doc-content -->
+</body>
+</html>

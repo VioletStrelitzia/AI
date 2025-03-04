@@ -1,0 +1,5 @@
+<map id="manhattanDistance" name="manhattanDistance">
+<area shape="rect" id="Node000001" title="启发函数 2 ：曼哈顿距离" alt="" coords="5,5,140,32"/>
+<area shape="rect" id="Node000002" href="$classyuki_1_1atri_1_1nfp_1_1_state.html#a73c158802a46ff6eb0ba850537d921fd" title="获取row行col列的数码。" alt="" coords="188,5,343,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="140,16,172,16,172,21,140,21"/>
+</map>

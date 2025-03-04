@@ -1,0 +1,198 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.12.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>AI: D:/user/Project/Code/AI/cxx_src/CSP/include/Variable.hpp 文件参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">AI<span id="projectnumber">&#160;1.0.0</span>
+   </div>
+   <div id="projectbrief">YUKII的AI库</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.12.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','搜索',false);
+  $(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){ initResizable(false); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_7f512dd0749495d1be0f144cf126d477.html">cxx_src</a></li><li class="navelem"><a class="el" href="dir_5d9ead34d3ea77e752b60d7a929fd4c7.html">CSP</a></li><li class="navelem"><a class="el" href="dir_904ded489644ee18c4bab4e726d916f0.html">include</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div id="doc-content">
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">类</a> &#124;
+<a href="#namespaces">命名空间</a>  </div>
+  <div class="headertitle"><div class="title">Variable.hpp 文件参考</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;<a class="el" href="core_8h_source.html">core.h</a>&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Variable.hpp 的引用(Include)关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="_variable_8hpp__incl.png" border="0" usemap="#a_d_1_2user_2_project_2_code_2_a_i_2cxx__src_2_c_s_p_2include_2_variable_8hpp" alt=""/></div>
+<map name="a_d_1_2user_2_project_2_code_2_a_i_2cxx__src_2_c_s_p_2include_2_variable_8hpp" id="a_d_1_2user_2_project_2_code_2_a_i_2cxx__src_2_c_s_p_2include_2_variable_8hpp">
+<area shape="rect" title=" " alt="" coords="933,5,1098,64"/>
+<area shape="rect" href="core_8h.html" title="核心库" alt="" coords="987,112,1044,139"/>
+<area shape="poly" title=" " alt="" coords="1018,64,1018,96,1013,96,1013,64"/>
+<area shape="rect" title=" " alt="" coords="5,187,56,213"/>
+<area shape="poly" title=" " alt="" coords="987,130,556,147,283,165,165,176,71,189,71,184,164,171,282,160,556,142,987,125"/>
+<area shape="rect" title=" " alt="" coords="79,187,136,213"/>
+<area shape="poly" title=" " alt="" coords="987,129,857,130,654,137,408,156,279,170,152,189,151,184,279,165,408,150,654,132,857,125,987,124"/>
+<area shape="rect" title=" " alt="" coords="161,187,199,213"/>
+<area shape="poly" title=" " alt="" coords="987,130,621,148,393,166,294,177,215,189,214,184,293,171,392,160,621,143,987,125"/>
+<area shape="rect" title=" " alt="" coords="223,187,262,213"/>
+<area shape="poly" title=" " alt="" coords="987,129,874,129,700,136,493,154,385,169,278,190,277,184,384,164,492,149,700,131,874,124,987,123"/>
+<area shape="rect" title=" " alt="" coords="286,187,332,213"/>
+<area shape="poly" title=" " alt="" coords="987,130,884,132,728,141,542,159,444,172,348,189,347,184,444,167,541,153,727,135,883,127,987,124"/>
+<area shape="rect" title=" " alt="" coords="357,187,467,213"/>
+<area shape="poly" title=" " alt="" coords="987,132,781,152,483,189,482,184,780,147,986,127"/>
+<area shape="rect" title=" " alt="" coords="492,187,548,213"/>
+<area shape="poly" title=" " alt="" coords="987,132,811,149,690,166,564,189,563,184,689,161,811,144,986,126"/>
+<area shape="rect" title=" " alt="" coords="572,187,625,213"/>
+<area shape="poly" title=" " alt="" coords="987,132,842,152,744,168,641,189,640,184,743,163,841,146,986,127"/>
+<area shape="rect" title=" " alt="" coords="649,187,702,213"/>
+<area shape="poly" title=" " alt="" coords="987,134,873,155,718,189,716,184,872,150,986,129"/>
+<area shape="rect" title=" " alt="" coords="726,187,823,213"/>
+<area shape="poly" title=" " alt="" coords="987,138,832,184,830,179,986,133"/>
+<area shape="rect" title=" " alt="" coords="846,187,924,213"/>
+<area shape="poly" title=" " alt="" coords="994,142,923,181,920,176,992,137"/>
+<area shape="rect" title=" " alt="" coords="948,187,1006,213"/>
+<area shape="poly" title=" " alt="" coords="1011,140,993,174,989,172,1007,138"/>
+<area shape="rect" title=" " alt="" coords="1030,187,1082,213"/>
+<area shape="poly" title=" " alt="" coords="1025,138,1044,172,1039,174,1020,141"/>
+<area shape="rect" title=" " alt="" coords="1106,187,1176,213"/>
+<area shape="poly" title=" " alt="" coords="1039,137,1108,176,1105,181,1036,142"/>
+<area shape="rect" title=" " alt="" coords="1200,187,1272,213"/>
+<area shape="poly" title=" " alt="" coords="1046,134,1186,179,1184,185,1044,139"/>
+<area shape="rect" title=" " alt="" coords="1296,187,1362,213"/>
+<area shape="poly" title=" " alt="" coords="1045,130,1282,183,1281,189,1044,135"/>
+<area shape="rect" title=" " alt="" coords="1386,187,1451,213"/>
+<area shape="poly" title=" " alt="" coords="1045,128,1182,148,1371,183,1370,189,1181,154,1044,133"/>
+<area shape="rect" title=" " alt="" coords="1475,187,1543,213"/>
+<area shape="poly" title=" " alt="" coords="1045,127,1217,146,1336,162,1460,184,1459,189,1335,167,1217,151,1045,132"/>
+<area shape="rect" title=" " alt="" coords="1568,187,1632,213"/>
+<area shape="poly" title=" " alt="" coords="1045,126,1253,142,1400,160,1553,184,1552,189,1399,165,1253,148,1045,131"/>
+<area shape="rect" title=" " alt="" coords="1656,187,1733,213"/>
+<area shape="poly" title=" " alt="" coords="1045,125,1287,142,1460,159,1641,184,1640,189,1459,164,1286,147,1045,131"/>
+<area shape="rect" title=" " alt="" coords="1757,187,1832,213"/>
+<area shape="poly" title=" " alt="" coords="1045,125,1326,139,1530,156,1742,184,1742,189,1529,162,1325,144,1045,130"/>
+<area shape="rect" title=" " alt="" coords="1856,187,1914,213"/>
+<area shape="poly" title=" " alt="" coords="1045,124,1169,126,1364,133,1597,151,1720,165,1841,184,1840,189,1719,171,1597,156,1363,138,1169,131,1045,129"/>
+<area shape="rect" title=" " alt="" coords="1939,187,1999,213"/>
+<area shape="poly" title=" " alt="" coords="1045,124,1180,125,1394,132,1654,150,1790,164,1924,184,1923,189,1789,170,1653,155,1394,137,1180,130,1045,129"/>
+<area shape="rect" title=" " alt="" coords="2023,187,2083,213"/>
+<area shape="poly" title=" " alt="" coords="1045,125,1497,143,1785,161,1910,172,2008,184,2007,189,1909,177,1784,166,1496,148,1045,130"/>
+</map>
+</div>
+</div><div class="textblock"><div class="dynheader">
+此图展示该文件被哪些文件直接或间接地引用了:</div>
+<div class="dyncontent">
+<div class="center"><img src="_variable_8hpp__dep__incl.png" border="0" usemap="#a_d_1_2user_2_project_2_code_2_a_i_2cxx__src_2_c_s_p_2include_2_variable_8hppdep" alt=""/></div>
+<map name="a_d_1_2user_2_project_2_code_2_a_i_2cxx__src_2_c_s_p_2include_2_variable_8hppdep" id="a_d_1_2user_2_project_2_code_2_a_i_2cxx__src_2_c_s_p_2include_2_variable_8hppdep">
+<area shape="rect" title=" " alt="" coords="128,5,294,64"/>
+<area shape="rect" href="_c_s_p_8hpp.html" title=" " alt="" coords="128,112,294,171"/>
+<area shape="poly" title=" " alt="" coords="214,80,214,112,208,112,208,80"/>
+<area shape="rect" href="_n_queen_8h.html" title=" " alt="" coords="32,219,198,277"/>
+<area shape="poly" title=" " alt="" coords="176,184,143,220,139,216,173,180"/>
+<area shape="rect" href="_c_s_p1_8cpp.html" title=" " alt="" coords="221,219,393,277"/>
+<area shape="poly" title=" " alt="" coords="249,180,283,216,279,220,246,184"/>
+<area shape="rect" href="_n_queen_8cpp.html" title=" " alt="" coords="5,325,225,368"/>
+<area shape="poly" title=" " alt="" coords="118,293,118,325,112,325,112,293"/>
+</map>
+</div>
+</div>
+<p><a href="_variable_8hpp_source.html">浏览该文件的源代码.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+类</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classyuki_1_1atri_1_1csp_1_1_variable.html">Variable&lt; ValueType &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">变量类  <a href="classyuki_1_1atri_1_1csp_1_1_variable.html#details">更多...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="namespaces" name="namespaces"></a>
+命名空间</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceyuki.html">yuki</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceyuki_1_1atri.html">yuki::atri</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceyuki_1_1atri_1_1csp.html">yuki::atri::csp</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0
+</small></address>
+</div><!-- doc-content -->
+</body>
+</html>

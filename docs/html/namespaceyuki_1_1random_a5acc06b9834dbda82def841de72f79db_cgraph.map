@@ -1,0 +1,5 @@
+<map id="chooseByProbability" name="chooseByProbability">
+<area shape="rect" id="Node000001" title="依概率选择" alt="" coords="5,5,146,32"/>
+<area shape="rect" id="Node000002" href="$namespaceyuki_1_1random.html#ac88f03eaee39420d241f2f74adfa6676" title="生成一个随机浮点数" alt="" coords="194,5,285,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="146,16,178,16,178,21,146,21"/>
+</map>

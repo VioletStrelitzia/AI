@@ -1,0 +1,9 @@
+<map id="Attribute" name="Attribute">
+<area shape="rect" id="Node000001" title="属性类" alt="" coords="89,112,159,139"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,13,59,40"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="53,51,85,86,110,110,107,114,81,90,49,54"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="83,13,165,40"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="127,56,127,112,121,112,121,56"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="189,5,334,48"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="221,60,144,114,141,109,218,55"/>
+</map>

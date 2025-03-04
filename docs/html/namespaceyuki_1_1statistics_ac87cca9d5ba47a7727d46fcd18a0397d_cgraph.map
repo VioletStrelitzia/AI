@@ -1,0 +1,6 @@
+<map id="product" name="product">
+<area shape="rect" id="Node000001" title="连乘积" alt="" coords="5,29,70,56"/>
+<area shape="rect" id="Node000002" href="$namespaceyuki_1_1statistics.html#a56b3e7e7ce27457b165303e8c30c7552" title="和" alt="" coords="118,29,164,56"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="70,40,102,40,102,45,70,45"/>
+<area shape="poly" id="edge2_Node000002_Node000002" title=" " alt="" coords="122,30,119,20,121,11,129,5,141,3,154,5,161,12,157,16,151,10,141,8,131,10,126,14,124,20,127,28"/>
+</map>

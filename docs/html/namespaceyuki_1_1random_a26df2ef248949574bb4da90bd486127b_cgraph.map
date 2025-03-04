@@ -1,0 +1,5 @@
+<map id="trigger" name="trigger">
+<area shape="rect" id="Node000001" title="依概率 p 随机选择是否触发" alt="" coords="5,5,63,32"/>
+<area shape="rect" id="Node000002" href="$namespaceyuki_1_1random.html#ac88f03eaee39420d241f2f74adfa6676" title="生成一个随机浮点数" alt="" coords="111,5,202,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="63,16,95,16,95,21,63,21"/>
+</map>

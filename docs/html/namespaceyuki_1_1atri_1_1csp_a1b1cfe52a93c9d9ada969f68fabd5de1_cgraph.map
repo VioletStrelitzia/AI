@@ -1,0 +1,19 @@
+<map id="testMinConflict" name="testMinConflict">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,113,115,140"/>
+<area shape="rect" id="Node000002" href="$classyuki_1_1atri_1_1csp_1_1_c_s_p.html#a760e3bf83acc2373474c39cdf54bdb52" title="为序号为 varId1，varId2 的 var 添加二元约束" alt="" coords="171,39,318,81"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="98,110,168,85,170,90,100,115"/>
+<area shape="rect" id="Node000003" href="$classyuki_1_1atri_1_1csp_1_1_c_s_p.html#af2f2e4a4d85e553f2dd648dec8b427fc" title="最小冲突算法" alt="" coords="176,105,312,148"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="115,124,160,124,160,129,115,129"/>
+<area shape="rect" id="Node000009" href="$namespaceyuki_1_1atri_1_1csp.html#a8cf0a8ea9d51d4f57a3de288406a81b6" title=" " alt="" coords="163,172,326,199"/>
+<area shape="poly" id="edge8_Node000001_Node000009" title=" " alt="" coords="104,138,163,157,185,164,183,169,162,163,102,143"/>
+<area shape="rect" id="Node000004" href="$classyuki_1_1atri_1_1csp_1_1_c_s_p.html#aea1f901e215f0b2371b88cc280c58a16" title="检查 variables 是否已经是解决方案" alt="" coords="410,5,546,48"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="301,102,325,91,348,74,373,58,394,48,397,53,375,62,351,79,327,96,304,107"/>
+<area shape="rect" id="Node000005" href="$classyuki_1_1atri_1_1csp_1_1_c_s_p.html#a74d9e2474ddbc27b83a569f911fe4e72" title="选择一个 var 冲突数最小的取值（有多个则从中随机取一个）" alt="" coords="397,72,559,115"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="313,114,381,104,382,110,314,120"/>
+<area shape="rect" id="Node000006" href="$classyuki_1_1atri_1_1csp_1_1_c_s_p.html#a007f7b8430262d9db2c44b4abdb8d033" title="对 variables 的所有 var 从其值域里随机赋值（不重置值域）" alt="" coords="410,139,546,181"/>
+<area shape="poly" id="edge5_Node000003_Node000006" title=" " alt="" coords="314,134,395,146,394,151,313,139"/>
+<area shape="rect" id="Node000008" href="$classyuki_1_1atri_1_1csp_1_1_c_s_p.html#a66ad3e330f1ae0afbb3f45d1a9d4aebf" title="随机选择一个冲突数大于 0 的 var" alt="" coords="374,205,582,248"/>
+<area shape="poly" id="edge7_Node000003_Node000008" title=" " alt="" coords="304,146,327,158,351,175,375,191,388,197,385,202,373,196,348,179,325,162,301,151"/>
+<area shape="rect" id="Node000007" href="$namespaceyuki_1_1random.html#a5c4c6f66339f20f8b261def24a471f24" title="从数组里随机选择一个元素" alt="" coords="630,147,777,173"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="547,157,615,157,615,163,547,163"/>
+</map>

@@ -1,0 +1,10 @@
+<map id="pluralityValue" name="pluralityValue">
+<area shape="rect" id="Node000001" title="从样本集里选取占比最多的 target 取值作为叶子结点" alt="" coords="286,29,385,56"/>
+<area shape="rect" id="Node000002" href="$classyuki_1_1atri_1_1dt_1_1_decision_tree_builder.html#afb0815a4166a68bb5f1c60ec09abe4de" title="采用 learn 算法建树" alt="" coords="200,29,238,56"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="271,45,239,45,239,40,271,40"/>
+<area shape="poly" id="edge2_Node000002_Node000002" title=" " alt="" coords="233,15,228,10,219,8,211,10,206,14,205,20,207,28,202,30,199,20,201,11,208,5,219,3,231,5,237,12"/>
+<area shape="rect" id="Node000003" href="$classyuki_1_1atri_1_1dt_1_1_decision_tree_builder.html#a9525b1c74d534350359d9f205c35cba4" title="建树" alt="" coords="103,29,152,56"/>
+<area shape="poly" id="edge3_Node000002_Node000003" title=" " alt="" coords="184,45,152,45,152,40,184,40"/>
+<area shape="rect" id="Node000004" href="$_decision_tree_test1_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,29,55,56"/>
+<area shape="poly" id="edge4_Node000003_Node000004" title=" " alt="" coords="87,45,55,45,55,40,87,40"/>
+</map>

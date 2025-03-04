@@ -1,0 +1,42 @@
+<map id="fit" name="fit">
+<area shape="rect" id="Node000001" title="采用 learn 算法建树" alt="" coords="10,347,48,373"/>
+<area shape="poly" id="edge1_Node000001_Node000001" title=" " alt="" coords="7,347,3,338,6,329,15,322,29,320,44,323,53,329,49,333,42,328,29,325,16,327,10,332,8,338,12,345"/>
+<area shape="rect" id="Node000002" href="$classyuki_1_1atri_1_1dt_1_1_decision_tree_builder.html#af5c09ddbcafc56b7b57135141fe9d649" title="获取信息增益最大的属性" alt="" coords="111,169,196,196"/>
+<area shape="poly" id="edge2_Node000001_Node000002" title=" " alt="" coords="33,345,56,293,94,232,121,204,125,208,98,235,61,296,38,347"/>
+<area shape="rect" id="Node000012" href="$classyuki_1_1atri_1_1dt_1_1_decision_tree_builder.html#ab1cc724b583b6cded54ffad7d52b0321" title="判断样本的目标属性分类是否相同" alt="" coords="97,245,210,272"/>
+<area shape="poly" id="edge13_Node000001_Node000012" title=" " alt="" coords="37,344,61,314,94,282,101,277,104,282,98,286,65,317,42,348"/>
+<area shape="rect" id="Node000013" href="$classyuki_1_1atri_1_1dt_1_1_decision_tree_builder.html#a3bdc85f7aabb2d74de92a2f83a61e001" title="将缺失当前划分属性值的样本按照有取值的样本分配概率权重进各个子集" alt="" coords="96,347,211,373"/>
+<area shape="poly" id="edge14_Node000001_Node000013" title=" " alt="" coords="48,357,80,357,80,363,48,363"/>
+<area shape="rect" id="Node000015" href="$classyuki_1_1atri_1_1dt_1_1_decision_tree_builder.html#a5d0dc286a8325ae013b6d8aa3e7dddd0" title="从样本集里选取占比最多的 target 取值作为叶子结点" alt="" coords="105,296,203,323"/>
+<area shape="poly" id="edge17_Node000001_Node000015" title=" " alt="" coords="47,350,104,326,106,331,49,355"/>
+<area shape="rect" id="Node000016" href="$classyuki_1_1atri_1_1dt_1_1_decision_tree_builder.html#af84be46cd0de725b0be509a90a82f641" title="从一个属性集合移除指定属性" alt="" coords="97,397,210,424"/>
+<area shape="poly" id="edge19_Node000001_Node000016" title=" " alt="" coords="49,365,106,389,104,394,47,370"/>
+<area shape="rect" id="Node000017" href="$classyuki_1_1atri_1_1dt_1_1_decision_tree_builder.html#a96c57718c5b9ed8a778f0eea4d0044aa" title="将样本集中给定属性缺失的样本分离" alt="" coords="104,448,203,475"/>
+<area shape="poly" id="edge20_Node000001_Node000017" title=" " alt="" coords="42,372,65,403,98,434,104,438,101,443,94,438,61,406,37,376"/>
+<area shape="rect" id="Node000018" href="$classyuki_1_1atri_1_1dt_1_1_decision_tree_builder.html#ac91dcadf2b879862ba082ccc49937f98" title="将样本集按照某个属性划分为一些子样本集" alt="" coords="102,499,205,525"/>
+<area shape="poly" id="edge21_Node000001_Node000018" title=" " alt="" coords="37,373,57,426,75,457,98,485,102,488,98,492,94,489,71,460,53,429,32,375"/>
+<area shape="rect" id="Node000003" href="$namespaceyuki_1_1random.html#a5c4c6f66339f20f8b261def24a471f24" title="从数组里随机选择一个元素" alt="" coords="275,309,421,336"/>
+<area shape="poly" id="edge3_Node000002_Node000003" title=" " alt="" coords="174,195,213,232,227,250,236,266,245,281,261,295,269,300,266,305,258,299,241,284,231,269,223,253,209,235,170,198"/>
+<area shape="rect" id="Node000004" href="$classyuki_1_1atri_1_1dt_1_1_decision_tree_builder.html#a214ac71a1020e164a830dc7e3a6d2aa2" title="获取样本集中给定属性可用（未缺失）的样本集合" alt="" coords="306,5,390,32"/>
+<area shape="poly" id="edge4_Node000002_Node000004" title=" " alt="" coords="159,168,195,107,224,72,258,42,290,27,292,31,261,46,228,76,200,110,164,170"/>
+<area shape="rect" id="Node000005" href="$classyuki_1_1atri_1_1dt_1_1_decision_tree_builder.html#aeb65309fac4c67ddb77d508ae87db08d" title="获取度量标准的输出字符串" alt="" coords="281,56,415,83"/>
+<area shape="poly" id="edge5_Node000002_Node000005" title=" " alt="" coords="166,167,205,130,258,92,271,86,273,91,261,97,208,134,170,171"/>
+<area shape="rect" id="Node000006" href="$classyuki_1_1atri_1_1dt_1_1_decision_tree_builder.html#ad8c174d24bae4fe7bb1e0346c29e3ef4" title="获取样本集总权重" alt="" coords="294,107,402,133"/>
+<area shape="poly" id="edge6_Node000002_Node000006" title=" " alt="" coords="191,166,259,143,281,136,283,141,260,148,193,171"/>
+<area shape="rect" id="Node000007" href="$classyuki_1_1atri_1_1dt_1_1_decision_tree_builder.html#aa10ed40befae9f8350131087780f489b" title="计算指定属性对于样本集的基尼指数" alt="" coords="311,157,385,184"/>
+<area shape="poly" id="edge7_Node000002_Node000007" title=" " alt="" coords="197,177,296,171,296,176,197,183"/>
+<area shape="rect" id="Node000009" href="$classyuki_1_1atri_1_1dt_1_1_decision_tree_builder.html#a9598a2aa8fe1f9b71cd834369f49dc84" title="计算给定属性在数据集中的信息增益" alt="" coords="313,208,383,235"/>
+<area shape="poly" id="edge9_Node000002_Node000009" title=" " alt="" coords="197,188,298,209,297,214,196,194"/>
+<area shape="rect" id="Node000011" href="$classyuki_1_1atri_1_1dt_1_1_decision_tree_builder.html#a8f38d5ee600d9a0238cf81e0919c4bbe" title="计算指定属性对于样本集的信息增益率" alt="" coords="298,259,398,285"/>
+<area shape="poly" id="edge11_Node000002_Node000011" title=" " alt="" coords="176,194,214,219,261,244,284,253,282,258,258,249,211,224,173,199"/>
+<area shape="rect" id="Node000008" href="$namespaceyuki_1_1statistics.html#a089b6b377afd975cdb34990feab306ce" title="计算基尼指数" alt="" coords="496,157,631,184"/>
+<area shape="poly" id="edge8_Node000007_Node000008" title=" " alt="" coords="385,168,481,168,481,173,385,173"/>
+<area shape="rect" id="Node000010" href="$namespaceyuki_1_1statistics.html#ac0c56aaf28b0dab3080545241577ff4f" title="计算随机变量的信息熵" alt="" coords="485,233,642,260"/>
+<area shape="poly" id="edge10_Node000009_Node000010" title=" " alt="" coords="383,223,470,233,469,238,383,228"/>
+<area shape="poly" id="edge12_Node000011_Node000010" title=" " alt="" coords="398,263,469,255,470,260,399,269"/>
+<area shape="rect" id="Node000014" href="$namespaceyuki_1_1atri_1_1dt.html#af41a77c2c209c0e51cb4e6c596470532" title=" " alt="" coords="259,435,437,461"/>
+<area shape="poly" id="edge15_Node000013_Node000014" title=" " alt="" coords="187,371,213,383,305,425,302,430,210,388,185,376"/>
+<area shape="poly" id="edge16_Node000014_Node000014" title=" " alt="" coords="315,436,309,426,313,416,327,410,348,408,371,411,384,417,381,422,370,416,348,413,328,415,317,420,314,425,320,433"/>
+<area shape="poly" id="edge18_Node000015_Node000003" title=" " alt="" coords="204,310,259,314,259,319,203,315"/>
+<area shape="poly" id="edge22_Node000018_Node000014" title=" " alt="" coords="196,496,290,464,292,469,198,501"/>
+</map>

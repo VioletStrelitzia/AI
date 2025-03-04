@@ -1,0 +1,5 @@
+<map id="chooseByWeights" name="chooseByWeights">
+<area shape="rect" id="Node000001" title="依权重选择" alt="" coords="5,5,132,32"/>
+<area shape="rect" id="Node000002" href="$namespaceyuki_1_1random.html#ac88f03eaee39420d241f2f74adfa6676" title="生成一个随机浮点数" alt="" coords="180,5,271,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="132,16,164,16,164,21,132,21"/>
+</map>

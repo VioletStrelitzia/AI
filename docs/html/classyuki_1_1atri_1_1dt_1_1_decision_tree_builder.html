@@ -1,0 +1,1742 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.12.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>AI: DecisionTreeBuilder类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">AI<span id="projectnumber">&#160;1.0.0</span>
+   </div>
+   <div id="projectbrief">YUKII的AI库</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.12.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','搜索',false);
+  $(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){ initResizable(false); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespaceyuki.html">yuki</a></li><li class="navelem"><a class="el" href="namespaceyuki_1_1atri.html">atri</a></li><li class="navelem"><a class="el" href="namespaceyuki_1_1atri_1_1dt.html">dt</a></li><li class="navelem"><a class="el" href="classyuki_1_1atri_1_1dt_1_1_decision_tree_builder.html">DecisionTreeBuilder</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div id="doc-content">
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">类</a> &#124;
+<a href="#pub-types">Public 类型</a> &#124;
+<a href="#pub-static-methods">静态 Public 成员函数</a> &#124;
+<a href="classyuki_1_1atri_1_1dt_1_1_decision_tree_builder-members.html">所有成员列表</a>  </div>
+  <div class="headertitle"><div class="title">DecisionTreeBuilder类 参考</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p><code>#include &lt;<a class="el" href="_decision_tree_builder_8h_source.html">DecisionTreeBuilder.h</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+类</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structyuki_1_1atri_1_1dt_1_1_decision_tree_builder_1_1_node_data.html">NodeData</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">结点信息类  <a href="structyuki_1_1atri_1_1dt_1_1_decision_tree_builder_1_1_node_data.html#details">更多...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
+Public 类型</h2></td></tr>
+<tr class="memitem:a181e9e8dd1254f9c3022cafa97210f99" id="r_a181e9e8dd1254f9c3022cafa97210f99"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a181e9e8dd1254f9c3022cafa97210f99">CriterionType</a> { <a class="el" href="#a181e9e8dd1254f9c3022cafa97210f99a7fdeedc782bbeac81ae55e996f3e8ebd">INFO_GAIN</a> = 0
+, <a class="el" href="#a181e9e8dd1254f9c3022cafa97210f99afd29d7782b3e34e35579b7e90163bda7">INFO_RATIO</a>
+, <a class="el" href="#a181e9e8dd1254f9c3022cafa97210f99ac6345905c7f676d8e6ba92ede171ff0e">GINI_INDEX</a>
+ }</td></tr>
+<tr class="memdesc:a181e9e8dd1254f9c3022cafa97210f99"><td class="mdescLeft">&#160;</td><td class="mdescRight">分裂度量标准  <a href="#a181e9e8dd1254f9c3022cafa97210f99">更多...</a><br /></td></tr>
+<tr class="separator:a181e9e8dd1254f9c3022cafa97210f99"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
+静态 Public 成员函数</h2></td></tr>
+<tr class="memitem:aeb65309fac4c67ddb77d508ae87db08d" id="r_aeb65309fac4c67ddb77d508ae87db08d"><td class="memItemLeft" align="right" valign="top">static auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aeb65309fac4c67ddb77d508ae87db08d">getCriterionTypeStr</a> (<a class="el" href="#a181e9e8dd1254f9c3022cafa97210f99">CriterionType</a> const &amp;criterion) -&gt; string</td></tr>
+<tr class="memdesc:aeb65309fac4c67ddb77d508ae87db08d"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取度量标准的输出字符串  <br /></td></tr>
+<tr class="separator:aeb65309fac4c67ddb77d508ae87db08d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6c2726e48b4ef41e57043f6fbc7fa7c0" id="r_a6c2726e48b4ef41e57043f6fbc7fa7c0"><td class="memItemLeft" align="right" valign="top">static auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6c2726e48b4ef41e57043f6fbc7fa7c0">quickSort</a> (vector&lt; pair&lt; <a class="el" href="classyuki_1_1atri_1_1dt_1_1_example.html">Example</a> *, <a class="el" href="namespaceyuki.html#abc2f107791bd7c1d49ecf0f168c085a3">f64</a> &gt; &gt; &amp;examples, <a class="el" href="classyuki_1_1atri_1_1dt_1_1_attribute.html">Attribute</a> *const &amp;attr, <a class="el" href="namespaceyuki.html#a77a52b9640a0c8600feb48e548425a40">i32</a> const &amp;left, <a class="el" href="namespaceyuki.html#a77a52b9640a0c8600feb48e548425a40">i32</a> const &amp;right) -&gt; void</td></tr>
+<tr class="memdesc:a6c2726e48b4ef41e57043f6fbc7fa7c0"><td class="mdescLeft">&#160;</td><td class="mdescRight">对样本集排序（快速排序）  <br /></td></tr>
+<tr class="separator:a6c2726e48b4ef41e57043f6fbc7fa7c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac7ed7e2e84f233a240d5ac5dd112ad15" id="r_ac7ed7e2e84f233a240d5ac5dd112ad15"><td class="memItemLeft" align="right" valign="top">static auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac7ed7e2e84f233a240d5ac5dd112ad15">quickSort</a> (vector&lt; pair&lt; <a class="el" href="classyuki_1_1atri_1_1dt_1_1_example.html">Example</a> *, <a class="el" href="namespaceyuki.html#abc2f107791bd7c1d49ecf0f168c085a3">f64</a> &gt; &gt; &amp;examples, <a class="el" href="classyuki_1_1atri_1_1dt_1_1_attribute.html">Attribute</a> *const &amp;attr) -&gt; void</td></tr>
+<tr class="memdesc:ac7ed7e2e84f233a240d5ac5dd112ad15"><td class="mdescLeft">&#160;</td><td class="mdescRight">对样本集排序  <br /></td></tr>
+<tr class="separator:ac7ed7e2e84f233a240d5ac5dd112ad15"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8a3cdabaa1db4dd03ab9b8624232e5a6" id="r_a8a3cdabaa1db4dd03ab9b8624232e5a6"><td class="memItemLeft" align="right" valign="top">static auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8a3cdabaa1db4dd03ab9b8624232e5a6">targetProbDist</a> (<a class="el" href="classyuki_1_1atri_1_1dt_1_1_attribute.html">Attribute</a> *const &amp;target, vector&lt; pair&lt; <a class="el" href="classyuki_1_1atri_1_1dt_1_1_example.html">Example</a> *, <a class="el" href="namespaceyuki.html#abc2f107791bd7c1d49ecf0f168c085a3">f64</a> &gt; &gt; const &amp;examples) -&gt; unordered_map&lt; <a class="el" href="namespaceyuki.html#abc2f107791bd7c1d49ecf0f168c085a3">f64</a>, <a class="el" href="namespaceyuki.html#abc2f107791bd7c1d49ecf0f168c085a3">f64</a> &gt;</td></tr>
+<tr class="memdesc:a8a3cdabaa1db4dd03ab9b8624232e5a6"><td class="mdescLeft">&#160;</td><td class="mdescRight">计算目标属性在样本集的概率分布（Probability Distribution）  <br /></td></tr>
+<tr class="separator:a8a3cdabaa1db4dd03ab9b8624232e5a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a68a45f386beb1e8c9a96ce29efb00b62" id="r_a68a45f386beb1e8c9a96ce29efb00b62"><td class="memItemLeft" align="right" valign="top">static auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a68a45f386beb1e8c9a96ce29efb00b62">targetProbDist</a> (<a class="el" href="classyuki_1_1atri_1_1dt_1_1_attribute.html">Attribute</a> *const &amp;target, vector&lt; pair&lt; <a class="el" href="classyuki_1_1atri_1_1dt_1_1_example.html">Example</a> *, <a class="el" href="namespaceyuki.html#abc2f107791bd7c1d49ecf0f168c085a3">f64</a> &gt; &gt; const &amp;examples, <a class="el" href="namespaceyuki.html#a77a52b9640a0c8600feb48e548425a40">i32</a> const &amp;begin, <a class="el" href="namespaceyuki.html#a77a52b9640a0c8600feb48e548425a40">i32</a> const &amp;end) -&gt; unordered_map&lt; <a class="el" href="namespaceyuki.html#abc2f107791bd7c1d49ecf0f168c085a3">f64</a>, <a class="el" href="namespaceyuki.html#abc2f107791bd7c1d49ecf0f168c085a3">f64</a> &gt;</td></tr>
+<tr class="memdesc:a68a45f386beb1e8c9a96ce29efb00b62"><td class="mdescLeft">&#160;</td><td class="mdescRight">计算目标属性在样本集的概率分布（Probability Distribution）  <br /></td></tr>
+<tr class="separator:a68a45f386beb1e8c9a96ce29efb00b62"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad8c174d24bae4fe7bb1e0346c29e3ef4" id="r_ad8c174d24bae4fe7bb1e0346c29e3ef4"><td class="memItemLeft" align="right" valign="top">static auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad8c174d24bae4fe7bb1e0346c29e3ef4">getTotalWeight</a> (vector&lt; pair&lt; <a class="el" href="classyuki_1_1atri_1_1dt_1_1_example.html">Example</a> *, <a class="el" href="namespaceyuki.html#abc2f107791bd7c1d49ecf0f168c085a3">f64</a> &gt; &gt; const &amp;examples) -&gt; <a class="el" href="namespaceyuki.html#abc2f107791bd7c1d49ecf0f168c085a3">f64</a></td></tr>
+<tr class="memdesc:ad8c174d24bae4fe7bb1e0346c29e3ef4"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取样本集总权重  <br /></td></tr>
+<tr class="separator:ad8c174d24bae4fe7bb1e0346c29e3ef4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa909c4f231e9b3849de2c674eb08e65a" id="r_aa909c4f231e9b3849de2c674eb08e65a"><td class="memItemLeft" align="right" valign="top">static auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa909c4f231e9b3849de2c674eb08e65a">getTotalWeight</a> (vector&lt; pair&lt; <a class="el" href="classyuki_1_1atri_1_1dt_1_1_example.html">Example</a> *, <a class="el" href="namespaceyuki.html#abc2f107791bd7c1d49ecf0f168c085a3">f64</a> &gt; &gt; const &amp;examples, <a class="el" href="namespaceyuki.html#a77a52b9640a0c8600feb48e548425a40">i32</a> const &amp;begin, <a class="el" href="namespaceyuki.html#a77a52b9640a0c8600feb48e548425a40">i32</a> const &amp;end) -&gt; <a class="el" href="namespaceyuki.html#abc2f107791bd7c1d49ecf0f168c085a3">f64</a></td></tr>
+<tr class="memdesc:aa909c4f231e9b3849de2c674eb08e65a"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取给定区间的样本集总权重  <br /></td></tr>
+<tr class="separator:aa909c4f231e9b3849de2c674eb08e65a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a214ac71a1020e164a830dc7e3a6d2aa2" id="r_a214ac71a1020e164a830dc7e3a6d2aa2"><td class="memItemLeft" align="right" valign="top">static auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a214ac71a1020e164a830dc7e3a6d2aa2">getAvailEx</a> (<a class="el" href="classyuki_1_1atri_1_1dt_1_1_attribute.html">Attribute</a> *const &amp;attr, vector&lt; pair&lt; <a class="el" href="classyuki_1_1atri_1_1dt_1_1_example.html">Example</a> *, <a class="el" href="namespaceyuki.html#abc2f107791bd7c1d49ecf0f168c085a3">f64</a> &gt; &gt; const &amp;examples) -&gt; vector&lt; pair&lt; <a class="el" href="classyuki_1_1atri_1_1dt_1_1_example.html">Example</a> *, <a class="el" href="namespaceyuki.html#abc2f107791bd7c1d49ecf0f168c085a3">f64</a> &gt; &gt;</td></tr>
+<tr class="memdesc:a214ac71a1020e164a830dc7e3a6d2aa2"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取样本集中给定属性可用（未缺失）的样本集合  <br /></td></tr>
+<tr class="separator:a214ac71a1020e164a830dc7e3a6d2aa2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a96c57718c5b9ed8a778f0eea4d0044aa" id="r_a96c57718c5b9ed8a778f0eea4d0044aa"><td class="memItemLeft" align="right" valign="top">static auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a96c57718c5b9ed8a778f0eea4d0044aa">sepAbsentEx</a> (<a class="el" href="classyuki_1_1atri_1_1dt_1_1_attribute.html">Attribute</a> *const &amp;attr, vector&lt; pair&lt; <a class="el" href="classyuki_1_1atri_1_1dt_1_1_example.html">Example</a> *, <a class="el" href="namespaceyuki.html#abc2f107791bd7c1d49ecf0f168c085a3">f64</a> &gt; &gt; &amp;examples) -&gt; vector&lt; pair&lt; <a class="el" href="classyuki_1_1atri_1_1dt_1_1_example.html">Example</a> *, <a class="el" href="namespaceyuki.html#abc2f107791bd7c1d49ecf0f168c085a3">f64</a> &gt; &gt;</td></tr>
+<tr class="memdesc:a96c57718c5b9ed8a778f0eea4d0044aa"><td class="mdescLeft">&#160;</td><td class="mdescRight">将样本集中给定属性缺失的样本分离  <br /></td></tr>
+<tr class="separator:a96c57718c5b9ed8a778f0eea4d0044aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac91dcadf2b879862ba082ccc49937f98" id="r_ac91dcadf2b879862ba082ccc49937f98"><td class="memItemLeft" align="right" valign="top">static auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac91dcadf2b879862ba082ccc49937f98">splitExamples</a> (<a class="el" href="classyuki_1_1atri_1_1dt_1_1_attribute.html">Attribute</a> *const &amp;attr, vector&lt; pair&lt; <a class="el" href="classyuki_1_1atri_1_1dt_1_1_example.html">Example</a> *, <a class="el" href="namespaceyuki.html#abc2f107791bd7c1d49ecf0f168c085a3">f64</a> &gt; &gt; const &amp;examples) -&gt; vector&lt; vector&lt; pair&lt; <a class="el" href="classyuki_1_1atri_1_1dt_1_1_example.html">Example</a> *, <a class="el" href="namespaceyuki.html#abc2f107791bd7c1d49ecf0f168c085a3">f64</a> &gt; &gt; &gt;</td></tr>
+<tr class="memdesc:ac91dcadf2b879862ba082ccc49937f98"><td class="mdescLeft">&#160;</td><td class="mdescRight">将样本集按照某个属性划分为一些子样本集  <br /></td></tr>
+<tr class="separator:ac91dcadf2b879862ba082ccc49937f98"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3bdc85f7aabb2d74de92a2f83a61e001" id="r_a3bdc85f7aabb2d74de92a2f83a61e001"><td class="memItemLeft" align="right" valign="top">static auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3bdc85f7aabb2d74de92a2f83a61e001">mergeExamples</a> (vector&lt; vector&lt; pair&lt; <a class="el" href="classyuki_1_1atri_1_1dt_1_1_example.html">Example</a> *, <a class="el" href="namespaceyuki.html#abc2f107791bd7c1d49ecf0f168c085a3">f64</a> &gt; &gt; &gt; &amp;<a class="el" href="namespaceyuki_1_1atri_1_1dt.html#af41a77c2c209c0e51cb4e6c596470532">subExamples</a>, vector&lt; pair&lt; <a class="el" href="classyuki_1_1atri_1_1dt_1_1_example.html">Example</a> *, <a class="el" href="namespaceyuki.html#abc2f107791bd7c1d49ecf0f168c085a3">f64</a> &gt; &gt; const &amp;absentExamples) -&gt; void</td></tr>
+<tr class="memdesc:a3bdc85f7aabb2d74de92a2f83a61e001"><td class="mdescLeft">&#160;</td><td class="mdescRight">将缺失当前划分属性值的样本按照有取值的样本分配概率权重进各个子集  <br /></td></tr>
+<tr class="separator:a3bdc85f7aabb2d74de92a2f83a61e001"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af84be46cd0de725b0be509a90a82f641" id="r_af84be46cd0de725b0be509a90a82f641"><td class="memItemLeft" align="right" valign="top">static auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af84be46cd0de725b0be509a90a82f641">removeAttritude</a> (<a class="el" href="classyuki_1_1atri_1_1dt_1_1_attribute.html">Attribute</a> *const &amp;attr, vector&lt; <a class="el" href="classyuki_1_1atri_1_1dt_1_1_attribute.html">Attribute</a> * &gt; const &amp;attributes) -&gt; vector&lt; <a class="el" href="classyuki_1_1atri_1_1dt_1_1_attribute.html">Attribute</a> * &gt;</td></tr>
+<tr class="memdesc:af84be46cd0de725b0be509a90a82f641"><td class="mdescLeft">&#160;</td><td class="mdescRight">从一个属性集合移除指定属性  <br /></td></tr>
+<tr class="separator:af84be46cd0de725b0be509a90a82f641"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5d0dc286a8325ae013b6d8aa3e7dddd0" id="r_a5d0dc286a8325ae013b6d8aa3e7dddd0"><td class="memItemLeft" align="right" valign="top">static auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5d0dc286a8325ae013b6d8aa3e7dddd0">pluralityValue</a> (<a class="el" href="classyuki_1_1atri_1_1dt_1_1_attribute.html">Attribute</a> *const &amp;target, vector&lt; pair&lt; <a class="el" href="classyuki_1_1atri_1_1dt_1_1_example.html">Example</a> *, <a class="el" href="namespaceyuki.html#abc2f107791bd7c1d49ecf0f168c085a3">f64</a> &gt; &gt; const &amp;examples) -&gt; <a class="el" href="namespaceyuki.html#abc2f107791bd7c1d49ecf0f168c085a3">f64</a></td></tr>
+<tr class="memdesc:a5d0dc286a8325ae013b6d8aa3e7dddd0"><td class="mdescLeft">&#160;</td><td class="mdescRight">从样本集里选取占比最多的 target 取值作为叶子结点  <br /></td></tr>
+<tr class="separator:a5d0dc286a8325ae013b6d8aa3e7dddd0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab1cc724b583b6cded54ffad7d52b0321" id="r_ab1cc724b583b6cded54ffad7d52b0321"><td class="memItemLeft" align="right" valign="top">static auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab1cc724b583b6cded54ffad7d52b0321">isSameClassify</a> (vector&lt; pair&lt; <a class="el" href="classyuki_1_1atri_1_1dt_1_1_example.html">Example</a> *, <a class="el" href="namespaceyuki.html#abc2f107791bd7c1d49ecf0f168c085a3">f64</a> &gt; &gt; const &amp;examples) -&gt; bool</td></tr>
+<tr class="memdesc:ab1cc724b583b6cded54ffad7d52b0321"><td class="mdescLeft">&#160;</td><td class="mdescRight">判断样本的目标属性分类是否相同  <br /></td></tr>
+<tr class="separator:ab1cc724b583b6cded54ffad7d52b0321"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acefb24aafd554801df533f179aa48320" id="r_acefb24aafd554801df533f179aa48320"><td class="memItemLeft" align="right" valign="top">static auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acefb24aafd554801df533f179aa48320">entropyRemain</a> (<a class="el" href="classyuki_1_1atri_1_1dt_1_1_attribute.html">Attribute</a> *const &amp;attr, <a class="el" href="classyuki_1_1atri_1_1dt_1_1_attribute.html">Attribute</a> *const &amp;target, vector&lt; vector&lt; pair&lt; <a class="el" href="classyuki_1_1atri_1_1dt_1_1_example.html">Example</a> *, <a class="el" href="namespaceyuki.html#abc2f107791bd7c1d49ecf0f168c085a3">f64</a> &gt; &gt; &gt; const &amp;<a class="el" href="namespaceyuki_1_1atri_1_1dt.html#af41a77c2c209c0e51cb4e6c596470532">subExamples</a>) -&gt; <a class="el" href="namespaceyuki.html#abc2f107791bd7c1d49ecf0f168c085a3">f64</a></td></tr>
+<tr class="memdesc:acefb24aafd554801df533f179aa48320"><td class="mdescLeft">&#160;</td><td class="mdescRight">计算给定属性在数据集中的熵  <br /></td></tr>
+<tr class="separator:acefb24aafd554801df533f179aa48320"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9598a2aa8fe1f9b71cd834369f49dc84" id="r_a9598a2aa8fe1f9b71cd834369f49dc84"><td class="memItemLeft" align="right" valign="top">static auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9598a2aa8fe1f9b71cd834369f49dc84">infoGain</a> (<a class="el" href="classyuki_1_1atri_1_1dt_1_1_attribute.html">Attribute</a> *const &amp;attr, <a class="el" href="classyuki_1_1atri_1_1dt_1_1_attribute.html">Attribute</a> *const &amp;target, vector&lt; pair&lt; <a class="el" href="classyuki_1_1atri_1_1dt_1_1_example.html">Example</a> *, <a class="el" href="namespaceyuki.html#abc2f107791bd7c1d49ecf0f168c085a3">f64</a> &gt; &gt; &amp;examples) -&gt; <a class="el" href="namespaceyuki.html#abc2f107791bd7c1d49ecf0f168c085a3">f64</a></td></tr>
+<tr class="memdesc:a9598a2aa8fe1f9b71cd834369f49dc84"><td class="mdescLeft">&#160;</td><td class="mdescRight">计算给定属性在数据集中的信息增益  <br /></td></tr>
+<tr class="separator:a9598a2aa8fe1f9b71cd834369f49dc84"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8f38d5ee600d9a0238cf81e0919c4bbe" id="r_a8f38d5ee600d9a0238cf81e0919c4bbe"><td class="memItemLeft" align="right" valign="top">static auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8f38d5ee600d9a0238cf81e0919c4bbe">infoGainRatio</a> (<a class="el" href="classyuki_1_1atri_1_1dt_1_1_attribute.html">Attribute</a> *const &amp;attr, <a class="el" href="classyuki_1_1atri_1_1dt_1_1_attribute.html">Attribute</a> *const &amp;target, vector&lt; pair&lt; <a class="el" href="classyuki_1_1atri_1_1dt_1_1_example.html">Example</a> *, <a class="el" href="namespaceyuki.html#abc2f107791bd7c1d49ecf0f168c085a3">f64</a> &gt; &gt; &amp;examples) -&gt; <a class="el" href="namespaceyuki.html#abc2f107791bd7c1d49ecf0f168c085a3">f64</a></td></tr>
+<tr class="memdesc:a8f38d5ee600d9a0238cf81e0919c4bbe"><td class="mdescLeft">&#160;</td><td class="mdescRight">计算指定属性对于样本集的信息增益率  <br /></td></tr>
+<tr class="separator:a8f38d5ee600d9a0238cf81e0919c4bbe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa10ed40befae9f8350131087780f489b" id="r_aa10ed40befae9f8350131087780f489b"><td class="memItemLeft" align="right" valign="top">static auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa10ed40befae9f8350131087780f489b">giniIndex</a> (<a class="el" href="classyuki_1_1atri_1_1dt_1_1_attribute.html">Attribute</a> *const &amp;attr, <a class="el" href="classyuki_1_1atri_1_1dt_1_1_attribute.html">Attribute</a> *const &amp;target, vector&lt; pair&lt; <a class="el" href="classyuki_1_1atri_1_1dt_1_1_example.html">Example</a> *, <a class="el" href="namespaceyuki.html#abc2f107791bd7c1d49ecf0f168c085a3">f64</a> &gt; &gt; &amp;examples) -&gt; <a class="el" href="namespaceyuki.html#abc2f107791bd7c1d49ecf0f168c085a3">f64</a></td></tr>
+<tr class="memdesc:aa10ed40befae9f8350131087780f489b"><td class="mdescLeft">&#160;</td><td class="mdescRight">计算指定属性对于样本集的基尼指数  <br /></td></tr>
+<tr class="separator:aa10ed40befae9f8350131087780f489b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af5c09ddbcafc56b7b57135141fe9d649" id="r_af5c09ddbcafc56b7b57135141fe9d649"><td class="memTemplParams" colspan="2">template&lt;<a class="el" href="#a181e9e8dd1254f9c3022cafa97210f99">CriterionType</a> Criterion = INFO_GAIN, bool PrintInfo = false&gt; </td></tr>
+<tr class="memitem:af5c09ddbcafc56b7b57135141fe9d649"><td class="memTemplItemLeft" align="right" valign="top">static auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#af5c09ddbcafc56b7b57135141fe9d649">importance</a> (vector&lt; <a class="el" href="classyuki_1_1atri_1_1dt_1_1_attribute.html">Attribute</a> * &gt; const &amp;attributes, <a class="el" href="classyuki_1_1atri_1_1dt_1_1_attribute.html">Attribute</a> *const &amp;target, vector&lt; pair&lt; <a class="el" href="classyuki_1_1atri_1_1dt_1_1_example.html">Example</a> *, <a class="el" href="namespaceyuki.html#abc2f107791bd7c1d49ecf0f168c085a3">f64</a> &gt; &gt; &amp;examples, pair&lt; string, <a class="el" href="namespaceyuki.html#abc2f107791bd7c1d49ecf0f168c085a3">f64</a> &gt; *nodeInfo=nullptr) -&gt; <a class="el" href="classyuki_1_1atri_1_1dt_1_1_attribute.html">Attribute</a> *</td></tr>
+<tr class="memdesc:af5c09ddbcafc56b7b57135141fe9d649"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取信息增益最大的属性  <br /></td></tr>
+<tr class="separator:af5c09ddbcafc56b7b57135141fe9d649"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afb0815a4166a68bb5f1c60ec09abe4de" id="r_afb0815a4166a68bb5f1c60ec09abe4de"><td class="memTemplParams" colspan="2">template&lt;<a class="el" href="#a181e9e8dd1254f9c3022cafa97210f99">CriterionType</a> Criterion = GINI_INDEX, bool PreCut = false, bool UsingQueue = true&gt; </td></tr>
+<tr class="memitem:afb0815a4166a68bb5f1c60ec09abe4de"><td class="memTemplItemLeft" align="right" valign="top">static auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#afb0815a4166a68bb5f1c60ec09abe4de">fit</a> (vector&lt; <a class="el" href="classyuki_1_1atri_1_1dt_1_1_attribute.html">Attribute</a> * &gt; const &amp;attributes, <a class="el" href="classyuki_1_1atri_1_1dt_1_1_attribute.html">Attribute</a> *const &amp;target, vector&lt; pair&lt; <a class="el" href="classyuki_1_1atri_1_1dt_1_1_example.html">Example</a> *, <a class="el" href="namespaceyuki.html#abc2f107791bd7c1d49ecf0f168c085a3">f64</a> &gt; &gt; &amp;examples, vector&lt; pair&lt; <a class="el" href="classyuki_1_1atri_1_1dt_1_1_example.html">Example</a> *, <a class="el" href="namespaceyuki.html#abc2f107791bd7c1d49ecf0f168c085a3">f64</a> &gt; &gt; const &amp;parentExamples, <a class="el" href="namespaceyuki.html#a77a52b9640a0c8600feb48e548425a40">i32</a> const &amp;depth, <a class="el" href="namespaceyuki.html#a77a52b9640a0c8600feb48e548425a40">i32</a> const &amp;maxDepth, unordered_map&lt; string, unordered_map&lt; <a class="el" href="namespaceyuki.html#abc2f107791bd7c1d49ecf0f168c085a3">f64</a>, string &gt; &gt; *valueStrMap=nullptr) -&gt; <a class="el" href="classyuki_1_1atri_1_1dt_1_1_decision_tree_node.html">DecisionTreeNode</a> *</td></tr>
+<tr class="memdesc:afb0815a4166a68bb5f1c60ec09abe4de"><td class="mdescLeft">&#160;</td><td class="mdescRight">采用 learn 算法建树  <br /></td></tr>
+<tr class="separator:afb0815a4166a68bb5f1c60ec09abe4de"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9525b1c74d534350359d9f205c35cba4" id="r_a9525b1c74d534350359d9f205c35cba4"><td class="memTemplParams" colspan="2">template&lt;<a class="el" href="#a181e9e8dd1254f9c3022cafa97210f99">CriterionType</a> Criterion = GINI_INDEX, bool PreCut = false, bool UsingQueue = true&gt; </td></tr>
+<tr class="memitem:a9525b1c74d534350359d9f205c35cba4"><td class="memTemplItemLeft" align="right" valign="top">static auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a9525b1c74d534350359d9f205c35cba4">learn</a> (<a class="el" href="classyuki_1_1atri_1_1dt_1_1_dataset.html">Dataset</a> *dataset, <a class="el" href="namespaceyuki.html#a77a52b9640a0c8600feb48e548425a40">i32</a> const &amp;maxDepth=-1) -&gt; <a class="el" href="classyuki_1_1atri_1_1dt_1_1_decision_tree.html">DecisionTree</a> *</td></tr>
+<tr class="memdesc:a9525b1c74d534350359d9f205c35cba4"><td class="mdescLeft">&#160;</td><td class="mdescRight">建树  <br /></td></tr>
+<tr class="separator:a9525b1c74d534350359d9f205c35cba4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af930c263cbed2f4f6f4206da3b08d580" id="r_af930c263cbed2f4f6f4206da3b08d580"><td class="memItemLeft" align="right" valign="top">static auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af930c263cbed2f4f6f4206da3b08d580">postCut</a> (<a class="el" href="classyuki_1_1atri_1_1dt_1_1_decision_tree.html">DecisionTree</a> *tree, <a class="el" href="classyuki_1_1atri_1_1dt_1_1_dataset.html">Dataset</a> *dataset) -&gt; void</td></tr>
+<tr class="memdesc:af930c263cbed2f4f6f4206da3b08d580"><td class="mdescLeft">&#160;</td><td class="mdescRight">后剪枝  <br /></td></tr>
+<tr class="separator:af930c263cbed2f4f6f4206da3b08d580"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock">
+<p class="definition">在文件 <a class="el" href="_decision_tree_builder_8h_source.html">DecisionTreeBuilder.h</a> 第 <a class="el" href="_decision_tree_builder_8h_source.html#l00008">8</a> 行定义.</p>
+</div><h2 class="groupheader">成员枚举类型说明</h2>
+<a id="a181e9e8dd1254f9c3022cafa97210f99" name="a181e9e8dd1254f9c3022cafa97210f99"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a181e9e8dd1254f9c3022cafa97210f99">&#9670;&#160;</a></span>CriterionType</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="#a181e9e8dd1254f9c3022cafa97210f99">CriterionType</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>分裂度量标准 </p>
+<table class="fieldtable">
+<tr><th colspan="2">枚举值</th></tr><tr><td class="fieldname"><a id="a181e9e8dd1254f9c3022cafa97210f99a7fdeedc782bbeac81ae55e996f3e8ebd" name="a181e9e8dd1254f9c3022cafa97210f99a7fdeedc782bbeac81ae55e996f3e8ebd"></a>INFO_GAIN&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a181e9e8dd1254f9c3022cafa97210f99afd29d7782b3e34e35579b7e90163bda7" name="a181e9e8dd1254f9c3022cafa97210f99afd29d7782b3e34e35579b7e90163bda7"></a>INFO_RATIO&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a181e9e8dd1254f9c3022cafa97210f99ac6345905c7f676d8e6ba92ede171ff0e" name="a181e9e8dd1254f9c3022cafa97210f99ac6345905c7f676d8e6ba92ede171ff0e"></a>GINI_INDEX&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+<p class="definition">在文件 <a class="el" href="_decision_tree_builder_8h_source.html">DecisionTreeBuilder.h</a> 第 <a class="el" href="_decision_tree_builder_8h_source.html#l00014">14</a> 行定义.</p>
+
+</div>
+</div>
+<h2 class="groupheader">成员函数说明</h2>
+<a id="acefb24aafd554801df533f179aa48320" name="acefb24aafd554801df533f179aa48320"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acefb24aafd554801df533f179aa48320">&#9670;&#160;</a></span>entropyRemain()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto entropyRemain </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classyuki_1_1atri_1_1dt_1_1_attribute.html">Attribute</a> *const &amp;</td>          <td class="paramname"><span class="paramname"><em>attr</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classyuki_1_1atri_1_1dt_1_1_attribute.html">Attribute</a> *const &amp;</td>          <td class="paramname"><span class="paramname"><em>target</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">vector&lt; vector&lt; pair&lt; <a class="el" href="classyuki_1_1atri_1_1dt_1_1_example.html">Example</a> *, <a class="el" href="namespaceyuki.html#abc2f107791bd7c1d49ecf0f168c085a3">f64</a> &gt; &gt; &gt; const &amp;</td>          <td class="paramname"><span class="paramname"><em>subExamples</em></span>&#160;) -&gt; <a class="el" href="namespaceyuki.html#abc2f107791bd7c1d49ecf0f168c085a3">f64</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>计算给定属性在数据集中的熵 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">attr</td><td>要计算熵的属性 </td></tr>
+    <tr><td class="paramname">target</td><td>目标属性 </td></tr>
+    <tr><td class="paramname">subExamples</td><td>数据集中的样本集合 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>f64 给定属性的熵值 </dd></dl>
+
+<p class="definition">在文件 <a class="el" href="_decision_tree_builder_8cpp_source.html">DecisionTreeBuilder.cpp</a> 第 <a class="el" href="_decision_tree_builder_8cpp_source.html#l00235">235</a> 行定义.</p>
+
+<p class="reference">引用了 <a class="el" href="tools_8cpp_source.html#l00104">yuki::statistics::entropy()</a> , 以及 <a class="el" href="_d_t_example_8cpp_source.html#l00014">yuki::atri::dt::subExamples()</a>.</p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classyuki_1_1atri_1_1dt_1_1_decision_tree_builder_acefb24aafd554801df533f179aa48320_cgraph.png" border="0" usemap="#aclassyuki_1_1atri_1_1dt_1_1_decision_tree_builder_acefb24aafd554801df533f179aa48320_cgraph" alt=""/></div>
+<map name="aclassyuki_1_1atri_1_1dt_1_1_decision_tree_builder_acefb24aafd554801df533f179aa48320_cgraph" id="aclassyuki_1_1atri_1_1dt_1_1_decision_tree_builder_acefb24aafd554801df533f179aa48320_cgraph">
+<area shape="rect" title="计算给定属性在数据集中的熵" alt="" coords="5,43,115,69"/>
+<area shape="rect" href="namespaceyuki_1_1statistics.html#ac0c56aaf28b0dab3080545241577ff4f" title="计算随机变量的信息熵" alt="" coords="173,5,330,32"/>
+<area shape="poly" title=" " alt="" coords="114,43,164,33,165,38,115,48"/>
+<area shape="rect" href="namespaceyuki_1_1atri_1_1dt.html#af41a77c2c209c0e51cb4e6c596470532" title=" " alt="" coords="163,80,340,107"/>
+<area shape="poly" title=" " alt="" coords="115,64,165,74,164,79,114,69"/>
+<area shape="poly" title=" " alt="" coords="219,81,213,71,217,62,230,55,251,53,274,56,286,62,284,67,273,61,251,59,231,61,221,65,218,71,223,78"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="afb0815a4166a68bb5f1c60ec09abe4de" name="afb0815a4166a68bb5f1c60ec09abe4de"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afb0815a4166a68bb5f1c60ec09abe4de">&#9670;&#160;</a></span>fit()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;<a class="el" href="#a181e9e8dd1254f9c3022cafa97210f99">CriterionType</a> Criterion = GINI_INDEX, bool PreCut = false, bool UsingQueue = true&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static auto fit </td>
+          <td>(</td>
+          <td class="paramtype">vector&lt; <a class="el" href="classyuki_1_1atri_1_1dt_1_1_attribute.html">Attribute</a> * &gt; const &amp;</td>          <td class="paramname"><span class="paramname"><em>attributes</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classyuki_1_1atri_1_1dt_1_1_attribute.html">Attribute</a> *const &amp;</td>          <td class="paramname"><span class="paramname"><em>target</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">vector&lt; pair&lt; <a class="el" href="classyuki_1_1atri_1_1dt_1_1_example.html">Example</a> *, <a class="el" href="namespaceyuki.html#abc2f107791bd7c1d49ecf0f168c085a3">f64</a> &gt; &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>examples</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">vector&lt; pair&lt; <a class="el" href="classyuki_1_1atri_1_1dt_1_1_example.html">Example</a> *, <a class="el" href="namespaceyuki.html#abc2f107791bd7c1d49ecf0f168c085a3">f64</a> &gt; &gt; const &amp;</td>          <td class="paramname"><span class="paramname"><em>parentExamples</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespaceyuki.html#a77a52b9640a0c8600feb48e548425a40">i32</a> const &amp;</td>          <td class="paramname"><span class="paramname"><em>depth</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespaceyuki.html#a77a52b9640a0c8600feb48e548425a40">i32</a> const &amp;</td>          <td class="paramname"><span class="paramname"><em>maxDepth</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unordered_map&lt; string, unordered_map&lt; <a class="el" href="namespaceyuki.html#abc2f107791bd7c1d49ecf0f168c085a3">f64</a>, string &gt; &gt; *</td>          <td class="paramname"><span class="paramname"><em>valueStrMap</em></span><span class="paramdefsep"> = </span><span class="paramdefval">nullptr</span>&#160;) -&gt; <a class="el" href="classyuki_1_1atri_1_1dt_1_1_decision_tree_node.html">DecisionTreeNode</a>* </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>采用 learn 算法建树 </p>
+<dl class="tparams"><dt>模板参数</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">Criterion</td><td>度量标准 </td></tr>
+    <tr><td class="paramname">PreCut</td><td>是否预剪枝 </td></tr>
+    <tr><td class="paramname">UsingQueue</td><td>是否使用队列迭代 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">attributes</td><td>候选属性集合 </td></tr>
+    <tr><td class="paramname">target</td><td>目标属性 </td></tr>
+    <tr><td class="paramname">examples</td><td>样本集 </td></tr>
+    <tr><td class="paramname">parentExamples</td><td>双亲样本集 </td></tr>
+    <tr><td class="paramname">depth</td><td>深度 </td></tr>
+    <tr><td class="paramname">maxDepth</td><td>最大深度 </td></tr>
+    <tr><td class="paramname">valueStrMap</td><td>数值和字符串的映射 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>DecisionTreeNode* 决策树 </dd></dl>
+
+<p class="definition">在文件 <a class="el" href="_decision_tree_builder_8h_source.html">DecisionTreeBuilder.h</a> 第 <a class="el" href="_decision_tree_builder_8h_source.html#l00330">330</a> 行定义.</p>
+
+<p class="reference">引用了 <a class="el" href="_decision_tree_node_8h_source.html#l00070">DiscreteDecisionTreeNode::children</a>, <a class="el" href="_attribute_8h_source.html#l00012">yuki::atri::dt::CONTINUOUS</a>, <a class="el" href="_attribute_8h_source.html#l00011">yuki::atri::dt::DISCRETE</a>, <a class="el" href="_decision_tree_builder_8h_source.html#l00330">DecisionTreeBuilder::fit()</a>, <a class="el" href="_decision_tree_builder_8h_source.html#l00241">DecisionTreeBuilder::importance()</a>, <a class="el" href="_decision_tree_builder_8cpp_source.html#l00225">DecisionTreeBuilder::isSameClassify()</a>, <a class="el" href="_decision_tree_builder_8cpp_source.html#l00166">DecisionTreeBuilder::mergeExamples()</a>, <a class="el" href="_attribute_8h_source.html#l00023">Attribute::name</a>, <a class="el" href="_decision_tree_builder_8cpp_source.html#l00199">DecisionTreeBuilder::pluralityValue()</a>, <a class="el" href="_decision_tree_builder_8cpp_source.html#l00189">DecisionTreeBuilder::removeAttritude()</a>, <a class="el" href="_decision_tree_builder_8cpp_source.html#l00096">DecisionTreeBuilder::sepAbsentEx()</a>, <a class="el" href="_decision_tree_builder_8cpp_source.html#l00109">DecisionTreeBuilder::splitExamples()</a>, <a class="el" href="_attribute_8h_source.html#l00024">Attribute::type</a> , 以及 <a class="el" href="_attribute_8h_source.html#l00025">Attribute::values</a>.</p>
+
+<p class="reference">被这些函数引用 <a class="el" href="_decision_tree_builder_8h_source.html#l00330">DecisionTreeBuilder::fit()</a> , 以及 <a class="el" href="_decision_tree_builder_8h_source.html#l00528">DecisionTreeBuilder::learn()</a>.</p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classyuki_1_1atri_1_1dt_1_1_decision_tree_builder_afb0815a4166a68bb5f1c60ec09abe4de_cgraph.png" border="0" usemap="#aclassyuki_1_1atri_1_1dt_1_1_decision_tree_builder_afb0815a4166a68bb5f1c60ec09abe4de_cgraph" alt=""/></div>
+<map name="aclassyuki_1_1atri_1_1dt_1_1_decision_tree_builder_afb0815a4166a68bb5f1c60ec09abe4de_cgraph" id="aclassyuki_1_1atri_1_1dt_1_1_decision_tree_builder_afb0815a4166a68bb5f1c60ec09abe4de_cgraph">
+<area shape="rect" title="采用 learn 算法建树" alt="" coords="10,347,48,373"/>
+<area shape="poly" title=" " alt="" coords="7,347,3,338,6,329,15,322,29,320,44,323,53,329,49,333,42,328,29,325,16,327,10,332,8,338,12,345"/>
+<area shape="rect" href="classyuki_1_1atri_1_1dt_1_1_decision_tree_builder.html#af5c09ddbcafc56b7b57135141fe9d649" title="获取信息增益最大的属性" alt="" coords="111,169,196,196"/>
+<area shape="poly" title=" " alt="" coords="33,345,56,293,94,232,121,204,125,208,98,235,61,296,38,347"/>
+<area shape="rect" href="classyuki_1_1atri_1_1dt_1_1_decision_tree_builder.html#ab1cc724b583b6cded54ffad7d52b0321" title="判断样本的目标属性分类是否相同" alt="" coords="97,245,210,272"/>
+<area shape="poly" title=" " alt="" coords="37,344,61,314,94,282,101,277,104,282,98,286,65,317,42,348"/>
+<area shape="rect" href="classyuki_1_1atri_1_1dt_1_1_decision_tree_builder.html#a3bdc85f7aabb2d74de92a2f83a61e001" title="将缺失当前划分属性值的样本按照有取值的样本分配概率权重进各个子集" alt="" coords="96,347,211,373"/>
+<area shape="poly" title=" " alt="" coords="48,357,80,357,80,363,48,363"/>
+<area shape="rect" href="classyuki_1_1atri_1_1dt_1_1_decision_tree_builder.html#a5d0dc286a8325ae013b6d8aa3e7dddd0" title="从样本集里选取占比最多的 target 取值作为叶子结点" alt="" coords="105,296,203,323"/>
+<area shape="poly" title=" " alt="" coords="47,350,104,326,106,331,49,355"/>
+<area shape="rect" href="classyuki_1_1atri_1_1dt_1_1_decision_tree_builder.html#af84be46cd0de725b0be509a90a82f641" title="从一个属性集合移除指定属性" alt="" coords="97,397,210,424"/>
+<area shape="poly" title=" " alt="" coords="49,365,106,389,104,394,47,370"/>
+<area shape="rect" href="classyuki_1_1atri_1_1dt_1_1_decision_tree_builder.html#a96c57718c5b9ed8a778f0eea4d0044aa" title="将样本集中给定属性缺失的样本分离" alt="" coords="104,448,203,475"/>
+<area shape="poly" title=" " alt="" coords="42,372,65,403,98,434,104,438,101,443,94,438,61,406,37,376"/>
+<area shape="rect" href="classyuki_1_1atri_1_1dt_1_1_decision_tree_builder.html#ac91dcadf2b879862ba082ccc49937f98" title="将样本集按照某个属性划分为一些子样本集" alt="" coords="102,499,205,525"/>
+<area shape="poly" title=" " alt="" coords="37,373,57,426,75,457,98,485,102,488,98,492,94,489,71,460,53,429,32,375"/>
+<area shape="rect" href="namespaceyuki_1_1random.html#a5c4c6f66339f20f8b261def24a471f24" title="从数组里随机选择一个元素" alt="" coords="275,309,421,336"/>
+<area shape="poly" title=" " alt="" coords="174,195,213,232,227,250,236,266,245,281,261,295,269,300,266,305,258,299,241,284,231,269,223,253,209,235,170,198"/>
+<area shape="rect" href="classyuki_1_1atri_1_1dt_1_1_decision_tree_builder.html#a214ac71a1020e164a830dc7e3a6d2aa2" title="获取样本集中给定属性可用（未缺失）的样本集合" alt="" coords="306,5,390,32"/>
+<area shape="poly" title=" " alt="" coords="159,168,195,107,224,72,258,42,290,27,292,31,261,46,228,76,200,110,164,170"/>
+<area shape="rect" href="classyuki_1_1atri_1_1dt_1_1_decision_tree_builder.html#aeb65309fac4c67ddb77d508ae87db08d" title="获取度量标准的输出字符串" alt="" coords="281,56,415,83"/>
+<area shape="poly" title=" " alt="" coords="166,167,205,130,258,92,271,86,273,91,261,97,208,134,170,171"/>
+<area shape="rect" href="classyuki_1_1atri_1_1dt_1_1_decision_tree_builder.html#ad8c174d24bae4fe7bb1e0346c29e3ef4" title="获取样本集总权重" alt="" coords="294,107,402,133"/>
+<area shape="poly" title=" " alt="" coords="191,166,259,143,281,136,283,141,260,148,193,171"/>
+<area shape="rect" href="classyuki_1_1atri_1_1dt_1_1_decision_tree_builder.html#aa10ed40befae9f8350131087780f489b" title="计算指定属性对于样本集的基尼指数" alt="" coords="311,157,385,184"/>
+<area shape="poly" title=" " alt="" coords="197,177,296,171,296,176,197,183"/>
+<area shape="rect" href="classyuki_1_1atri_1_1dt_1_1_decision_tree_builder.html#a9598a2aa8fe1f9b71cd834369f49dc84" title="计算给定属性在数据集中的信息增益" alt="" coords="313,208,383,235"/>
+<area shape="poly" title=" " alt="" coords="197,188,298,209,297,214,196,194"/>
+<area shape="rect" href="classyuki_1_1atri_1_1dt_1_1_decision_tree_builder.html#a8f38d5ee600d9a0238cf81e0919c4bbe" title="计算指定属性对于样本集的信息增益率" alt="" coords="298,259,398,285"/>
+<area shape="poly" title=" " alt="" coords="176,194,214,219,261,244,284,253,282,258,258,249,211,224,173,199"/>
+<area shape="rect" href="namespaceyuki_1_1statistics.html#a089b6b377afd975cdb34990feab306ce" title="计算基尼指数" alt="" coords="496,157,631,184"/>
+<area shape="poly" title=" " alt="" coords="385,168,481,168,481,173,385,173"/>
+<area shape="rect" href="namespaceyuki_1_1statistics.html#ac0c56aaf28b0dab3080545241577ff4f" title="计算随机变量的信息熵" alt="" coords="485,233,642,260"/>
+<area shape="poly" title=" " alt="" coords="383,223,470,233,469,238,383,228"/>
+<area shape="poly" title=" " alt="" coords="398,263,469,255,470,260,399,269"/>
+<area shape="rect" href="namespaceyuki_1_1atri_1_1dt.html#af41a77c2c209c0e51cb4e6c596470532" title=" " alt="" coords="259,435,437,461"/>
+<area shape="poly" title=" " alt="" coords="187,371,213,383,305,425,302,430,210,388,185,376"/>
+<area shape="poly" title=" " alt="" coords="315,436,309,426,313,416,327,410,348,408,371,411,384,417,381,422,370,416,348,413,328,415,317,420,314,425,320,433"/>
+<area shape="poly" title=" " alt="" coords="204,310,259,314,259,319,203,315"/>
+<area shape="poly" title=" " alt="" coords="196,496,290,464,292,469,198,501"/>
+</map>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classyuki_1_1atri_1_1dt_1_1_decision_tree_builder_afb0815a4166a68bb5f1c60ec09abe4de_icgraph.png" border="0" usemap="#aclassyuki_1_1atri_1_1dt_1_1_decision_tree_builder_afb0815a4166a68bb5f1c60ec09abe4de_icgraph" alt=""/></div>
+<map name="aclassyuki_1_1atri_1_1dt_1_1_decision_tree_builder_afb0815a4166a68bb5f1c60ec09abe4de_icgraph" id="aclassyuki_1_1atri_1_1dt_1_1_decision_tree_builder_afb0815a4166a68bb5f1c60ec09abe4de_icgraph">
+<area shape="rect" title="采用 learn 算法建树" alt="" coords="200,29,238,56"/>
+<area shape="poly" title=" " alt="" coords="233,15,228,10,219,8,211,10,206,14,205,20,207,28,202,30,199,20,201,11,208,5,219,3,231,5,237,12"/>
+<area shape="rect" href="classyuki_1_1atri_1_1dt_1_1_decision_tree_builder.html#a9525b1c74d534350359d9f205c35cba4" title="建树" alt="" coords="103,29,152,56"/>
+<area shape="poly" title=" " alt="" coords="184,45,152,45,152,40,184,40"/>
+<area shape="rect" href="_decision_tree_test1_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,29,55,56"/>
+<area shape="poly" title=" " alt="" coords="87,45,55,45,55,40,87,40"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a214ac71a1020e164a830dc7e3a6d2aa2" name="a214ac71a1020e164a830dc7e3a6d2aa2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a214ac71a1020e164a830dc7e3a6d2aa2">&#9670;&#160;</a></span>getAvailEx()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto getAvailEx </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classyuki_1_1atri_1_1dt_1_1_attribute.html">Attribute</a> *const &amp;</td>          <td class="paramname"><span class="paramname"><em>attr</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">vector&lt; pair&lt; <a class="el" href="classyuki_1_1atri_1_1dt_1_1_example.html">Example</a> *, <a class="el" href="namespaceyuki.html#abc2f107791bd7c1d49ecf0f168c085a3">f64</a> &gt; &gt; const &amp;</td>          <td class="paramname"><span class="paramname"><em>examples</em></span>&#160;) -&gt; vector&lt;pair&lt;<a class="el" href="classyuki_1_1atri_1_1dt_1_1_example.html">Example</a>*, <a class="el" href="namespaceyuki.html#abc2f107791bd7c1d49ecf0f168c085a3">f64</a>&gt;&gt;</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>获取样本集中给定属性可用（未缺失）的样本集合 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">attr</td><td>属性 </td></tr>
+    <tr><td class="paramname">examples</td><td>样本集 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>vector&lt;pair&lt;Example*, f64&gt;&gt; 给定属性可用（未缺失）的样本集合 </dd></dl>
+
+<p class="definition">在文件 <a class="el" href="_decision_tree_builder_8cpp_source.html">DecisionTreeBuilder.cpp</a> 第 <a class="el" href="_decision_tree_builder_8cpp_source.html#l00086">86</a> 行定义.</p>
+
+<p class="reference">引用了 <a class="el" href="_attribute_8h_source.html#l00021">Attribute::ABSENT</a>.</p>
+
+<p class="reference">被这些函数引用 <a class="el" href="_decision_tree_builder_8h_source.html#l00241">DecisionTreeBuilder::importance()</a>.</p>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classyuki_1_1atri_1_1dt_1_1_decision_tree_builder_a214ac71a1020e164a830dc7e3a6d2aa2_icgraph.png" border="0" usemap="#aclassyuki_1_1atri_1_1dt_1_1_decision_tree_builder_a214ac71a1020e164a830dc7e3a6d2aa2_icgraph" alt=""/></div>
+<map name="aclassyuki_1_1atri_1_1dt_1_1_decision_tree_builder_a214ac71a1020e164a830dc7e3a6d2aa2_icgraph" id="aclassyuki_1_1atri_1_1dt_1_1_decision_tree_builder_a214ac71a1020e164a830dc7e3a6d2aa2_icgraph">
+<area shape="rect" title="获取样本集中给定属性可用（未缺失）的样本集合" alt="" coords="420,29,504,56"/>
+<area shape="rect" href="classyuki_1_1atri_1_1dt_1_1_decision_tree_builder.html#af5c09ddbcafc56b7b57135141fe9d649" title="获取信息增益最大的属性" alt="" coords="286,29,372,56"/>
+<area shape="poly" title=" " alt="" coords="404,45,372,45,372,40,404,40"/>
+<area shape="rect" href="classyuki_1_1atri_1_1dt_1_1_decision_tree_builder.html#afb0815a4166a68bb5f1c60ec09abe4de" title="采用 learn 算法建树" alt="" coords="200,29,238,56"/>
+<area shape="poly" title=" " alt="" coords="271,45,239,45,239,40,271,40"/>
+<area shape="poly" title=" " alt="" coords="233,15,228,10,219,8,211,10,206,14,205,20,207,28,202,30,199,20,201,11,208,5,219,3,231,5,237,12"/>
+<area shape="rect" href="classyuki_1_1atri_1_1dt_1_1_decision_tree_builder.html#a9525b1c74d534350359d9f205c35cba4" title="建树" alt="" coords="103,29,152,56"/>
+<area shape="poly" title=" " alt="" coords="184,45,152,45,152,40,184,40"/>
+<area shape="rect" href="_decision_tree_test1_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,29,55,56"/>
+<area shape="poly" title=" " alt="" coords="87,45,55,45,55,40,87,40"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="aeb65309fac4c67ddb77d508ae87db08d" name="aeb65309fac4c67ddb77d508ae87db08d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeb65309fac4c67ddb77d508ae87db08d">&#9670;&#160;</a></span>getCriterionTypeStr()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto getCriterionTypeStr </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#a181e9e8dd1254f9c3022cafa97210f99">CriterionType</a> const &amp;</td>          <td class="paramname"><span class="paramname"><em>criterion</em></span></td><td>)</td>
+          <td> -&gt; string</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>获取度量标准的输出字符串 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">criterion</td><td>度量标准 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>string 字符串 </dd></dl>
+
+<p class="definition">在文件 <a class="el" href="_decision_tree_builder_8cpp_source.html">DecisionTreeBuilder.cpp</a> 第 <a class="el" href="_decision_tree_builder_8cpp_source.html#l00004">4</a> 行定义.</p>
+
+<p class="reference">被这些函数引用 <a class="el" href="_decision_tree_builder_8h_source.html#l00241">DecisionTreeBuilder::importance()</a>.</p>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classyuki_1_1atri_1_1dt_1_1_decision_tree_builder_aeb65309fac4c67ddb77d508ae87db08d_icgraph.png" border="0" usemap="#aclassyuki_1_1atri_1_1dt_1_1_decision_tree_builder_aeb65309fac4c67ddb77d508ae87db08d_icgraph" alt=""/></div>
+<map name="aclassyuki_1_1atri_1_1dt_1_1_decision_tree_builder_aeb65309fac4c67ddb77d508ae87db08d_icgraph" id="aclassyuki_1_1atri_1_1dt_1_1_decision_tree_builder_aeb65309fac4c67ddb77d508ae87db08d_icgraph">
+<area shape="rect" title="获取度量标准的输出字符串" alt="" coords="420,29,553,56"/>
+<area shape="rect" href="classyuki_1_1atri_1_1dt_1_1_decision_tree_builder.html#af5c09ddbcafc56b7b57135141fe9d649" title="获取信息增益最大的属性" alt="" coords="286,29,372,56"/>
+<area shape="poly" title=" " alt="" coords="404,45,372,45,372,40,404,40"/>
+<area shape="rect" href="classyuki_1_1atri_1_1dt_1_1_decision_tree_builder.html#afb0815a4166a68bb5f1c60ec09abe4de" title="采用 learn 算法建树" alt="" coords="200,29,238,56"/>
+<area shape="poly" title=" " alt="" coords="271,45,239,45,239,40,271,40"/>
+<area shape="poly" title=" " alt="" coords="233,15,228,10,219,8,211,10,206,14,205,20,207,28,202,30,199,20,201,11,208,5,219,3,231,5,237,12"/>
+<area shape="rect" href="classyuki_1_1atri_1_1dt_1_1_decision_tree_builder.html#a9525b1c74d534350359d9f205c35cba4" title="建树" alt="" coords="103,29,152,56"/>
+<area shape="poly" title=" " alt="" coords="184,45,152,45,152,40,184,40"/>
+<area shape="rect" href="_decision_tree_test1_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,29,55,56"/>
+<area shape="poly" title=" " alt="" coords="87,45,55,45,55,40,87,40"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ad8c174d24bae4fe7bb1e0346c29e3ef4" name="ad8c174d24bae4fe7bb1e0346c29e3ef4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad8c174d24bae4fe7bb1e0346c29e3ef4">&#9670;&#160;</a></span>getTotalWeight() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto getTotalWeight </td>
+          <td>(</td>
+          <td class="paramtype">vector&lt; pair&lt; <a class="el" href="classyuki_1_1atri_1_1dt_1_1_example.html">Example</a> *, <a class="el" href="namespaceyuki.html#abc2f107791bd7c1d49ecf0f168c085a3">f64</a> &gt; &gt; const &amp;</td>          <td class="paramname"><span class="paramname"><em>examples</em></span></td><td>)</td>
+          <td> -&gt; <a class="el" href="namespaceyuki.html#abc2f107791bd7c1d49ecf0f168c085a3">f64</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>获取样本集总权重 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">examples</td><td>样本集 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>f64 样本集总权重 </dd></dl>
+
+<p class="definition">在文件 <a class="el" href="_decision_tree_builder_8cpp_source.html">DecisionTreeBuilder.cpp</a> 第 <a class="el" href="_decision_tree_builder_8cpp_source.html#l00070">70</a> 行定义.</p>
+
+<p class="reference">被这些函数引用 <a class="el" href="_decision_tree_builder_8h_source.html#l00241">DecisionTreeBuilder::importance()</a>.</p>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classyuki_1_1atri_1_1dt_1_1_decision_tree_builder_ad8c174d24bae4fe7bb1e0346c29e3ef4_icgraph.png" border="0" usemap="#aclassyuki_1_1atri_1_1dt_1_1_decision_tree_builder_ad8c174d24bae4fe7bb1e0346c29e3ef4_icgraph" alt=""/></div>
+<map name="aclassyuki_1_1atri_1_1dt_1_1_decision_tree_builder_ad8c174d24bae4fe7bb1e0346c29e3ef4_icgraph" id="aclassyuki_1_1atri_1_1dt_1_1_decision_tree_builder_ad8c174d24bae4fe7bb1e0346c29e3ef4_icgraph">
+<area shape="rect" title="获取样本集总权重" alt="" coords="420,29,527,56"/>
+<area shape="rect" href="classyuki_1_1atri_1_1dt_1_1_decision_tree_builder.html#af5c09ddbcafc56b7b57135141fe9d649" title="获取信息增益最大的属性" alt="" coords="286,29,372,56"/>
+<area shape="poly" title=" " alt="" coords="404,45,372,45,372,40,404,40"/>
+<area shape="rect" href="classyuki_1_1atri_1_1dt_1_1_decision_tree_builder.html#afb0815a4166a68bb5f1c60ec09abe4de" title="采用 learn 算法建树" alt="" coords="200,29,238,56"/>
+<area shape="poly" title=" " alt="" coords="271,45,239,45,239,40,271,40"/>
+<area shape="poly" title=" " alt="" coords="233,15,228,10,219,8,211,10,206,14,205,20,207,28,202,30,199,20,201,11,208,5,219,3,231,5,237,12"/>
+<area shape="rect" href="classyuki_1_1atri_1_1dt_1_1_decision_tree_builder.html#a9525b1c74d534350359d9f205c35cba4" title="建树" alt="" coords="103,29,152,56"/>
+<area shape="poly" title=" " alt="" coords="184,45,152,45,152,40,184,40"/>
+<area shape="rect" href="_decision_tree_test1_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,29,55,56"/>
+<area shape="poly" title=" " alt="" coords="87,45,55,45,55,40,87,40"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="aa909c4f231e9b3849de2c674eb08e65a" name="aa909c4f231e9b3849de2c674eb08e65a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa909c4f231e9b3849de2c674eb08e65a">&#9670;&#160;</a></span>getTotalWeight() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto getTotalWeight </td>
+          <td>(</td>
+          <td class="paramtype">vector&lt; pair&lt; <a class="el" href="classyuki_1_1atri_1_1dt_1_1_example.html">Example</a> *, <a class="el" href="namespaceyuki.html#abc2f107791bd7c1d49ecf0f168c085a3">f64</a> &gt; &gt; const &amp;</td>          <td class="paramname"><span class="paramname"><em>examples</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespaceyuki.html#a77a52b9640a0c8600feb48e548425a40">i32</a> const &amp;</td>          <td class="paramname"><span class="paramname"><em>begin</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespaceyuki.html#a77a52b9640a0c8600feb48e548425a40">i32</a> const &amp;</td>          <td class="paramname"><span class="paramname"><em>end</em></span>&#160;) -&gt; <a class="el" href="namespaceyuki.html#abc2f107791bd7c1d49ecf0f168c085a3">f64</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>获取给定区间的样本集总权重 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">examples</td><td>样本集 </td></tr>
+    <tr><td class="paramname">begin</td><td>起点 </td></tr>
+    <tr><td class="paramname">end</td><td>终点 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>f64 给定区间的样本集总权重 </dd></dl>
+
+<p class="definition">在文件 <a class="el" href="_decision_tree_builder_8cpp_source.html">DecisionTreeBuilder.cpp</a> 第 <a class="el" href="_decision_tree_builder_8cpp_source.html#l00078">78</a> 行定义.</p>
+
+</div>
+</div>
+<a id="aa10ed40befae9f8350131087780f489b" name="aa10ed40befae9f8350131087780f489b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa10ed40befae9f8350131087780f489b">&#9670;&#160;</a></span>giniIndex()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto giniIndex </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classyuki_1_1atri_1_1dt_1_1_attribute.html">Attribute</a> *const &amp;</td>          <td class="paramname"><span class="paramname"><em>attr</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classyuki_1_1atri_1_1dt_1_1_attribute.html">Attribute</a> *const &amp;</td>          <td class="paramname"><span class="paramname"><em>target</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">vector&lt; pair&lt; <a class="el" href="classyuki_1_1atri_1_1dt_1_1_example.html">Example</a> *, <a class="el" href="namespaceyuki.html#abc2f107791bd7c1d49ecf0f168c085a3">f64</a> &gt; &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>examples</em></span>&#160;) -&gt; <a class="el" href="namespaceyuki.html#abc2f107791bd7c1d49ecf0f168c085a3">f64</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>计算指定属性对于样本集的基尼指数 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">attr</td><td>属性 </td></tr>
+    <tr><td class="paramname">target</td><td>目标属性 </td></tr>
+    <tr><td class="paramname">examples</td><td>样本集 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>f64 指定属性对于样本集的基尼指数 </dd></dl>
+
+<p class="definition">在文件 <a class="el" href="_decision_tree_builder_8cpp_source.html">DecisionTreeBuilder.cpp</a> 第 <a class="el" href="_decision_tree_builder_8cpp_source.html#l00354">354</a> 行定义.</p>
+
+<p class="reference">引用了 <a class="el" href="_attribute_8h_source.html#l00012">yuki::atri::dt::CONTINUOUS</a>, <a class="el" href="_attribute_8h_source.html#l00011">yuki::atri::dt::DISCRETE</a> , 以及 <a class="el" href="tools_8cpp_source.html#l00121">yuki::statistics::gini()</a>.</p>
+
+<p class="reference">被这些函数引用 <a class="el" href="_decision_tree_builder_8h_source.html#l00241">DecisionTreeBuilder::importance()</a>.</p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classyuki_1_1atri_1_1dt_1_1_decision_tree_builder_aa10ed40befae9f8350131087780f489b_cgraph.png" border="0" usemap="#aclassyuki_1_1atri_1_1dt_1_1_decision_tree_builder_aa10ed40befae9f8350131087780f489b_cgraph" alt=""/></div>
+<map name="aclassyuki_1_1atri_1_1dt_1_1_decision_tree_builder_aa10ed40befae9f8350131087780f489b_cgraph" id="aclassyuki_1_1atri_1_1dt_1_1_decision_tree_builder_aa10ed40befae9f8350131087780f489b_cgraph">
+<area shape="rect" title="计算指定属性对于样本集的基尼指数" alt="" coords="5,5,79,32"/>
+<area shape="rect" href="namespaceyuki_1_1statistics.html#a089b6b377afd975cdb34990feab306ce" title="计算基尼指数" alt="" coords="127,5,261,32"/>
+<area shape="poly" title=" " alt="" coords="79,16,111,16,111,21,79,21"/>
+</map>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classyuki_1_1atri_1_1dt_1_1_decision_tree_builder_aa10ed40befae9f8350131087780f489b_icgraph.png" border="0" usemap="#aclassyuki_1_1atri_1_1dt_1_1_decision_tree_builder_aa10ed40befae9f8350131087780f489b_icgraph" alt=""/></div>
+<map name="aclassyuki_1_1atri_1_1dt_1_1_decision_tree_builder_aa10ed40befae9f8350131087780f489b_icgraph" id="aclassyuki_1_1atri_1_1dt_1_1_decision_tree_builder_aa10ed40befae9f8350131087780f489b_icgraph">
+<area shape="rect" title="计算指定属性对于样本集的基尼指数" alt="" coords="420,29,493,56"/>
+<area shape="rect" href="classyuki_1_1atri_1_1dt_1_1_decision_tree_builder.html#af5c09ddbcafc56b7b57135141fe9d649" title="获取信息增益最大的属性" alt="" coords="286,29,372,56"/>
+<area shape="poly" title=" " alt="" coords="404,45,372,45,372,40,404,40"/>
+<area shape="rect" href="classyuki_1_1atri_1_1dt_1_1_decision_tree_builder.html#afb0815a4166a68bb5f1c60ec09abe4de" title="采用 learn 算法建树" alt="" coords="200,29,238,56"/>
+<area shape="poly" title=" " alt="" coords="271,45,239,45,239,40,271,40"/>
+<area shape="poly" title=" " alt="" coords="233,15,228,10,219,8,211,10,206,14,205,20,207,28,202,30,199,20,201,11,208,5,219,3,231,5,237,12"/>
+<area shape="rect" href="classyuki_1_1atri_1_1dt_1_1_decision_tree_builder.html#a9525b1c74d534350359d9f205c35cba4" title="建树" alt="" coords="103,29,152,56"/>
+<area shape="poly" title=" " alt="" coords="184,45,152,45,152,40,184,40"/>
+<area shape="rect" href="_decision_tree_test1_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,29,55,56"/>
+<area shape="poly" title=" " alt="" coords="87,45,55,45,55,40,87,40"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="af5c09ddbcafc56b7b57135141fe9d649" name="af5c09ddbcafc56b7b57135141fe9d649"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af5c09ddbcafc56b7b57135141fe9d649">&#9670;&#160;</a></span>importance()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;<a class="el" href="#a181e9e8dd1254f9c3022cafa97210f99">CriterionType</a> Criterion = INFO_GAIN, bool PrintInfo = false&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static auto importance </td>
+          <td>(</td>
+          <td class="paramtype">vector&lt; <a class="el" href="classyuki_1_1atri_1_1dt_1_1_attribute.html">Attribute</a> * &gt; const &amp;</td>          <td class="paramname"><span class="paramname"><em>attributes</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classyuki_1_1atri_1_1dt_1_1_attribute.html">Attribute</a> *const &amp;</td>          <td class="paramname"><span class="paramname"><em>target</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">vector&lt; pair&lt; <a class="el" href="classyuki_1_1atri_1_1dt_1_1_example.html">Example</a> *, <a class="el" href="namespaceyuki.html#abc2f107791bd7c1d49ecf0f168c085a3">f64</a> &gt; &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>examples</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">pair&lt; string, <a class="el" href="namespaceyuki.html#abc2f107791bd7c1d49ecf0f168c085a3">f64</a> &gt; *</td>          <td class="paramname"><span class="paramname"><em>nodeInfo</em></span><span class="paramdefsep"> = </span><span class="paramdefval">nullptr</span>&#160;) -&gt; <a class="el" href="classyuki_1_1atri_1_1dt_1_1_attribute.html">Attribute</a>* </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>获取信息增益最大的属性 </p>
+<dl class="tparams"><dt>模板参数</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">Criterion</td><td>度量标准 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">attributes</td><td>候选属性集合 </td></tr>
+    <tr><td class="paramname">target</td><td>目标属性 </td></tr>
+    <tr><td class="paramname">examples</td><td>样本集 </td></tr>
+    <tr><td class="paramname">nodeInfo</td><td>节点信息 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>Attribute* 信息增益最大的属性 </dd></dl>
+<p>&lt; 计算度量值的函数</p>
+<p>&lt; 判断度量值更优的函数</p>
+<p>&lt; 保存度量值相等的属性（可能同时存在多个最优分裂属性）</p>
+
+<p class="definition">在文件 <a class="el" href="_decision_tree_builder_8h_source.html">DecisionTreeBuilder.h</a> 第 <a class="el" href="_decision_tree_builder_8h_source.html#l00241">241</a> 行定义.</p>
+
+<p class="reference">引用了 <a class="el" href="tools_8h_source.html#l00389">yuki::random::choose()</a>, <a class="el" href="_decision_tree_builder_8cpp_source.html#l00086">DecisionTreeBuilder::getAvailEx()</a>, <a class="el" href="_decision_tree_builder_8cpp_source.html#l00004">DecisionTreeBuilder::getCriterionTypeStr()</a>, <a class="el" href="_decision_tree_builder_8cpp_source.html#l00070">DecisionTreeBuilder::getTotalWeight()</a>, <a class="el" href="_decision_tree_builder_8cpp_source.html#l00354">DecisionTreeBuilder::giniIndex()</a>, <a class="el" href="_decision_tree_builder_8h_source.html#l00015">DecisionTreeBuilder::INFO_GAIN</a>, <a class="el" href="_decision_tree_builder_8h_source.html#l00016">DecisionTreeBuilder::INFO_RATIO</a>, <a class="el" href="_decision_tree_builder_8cpp_source.html#l00261">DecisionTreeBuilder::infoGain()</a>, <a class="el" href="_decision_tree_builder_8cpp_source.html#l00301">DecisionTreeBuilder::infoGainRatio()</a> , 以及 <a class="el" href="_attribute_8h_source.html#l00023">Attribute::name</a>.</p>
+
+<p class="reference">被这些函数引用 <a class="el" href="_decision_tree_builder_8h_source.html#l00330">DecisionTreeBuilder::fit()</a>.</p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classyuki_1_1atri_1_1dt_1_1_decision_tree_builder_af5c09ddbcafc56b7b57135141fe9d649_cgraph.png" border="0" usemap="#aclassyuki_1_1atri_1_1dt_1_1_decision_tree_builder_af5c09ddbcafc56b7b57135141fe9d649_cgraph" alt=""/></div>
+<map name="aclassyuki_1_1atri_1_1dt_1_1_decision_tree_builder_af5c09ddbcafc56b7b57135141fe9d649_cgraph" id="aclassyuki_1_1atri_1_1dt_1_1_decision_tree_builder_af5c09ddbcafc56b7b57135141fe9d649_cgraph">
+<area shape="rect" title="获取信息增益最大的属性" alt="" coords="5,157,91,184"/>
+<area shape="rect" href="namespaceyuki_1_1random.html#a5c4c6f66339f20f8b261def24a471f24" title="从数组里随机选择一个元素" alt="" coords="139,5,285,32"/>
+<area shape="poly" title=" " alt="" coords="53,155,84,101,108,69,137,42,144,37,147,42,140,46,112,73,88,104,58,158"/>
+<area shape="rect" href="classyuki_1_1atri_1_1dt_1_1_decision_tree_builder.html#a214ac71a1020e164a830dc7e3a6d2aa2" title="获取样本集中给定属性可用（未缺失）的样本集合" alt="" coords="170,56,254,83"/>
+<area shape="poly" title=" " alt="" coords="60,155,93,124,137,92,154,84,156,89,140,97,97,128,64,159"/>
+<area shape="rect" href="classyuki_1_1atri_1_1dt_1_1_decision_tree_builder.html#aeb65309fac4c67ddb77d508ae87db08d" title="获取度量标准的输出字符串" alt="" coords="145,107,278,133"/>
+<area shape="poly" title=" " alt="" coords="90,155,151,136,153,141,92,160"/>
+<area shape="rect" href="classyuki_1_1atri_1_1dt_1_1_decision_tree_builder.html#ad8c174d24bae4fe7bb1e0346c29e3ef4" title="获取样本集总权重" alt="" coords="158,157,266,184"/>
+<area shape="poly" title=" " alt="" coords="91,168,143,168,143,173,91,173"/>
+<area shape="rect" href="classyuki_1_1atri_1_1dt_1_1_decision_tree_builder.html#aa10ed40befae9f8350131087780f489b" title="计算指定属性对于样本集的基尼指数" alt="" coords="175,208,248,235"/>
+<area shape="poly" title=" " alt="" coords="92,181,162,203,160,208,90,186"/>
+<area shape="rect" href="classyuki_1_1atri_1_1dt_1_1_decision_tree_builder.html#a9598a2aa8fe1f9b71cd834369f49dc84" title="计算给定属性在数据集中的信息增益" alt="" coords="177,259,246,285"/>
+<area shape="poly" title=" " alt="" coords="64,182,97,213,140,244,164,255,161,260,137,249,93,217,60,186"/>
+<area shape="rect" href="classyuki_1_1atri_1_1dt_1_1_decision_tree_builder.html#a8f38d5ee600d9a0238cf81e0919c4bbe" title="计算指定属性对于样本集的信息增益率" alt="" coords="162,309,262,336"/>
+<area shape="poly" title=" " alt="" coords="58,183,88,238,112,268,140,295,149,301,146,306,137,299,108,272,84,240,53,186"/>
+<area shape="rect" href="namespaceyuki_1_1statistics.html#a089b6b377afd975cdb34990feab306ce" title="计算基尼指数" alt="" coords="344,208,479,235"/>
+<area shape="poly" title=" " alt="" coords="249,219,329,219,329,224,249,224"/>
+<area shape="rect" href="namespaceyuki_1_1statistics.html#ac0c56aaf28b0dab3080545241577ff4f" title="计算随机变量的信息熵" alt="" coords="333,284,490,311"/>
+<area shape="poly" title=" " alt="" coords="247,274,318,283,317,288,247,279"/>
+<area shape="poly" title=" " alt="" coords="262,314,317,307,318,312,263,319"/>
+</map>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classyuki_1_1atri_1_1dt_1_1_decision_tree_builder_af5c09ddbcafc56b7b57135141fe9d649_icgraph.png" border="0" usemap="#aclassyuki_1_1atri_1_1dt_1_1_decision_tree_builder_af5c09ddbcafc56b7b57135141fe9d649_icgraph" alt=""/></div>
+<map name="aclassyuki_1_1atri_1_1dt_1_1_decision_tree_builder_af5c09ddbcafc56b7b57135141fe9d649_icgraph" id="aclassyuki_1_1atri_1_1dt_1_1_decision_tree_builder_af5c09ddbcafc56b7b57135141fe9d649_icgraph">
+<area shape="rect" title="获取信息增益最大的属性" alt="" coords="286,29,372,56"/>
+<area shape="rect" href="classyuki_1_1atri_1_1dt_1_1_decision_tree_builder.html#afb0815a4166a68bb5f1c60ec09abe4de" title="采用 learn 算法建树" alt="" coords="200,29,238,56"/>
+<area shape="poly" title=" " alt="" coords="271,45,239,45,239,40,271,40"/>
+<area shape="poly" title=" " alt="" coords="233,15,228,10,219,8,211,10,206,14,205,20,207,28,202,30,199,20,201,11,208,5,219,3,231,5,237,12"/>
+<area shape="rect" href="classyuki_1_1atri_1_1dt_1_1_decision_tree_builder.html#a9525b1c74d534350359d9f205c35cba4" title="建树" alt="" coords="103,29,152,56"/>
+<area shape="poly" title=" " alt="" coords="184,45,152,45,152,40,184,40"/>
+<area shape="rect" href="_decision_tree_test1_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,29,55,56"/>
+<area shape="poly" title=" " alt="" coords="87,45,55,45,55,40,87,40"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a9598a2aa8fe1f9b71cd834369f49dc84" name="a9598a2aa8fe1f9b71cd834369f49dc84"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9598a2aa8fe1f9b71cd834369f49dc84">&#9670;&#160;</a></span>infoGain()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto infoGain </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classyuki_1_1atri_1_1dt_1_1_attribute.html">Attribute</a> *const &amp;</td>          <td class="paramname"><span class="paramname"><em>attr</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classyuki_1_1atri_1_1dt_1_1_attribute.html">Attribute</a> *const &amp;</td>          <td class="paramname"><span class="paramname"><em>target</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">vector&lt; pair&lt; <a class="el" href="classyuki_1_1atri_1_1dt_1_1_example.html">Example</a> *, <a class="el" href="namespaceyuki.html#abc2f107791bd7c1d49ecf0f168c085a3">f64</a> &gt; &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>examples</em></span>&#160;) -&gt; <a class="el" href="namespaceyuki.html#abc2f107791bd7c1d49ecf0f168c085a3">f64</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>计算给定属性在数据集中的信息增益 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">attr</td><td>要计算信息增益的属性 </td></tr>
+    <tr><td class="paramname">target</td><td>目标属性 </td></tr>
+    <tr><td class="paramname">examples</td><td>数据集中的样本集合 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>f64 给定属性的信息增益 </dd></dl>
+
+<p class="definition">在文件 <a class="el" href="_decision_tree_builder_8cpp_source.html">DecisionTreeBuilder.cpp</a> 第 <a class="el" href="_decision_tree_builder_8cpp_source.html#l00261">261</a> 行定义.</p>
+
+<p class="reference">引用了 <a class="el" href="_attribute_8h_source.html#l00021">Attribute::ABSENT</a>, <a class="el" href="_attribute_8h_source.html#l00012">yuki::atri::dt::CONTINUOUS</a>, <a class="el" href="_attribute_8h_source.html#l00011">yuki::atri::dt::DISCRETE</a> , 以及 <a class="el" href="tools_8cpp_source.html#l00104">yuki::statistics::entropy()</a>.</p>
+
+<p class="reference">被这些函数引用 <a class="el" href="_decision_tree_builder_8h_source.html#l00241">DecisionTreeBuilder::importance()</a>.</p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classyuki_1_1atri_1_1dt_1_1_decision_tree_builder_a9598a2aa8fe1f9b71cd834369f49dc84_cgraph.png" border="0" usemap="#aclassyuki_1_1atri_1_1dt_1_1_decision_tree_builder_a9598a2aa8fe1f9b71cd834369f49dc84_cgraph" alt=""/></div>
+<map name="aclassyuki_1_1atri_1_1dt_1_1_decision_tree_builder_a9598a2aa8fe1f9b71cd834369f49dc84_cgraph" id="aclassyuki_1_1atri_1_1dt_1_1_decision_tree_builder_a9598a2aa8fe1f9b71cd834369f49dc84_cgraph">
+<area shape="rect" title="计算给定属性在数据集中的信息增益" alt="" coords="5,5,75,32"/>
+<area shape="rect" href="namespaceyuki_1_1statistics.html#ac0c56aaf28b0dab3080545241577ff4f" title="计算随机变量的信息熵" alt="" coords="123,5,280,32"/>
+<area shape="poly" title=" " alt="" coords="75,16,107,16,107,21,75,21"/>
+</map>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classyuki_1_1atri_1_1dt_1_1_decision_tree_builder_a9598a2aa8fe1f9b71cd834369f49dc84_icgraph.png" border="0" usemap="#aclassyuki_1_1atri_1_1dt_1_1_decision_tree_builder_a9598a2aa8fe1f9b71cd834369f49dc84_icgraph" alt=""/></div>
+<map name="aclassyuki_1_1atri_1_1dt_1_1_decision_tree_builder_a9598a2aa8fe1f9b71cd834369f49dc84_icgraph" id="aclassyuki_1_1atri_1_1dt_1_1_decision_tree_builder_a9598a2aa8fe1f9b71cd834369f49dc84_icgraph">
+<area shape="rect" title="计算给定属性在数据集中的信息增益" alt="" coords="420,29,489,56"/>
+<area shape="rect" href="classyuki_1_1atri_1_1dt_1_1_decision_tree_builder.html#af5c09ddbcafc56b7b57135141fe9d649" title="获取信息增益最大的属性" alt="" coords="286,29,372,56"/>
+<area shape="poly" title=" " alt="" coords="404,45,372,45,372,40,404,40"/>
+<area shape="rect" href="classyuki_1_1atri_1_1dt_1_1_decision_tree_builder.html#afb0815a4166a68bb5f1c60ec09abe4de" title="采用 learn 算法建树" alt="" coords="200,29,238,56"/>
+<area shape="poly" title=" " alt="" coords="271,45,239,45,239,40,271,40"/>
+<area shape="poly" title=" " alt="" coords="233,15,228,10,219,8,211,10,206,14,205,20,207,28,202,30,199,20,201,11,208,5,219,3,231,5,237,12"/>
+<area shape="rect" href="classyuki_1_1atri_1_1dt_1_1_decision_tree_builder.html#a9525b1c74d534350359d9f205c35cba4" title="建树" alt="" coords="103,29,152,56"/>
+<area shape="poly" title=" " alt="" coords="184,45,152,45,152,40,184,40"/>
+<area shape="rect" href="_decision_tree_test1_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,29,55,56"/>
+<area shape="poly" title=" " alt="" coords="87,45,55,45,55,40,87,40"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a8f38d5ee600d9a0238cf81e0919c4bbe" name="a8f38d5ee600d9a0238cf81e0919c4bbe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8f38d5ee600d9a0238cf81e0919c4bbe">&#9670;&#160;</a></span>infoGainRatio()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto infoGainRatio </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classyuki_1_1atri_1_1dt_1_1_attribute.html">Attribute</a> *const &amp;</td>          <td class="paramname"><span class="paramname"><em>attr</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classyuki_1_1atri_1_1dt_1_1_attribute.html">Attribute</a> *const &amp;</td>          <td class="paramname"><span class="paramname"><em>target</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">vector&lt; pair&lt; <a class="el" href="classyuki_1_1atri_1_1dt_1_1_example.html">Example</a> *, <a class="el" href="namespaceyuki.html#abc2f107791bd7c1d49ecf0f168c085a3">f64</a> &gt; &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>examples</em></span>&#160;) -&gt; <a class="el" href="namespaceyuki.html#abc2f107791bd7c1d49ecf0f168c085a3">f64</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>计算指定属性对于样本集的信息增益率 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">attr</td><td>属性 </td></tr>
+    <tr><td class="paramname">target</td><td>目标属性 </td></tr>
+    <tr><td class="paramname">examples</td><td>样本集 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>f64 指定属性对于样本集的信息增益率 </dd></dl>
+
+<p class="definition">在文件 <a class="el" href="_decision_tree_builder_8cpp_source.html">DecisionTreeBuilder.cpp</a> 第 <a class="el" href="_decision_tree_builder_8cpp_source.html#l00301">301</a> 行定义.</p>
+
+<p class="reference">引用了 <a class="el" href="_attribute_8h_source.html#l00012">yuki::atri::dt::CONTINUOUS</a>, <a class="el" href="_attribute_8h_source.html#l00011">yuki::atri::dt::DISCRETE</a> , 以及 <a class="el" href="tools_8cpp_source.html#l00104">yuki::statistics::entropy()</a>.</p>
+
+<p class="reference">被这些函数引用 <a class="el" href="_decision_tree_builder_8h_source.html#l00241">DecisionTreeBuilder::importance()</a>.</p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classyuki_1_1atri_1_1dt_1_1_decision_tree_builder_a8f38d5ee600d9a0238cf81e0919c4bbe_cgraph.png" border="0" usemap="#aclassyuki_1_1atri_1_1dt_1_1_decision_tree_builder_a8f38d5ee600d9a0238cf81e0919c4bbe_cgraph" alt=""/></div>
+<map name="aclassyuki_1_1atri_1_1dt_1_1_decision_tree_builder_a8f38d5ee600d9a0238cf81e0919c4bbe_cgraph" id="aclassyuki_1_1atri_1_1dt_1_1_decision_tree_builder_a8f38d5ee600d9a0238cf81e0919c4bbe_cgraph">
+<area shape="rect" title="计算指定属性对于样本集的信息增益率" alt="" coords="5,5,106,32"/>
+<area shape="rect" href="namespaceyuki_1_1statistics.html#ac0c56aaf28b0dab3080545241577ff4f" title="计算随机变量的信息熵" alt="" coords="154,5,311,32"/>
+<area shape="poly" title=" " alt="" coords="106,16,138,16,138,21,106,21"/>
+</map>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classyuki_1_1atri_1_1dt_1_1_decision_tree_builder_a8f38d5ee600d9a0238cf81e0919c4bbe_icgraph.png" border="0" usemap="#aclassyuki_1_1atri_1_1dt_1_1_decision_tree_builder_a8f38d5ee600d9a0238cf81e0919c4bbe_icgraph" alt=""/></div>
+<map name="aclassyuki_1_1atri_1_1dt_1_1_decision_tree_builder_a8f38d5ee600d9a0238cf81e0919c4bbe_icgraph" id="aclassyuki_1_1atri_1_1dt_1_1_decision_tree_builder_a8f38d5ee600d9a0238cf81e0919c4bbe_icgraph">
+<area shape="rect" title="计算指定属性对于样本集的信息增益率" alt="" coords="420,29,520,56"/>
+<area shape="rect" href="classyuki_1_1atri_1_1dt_1_1_decision_tree_builder.html#af5c09ddbcafc56b7b57135141fe9d649" title="获取信息增益最大的属性" alt="" coords="286,29,372,56"/>
+<area shape="poly" title=" " alt="" coords="404,45,372,45,372,40,404,40"/>
+<area shape="rect" href="classyuki_1_1atri_1_1dt_1_1_decision_tree_builder.html#afb0815a4166a68bb5f1c60ec09abe4de" title="采用 learn 算法建树" alt="" coords="200,29,238,56"/>
+<area shape="poly" title=" " alt="" coords="271,45,239,45,239,40,271,40"/>
+<area shape="poly" title=" " alt="" coords="233,15,228,10,219,8,211,10,206,14,205,20,207,28,202,30,199,20,201,11,208,5,219,3,231,5,237,12"/>
+<area shape="rect" href="classyuki_1_1atri_1_1dt_1_1_decision_tree_builder.html#a9525b1c74d534350359d9f205c35cba4" title="建树" alt="" coords="103,29,152,56"/>
+<area shape="poly" title=" " alt="" coords="184,45,152,45,152,40,184,40"/>
+<area shape="rect" href="_decision_tree_test1_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,29,55,56"/>
+<area shape="poly" title=" " alt="" coords="87,45,55,45,55,40,87,40"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ab1cc724b583b6cded54ffad7d52b0321" name="ab1cc724b583b6cded54ffad7d52b0321"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab1cc724b583b6cded54ffad7d52b0321">&#9670;&#160;</a></span>isSameClassify()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool isSameClassify </td>
+          <td>(</td>
+          <td class="paramtype">vector&lt; pair&lt; <a class="el" href="classyuki_1_1atri_1_1dt_1_1_example.html">Example</a> *, <a class="el" href="namespaceyuki.html#abc2f107791bd7c1d49ecf0f168c085a3">f64</a> &gt; &gt; const &amp;</td>          <td class="paramname"><span class="paramname"><em>examples</em></span></td><td>)</td>
+          <td> -&gt; bool</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>判断样本的目标属性分类是否相同 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">examples</td><td>样本 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>bool 样本分类的目标属性是否相同 </dd></dl>
+<dl class="retval"><dt>返回值</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">true</td><td>样本分类的目标属性相同 </td></tr>
+    <tr><td class="paramname">false</td><td>样本分类的目标属性不相同 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">在文件 <a class="el" href="_decision_tree_builder_8cpp_source.html">DecisionTreeBuilder.cpp</a> 第 <a class="el" href="_decision_tree_builder_8cpp_source.html#l00225">225</a> 行定义.</p>
+
+<p class="reference">被这些函数引用 <a class="el" href="_decision_tree_builder_8h_source.html#l00330">DecisionTreeBuilder::fit()</a>.</p>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classyuki_1_1atri_1_1dt_1_1_decision_tree_builder_ab1cc724b583b6cded54ffad7d52b0321_icgraph.png" border="0" usemap="#aclassyuki_1_1atri_1_1dt_1_1_decision_tree_builder_ab1cc724b583b6cded54ffad7d52b0321_icgraph" alt=""/></div>
+<map name="aclassyuki_1_1atri_1_1dt_1_1_decision_tree_builder_ab1cc724b583b6cded54ffad7d52b0321_icgraph" id="aclassyuki_1_1atri_1_1dt_1_1_decision_tree_builder_ab1cc724b583b6cded54ffad7d52b0321_icgraph">
+<area shape="rect" title="判断样本的目标属性分类是否相同" alt="" coords="286,29,400,56"/>
+<area shape="rect" href="classyuki_1_1atri_1_1dt_1_1_decision_tree_builder.html#afb0815a4166a68bb5f1c60ec09abe4de" title="采用 learn 算法建树" alt="" coords="200,29,238,56"/>
+<area shape="poly" title=" " alt="" coords="271,45,239,45,239,40,271,40"/>
+<area shape="poly" title=" " alt="" coords="233,15,228,10,219,8,211,10,206,14,205,20,207,28,202,30,199,20,201,11,208,5,219,3,231,5,237,12"/>
+<area shape="rect" href="classyuki_1_1atri_1_1dt_1_1_decision_tree_builder.html#a9525b1c74d534350359d9f205c35cba4" title="建树" alt="" coords="103,29,152,56"/>
+<area shape="poly" title=" " alt="" coords="184,45,152,45,152,40,184,40"/>
+<area shape="rect" href="_decision_tree_test1_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,29,55,56"/>
+<area shape="poly" title=" " alt="" coords="87,45,55,45,55,40,87,40"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a9525b1c74d534350359d9f205c35cba4" name="a9525b1c74d534350359d9f205c35cba4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9525b1c74d534350359d9f205c35cba4">&#9670;&#160;</a></span>learn()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;<a class="el" href="#a181e9e8dd1254f9c3022cafa97210f99">CriterionType</a> Criterion = GINI_INDEX, bool PreCut = false, bool UsingQueue = true&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static auto learn </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classyuki_1_1atri_1_1dt_1_1_dataset.html">Dataset</a> *</td>          <td class="paramname"><span class="paramname"><em>dataset</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespaceyuki.html#a77a52b9640a0c8600feb48e548425a40">i32</a> const &amp;</td>          <td class="paramname"><span class="paramname"><em>maxDepth</em></span><span class="paramdefsep"> = </span><span class="paramdefval">-1</span>&#160;) -&gt; <a class="el" href="classyuki_1_1atri_1_1dt_1_1_decision_tree.html">DecisionTree</a>* </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>建树 </p>
+<dl class="tparams"><dt>模板参数</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">Criterion</td><td>度量标准 </td></tr>
+    <tr><td class="paramname">PreCut</td><td>是否预剪枝 </td></tr>
+    <tr><td class="paramname">UsingQueue</td><td>是否使用队列迭代 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dataset</td><td>样本集 </td></tr>
+    <tr><td class="paramname">maxDepth</td><td>最大深度 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>DecisionTree* 决策树 </dd></dl>
+
+<p class="definition">在文件 <a class="el" href="_decision_tree_builder_8h_source.html">DecisionTreeBuilder.h</a> 第 <a class="el" href="_decision_tree_builder_8h_source.html#l00528">528</a> 行定义.</p>
+
+<p class="reference">引用了 <a class="el" href="_attribute_8h_source.html#l00021">Attribute::ABSENT</a>, <a class="el" href="_decision_tree_8h_source.html#l00012">DecisionTree::attributes</a>, <a class="el" href="_d_t_example_8h_source.html#l00012">Example::data</a>, <a class="el" href="_decision_tree_builder_8h_source.html#l00330">DecisionTreeBuilder::fit()</a>, <a class="el" href="_decision_tree_8h_source.html#l00017">DecisionTree::root</a>, <a class="el" href="_decision_tree_8h_source.html#l00013">DecisionTree::target</a>, <a class="el" href="_d_t_example_8h_source.html#l00013">Example::target</a> , 以及 <a class="el" href="_decision_tree_8h_source.html#l00015">DecisionTree::valueStrMap</a>.</p>
+
+<p class="reference">被这些函数引用 <a class="el" href="_decision_tree_test1_8cpp_source.html#l00008">main()</a>.</p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classyuki_1_1atri_1_1dt_1_1_decision_tree_builder_a9525b1c74d534350359d9f205c35cba4_cgraph.png" border="0" usemap="#aclassyuki_1_1atri_1_1dt_1_1_decision_tree_builder_a9525b1c74d534350359d9f205c35cba4_cgraph" alt=""/></div>
+<map name="aclassyuki_1_1atri_1_1dt_1_1_decision_tree_builder_a9525b1c74d534350359d9f205c35cba4_cgraph" id="aclassyuki_1_1atri_1_1dt_1_1_decision_tree_builder_a9525b1c74d534350359d9f205c35cba4_cgraph">
+<area shape="rect" title="建树" alt="" coords="5,347,55,373"/>
+<area shape="rect" href="classyuki_1_1atri_1_1dt_1_1_decision_tree_builder.html#afb0815a4166a68bb5f1c60ec09abe4de" title="采用 learn 算法建树" alt="" coords="103,347,141,373"/>
+<area shape="poly" title=" " alt="" coords="55,357,87,357,87,363,55,363"/>
+<area shape="poly" title=" " alt="" coords="105,347,102,338,104,329,111,322,122,320,134,323,140,329,136,333,131,327,122,325,113,327,109,331,107,338,110,345"/>
+<area shape="rect" href="classyuki_1_1atri_1_1dt_1_1_decision_tree_builder.html#af5c09ddbcafc56b7b57135141fe9d649" title="获取信息增益最大的属性" alt="" coords="204,169,289,196"/>
+<area shape="poly" title=" " alt="" coords="126,345,149,293,187,232,214,204,218,208,191,235,154,296,131,347"/>
+<area shape="rect" href="classyuki_1_1atri_1_1dt_1_1_decision_tree_builder.html#ab1cc724b583b6cded54ffad7d52b0321" title="判断样本的目标属性分类是否相同" alt="" coords="190,245,303,272"/>
+<area shape="poly" title=" " alt="" coords="130,344,154,314,187,282,194,277,197,282,191,286,158,317,135,348"/>
+<area shape="rect" href="classyuki_1_1atri_1_1dt_1_1_decision_tree_builder.html#a3bdc85f7aabb2d74de92a2f83a61e001" title="将缺失当前划分属性值的样本按照有取值的样本分配概率权重进各个子集" alt="" coords="189,347,304,373"/>
+<area shape="poly" title=" " alt="" coords="141,357,173,357,173,363,141,363"/>
+<area shape="rect" href="classyuki_1_1atri_1_1dt_1_1_decision_tree_builder.html#a5d0dc286a8325ae013b6d8aa3e7dddd0" title="从样本集里选取占比最多的 target 取值作为叶子结点" alt="" coords="198,296,296,323"/>
+<area shape="poly" title=" " alt="" coords="140,350,197,326,199,331,142,355"/>
+<area shape="rect" href="classyuki_1_1atri_1_1dt_1_1_decision_tree_builder.html#af84be46cd0de725b0be509a90a82f641" title="从一个属性集合移除指定属性" alt="" coords="190,397,303,424"/>
+<area shape="poly" title=" " alt="" coords="142,365,199,389,197,394,140,370"/>
+<area shape="rect" href="classyuki_1_1atri_1_1dt_1_1_decision_tree_builder.html#a96c57718c5b9ed8a778f0eea4d0044aa" title="将样本集中给定属性缺失的样本分离" alt="" coords="197,448,296,475"/>
+<area shape="poly" title=" " alt="" coords="135,372,158,403,191,434,197,438,194,443,187,438,154,406,130,376"/>
+<area shape="rect" href="classyuki_1_1atri_1_1dt_1_1_decision_tree_builder.html#ac91dcadf2b879862ba082ccc49937f98" title="将样本集按照某个属性划分为一些子样本集" alt="" coords="195,499,298,525"/>
+<area shape="poly" title=" " alt="" coords="129,373,150,426,168,457,191,485,195,488,191,492,187,489,164,460,146,429,125,375"/>
+<area shape="rect" href="namespaceyuki_1_1random.html#a5c4c6f66339f20f8b261def24a471f24" title="从数组里随机选择一个元素" alt="" coords="368,309,514,336"/>
+<area shape="poly" title=" " alt="" coords="267,195,306,232,320,250,329,266,338,281,354,295,362,300,359,305,351,299,334,284,324,269,316,253,302,235,263,198"/>
+<area shape="rect" href="classyuki_1_1atri_1_1dt_1_1_decision_tree_builder.html#a214ac71a1020e164a830dc7e3a6d2aa2" title="获取样本集中给定属性可用（未缺失）的样本集合" alt="" coords="399,5,483,32"/>
+<area shape="poly" title=" " alt="" coords="252,168,288,107,317,72,351,42,383,27,385,31,354,46,320,76,293,110,257,170"/>
+<area shape="rect" href="classyuki_1_1atri_1_1dt_1_1_decision_tree_builder.html#aeb65309fac4c67ddb77d508ae87db08d" title="获取度量标准的输出字符串" alt="" coords="374,56,508,83"/>
+<area shape="poly" title=" " alt="" coords="259,167,298,130,351,92,364,86,366,91,354,97,301,134,263,171"/>
+<area shape="rect" href="classyuki_1_1atri_1_1dt_1_1_decision_tree_builder.html#ad8c174d24bae4fe7bb1e0346c29e3ef4" title="获取样本集总权重" alt="" coords="387,107,495,133"/>
+<area shape="poly" title=" " alt="" coords="284,166,352,143,374,136,376,141,353,148,286,171"/>
+<area shape="rect" href="classyuki_1_1atri_1_1dt_1_1_decision_tree_builder.html#aa10ed40befae9f8350131087780f489b" title="计算指定属性对于样本集的基尼指数" alt="" coords="404,157,478,184"/>
+<area shape="poly" title=" " alt="" coords="289,177,389,171,389,176,290,183"/>
+<area shape="rect" href="classyuki_1_1atri_1_1dt_1_1_decision_tree_builder.html#a9598a2aa8fe1f9b71cd834369f49dc84" title="计算给定属性在数据集中的信息增益" alt="" coords="406,208,476,235"/>
+<area shape="poly" title=" " alt="" coords="290,188,391,209,390,214,289,194"/>
+<area shape="rect" href="classyuki_1_1atri_1_1dt_1_1_decision_tree_builder.html#a8f38d5ee600d9a0238cf81e0919c4bbe" title="计算指定属性对于样本集的信息增益率" alt="" coords="391,259,491,285"/>
+<area shape="poly" title=" " alt="" coords="269,194,307,219,354,244,377,253,375,258,351,249,304,224,266,199"/>
+<area shape="rect" href="namespaceyuki_1_1statistics.html#a089b6b377afd975cdb34990feab306ce" title="计算基尼指数" alt="" coords="589,157,724,184"/>
+<area shape="poly" title=" " alt="" coords="478,168,574,168,574,173,478,173"/>
+<area shape="rect" href="namespaceyuki_1_1statistics.html#ac0c56aaf28b0dab3080545241577ff4f" title="计算随机变量的信息熵" alt="" coords="578,233,735,260"/>
+<area shape="poly" title=" " alt="" coords="476,223,563,233,562,238,476,228"/>
+<area shape="poly" title=" " alt="" coords="491,263,562,255,563,260,492,269"/>
+<area shape="rect" href="namespaceyuki_1_1atri_1_1dt.html#af41a77c2c209c0e51cb4e6c596470532" title=" " alt="" coords="352,435,530,461"/>
+<area shape="poly" title=" " alt="" coords="280,371,306,383,398,425,395,430,303,388,278,376"/>
+<area shape="poly" title=" " alt="" coords="408,436,402,426,406,416,419,410,441,408,464,411,477,417,474,422,463,416,441,413,421,415,410,420,407,425,412,433"/>
+<area shape="poly" title=" " alt="" coords="297,310,352,314,352,319,296,315"/>
+<area shape="poly" title=" " alt="" coords="289,496,383,464,385,469,291,501"/>
+</map>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classyuki_1_1atri_1_1dt_1_1_decision_tree_builder_a9525b1c74d534350359d9f205c35cba4_icgraph.png" border="0" usemap="#aclassyuki_1_1atri_1_1dt_1_1_decision_tree_builder_a9525b1c74d534350359d9f205c35cba4_icgraph" alt=""/></div>
+<map name="aclassyuki_1_1atri_1_1dt_1_1_decision_tree_builder_a9525b1c74d534350359d9f205c35cba4_icgraph" id="aclassyuki_1_1atri_1_1dt_1_1_decision_tree_builder_a9525b1c74d534350359d9f205c35cba4_icgraph">
+<area shape="rect" title="建树" alt="" coords="103,5,152,32"/>
+<area shape="rect" href="_decision_tree_test1_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,5,55,32"/>
+<area shape="poly" title=" " alt="" coords="87,21,55,21,55,16,87,16"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a3bdc85f7aabb2d74de92a2f83a61e001" name="a3bdc85f7aabb2d74de92a2f83a61e001"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3bdc85f7aabb2d74de92a2f83a61e001">&#9670;&#160;</a></span>mergeExamples()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto mergeExamples </td>
+          <td>(</td>
+          <td class="paramtype">vector&lt; vector&lt; pair&lt; <a class="el" href="classyuki_1_1atri_1_1dt_1_1_example.html">Example</a> *, <a class="el" href="namespaceyuki.html#abc2f107791bd7c1d49ecf0f168c085a3">f64</a> &gt; &gt; &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>subExamples</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">vector&lt; pair&lt; <a class="el" href="classyuki_1_1atri_1_1dt_1_1_example.html">Example</a> *, <a class="el" href="namespaceyuki.html#abc2f107791bd7c1d49ecf0f168c085a3">f64</a> &gt; &gt; const &amp;</td>          <td class="paramname"><span class="paramname"><em>absentExamples</em></span>&#160;) -&gt; void</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>将缺失当前划分属性值的样本按照有取值的样本分配概率权重进各个子集 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">subExamples</td><td>子样本集集合 </td></tr>
+    <tr><td class="paramname">absentExamples</td><td>缺失值样本集合 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">在文件 <a class="el" href="_decision_tree_builder_8cpp_source.html">DecisionTreeBuilder.cpp</a> 第 <a class="el" href="_decision_tree_builder_8cpp_source.html#l00166">166</a> 行定义.</p>
+
+<p class="reference">引用了 <a class="el" href="_d_t_example_8cpp_source.html#l00014">yuki::atri::dt::subExamples()</a>.</p>
+
+<p class="reference">被这些函数引用 <a class="el" href="_decision_tree_builder_8h_source.html#l00330">DecisionTreeBuilder::fit()</a>.</p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classyuki_1_1atri_1_1dt_1_1_decision_tree_builder_a3bdc85f7aabb2d74de92a2f83a61e001_cgraph.png" border="0" usemap="#aclassyuki_1_1atri_1_1dt_1_1_decision_tree_builder_a3bdc85f7aabb2d74de92a2f83a61e001_cgraph" alt=""/></div>
+<map name="aclassyuki_1_1atri_1_1dt_1_1_decision_tree_builder_a3bdc85f7aabb2d74de92a2f83a61e001_cgraph" id="aclassyuki_1_1atri_1_1dt_1_1_decision_tree_builder_a3bdc85f7aabb2d74de92a2f83a61e001_cgraph">
+<area shape="rect" title="将缺失当前划分属性值的样本按照有取值的样本分配概率权重进各个子集" alt="" coords="5,29,121,56"/>
+<area shape="rect" href="namespaceyuki_1_1atri_1_1dt.html#af41a77c2c209c0e51cb4e6c596470532" title=" " alt="" coords="169,29,346,56"/>
+<area shape="poly" title=" " alt="" coords="121,40,153,40,153,45,121,45"/>
+<area shape="poly" title=" " alt="" coords="224,30,218,21,222,11,236,5,257,3,281,5,293,12,290,16,279,10,257,8,237,10,226,15,224,20,229,27"/>
+</map>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classyuki_1_1atri_1_1dt_1_1_decision_tree_builder_a3bdc85f7aabb2d74de92a2f83a61e001_icgraph.png" border="0" usemap="#aclassyuki_1_1atri_1_1dt_1_1_decision_tree_builder_a3bdc85f7aabb2d74de92a2f83a61e001_icgraph" alt=""/></div>
+<map name="aclassyuki_1_1atri_1_1dt_1_1_decision_tree_builder_a3bdc85f7aabb2d74de92a2f83a61e001_icgraph" id="aclassyuki_1_1atri_1_1dt_1_1_decision_tree_builder_a3bdc85f7aabb2d74de92a2f83a61e001_icgraph">
+<area shape="rect" title="将缺失当前划分属性值的样本按照有取值的样本分配概率权重进各个子集" alt="" coords="286,29,402,56"/>
+<area shape="rect" href="classyuki_1_1atri_1_1dt_1_1_decision_tree_builder.html#afb0815a4166a68bb5f1c60ec09abe4de" title="采用 learn 算法建树" alt="" coords="200,29,238,56"/>
+<area shape="poly" title=" " alt="" coords="271,45,239,45,239,40,271,40"/>
+<area shape="poly" title=" " alt="" coords="233,15,228,10,219,8,211,10,206,14,205,20,207,28,202,30,199,20,201,11,208,5,219,3,231,5,237,12"/>
+<area shape="rect" href="classyuki_1_1atri_1_1dt_1_1_decision_tree_builder.html#a9525b1c74d534350359d9f205c35cba4" title="建树" alt="" coords="103,29,152,56"/>
+<area shape="poly" title=" " alt="" coords="184,45,152,45,152,40,184,40"/>
+<area shape="rect" href="_decision_tree_test1_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,29,55,56"/>
+<area shape="poly" title=" " alt="" coords="87,45,55,45,55,40,87,40"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a5d0dc286a8325ae013b6d8aa3e7dddd0" name="a5d0dc286a8325ae013b6d8aa3e7dddd0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5d0dc286a8325ae013b6d8aa3e7dddd0">&#9670;&#160;</a></span>pluralityValue()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto pluralityValue </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classyuki_1_1atri_1_1dt_1_1_attribute.html">Attribute</a> *const &amp;</td>          <td class="paramname"><span class="paramname"><em>target</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">vector&lt; pair&lt; <a class="el" href="classyuki_1_1atri_1_1dt_1_1_example.html">Example</a> *, <a class="el" href="namespaceyuki.html#abc2f107791bd7c1d49ecf0f168c085a3">f64</a> &gt; &gt; const &amp;</td>          <td class="paramname"><span class="paramname"><em>examples</em></span>&#160;) -&gt; <a class="el" href="namespaceyuki.html#abc2f107791bd7c1d49ecf0f168c085a3">f64</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>从样本集里选取占比最多的 target 取值作为叶子结点 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">target</td><td>目标属性 </td></tr>
+    <tr><td class="paramname">examples</td><td>样本集 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>f64 叶子结点 </dd></dl>
+
+<p class="definition">在文件 <a class="el" href="_decision_tree_builder_8cpp_source.html">DecisionTreeBuilder.cpp</a> 第 <a class="el" href="_decision_tree_builder_8cpp_source.html#l00199">199</a> 行定义.</p>
+
+<p class="reference">引用了 <a class="el" href="tools_8h_source.html#l00389">yuki::random::choose()</a>.</p>
+
+<p class="reference">被这些函数引用 <a class="el" href="_decision_tree_builder_8h_source.html#l00330">DecisionTreeBuilder::fit()</a>.</p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classyuki_1_1atri_1_1dt_1_1_decision_tree_builder_a5d0dc286a8325ae013b6d8aa3e7dddd0_cgraph.png" border="0" usemap="#aclassyuki_1_1atri_1_1dt_1_1_decision_tree_builder_a5d0dc286a8325ae013b6d8aa3e7dddd0_cgraph" alt=""/></div>
+<map name="aclassyuki_1_1atri_1_1dt_1_1_decision_tree_builder_a5d0dc286a8325ae013b6d8aa3e7dddd0_cgraph" id="aclassyuki_1_1atri_1_1dt_1_1_decision_tree_builder_a5d0dc286a8325ae013b6d8aa3e7dddd0_cgraph">
+<area shape="rect" title="从样本集里选取占比最多的 target 取值作为叶子结点" alt="" coords="5,5,104,32"/>
+<area shape="rect" href="namespaceyuki_1_1random.html#a5c4c6f66339f20f8b261def24a471f24" title="从数组里随机选择一个元素" alt="" coords="152,5,298,32"/>
+<area shape="poly" title=" " alt="" coords="104,16,136,16,136,21,104,21"/>
+</map>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classyuki_1_1atri_1_1dt_1_1_decision_tree_builder_a5d0dc286a8325ae013b6d8aa3e7dddd0_icgraph.png" border="0" usemap="#aclassyuki_1_1atri_1_1dt_1_1_decision_tree_builder_a5d0dc286a8325ae013b6d8aa3e7dddd0_icgraph" alt=""/></div>
+<map name="aclassyuki_1_1atri_1_1dt_1_1_decision_tree_builder_a5d0dc286a8325ae013b6d8aa3e7dddd0_icgraph" id="aclassyuki_1_1atri_1_1dt_1_1_decision_tree_builder_a5d0dc286a8325ae013b6d8aa3e7dddd0_icgraph">
+<area shape="rect" title="从样本集里选取占比最多的 target 取值作为叶子结点" alt="" coords="286,29,385,56"/>
+<area shape="rect" href="classyuki_1_1atri_1_1dt_1_1_decision_tree_builder.html#afb0815a4166a68bb5f1c60ec09abe4de" title="采用 learn 算法建树" alt="" coords="200,29,238,56"/>
+<area shape="poly" title=" " alt="" coords="271,45,239,45,239,40,271,40"/>
+<area shape="poly" title=" " alt="" coords="233,15,228,10,219,8,211,10,206,14,205,20,207,28,202,30,199,20,201,11,208,5,219,3,231,5,237,12"/>
+<area shape="rect" href="classyuki_1_1atri_1_1dt_1_1_decision_tree_builder.html#a9525b1c74d534350359d9f205c35cba4" title="建树" alt="" coords="103,29,152,56"/>
+<area shape="poly" title=" " alt="" coords="184,45,152,45,152,40,184,40"/>
+<area shape="rect" href="_decision_tree_test1_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,29,55,56"/>
+<area shape="poly" title=" " alt="" coords="87,45,55,45,55,40,87,40"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="af930c263cbed2f4f6f4206da3b08d580" name="af930c263cbed2f4f6f4206da3b08d580"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af930c263cbed2f4f6f4206da3b08d580">&#9670;&#160;</a></span>postCut()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static auto postCut </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classyuki_1_1atri_1_1dt_1_1_decision_tree.html">DecisionTree</a> *</td>          <td class="paramname"><span class="paramname"><em>tree</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classyuki_1_1atri_1_1dt_1_1_dataset.html">Dataset</a> *</td>          <td class="paramname"><span class="paramname"><em>dataset</em></span>&#160;) -&gt; void </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>后剪枝 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">tree</td><td>决策树 </td></tr>
+    <tr><td class="paramname">dataset</td><td>测试集 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">在文件 <a class="el" href="_decision_tree_builder_8h_source.html">DecisionTreeBuilder.h</a> 第 <a class="el" href="_decision_tree_builder_8h_source.html#l00575">575</a> 行定义.</p>
+
+<p class="reference">引用了 <a class="el" href="_decision_tree_node_8h_source.html#l00070">DiscreteDecisionTreeNode::children</a>, <a class="el" href="_decision_tree_node_8h_source.html#l00016">yuki::atri::dt::CONTINUOUS_BINARY</a>, <a class="el" href="_decision_tree_node_8h_source.html#l00015">yuki::atri::dt::DISCRETE_MUT</a>, <a class="el" href="_decision_tree_node_8h_source.html#l00151">ContinuousBinaryDecisionTreeNode::lchild</a>, <a class="el" href="_decision_tree_node_8cpp_source.html#l00066">ContinuousBinaryDecisionTreeNode::printTree()</a> , 以及 <a class="el" href="_decision_tree_node_8h_source.html#l00152">ContinuousBinaryDecisionTreeNode::rchild</a>.</p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classyuki_1_1atri_1_1dt_1_1_decision_tree_builder_af930c263cbed2f4f6f4206da3b08d580_cgraph.png" border="0" usemap="#aclassyuki_1_1atri_1_1dt_1_1_decision_tree_builder_af930c263cbed2f4f6f4206da3b08d580_cgraph" alt=""/></div>
+<map name="aclassyuki_1_1atri_1_1dt_1_1_decision_tree_builder_af930c263cbed2f4f6f4206da3b08d580_cgraph" id="aclassyuki_1_1atri_1_1dt_1_1_decision_tree_builder_af930c263cbed2f4f6f4206da3b08d580_cgraph">
+<area shape="rect" title="后剪枝" alt="" coords="5,21,73,48"/>
+<area shape="rect" href="classyuki_1_1atri_1_1dt_1_1_continuous_binary_decision_tree_node.html#a54b797ca3cf16c24b9b2f15bb97f666d" title="打印树的结构（递归）" alt="" coords="121,5,287,64"/>
+<area shape="poly" title=" " alt="" coords="73,32,105,32,105,37,73,37"/>
+<area shape="rect" href="namespaceyuki.html#a5a75fc158cd1a918b4e6ea36d23fdefd" title="打印制表填充" alt="" coords="335,21,454,48"/>
+<area shape="poly" title=" " alt="" coords="287,32,320,32,320,37,287,37"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ac7ed7e2e84f233a240d5ac5dd112ad15" name="ac7ed7e2e84f233a240d5ac5dd112ad15"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac7ed7e2e84f233a240d5ac5dd112ad15">&#9670;&#160;</a></span>quickSort() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto quickSort </td>
+          <td>(</td>
+          <td class="paramtype">vector&lt; pair&lt; <a class="el" href="classyuki_1_1atri_1_1dt_1_1_example.html">Example</a> *, <a class="el" href="namespaceyuki.html#abc2f107791bd7c1d49ecf0f168c085a3">f64</a> &gt; &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>examples</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classyuki_1_1atri_1_1dt_1_1_attribute.html">Attribute</a> *const &amp;</td>          <td class="paramname"><span class="paramname"><em>attr</em></span>&#160;) -&gt; void</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>对样本集排序 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">examples</td><td>样本集 </td></tr>
+    <tr><td class="paramname">attr</td><td>排序的标准属性 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">在文件 <a class="el" href="_decision_tree_builder_8cpp_source.html">DecisionTreeBuilder.cpp</a> 第 <a class="el" href="_decision_tree_builder_8cpp_source.html#l00033">33</a> 行定义.</p>
+
+</div>
+</div>
+<a id="a6c2726e48b4ef41e57043f6fbc7fa7c0" name="a6c2726e48b4ef41e57043f6fbc7fa7c0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6c2726e48b4ef41e57043f6fbc7fa7c0">&#9670;&#160;</a></span>quickSort() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto quickSort </td>
+          <td>(</td>
+          <td class="paramtype">vector&lt; pair&lt; <a class="el" href="classyuki_1_1atri_1_1dt_1_1_example.html">Example</a> *, <a class="el" href="namespaceyuki.html#abc2f107791bd7c1d49ecf0f168c085a3">f64</a> &gt; &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>examples</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classyuki_1_1atri_1_1dt_1_1_attribute.html">Attribute</a> *const &amp;</td>          <td class="paramname"><span class="paramname"><em>attr</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespaceyuki.html#a77a52b9640a0c8600feb48e548425a40">i32</a> const &amp;</td>          <td class="paramname"><span class="paramname"><em>left</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespaceyuki.html#a77a52b9640a0c8600feb48e548425a40">i32</a> const &amp;</td>          <td class="paramname"><span class="paramname"><em>right</em></span>&#160;) -&gt; void</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>对样本集排序（快速排序） </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">examples</td><td>样本集 </td></tr>
+    <tr><td class="paramname">attr</td><td>排序的标准属性 </td></tr>
+    <tr><td class="paramname">left</td><td>左端点 </td></tr>
+    <tr><td class="paramname">right</td><td>右端点 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">在文件 <a class="el" href="_decision_tree_builder_8cpp_source.html">DecisionTreeBuilder.cpp</a> 第 <a class="el" href="_decision_tree_builder_8cpp_source.html#l00013">13</a> 行定义.</p>
+
+</div>
+</div>
+<a id="af84be46cd0de725b0be509a90a82f641" name="af84be46cd0de725b0be509a90a82f641"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af84be46cd0de725b0be509a90a82f641">&#9670;&#160;</a></span>removeAttritude()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto removeAttritude </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classyuki_1_1atri_1_1dt_1_1_attribute.html">Attribute</a> *const &amp;</td>          <td class="paramname"><span class="paramname"><em>attr</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">vector&lt; <a class="el" href="classyuki_1_1atri_1_1dt_1_1_attribute.html">Attribute</a> * &gt; const &amp;</td>          <td class="paramname"><span class="paramname"><em>attributes</em></span>&#160;) -&gt; vector&lt;<a class="el" href="classyuki_1_1atri_1_1dt_1_1_attribute.html">Attribute</a>*&gt;</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>从一个属性集合移除指定属性 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">attr</td><td>要移除的属性 </td></tr>
+    <tr><td class="paramname">attributes</td><td>属性集合 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>vector&lt;Attribute*&gt; 移除了指定属性的属性集合 </dd></dl>
+
+<p class="definition">在文件 <a class="el" href="_decision_tree_builder_8cpp_source.html">DecisionTreeBuilder.cpp</a> 第 <a class="el" href="_decision_tree_builder_8cpp_source.html#l00189">189</a> 行定义.</p>
+
+<p class="reference">被这些函数引用 <a class="el" href="_decision_tree_builder_8h_source.html#l00330">DecisionTreeBuilder::fit()</a>.</p>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classyuki_1_1atri_1_1dt_1_1_decision_tree_builder_af84be46cd0de725b0be509a90a82f641_icgraph.png" border="0" usemap="#aclassyuki_1_1atri_1_1dt_1_1_decision_tree_builder_af84be46cd0de725b0be509a90a82f641_icgraph" alt=""/></div>
+<map name="aclassyuki_1_1atri_1_1dt_1_1_decision_tree_builder_af84be46cd0de725b0be509a90a82f641_icgraph" id="aclassyuki_1_1atri_1_1dt_1_1_decision_tree_builder_af84be46cd0de725b0be509a90a82f641_icgraph">
+<area shape="rect" title="从一个属性集合移除指定属性" alt="" coords="286,29,400,56"/>
+<area shape="rect" href="classyuki_1_1atri_1_1dt_1_1_decision_tree_builder.html#afb0815a4166a68bb5f1c60ec09abe4de" title="采用 learn 算法建树" alt="" coords="200,29,238,56"/>
+<area shape="poly" title=" " alt="" coords="271,45,239,45,239,40,271,40"/>
+<area shape="poly" title=" " alt="" coords="233,15,228,10,219,8,211,10,206,14,205,20,207,28,202,30,199,20,201,11,208,5,219,3,231,5,237,12"/>
+<area shape="rect" href="classyuki_1_1atri_1_1dt_1_1_decision_tree_builder.html#a9525b1c74d534350359d9f205c35cba4" title="建树" alt="" coords="103,29,152,56"/>
+<area shape="poly" title=" " alt="" coords="184,45,152,45,152,40,184,40"/>
+<area shape="rect" href="_decision_tree_test1_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,29,55,56"/>
+<area shape="poly" title=" " alt="" coords="87,45,55,45,55,40,87,40"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a96c57718c5b9ed8a778f0eea4d0044aa" name="a96c57718c5b9ed8a778f0eea4d0044aa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a96c57718c5b9ed8a778f0eea4d0044aa">&#9670;&#160;</a></span>sepAbsentEx()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto sepAbsentEx </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classyuki_1_1atri_1_1dt_1_1_attribute.html">Attribute</a> *const &amp;</td>          <td class="paramname"><span class="paramname"><em>attr</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">vector&lt; pair&lt; <a class="el" href="classyuki_1_1atri_1_1dt_1_1_example.html">Example</a> *, <a class="el" href="namespaceyuki.html#abc2f107791bd7c1d49ecf0f168c085a3">f64</a> &gt; &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>examples</em></span>&#160;) -&gt; vector&lt;pair&lt;<a class="el" href="classyuki_1_1atri_1_1dt_1_1_example.html">Example</a>*, <a class="el" href="namespaceyuki.html#abc2f107791bd7c1d49ecf0f168c085a3">f64</a>&gt;&gt;</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>将样本集中给定属性缺失的样本分离 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">attr</td><td>属性 </td></tr>
+    <tr><td class="paramname">examples</td><td>样本集 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>vector&lt;pair&lt;Example*, f64&gt;&gt; 给定属性缺失的样本集合 </dd></dl>
+
+<p class="definition">在文件 <a class="el" href="_decision_tree_builder_8cpp_source.html">DecisionTreeBuilder.cpp</a> 第 <a class="el" href="_decision_tree_builder_8cpp_source.html#l00096">96</a> 行定义.</p>
+
+<p class="reference">引用了 <a class="el" href="_attribute_8h_source.html#l00021">Attribute::ABSENT</a>.</p>
+
+<p class="reference">被这些函数引用 <a class="el" href="_decision_tree_builder_8h_source.html#l00330">DecisionTreeBuilder::fit()</a>.</p>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classyuki_1_1atri_1_1dt_1_1_decision_tree_builder_a96c57718c5b9ed8a778f0eea4d0044aa_icgraph.png" border="0" usemap="#aclassyuki_1_1atri_1_1dt_1_1_decision_tree_builder_a96c57718c5b9ed8a778f0eea4d0044aa_icgraph" alt=""/></div>
+<map name="aclassyuki_1_1atri_1_1dt_1_1_decision_tree_builder_a96c57718c5b9ed8a778f0eea4d0044aa_icgraph" id="aclassyuki_1_1atri_1_1dt_1_1_decision_tree_builder_a96c57718c5b9ed8a778f0eea4d0044aa_icgraph">
+<area shape="rect" title="将样本集中给定属性缺失的样本分离" alt="" coords="286,29,386,56"/>
+<area shape="rect" href="classyuki_1_1atri_1_1dt_1_1_decision_tree_builder.html#afb0815a4166a68bb5f1c60ec09abe4de" title="采用 learn 算法建树" alt="" coords="200,29,238,56"/>
+<area shape="poly" title=" " alt="" coords="271,45,239,45,239,40,271,40"/>
+<area shape="poly" title=" " alt="" coords="233,15,228,10,219,8,211,10,206,14,205,20,207,28,202,30,199,20,201,11,208,5,219,3,231,5,237,12"/>
+<area shape="rect" href="classyuki_1_1atri_1_1dt_1_1_decision_tree_builder.html#a9525b1c74d534350359d9f205c35cba4" title="建树" alt="" coords="103,29,152,56"/>
+<area shape="poly" title=" " alt="" coords="184,45,152,45,152,40,184,40"/>
+<area shape="rect" href="_decision_tree_test1_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,29,55,56"/>
+<area shape="poly" title=" " alt="" coords="87,45,55,45,55,40,87,40"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ac91dcadf2b879862ba082ccc49937f98" name="ac91dcadf2b879862ba082ccc49937f98"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac91dcadf2b879862ba082ccc49937f98">&#9670;&#160;</a></span>splitExamples()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto splitExamples </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classyuki_1_1atri_1_1dt_1_1_attribute.html">Attribute</a> *const &amp;</td>          <td class="paramname"><span class="paramname"><em>attr</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">vector&lt; pair&lt; <a class="el" href="classyuki_1_1atri_1_1dt_1_1_example.html">Example</a> *, <a class="el" href="namespaceyuki.html#abc2f107791bd7c1d49ecf0f168c085a3">f64</a> &gt; &gt; const &amp;</td>          <td class="paramname"><span class="paramname"><em>examples</em></span>&#160;) -&gt; vector&lt;vector&lt;pair&lt;<a class="el" href="classyuki_1_1atri_1_1dt_1_1_example.html">Example</a>*, <a class="el" href="namespaceyuki.html#abc2f107791bd7c1d49ecf0f168c085a3">f64</a>&gt;&gt;&gt;</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>将样本集按照某个属性划分为一些子样本集 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">attr</td><td>用于划分的属性 </td></tr>
+    <tr><td class="paramname">examples</td><td>样本集 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>vector&lt;vector&lt;pair&lt;Example*, f64&gt;&gt;&gt; 子样本集集合 </dd></dl>
+
+<p class="definition">在文件 <a class="el" href="_decision_tree_builder_8cpp_source.html">DecisionTreeBuilder.cpp</a> 第 <a class="el" href="_decision_tree_builder_8cpp_source.html#l00109">109</a> 行定义.</p>
+
+<p class="reference">引用了 <a class="el" href="_attribute_8h_source.html#l00012">yuki::atri::dt::CONTINUOUS</a>, <a class="el" href="_attribute_8h_source.html#l00011">yuki::atri::dt::DISCRETE</a> , 以及 <a class="el" href="_d_t_example_8cpp_source.html#l00014">yuki::atri::dt::subExamples()</a>.</p>
+
+<p class="reference">被这些函数引用 <a class="el" href="_decision_tree_builder_8h_source.html#l00330">DecisionTreeBuilder::fit()</a>.</p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classyuki_1_1atri_1_1dt_1_1_decision_tree_builder_ac91dcadf2b879862ba082ccc49937f98_cgraph.png" border="0" usemap="#aclassyuki_1_1atri_1_1dt_1_1_decision_tree_builder_ac91dcadf2b879862ba082ccc49937f98_cgraph" alt=""/></div>
+<map name="aclassyuki_1_1atri_1_1dt_1_1_decision_tree_builder_ac91dcadf2b879862ba082ccc49937f98_cgraph" id="aclassyuki_1_1atri_1_1dt_1_1_decision_tree_builder_ac91dcadf2b879862ba082ccc49937f98_cgraph">
+<area shape="rect" title="将样本集按照某个属性划分为一些子样本集" alt="" coords="5,29,109,56"/>
+<area shape="rect" href="namespaceyuki_1_1atri_1_1dt.html#af41a77c2c209c0e51cb4e6c596470532" title=" " alt="" coords="157,29,334,56"/>
+<area shape="poly" title=" " alt="" coords="109,40,141,40,141,45,109,45"/>
+<area shape="poly" title=" " alt="" coords="213,30,207,21,211,11,224,5,245,3,268,5,280,12,277,16,266,10,245,8,226,10,215,15,213,20,218,27"/>
+</map>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classyuki_1_1atri_1_1dt_1_1_decision_tree_builder_ac91dcadf2b879862ba082ccc49937f98_icgraph.png" border="0" usemap="#aclassyuki_1_1atri_1_1dt_1_1_decision_tree_builder_ac91dcadf2b879862ba082ccc49937f98_icgraph" alt=""/></div>
+<map name="aclassyuki_1_1atri_1_1dt_1_1_decision_tree_builder_ac91dcadf2b879862ba082ccc49937f98_icgraph" id="aclassyuki_1_1atri_1_1dt_1_1_decision_tree_builder_ac91dcadf2b879862ba082ccc49937f98_icgraph">
+<area shape="rect" title="将样本集按照某个属性划分为一些子样本集" alt="" coords="286,29,390,56"/>
+<area shape="rect" href="classyuki_1_1atri_1_1dt_1_1_decision_tree_builder.html#afb0815a4166a68bb5f1c60ec09abe4de" title="采用 learn 算法建树" alt="" coords="200,29,238,56"/>
+<area shape="poly" title=" " alt="" coords="271,45,239,45,239,40,271,40"/>
+<area shape="poly" title=" " alt="" coords="233,15,228,10,219,8,211,10,206,14,205,20,207,28,202,30,199,20,201,11,208,5,219,3,231,5,237,12"/>
+<area shape="rect" href="classyuki_1_1atri_1_1dt_1_1_decision_tree_builder.html#a9525b1c74d534350359d9f205c35cba4" title="建树" alt="" coords="103,29,152,56"/>
+<area shape="poly" title=" " alt="" coords="184,45,152,45,152,40,184,40"/>
+<area shape="rect" href="_decision_tree_test1_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,29,55,56"/>
+<area shape="poly" title=" " alt="" coords="87,45,55,45,55,40,87,40"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a8a3cdabaa1db4dd03ab9b8624232e5a6" name="a8a3cdabaa1db4dd03ab9b8624232e5a6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8a3cdabaa1db4dd03ab9b8624232e5a6">&#9670;&#160;</a></span>targetProbDist() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto targetProbDist </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classyuki_1_1atri_1_1dt_1_1_attribute.html">Attribute</a> *const &amp;</td>          <td class="paramname"><span class="paramname"><em>target</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">vector&lt; pair&lt; <a class="el" href="classyuki_1_1atri_1_1dt_1_1_example.html">Example</a> *, <a class="el" href="namespaceyuki.html#abc2f107791bd7c1d49ecf0f168c085a3">f64</a> &gt; &gt; const &amp;</td>          <td class="paramname"><span class="paramname"><em>examples</em></span>&#160;) -&gt; unordered_map&lt;<a class="el" href="namespaceyuki.html#abc2f107791bd7c1d49ecf0f168c085a3">f64</a>, <a class="el" href="namespaceyuki.html#abc2f107791bd7c1d49ecf0f168c085a3">f64</a>&gt;</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>计算目标属性在样本集的概率分布（Probability Distribution） </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">target</td><td>目标属性 </td></tr>
+    <tr><td class="paramname">examples</td><td>样本集 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>unordered_map&lt;f64, f64&gt; 概率分布 </dd></dl>
+
+<p class="definition">在文件 <a class="el" href="_decision_tree_builder_8cpp_source.html">DecisionTreeBuilder.cpp</a> 第 <a class="el" href="_decision_tree_builder_8cpp_source.html#l00037">37</a> 行定义.</p>
+
+</div>
+</div>
+<a id="a68a45f386beb1e8c9a96ce29efb00b62" name="a68a45f386beb1e8c9a96ce29efb00b62"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a68a45f386beb1e8c9a96ce29efb00b62">&#9670;&#160;</a></span>targetProbDist() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto targetProbDist </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classyuki_1_1atri_1_1dt_1_1_attribute.html">Attribute</a> *const &amp;</td>          <td class="paramname"><span class="paramname"><em>target</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">vector&lt; pair&lt; <a class="el" href="classyuki_1_1atri_1_1dt_1_1_example.html">Example</a> *, <a class="el" href="namespaceyuki.html#abc2f107791bd7c1d49ecf0f168c085a3">f64</a> &gt; &gt; const &amp;</td>          <td class="paramname"><span class="paramname"><em>examples</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespaceyuki.html#a77a52b9640a0c8600feb48e548425a40">i32</a> const &amp;</td>          <td class="paramname"><span class="paramname"><em>begin</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespaceyuki.html#a77a52b9640a0c8600feb48e548425a40">i32</a> const &amp;</td>          <td class="paramname"><span class="paramname"><em>end</em></span>&#160;) -&gt; unordered_map&lt;<a class="el" href="namespaceyuki.html#abc2f107791bd7c1d49ecf0f168c085a3">f64</a>, <a class="el" href="namespaceyuki.html#abc2f107791bd7c1d49ecf0f168c085a3">f64</a>&gt;</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>计算目标属性在样本集的概率分布（Probability Distribution） </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">target</td><td>目标属性 </td></tr>
+    <tr><td class="paramname">examples</td><td>样本集 </td></tr>
+    <tr><td class="paramname">begin</td><td>起点 </td></tr>
+    <tr><td class="paramname">end</td><td>终点 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>unordered_map&lt;f64, f64&gt; 概率分布 </dd></dl>
+
+<p class="definition">在文件 <a class="el" href="_decision_tree_builder_8cpp_source.html">DecisionTreeBuilder.cpp</a> 第 <a class="el" href="_decision_tree_builder_8cpp_source.html#l00053">53</a> 行定义.</p>
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>D:/user/Project/Code/AI/cxx_src/DecisionTree/include/<a class="el" href="_decision_tree_builder_8h_source.html">DecisionTreeBuilder.h</a></li>
+<li>D:/user/Project/Code/AI/cxx_src/DecisionTree/src/<a class="el" href="_decision_tree_builder_8cpp_source.html">DecisionTreeBuilder.cpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0
+</small></address>
+</div><!-- doc-content -->
+</body>
+</html>
